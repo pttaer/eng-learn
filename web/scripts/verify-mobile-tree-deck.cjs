@@ -361,10 +361,8 @@ const deckCards = deckEl.querySelectorAll('.deck-branch-card');
 for (const card of deckCards) {
   const ctaBtn = card.querySelector('.btn-enter-dossier');
   assert.ok(ctaBtn, 'Each deck card must contain a prominent .btn-enter-dossier CTA button');
-  const perks = card.querySelectorAll('.deck-perk-badge');
-  assert.ok(perks.length > 0, 'Each deck card must list unlocked perks as badges');
-  const workouts = card.querySelectorAll('.deck-workout-badge');
-  assert.ok(workouts.length > 0, 'Each deck card must list workout tasks as badges');
+  const countText = card.querySelector('.deck-perks-count-text');
+  assert.ok(countText, 'Each deck card must list lessons/perks count');
 }
 
 console.log('PASSED: All touch CTA buttons and badges satisfy >= 44x44px touch targets.\n');

@@ -4,7 +4,7 @@
 - **Physical Resolution**: 1080 x 2408 px
 - **Density**: 480 dpi (Device Pixel Ratio: 3.0x)
 - **CSS Viewport**: 360 x 803 px
-- **Total Viewport & Scroll Screenshots**: **134**
+- **Total Viewport & Scroll Screenshots**: **138**
 - **DOM & Visual Audit Status**: **0 Defects** (Zero horizontal bleed, zero text clipping, zero tap floor violations)
 
 ---
@@ -85,28 +85,32 @@
 | 2 | `02-vocab-back-01-top.png` | [02-vocab-back-01-top.png](./04-mastery-foundations/02-vocab-back-01-top.png) |
 | 3 | `02-vocab-back-02-scrolled.png` | [02-vocab-back-02-scrolled.png](./04-mastery-foundations/02-vocab-back-02-scrolled.png) |
 | 4 | `03-collocations-drill-01-top.png` | [03-collocations-drill-01-top.png](./04-mastery-foundations/03-collocations-drill-01-top.png) |
-| 5 | `04-collocations-lexicon-01-top.png` | [04-collocations-lexicon-01-top.png](./04-mastery-foundations/04-collocations-lexicon-01-top.png) |
-| 6 | `04-collocations-lexicon-02-scrolled.png` | [04-collocations-lexicon-02-scrolled.png](./04-mastery-foundations/04-collocations-lexicon-02-scrolled.png) |
-| 7 | `05-grammar-codex-01-top.png` | [05-grammar-codex-01-top.png](./04-mastery-foundations/05-grammar-codex-01-top.png) |
-| 8 | `05-grammar-codex-02-scrolled.png` | [05-grammar-codex-02-scrolled.png](./04-mastery-foundations/05-grammar-codex-02-scrolled.png) |
-| 9 | `06-tenses-drill-01-top.png` | [06-tenses-drill-01-top.png](./04-mastery-foundations/06-tenses-drill-01-top.png) |
-| 10 | `06-tenses-drill-02-scrolled.png` | [06-tenses-drill-02-scrolled.png](./04-mastery-foundations/06-tenses-drill-02-scrolled.png) |
-| 11 | `07-tenses-codex-01-top.png` | [07-tenses-codex-01-top.png](./04-mastery-foundations/07-tenses-codex-01-top.png) |
-| 12 | `07-tenses-codex-02-scrolled.png` | [07-tenses-codex-02-scrolled.png](./04-mastery-foundations/07-tenses-codex-02-scrolled.png) |
-| 13 | `07-tenses-codex-03-bottom.png` | [07-tenses-codex-03-bottom.png](./04-mastery-foundations/07-tenses-codex-03-bottom.png) |
-| 14 | `08-tenses-gauntlet-01-top.png` | [08-tenses-gauntlet-01-top.png](./04-mastery-foundations/08-tenses-gauntlet-01-top.png) |
-| 15 | `08b-tenses-gauntlet-scorecard-01-top.png` | [08b-tenses-gauntlet-scorecard-01-top.png](./04-mastery-foundations/08b-tenses-gauntlet-scorecard-01-top.png) |
-| 16 | `08b-tenses-gauntlet-scorecard-02-scrolled.png` | [08b-tenses-gauntlet-scorecard-02-scrolled.png](./04-mastery-foundations/08b-tenses-gauntlet-scorecard-02-scrolled.png) |
-| 17 | `09-lexicon-drawer-01-top.png` | [09-lexicon-drawer-01-top.png](./04-mastery-foundations/09-lexicon-drawer-01-top.png) |
-| 18 | `09-lexicon-drawer-02-scrolled.png` | [09-lexicon-drawer-02-scrolled.png](./04-mastery-foundations/09-lexicon-drawer-02-scrolled.png) |
-| 19 | `10-cambridge-drills-01-top.png` | [10-cambridge-drills-01-top.png](./04-mastery-foundations/10-cambridge-drills-01-top.png) |
-| 20 | `10-cambridge-drills-02-scrolled.png` | [10-cambridge-drills-02-scrolled.png](./04-mastery-foundations/10-cambridge-drills-02-scrolled.png) |
-| 21 | `10-cambridge-drills-03-bottom.png` | [10-cambridge-drills-03-bottom.png](./04-mastery-foundations/10-cambridge-drills-03-bottom.png) |
-| 22 | `11-phonemic-sounds-01-top.png` | [11-phonemic-sounds-01-top.png](./04-mastery-foundations/11-phonemic-sounds-01-top.png) |
-| 23 | `11-phonemic-sounds-02-scrolled.png` | [11-phonemic-sounds-02-scrolled.png](./04-mastery-foundations/11-phonemic-sounds-02-scrolled.png) |
-| 24 | `12-email-builder-01-top.png` | [12-email-builder-01-top.png](./04-mastery-foundations/12-email-builder-01-top.png) |
-| 25 | `12-email-builder-02-scrolled.png` | [12-email-builder-02-scrolled.png](./04-mastery-foundations/12-email-builder-02-scrolled.png) |
-| 26 | `12-email-builder-03-bottom.png` | [12-email-builder-03-bottom.png](./04-mastery-foundations/12-email-builder-03-bottom.png) |
+| 5 | `03-collocations-drill-02-scrolled.png` | [03-collocations-drill-02-scrolled.png](./04-mastery-foundations/03-collocations-drill-02-scrolled.png) |
+| 6 | `04-collocations-lexicon-01-top.png` | [04-collocations-lexicon-01-top.png](./04-mastery-foundations/04-collocations-lexicon-01-top.png) |
+| 7 | `04-collocations-lexicon-02-scrolled.png` | [04-collocations-lexicon-02-scrolled.png](./04-mastery-foundations/04-collocations-lexicon-02-scrolled.png) |
+| 8 | `05-grammar-codex-01-top.png` | [05-grammar-codex-01-top.png](./04-mastery-foundations/05-grammar-codex-01-top.png) |
+| 9 | `05-grammar-codex-02-scrolled.png` | [05-grammar-codex-02-scrolled.png](./04-mastery-foundations/05-grammar-codex-02-scrolled.png) |
+| 10 | `06-tenses-drill-01-top.png` | [06-tenses-drill-01-top.png](./04-mastery-foundations/06-tenses-drill-01-top.png) |
+| 11 | `06-tenses-drill-02-scrolled.png` | [06-tenses-drill-02-scrolled.png](./04-mastery-foundations/06-tenses-drill-02-scrolled.png) |
+| 12 | `07-tenses-codex-01-top.png` | [07-tenses-codex-01-top.png](./04-mastery-foundations/07-tenses-codex-01-top.png) |
+| 13 | `07-tenses-codex-02-scrolled.png` | [07-tenses-codex-02-scrolled.png](./04-mastery-foundations/07-tenses-codex-02-scrolled.png) |
+| 14 | `07-tenses-codex-03-bottom.png` | [07-tenses-codex-03-bottom.png](./04-mastery-foundations/07-tenses-codex-03-bottom.png) |
+| 15 | `08-tenses-gauntlet-01-top.png` | [08-tenses-gauntlet-01-top.png](./04-mastery-foundations/08-tenses-gauntlet-01-top.png) |
+| 16 | `08-tenses-gauntlet-02-scrolled.png` | [08-tenses-gauntlet-02-scrolled.png](./04-mastery-foundations/08-tenses-gauntlet-02-scrolled.png) |
+| 17 | `08b-tenses-gauntlet-scorecard-01-top.png` | [08b-tenses-gauntlet-scorecard-01-top.png](./04-mastery-foundations/08b-tenses-gauntlet-scorecard-01-top.png) |
+| 18 | `08b-tenses-gauntlet-scorecard-02-scrolled.png` | [08b-tenses-gauntlet-scorecard-02-scrolled.png](./04-mastery-foundations/08b-tenses-gauntlet-scorecard-02-scrolled.png) |
+| 19 | `08b-tenses-gauntlet-scorecard-03-bottom.png` | [08b-tenses-gauntlet-scorecard-03-bottom.png](./04-mastery-foundations/08b-tenses-gauntlet-scorecard-03-bottom.png) |
+| 20 | `09-lexicon-drawer-01-top.png` | [09-lexicon-drawer-01-top.png](./04-mastery-foundations/09-lexicon-drawer-01-top.png) |
+| 21 | `09-lexicon-drawer-02-scrolled.png` | [09-lexicon-drawer-02-scrolled.png](./04-mastery-foundations/09-lexicon-drawer-02-scrolled.png) |
+| 22 | `09-lexicon-drawer-03-bottom.png` | [09-lexicon-drawer-03-bottom.png](./04-mastery-foundations/09-lexicon-drawer-03-bottom.png) |
+| 23 | `10-cambridge-drills-01-top.png` | [10-cambridge-drills-01-top.png](./04-mastery-foundations/10-cambridge-drills-01-top.png) |
+| 24 | `10-cambridge-drills-02-scrolled.png` | [10-cambridge-drills-02-scrolled.png](./04-mastery-foundations/10-cambridge-drills-02-scrolled.png) |
+| 25 | `10-cambridge-drills-03-bottom.png` | [10-cambridge-drills-03-bottom.png](./04-mastery-foundations/10-cambridge-drills-03-bottom.png) |
+| 26 | `11-phonemic-sounds-01-top.png` | [11-phonemic-sounds-01-top.png](./04-mastery-foundations/11-phonemic-sounds-01-top.png) |
+| 27 | `11-phonemic-sounds-02-scrolled.png` | [11-phonemic-sounds-02-scrolled.png](./04-mastery-foundations/11-phonemic-sounds-02-scrolled.png) |
+| 28 | `12-email-builder-01-top.png` | [12-email-builder-01-top.png](./04-mastery-foundations/12-email-builder-01-top.png) |
+| 29 | `12-email-builder-02-scrolled.png` | [12-email-builder-02-scrolled.png](./04-mastery-foundations/12-email-builder-02-scrolled.png) |
+| 30 | `12-email-builder-03-bottom.png` | [12-email-builder-03-bottom.png](./04-mastery-foundations/12-email-builder-03-bottom.png) |
 
 ## 05-speed-mediation-habits
 

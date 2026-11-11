@@ -4658,15 +4658,20 @@ html[data-motion="reduce"] {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: var(--space-12) auto;
+  margin: 4px auto;
   position: relative;
   width: 100%;
-  max-width: 360px;
+  max-width: 320px;
 }
 
 .radar-chart-container svg {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
   overflow: visible;
-  filter: drop-shadow(0 0 16px rgba(56, 189, 248, 0.15));
+  filter: drop-shadow(0 0 16px rgba(56, 189, 248, 0.12));
 }
 
 .radar-ring {
@@ -4677,38 +4682,47 @@ html[data-motion="reduce"] {
   stroke: var(--ink-muted, #94a3b8);
   stroke-width: 1px;
   stroke-dasharray: 2, 3;
-  opacity: 0.35;
+  opacity: 0.3;
 }
 
 .radar-axis-label {
-  font-family: var(--font-mono, monospace);
-  font-size: var(--font-kicker);
+  font-family: var(--font-sans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.06em;
+  text-transform: uppercase;
   fill: var(--ink-secondary, #cbd5e1);
 }
 
 .radar-tier-label {
   font-family: var(--font-mono, monospace);
-  font-size: var(--font-kicker);
+  font-size: 8.5px;
   font-weight: 600;
   fill: var(--ink-muted, #94a3b8);
-  opacity: 0.7;
+  opacity: 0.75;
+}
+
+.radar-target-ring {
+  stroke: var(--ink-muted, #94a3b8);
+  stroke-width: 1.2px;
+  stroke-dasharray: 3, 3;
+  fill: none;
+  opacity: 0.45;
 }
 
 .radar-value-polygon {
   stroke: var(--accent-gold, #a5b4fc);
   stroke-width: 2.5px;
   fill: rgba(165, 180, 252, 0.22);
-  filter: drop-shadow(0 0 8px rgba(165, 180, 252, 0.45));
-  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  filter: drop-shadow(0 0 8px rgba(165, 180, 252, 0.4));
+  transition: points 0.25s cubic-bezier(0.16, 1, 0.3, 1), all 0.25s ease;
 }
 
 .radar-node-dot {
   fill: var(--accent-gold, #a5b4fc);
   stroke: var(--bg-canvas, #080a0f);
   stroke-width: 2px;
-  transition: transform 0.2s ease;
+  transition: cx 0.25s cubic-bezier(0.16, 1, 0.3, 1), cy 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Stepper Header */
@@ -4789,76 +4803,264 @@ html[data-motion="reduce"] {
   flex-shrink: 0;
 }
 
-/* Diagnostic Results Card & Skill Breakdown Grid */
-.diagnostic-results-card {
-  width: 100%;
+/* Multi-Skill Modal & Celestial Skill Radar */
+.multi-skill-card {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+  text-align: left !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  border-radius: var(--radius-squircle-md, 16px) !important;
+  background: var(--bg-card, #182030) !important;
+  border: 1px solid var(--border-hairline) !important;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.6) !important;
+  box-sizing: border-box !important;
+  width: 100% !important;
+  max-width: 560px !important;
+  max-height: calc(100dvh - 32px) !important;
+}
+
+.multi-skill-header {
   display: flex;
-  flex-direction: column;
   align-items: center;
-}
-
-.skill-breakdown-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-8);
+  justify-content: space-between;
   width: 100%;
-  margin: var(--space-8) 0;
+  padding: 10px 16px;
+  background: var(--bg-card, #182030);
+  border-bottom: 1px solid var(--border-hairline);
+  flex-shrink: 0;
+  z-index: 5;
+  box-sizing: border-box;
 }
 
-.skill-card-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 8px 6px;
-  border-radius: 6px;
-  background: var(--bg-surface-sunk, rgba(0, 0, 0, 0.15));
-  border: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.08));
-}
-
-.skill-card-name {
-  font-size: var(--font-kicker);
+.multi-skill-header .telemetry-label {
+  font-size: var(--font-kicker, 11px);
   font-weight: 700;
-  color: var(--ink-secondary, #cbd5e1);
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-bottom: 2px;
+  color: var(--ink-secondary, #cbd5e1);
 }
 
-.skill-level-chip {
-  font-size: var(--font-body);
-  font-weight: 800;
-  color: var(--accent-gold, #a5b4fc);
-  margin-bottom: 4px;
-}
-
-.skill-level-selector {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: var(--gap-element);
+.multi-skill-close-btn {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
   justify-content: center;
+  background: transparent;
+  border: none;
+  color: var(--ink-muted, #94a3b8);
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: var(--radius-btn, 10px);
+  transition: background 0.15s ease, color 0.15s ease;
+  padding: 0;
+  margin: -6px -8px -6px 0;
 }
 
-.skill-level-btn {
-  padding: 2px 4px;
-  font-size: var(--font-kicker);
+.multi-skill-close-btn:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--ink-primary, #f8fafc);
+}
+
+.multi-skill-scroll-body {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-sizing: border-box;
+  scrollbar-width: thin;
+  -webkit-overflow-scrolling: touch;
+}
+
+.multi-skill-footer {
+  width: 100%;
+  flex-shrink: 0;
+  padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0px));
+  background: var(--bg-card, #182030);
+  border-top: 1px solid var(--border-hairline);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 5;
+  box-sizing: border-box;
+}
+
+/* Radar Hero Section */
+.radar-hero-section {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.radar-hero-title {
+  font-family: var(--font-sans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: 21px;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--accent-gold, #a5b4fc);
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.radar-hero-lead {
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--ink-secondary, #94a3b8);
+  margin: 0;
+  max-width: 60ch;
+}
+
+.radar-kicker-label {
+  font-size: 11px;
   font-weight: 700;
-  border-radius: var(--radius-btn, 10px);
-  border: 1px solid transparent;
-  background: transparent;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   color: var(--ink-muted, #94a3b8);
-  cursor: pointer;
-  min-width: 18px;
+  margin-top: 2px;
   text-align: center;
 }
 
-.skill-level-btn:hover {
+/* Skill Calibration Group (Compressed, Hairline Divided, No Nested Borders) */
+.skill-calibration-section {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: left;
+}
+
+.skill-calibration-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.skill-calibration-kicker {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-muted, #94a3b8);
+}
+
+.skill-calibration-group {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-surface, #111622);
+  border-radius: var(--radius-squircle-md, 16px);
+  border: 1px solid var(--border-hairline);
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.skill-calibration-row {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 8px 12px;
+  box-sizing: border-box;
+  border-top: 1px solid var(--border-hairline);
+}
+
+.skill-calibration-row:first-child {
+  border-top: none;
+}
+
+.skill-row-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.skill-row-title {
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
   color: var(--ink-primary, #f8fafc);
-  background: rgba(255, 255, 255, 0.06);
+}
+
+.skill-amber-hint {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--accent-amber, #fbbf24);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.level-track {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 8px;
+  background: var(--bg-surface-sunk, #0d121c);
+  border-radius: var(--radius-btn, 10px);
+  padding: 4px;
+  box-sizing: border-box;
+  border: 0;
+}
+
+.skill-level-btn {
+  min-height: 44px;
+  height: 44px;
+  border-radius: var(--radius-btn, 10px);
+  border: 0;
+  background: var(--bg-card, #182030);
+  color: var(--ink-secondary, #94a3b8);
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: background 0.15s ease, color 0.15s ease, transform 0.1s ease;
+  padding: 0;
+  margin: 0;
+}
+
+.skill-level-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--ink-primary, #f8fafc);
 }
 
 .skill-level-btn.active {
-  background: var(--accent-gold, #a5b4fc);
-  color: var(--bg-canvas, #080a0f);
+  background: var(--accent-gold, #a5b4fc) !important;
+  color: #080a0f !important;
+  font-weight: 800 !important;
+  box-shadow: 0 2px 8px rgba(165, 180, 252, 0.25);
+}
+
+.diagnosed-dot {
+  display: block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--ink-muted, #94a3b8);
+  margin-top: 2px;
+}
+
+.skill-level-btn.active .diagnosed-dot {
+  background: #080a0f;
+}
+
+/* Diagnostic Results Card & Legacy Selectors Compatibility */
+.diagnostic-results-card,
+.skill-breakdown-grid,
+.skill-level-chip,
+.skill-card-item {
+  box-sizing: border-box;
 }
 
 @media (max-width: 768px) {
@@ -4867,90 +5069,33 @@ html[data-motion="reduce"] {
   }
 
   .multi-skill-card {
-    padding: 14px 14px 16px 14px !important;
-    gap: 10px !important;
-  }
-
-  .multi-skill-card .stepper-header,
-  .multi-skill-card .quiz-telemetry-header {
-    padding-right: 48px !important;
-  }
-
-  .quiz-hotkeys-hint {
-    display: none !important;
+    width: 100% !important;
+    max-width: calc(100vw - 24px) !important;
+    max-height: calc(100dvh - 32px) !important;
+    padding: 0 !important;
+    align-items: stretch !important;
   }
 
   .radar-chart-container svg {
-    max-width: 170px !important;
-    max-height: 130px !important;
+    max-width: 320px !important;
     width: 100% !important;
     height: auto !important;
   }
 
-  .skill-breakdown-grid {
-    grid-template-columns: 1fr !important;
-    gap: 4px !important;
-    margin: 4px 0 !important;
-  }
-
-  .skill-card-item {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: stretch !important;
-    padding: 8px 12px !important;
-    gap: 8px !important;
-  }
-
-  .skill-card-header {
-    display: flex !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-    width: 100% !important;
-  }
-
-  .skill-card-name {
-    font-size: 13px !important;
-    font-weight: 700 !important;
-    margin-bottom: 0 !important;
-  }
-
-  .skill-level-chip {
-    font-size: 12px !important;
-    font-weight: 800 !important;
-    margin-bottom: 0 !important;
-  }
-
-  .skill-level-selector {
-    display: grid !important;
+  .level-track {
     grid-template-columns: repeat(6, 1fr) !important;
-    gap: 4px !important;
-    width: 100% !important;
-    background: var(--bg-surface-sunk, rgba(0, 0, 0, 0.25)) !important;
-    border: 1px solid var(--border-hairline) !important;
+    gap: 8px !important;
+    background: var(--bg-surface-sunk, #0d121c) !important;
+    border: 0 !important;
     border-radius: var(--radius-btn, 10px) !important;
-    padding: 3px !important;
-    box-sizing: border-box !important;
+    padding: 4px !important;
   }
 
   .skill-level-btn {
-    padding: 4px 0 !important;
-    min-height: 38px !important;
-    font-size: 13px !important;
-    font-weight: 700 !important;
-    border-radius: 7px !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    border: none !important;
-    background: transparent !important;
-    color: var(--ink-secondary, #94a3b8) !important;
-    transition: all 0.15s ease !important;
-  }
-
-  .skill-level-btn.active {
-    background: var(--accent-gold, #a5b4fc) !important;
-    color: #080a0f !important;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4) !important;
+    min-height: 44px !important;
+    height: 44px !important;
+    border-radius: var(--radius-btn, 10px) !important;
+    border: 0 !important;
   }
 
   .quiz-hotkeys-hint {

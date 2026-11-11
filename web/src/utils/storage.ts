@@ -374,6 +374,15 @@ export class StorageManager {
     this.saveState(state);
   }
 
+  public static deleteCardState(cardId: string): void {
+    const state = this.loadState();
+    if (state.cardStates && state.cardStates[cardId]) {
+      delete state.cardStates[cardId];
+      if (state.totalCardsReviewed > 0) state.totalCardsReviewed -= 1;
+      this.saveState(state);
+    }
+  }
+
   public static toggleSoundMute(): boolean {
     const state = this.loadState();
     state.soundMuted = !state.soundMuted;

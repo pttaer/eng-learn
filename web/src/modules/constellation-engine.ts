@@ -63,7 +63,7 @@ export class ConstellationEngine {
     const readingMastered = readingPerks.filter(p => p.status === 'mastered').length;
     const readingUnlocked = readingPerks.filter(p => p.status !== 'locked').length;
     const readingPct = readingPerks.length > 0
-      ? Math.round(readingPerks.reduce((acc, p) => acc + p.masteryPct, 0) / readingPerks.length)
+      ? Math.round((readingUnlocked / readingPerks.length) * 100)
       : 0;
 
     // 2. Writing Branch
@@ -79,7 +79,7 @@ export class ConstellationEngine {
     const writingMastered = writingPerks.filter(p => p.status === 'mastered').length;
     const writingUnlocked = writingPerks.filter(p => p.status !== 'locked').length;
     const writingPct = writingPerks.length > 0
-      ? Math.round(writingPerks.reduce((acc, p) => acc + p.masteryPct, 0) / writingPerks.length)
+      ? Math.round((writingUnlocked / writingPerks.length) * 100)
       : 0;
 
     // 3. Listening Branch
@@ -107,7 +107,7 @@ export class ConstellationEngine {
     });
     const listeningMastered = listeningPerks.filter(p => p.status === 'mastered').length;
     const listeningUnlocked = listeningPerks.filter(p => p.status !== 'locked').length;
-    const listeningPct = listeningPerks.length > 0 ? Math.round(listeningPerks.reduce((acc, p) => acc + p.masteryPct, 0) / listeningPerks.length) : 0;
+    const listeningPct = listeningPerks.length > 0 ? Math.round((listeningUnlocked / listeningPerks.length) * 100) : 0;
 
     // 4. Speaking Branch
     const speakingNodes = SKILL_BRANCHES.speaking.nodes;
@@ -122,7 +122,7 @@ export class ConstellationEngine {
     const speakingMastered = speakingPerks.filter(p => p.status === 'mastered').length;
     const speakingUnlocked = speakingPerks.filter(p => p.status !== 'locked').length;
     const speakingPct = speakingPerks.length > 0
-      ? Math.round(speakingPerks.reduce((acc, p) => acc + p.masteryPct, 0) / speakingPerks.length)
+      ? Math.round((speakingUnlocked / speakingPerks.length) * 100)
       : 0;
 
     // 5. Collocations / Grammar Branch (Combined Core)
@@ -140,7 +140,7 @@ export class ConstellationEngine {
     const cgMastered = collocGrammarPerks.filter(p => p.status === 'mastered').length;
     const cgUnlocked = collocGrammarPerks.filter(p => p.status !== 'locked').length;
     const cgPct = collocGrammarPerks.length > 0
-      ? Math.round(collocGrammarPerks.reduce((acc, p) => acc + p.masteryPct, 0) / collocGrammarPerks.length)
+      ? Math.round((cgUnlocked / collocGrammarPerks.length) * 100)
       : 0;
 
     // Today's drills count

@@ -1,7 +1,7 @@
 # Complete Mobile Visual Audit Gallery (iPhone 14/15 — 390x844 Retina @2x)
 
-Captured: **2026-10-27T09:01:46.366Z**  
-Total Mobile Views Captured: **47**  
+Captured: **2026-11-11T16:05:09.423Z**  
+Total Mobile Views Captured: **48**  
 
 ## Part 1: English Singularity C2 Mastery App (Mobile)
 | # | Filename | View Title & Description |
@@ -36,27 +36,28 @@ Total Mobile Views Captured: **47**
 | 28 | [`28-mobile-lexicon-drawer.png`](./28-mobile-lexicon-drawer.png) | **Universal In-Text Lexicon Drawer** |
 | 29 | [`29-mobile-spotlight-tour.png`](./29-mobile-spotlight-tour.png) | **Game-Style Spotlight Cutout Onboarding Tour** |
 | 30 | [`30-mobile-streak-toast.png`](./30-mobile-streak-toast.png) | **Daily Streak Protection Alert Toast Notification** |
+| 31 | [`30a-mobile-placement-quiz-intro.png`](./30a-mobile-placement-quiz-intro.png) | **Intro Quick Assessment (Find Your Level Initial Briefing)** |
+| 32 | [`30b-mobile-placement-quiz-question.png`](./30b-mobile-placement-quiz-question.png) | **Intro Quick Assessment (Active Adaptive Recall Question)** |
+| 33 | [`46-mobile-floating-scratchpad.png`](./46-mobile-floating-scratchpad.png) | **Floating Quick Scratchpad & Notes Manager** |
 
 ## Part 2: Academic IELTS 7.0 Platform (Mobile)
 | # | Filename | View Title & Description |
 |---|---|---|
-| 31 | [`30a-mobile-placement-quiz-intro.png`](./30a-mobile-placement-quiz-intro.png) | **Intro Quick Assessment (Find Your Level Initial Briefing)** |
-| 32 | [`30b-mobile-placement-quiz-question.png`](./30b-mobile-placement-quiz-question.png) | **Intro Quick Assessment (Active Adaptive Recall Question)** |
-| 33 | [`31-mobile-ielts-overview.png`](./31-mobile-ielts-overview.png) | **IELTS Academic Road to 7.0 Overview & Band Tracker** |
-| 34 | [`32-mobile-ielts-diagnostic.png`](./32-mobile-ielts-diagnostic.png) | **IELTS Academic Diagnostic Assessment Test** |
-| 35 | [`33-mobile-ielts-reading.png`](./33-mobile-ielts-reading.png) | **IELTS Academic Timed Reading Exam & Questions Split** |
-| 36 | [`34-mobile-ielts-reading-drills.png`](./34-mobile-ielts-reading-drills.png) | **14 Attack Drills & Synonym Lab (Reading Skills)** |
-| 37 | [`35-mobile-ielts-listening.png`](./35-mobile-ielts-listening.png) | **IELTS Sections 1–4 Audio Practice & Questions** |
-| 38 | [`36-mobile-ielts-listening-traps.png`](./36-mobile-ielts-listening-traps.png) | **Trap & Self-Correction Audio Lab (Listening Skills)** |
-| 39 | [`37-mobile-ielts-writing.png`](./37-mobile-ielts-writing.png) | **IELTS Timed Tasks 1 & 2 Automated Evaluator** |
-| 40 | [`38-mobile-ielts-writing-studio.png`](./38-mobile-ielts-writing-studio.png) | **Visual Blueprints & 4-Sentence Architect Studio** |
-| 41 | [`39-mobile-ielts-speaking.png`](./39-mobile-ielts-speaking.png) | **IELTS Speaking Prompts & Audio Notepad** |
-| 42 | [`40-mobile-ielts-speaking-simulator.png`](./40-mobile-ielts-speaking-simulator.png) | **3-Part Examiner Simulator & Fluency Meter** |
-| 43 | [`41-mobile-ielts-topic-lexicon.png`](./41-mobile-ielts-topic-lexicon.png) | **IELTS Master Lexicon (3,345 Vocab & 10,015 Collocations)** |
-| 44 | [`42-mobile-ielts-strategy-codex.png`](./42-mobile-ielts-strategy-codex.png) | **IELTS Tactical Strategy Codex (46 Blueprints)** |
-| 45 | [`43-mobile-ielts-knowledge-vault.png`](./43-mobile-ielts-knowledge-vault.png) | **IELTS Knowledge Vault (746 Tips Articles / 415k Words)** |
-| 46 | [`44-mobile-ielts-study-path.png`](./44-mobile-ielts-study-path.png) | **IELTS Personalized 12-Week Study Path** |
-| 47 | [`45-mobile-ielts-mock-exam.png`](./45-mobile-ielts-mock-exam.png) | **IELTS Full CD-Exam Mock Cockpit & Band Calculator** |
+| 1 | [`31-mobile-ielts-overview.png`](./31-mobile-ielts-overview.png) | **IELTS Academic Road to 7.0 Overview & Band Tracker** |
+| 2 | [`32-mobile-ielts-diagnostic.png`](./32-mobile-ielts-diagnostic.png) | **IELTS Academic Diagnostic Assessment Test** |
+| 3 | [`33-mobile-ielts-reading.png`](./33-mobile-ielts-reading.png) | **IELTS Academic Timed Reading Exam & Questions Split** |
+| 4 | [`34-mobile-ielts-reading-drills.png`](./34-mobile-ielts-reading-drills.png) | **14 Attack Drills & Synonym Lab (Reading Skills)** |
+| 5 | [`35-mobile-ielts-listening.png`](./35-mobile-ielts-listening.png) | **IELTS Sections 1–4 Audio Practice & Questions** |
+| 6 | [`36-mobile-ielts-listening-traps.png`](./36-mobile-ielts-listening-traps.png) | **Trap & Self-Correction Audio Lab (Listening Skills)** |
+| 7 | [`37-mobile-ielts-writing.png`](./37-mobile-ielts-writing.png) | **IELTS Timed Tasks 1 & 2 Automated Evaluator** |
+| 8 | [`38-mobile-ielts-writing-studio.png`](./38-mobile-ielts-writing-studio.png) | **Visual Blueprints & 4-Sentence Architect Studio** |
+| 9 | [`39-mobile-ielts-speaking.png`](./39-mobile-ielts-speaking.png) | **IELTS Speaking Prompts & Audio Notepad** |
+| 10 | [`40-mobile-ielts-speaking-simulator.png`](./40-mobile-ielts-speaking-simulator.png) | **3-Part Examiner Simulator & Fluency Meter** |
+| 11 | [`41-mobile-ielts-topic-lexicon.png`](./41-mobile-ielts-topic-lexicon.png) | **IELTS Master Lexicon (3,345 Vocab & 10,015 Collocations)** |
+| 12 | [`42-mobile-ielts-strategy-codex.png`](./42-mobile-ielts-strategy-codex.png) | **IELTS Tactical Strategy Codex (46 Blueprints)** |
+| 13 | [`43-mobile-ielts-knowledge-vault.png`](./43-mobile-ielts-knowledge-vault.png) | **IELTS Strategy Blueprint Expanded Drawer & Tips Breakdown** |
+| 14 | [`44-mobile-ielts-study-path.png`](./44-mobile-ielts-study-path.png) | **IELTS Personalized 12-Week Study Path** |
+| 15 | [`45-mobile-ielts-mock-exam.png`](./45-mobile-ielts-mock-exam.png) | **IELTS Full CD-Exam Mock Cockpit & Band Calculator** |
 
 ---
 *Captured with automated headless Chrome engine on mobile touch profile.*

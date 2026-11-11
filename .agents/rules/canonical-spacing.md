@@ -243,16 +243,22 @@ Mirrors §11 in [`docs/TYPOGRAPHY_SPACING_RULES.md`](file:///e:/Eng/docs/TYPOGRA
   - *Row 3:* Dedicated progress bar track with explicit margins.
   - *Daily Tasks:* Bound by `max-width` with text truncation so they never collide with the hero action button (`CONTINUE →`).
 
-### 6. Zero-Scroll vs. Natural Scroll Principle
-- **Contextual Scope:** Zero-Scroll (`overflow: 0px` on 844px height) applies **only when a view's content can naturally be compacted into an elegant, uncrowded surface** (e.g. Constellation Skill Deck, Star Map, or Home Dashboard).
-- **Rich Content Exemption (Scroll Naturally):** It is **never a dogmatic requirement for every view**. Views containing deep or expansive content (Reading Articles, Writing Studio, Strategy Guides, Lexicon Lists, Exam Passages) MUST scroll naturally (`overflow-y: auto`) with `--safe-bottom-dock` clearance. Never artificially crush or compress rich educational content into an unscrollable container.
+### 6. Zero-Scroll vs. Adaptive Vertical Minimum Invariant
+- **Contextual Scope & Preferred Minimum Height:**
+  Every single-fit view (e.g. Constellation Skill Deck, Star Map, Flashcard / Atomic Card, Living Canvas, Speed Blitz, Meditation Workbench, Placement Quiz) declares a content-preferred minimum vertical size (content natural height).
+- **Adaptive Vertical Scrolling Behavior:**
+  1. **When Viewport Height < Preferred Minimum:** If the available vertical screen height (accounting for header and fixed bottom dock) is too small to fit the view's preferred minimum vertical size, the view **MUST** enable vertical scrolling (`overflow-y: auto !important; scrollbar-width: thin; -webkit-overflow-scrolling: touch;`). Never crush cards with `min-height: 0` or squeeze text to force artificial zero-scroll.
+  2. **Guaranteed Safe Dock Clearance:** The scroll container (`#workspace-mount`) MUST declare bottom padding `calc(var(--safe-bottom-dock, 84px) + env(safe-area-inset-bottom, 0px) + 16px)`. When scrolled down to the bottom, the lowest card, button, or interactive element MUST clear the fixed bottom navigation dock by at least 16px. Content must NEVER be clipped by `#app` or collide with the bottom dock.
+  3. **When Viewport Height ≥ Preferred Minimum:** If the screen resolution fits the UI's preferred vertical size comfortably, the view fits naturally within the viewport without unnecessary scrolling, and the leftover space serves as clean, valid breathing room above the dock.
+  4. **Strict Flexbox Hierarchy Rule:** Never set `height: auto !important; min-height: 100% !important;` on `#workspace-mount`. `#workspace-mount` MUST retain `flex: 1 1 auto; min-height: 0; height: 100%; max-height: 100%; overflow-y: auto;` so it remains strictly bound to `#app`'s visible flex area. Only the *inner view children* (`.skill-tree-view`, `.skill-tree-shell`, `.dossier-workspace`, etc.) declare `min-height: min-content; height: auto;`.
+- **Rich Content Exemption (Scroll Naturally):** Views containing deep or expansive content (Reading Articles, Writing Studio, Strategy Guides, Lexicon Lists, Exam Passages) MUST scroll naturally (`overflow-y: auto`) with standard dock clearance. Never artificially crush or compress rich educational content into an unscrollable container.
 
 ### 7. The iPhone 6 (375×667px) Resilience Test
 - **The Ultimate Compact Benchmark:** Every view across both English Singularity and IELTS must be flexible enough to render flawlessly on legacy compact viewports down to **iPhone 6 (375×667px)**.
 - **Resilience Criteria:**
   - Zero horizontal overflow (`overflow-x: hidden; scrollWidth === clientWidth`).
-  - Safe Dock Clearance: The lowest interactive element or card must comfortably clear the fixed bottom dock (`padding-bottom: calc(var(--safe-bottom-dock, 84px) + 12px)`).
-  - Adaptive Height: Use `min-height: 100%` instead of hardcoded `height: 100%`. On taller modern phones (iPhone 15 Pro, 390×844px), compact views fit seamlessly without scrolling; on compact phones (iPhone 6, 375×667px), the page gracefully and smoothly scrolls vertically without cutting off tiles or text.
+  - Safe Dock Clearance: The lowest interactive element or card must comfortably clear the fixed bottom dock (`padding-bottom: calc(var(--safe-bottom-dock, 84px) + 16px)`).
+  - Adaptive Vertical Sizing: Inner containers use `min-height: min-content; height: auto;`. On taller modern phones (iPhone 15 Pro, 390×844px), compact views fit seamlessly without scrolling; on compact phones (iPhone 6, 375×667px), the page gracefully and smoothly scrolls vertically without cutting off tiles or text.
 
 ### 8. Badge & Pill Anti-Wrap Invariant
 - **Anti-Pattern (View cũ):** Inline badges, CEFR level chips, or category pills (`.skill-badge-pill`, `.hud-badge`, `.hud-pill`) lacking `white-space: nowrap`, causing words inside the oval to break awkwardly into 2–3 lines (e.g. `VOCABULARY &` / `COLLOCATIONS ·` / `A1` or `CELESTIAL` / `RADAR`).

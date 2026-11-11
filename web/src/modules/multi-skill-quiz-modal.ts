@@ -431,6 +431,7 @@ export class MultiSkillQuizModal {
 
   // Calibrated results per skill
   private calibratedLevels: Record<SkillId, Cefr>;
+  private diagnosedLevels: Record<SkillId, Cefr>;
   private stageCorrectCounts: number[] = [0, 0, 0, 0, 0];
   private stageAskedCounts: number[] = [0, 0, 0, 0, 0];
 
@@ -464,6 +465,7 @@ export class MultiSkillQuizModal {
     // Load initial profile from storage
     const currentProfile = StorageManager.getSkillProfile();
     this.calibratedLevels = { ...currentProfile.skills };
+    this.diagnosedLevels = { ...currentProfile.skills };
 
     // Build question bank
     this.initQuestionBank();
@@ -524,64 +526,100 @@ export class MultiSkillQuizModal {
     }
   }
 
-  private card(inner: string, maxWidth: string = '620px'): void {
+  private card(inner: string, maxWidth: string = '620px', showCloseBtn: boolean = true, extraClass: string = ''): void {
     this.overlay.innerHTML = `
-      <div class="completion-receipt-card multi-skill-card" style="position: relative; max-width: ${maxWidth}; width: 100%; max-height: 90dvh; overflow-y: auto;">
-        <button type="button" class="multi-skill-card-close-btn" aria-label="${t('common.close', undefined, 'Close')}" style="position: absolute; top: 12px; right: 12px; min-width: 44px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; background: transparent; border: none; color: var(--ink-muted); font-size: 18px; cursor: pointer; border-radius: var(--radius-btn, 10px); z-index: 5;">✕</button>
+      <div class="completion-receipt-card multi-skill-card ${extraClass}" tabindex="-1" style="position: relative; max-width: ${maxWidth}; width: 100%; max-height: 90dvh; overflow-y: auto; outline: none;">
+        ${showCloseBtn ? `<button type="button" class="multi-skill-card-close-btn" aria-label="${t('common.close', undefined, 'Close')}" style="position: absolute; top: 12px; right: 12px; min-width: 44px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; background: transparent; border: none; color: var(--ink-muted); font-size: 18px; cursor: pointer; border-radius: var(--radius-btn, 10px); z-index: 5;">✕</button>` : ''}
         ${inner}
       </div>
     `;
-    this.overlay.querySelector('.multi-skill-card-close-btn')?.addEventListener('click', () => {
-      AudioSynthesizer.play('click');
-      this.close();
-    });
+    if (showCloseBtn) {
+      this.overlay.querySelector('.multi-skill-card-close-btn')?.addEventListener('click', () => {
+        AudioSynthesizer.play('click');
+        this.close();
+      });
+    }
+    const cardEl = this.overlay.querySelector<HTMLElement>('.multi-skill-card');
+    cardEl?.focus();
   }
 
   // =========================================================================
   // VIEW: INTRO
   // =========================================================================
   private renderIntro(): void {
+    const state = StorageManager.loadState();
+    const hasPriorResult = StorageManager.isPlacementDone() || (Array.isArray(state.skillProfileHistory) && state.skillProfileHistory.length > 0);
+
     this.card(`
-      <div class="quiz-telemetry-header" style="margin-bottom: var(--space-12); display: flex; flex-direction: column; gap: 4px;">
-        <div style="display: flex; align-items: center; justify-content: space-between; gap: var(--space-8);">
-          <span class="telemetry-label" style="letter-spacing: 0.08em; font-weight: 700;">${t('quiz.initiative', undefined, 'INITIATIVE 21')}</span>
-          <span class="skill-badge-pill">${icon('target', 12)} ${t('quiz.celestial_radar', undefined, 'CELESTIAL RADAR')}</span>
-        </div>
-        <div class="telemetry-label" style="color: var(--ink-muted); font-size: var(--font-kicker); letter-spacing: 0.06em;">
-          ${t('quiz.diagnostic_kicker', undefined, 'MULTI-SKILL CEFR DIAGNOSTIC')}
-        </div>
+      <div class="dlg-head">
+        <span class="dlg-kicker">${t('quiz.diagnostic_kicker_short', undefined, 'CEFR DIAGNOSTIC')}</span>
+        <button type="button" class="multi-skill-close-btn" aria-label="${t('common.close', undefined, 'Close')}">✕</button>
       </div>
-      <h2 style="font-size: var(--font-h1); font-weight: 800; margin: 0 0 var(--space-8) 0; letter-spacing: -0.02em;">
-        ${t('quiz.intro_title', undefined, 'Calibrate Your Language Proficiency')}
+
+      <h2 class="dlg-title">
+        ${t('quiz.intro_title', undefined, 'Calibrate your language proficiency')}
       </h2>
-      <p style="font-size: var(--font-h4); line-height: 1.6; margin-bottom: var(--space-16); color: var(--ink-secondary);">
-        ${t('quiz.intro_desc', undefined, 'Unlike traditional single-level tests, language mastery is asymmetric. This diagnostic evaluates 5 distinct skills (Vocabulary, Grammar, Reading, Listening, and Writing) with 3 adaptive questions each (15 questions total · ~2 minutes).')}
+
+      <div class="dlg-meta">
+        ${t('quiz.meta_summary', undefined, '5 skills · 15 questions · ~2 mins')}
+      </div>
+
+      <p class="dlg-body">
+        ${t('quiz.intro_sentence', undefined, 'Adaptive questions tailored to your proficiency.')}
       </p>
-      
-      <div class="stepper-header" style="margin-bottom: var(--space-20);">
-        <div class="stepper-steps-track">
-          ${STAGES.map((st, i) => `
-            <div class="stepper-step">
-              <span class="step-num">${i + 1}</span>
-              <span class="step-label">${st.label}</span>
-            </div>
-          `).join('')}
+
+      <div class="skill-row" role="list" aria-label="Evaluated skills">
+        <div class="skill-chip" role="listitem">
+          <span class="skill-chip-icon">${icon('book', 16)}</span>
+          <span class="skill-chip-label">${t('quiz.chip_vocab', undefined, 'Từ vựng')}</span>
+        </div>
+        <div class="skill-chip" role="listitem">
+          <span class="skill-chip-icon">${icon('zap', 16)}</span>
+          <span class="skill-chip-label">${t('quiz.chip_grammar', undefined, 'Ngữ pháp')}</span>
+        </div>
+        <div class="skill-chip" role="listitem">
+          <span class="skill-chip-icon">${icon('eye', 16)}</span>
+          <span class="skill-chip-label">${t('quiz.chip_reading', undefined, 'Đọc')}</span>
+        </div>
+        <div class="skill-chip" role="listitem">
+          <span class="skill-chip-icon">${icon('volume', 16)}</span>
+          <span class="skill-chip-label">${t('quiz.chip_listening', undefined, 'Nghe')}</span>
+        </div>
+        <div class="skill-chip" role="listitem">
+          <span class="skill-chip-icon">${icon('edit', 16)}</span>
+          <span class="skill-chip-label">${t('quiz.chip_writing', undefined, 'Viết')}</span>
         </div>
       </div>
 
-      <div class="action-stack modal-actions" style="display: flex; flex-direction: column; gap: 12px; width: 100%; margin-top: 20px;">
-        <button class="hud-btn quiz-start-btn" style="width: 100%; justify-content: center; padding: 12px 0; font-weight: 700; background: var(--accent-gold); color: var(--bg-canvas); border-color: var(--accent-gold);">
-          ${icon('zap', 14)} ${t('quiz.start_diagnostic', undefined, 'Start Diagnostic (15 Questions)')}
+      <div class="dlg-actions action-stack modal-actions">
+        <!-- Primary Button: Start -->
+        <button class="hud-btn btn-primary quiz-start-btn apple-press" style="width: 100%; justify-content: center; min-height: 46px; font-weight: 700; background: var(--accent-gold, #a5b4fc); color: var(--bg-canvas, #080a0f); border: 0 !important; border-radius: var(--radius-btn, 10px); display: inline-flex; align-items: center; gap: 8px; cursor: pointer;">
+          ${icon('play', 14)} <span>${t('quiz.start_diagnostic_cta', undefined, 'Start · 15 questions')}</span>
         </button>
-        <button class="hud-btn quiz-radar-direct-btn" style="width: 100%; justify-content: center; padding: 10px 0; font-weight: 600;">
-          ${icon('target', 14)} ${t('quiz.view_radar', undefined, 'View Current Radar Profile')}
-        </button>
-        <button class="apple-bottom-close-btn quiz-cancel-btn">
-          ${t('quiz.cancel_keep', undefined, 'Cancel & Keep Current Levels')}
+
+        <!-- Consequence note directly under CTA -->
+        <div class="dlg-consequence" style="font-size: 13px; line-height: 1.4; color: var(--ink-muted, #94a3b8); text-align: center; margin: 0 0 2px 0;">
+          ${t('quiz.consequence_hint', undefined, 'Results update your current levels. You can adjust them later.')}
+        </div>
+
+        ${hasPriorResult ? `
+          <!-- Secondary Button: View Radar Profile (tonal) -->
+          <button class="hud-btn btn-secondary quiz-radar-direct-btn apple-press" style="width: 100%; justify-content: center; min-height: 44px; font-weight: 600; background: var(--bg-surface-sunk, rgba(255, 255, 255, 0.05)); color: var(--ink-primary, #f8fafc); border: 1px solid var(--border-hairline, rgba(255, 255, 255, 0.12)); border-radius: var(--radius-btn, 10px); display: inline-flex; align-items: center; gap: 8px; cursor: pointer;">
+            ${icon('chart', 14)} <span>${t('quiz.view_radar_cta', undefined, 'View Radar profile')}</span>
+          </button>
+        ` : ''}
+
+        <!-- Tertiary Button: Later (text, no fill) -->
+        <button class="btn-tertiary quiz-cancel-btn apple-press" style="width: 100%; justify-content: center; min-height: 44px; font-weight: 500; background: transparent; border: 0 !important; color: var(--ink-muted, #94a3b8); cursor: pointer; border-radius: var(--radius-btn, 10px); display: inline-flex; align-items: center; padding: 8px 16px;">
+          <span>${t('quiz.dismiss_later', undefined, 'Later')}</span>
         </button>
       </div>
-    `);
+    `, '520px', false, 'multi-skill-intro-modal');
 
+    this.overlay.querySelector('.multi-skill-close-btn')?.addEventListener('click', () => {
+      AudioSynthesizer.play('click');
+      this.close();
+    });
     this.overlay.querySelector('.quiz-start-btn')?.addEventListener('click', () => {
       AudioSynthesizer.play('click');
       this.startQuiz();
@@ -594,8 +632,6 @@ export class MultiSkillQuizModal {
       AudioSynthesizer.play('click');
       this.close();
     });
-
-    (this.overlay.querySelector('.quiz-start-btn') as HTMLElement | null)?.focus();
   }
 
   // =========================================================================
@@ -835,6 +871,7 @@ export class MultiSkillQuizModal {
       const writeIdx = cefrIndex(this.calibratedLevels.writing);
       const speakingIdx = Math.round((listenIdx + writeIdx) / 2);
       this.calibratedLevels.speaking = CEFR_ORDER[speakingIdx] || 'B1';
+      this.diagnosedLevels = { ...this.calibratedLevels };
 
       AudioSynthesizer.play('radar-reveal');
       this.renderRadarResults();
@@ -863,107 +900,216 @@ export class MultiSkillQuizModal {
   private renderRadarResults(): void {
     AudioSynthesizer.play('radar-reveal');
     const overallLevel = this.calculateOverallCefr(this.calibratedLevels);
-    const radarSvg = MultiSkillQuizModal.generateRadarSvg(this.calibratedLevels, 320);
+    const radarSvg = MultiSkillQuizModal.generateRadarSvg(this.calibratedLevels, this.diagnosedLevels, 320);
 
-    this.card(`
-      <div class="quiz-telemetry-header" style="margin-bottom: var(--space-12); display: flex; flex-direction: column; gap: 4px;">
-        <div style="display: flex; align-items: center; justify-content: space-between; gap: var(--space-8); padding-right: 36px; flex-wrap: nowrap;">
-          <span class="telemetry-label" style="letter-spacing: 0.05em; font-weight: 700; white-space: nowrap; font-size: 11px;">${t('quiz.diagnostic_complete', undefined, 'DIAGNOSTIC COMPLETE')}</span>
-          <span class="skill-badge-pill" style="white-space: nowrap; flex-shrink: 0;">${icon('target', 12)} ${t('quiz.overall', { level: overallLevel }, `${overallLevel} OVERALL`)}</span>
-        </div>
-        <div class="telemetry-label" style="color: var(--ink-muted); font-size: var(--font-kicker); letter-spacing: 0.06em;">
-          ${t('quiz.radar_title', undefined, 'CEFR 6-AXIS SKILL RADAR')}
-        </div>
-      </div>
+    this.overlay.innerHTML = `
+      <div class="completion-receipt-card multi-skill-card" style="max-width: 620px; width: 100%;">
+        <!-- Pinned Sticky Header: Left Kicker, Right Close Button (44x44) -->
+        <header class="multi-skill-header">
+          <span class="telemetry-label">${t('quiz.diagnostic_complete', undefined, 'DIAGNOSTIC COMPLETE')}</span>
+          <button type="button" class="multi-skill-close-btn" aria-label="${t('common.close', undefined, 'Close')}">✕</button>
+        </header>
 
-      <div style="text-align: center; margin-bottom: var(--space-8);">
-        <h2 style="font-size: var(--font-h1); font-weight: 800; margin: 0; letter-spacing: -0.02em;">
-          ${CEFR_LABELS[overallLevel]}
-        </h2>
-        <p style="font-size: var(--font-body-compact); color: var(--ink-secondary); margin: 4px 0 0 0;">
-          ${t('quiz.radar_desc', undefined, 'Multi-skill diagnostic calibrated across 6 core language axes.')}
-        </p>
-      </div>
+        <!-- Scrollable Content Body -->
+        <div class="multi-skill-scroll-body">
+          <!-- Centered Hero Section -->
+          <div class="radar-hero-section">
+            <h1 class="radar-hero-title">${CEFR_LABELS[overallLevel]}</h1>
+            <p class="radar-hero-lead">${t('quiz.radar_desc', undefined, 'Multi-skill diagnostic calibrated across 6 core language axes.')}</p>
+            <div class="radar-kicker-label">${t('quiz.radar_title', undefined, 'CEFR 6-AXIS SKILL RADAR')}</div>
+          </div>
 
-      <!-- Celestial Radar SVG Hexagon -->
-      <div class="radar-chart-container">
-        ${radarSvg}
-      </div>
+          <!-- Radar Chart Hexagon -->
+          <div class="radar-chart-container">
+            ${radarSvg}
+          </div>
 
-      <!-- Skill Breakdown & Manual Override Grid -->
-      <div class="telemetry-label" style="margin-bottom: var(--space-8);">
-        ${t('quiz.skill_calibration_hint', undefined, 'Skill Calibration · Tap Level to Adjust')}
-      </div>
-
-      <div class="skill-breakdown-grid">
-        ${ALL_SKILLS.map(skill => {
-          const current = this.calibratedLevels[skill];
-          const skillLabel = skill === 'vocab' ? 'Vocabulary' : skill.charAt(0).toUpperCase() + skill.slice(1);
-          return `
-            <div class="skill-card-item">
-              <div class="skill-card-header">
-                <span class="skill-card-name">${skillLabel}</span>
-                <span class="skill-level-chip" id="chip-${skill}">${current}</span>
-              </div>
-              <div class="skill-level-selector" data-skill="${skill}">
-                ${CEFR_ORDER.map(l => `
-                  <button class="skill-level-btn ${l === current ? 'active' : ''}" data-level="${l}" title="${skillLabel} ${l}">${l}</button>
-                `).join('')}
-              </div>
+          <!-- Left-Aligned Skill Calibration Section -->
+          <div class="skill-calibration-section">
+            <div class="skill-calibration-section-header">
+              <span class="skill-calibration-kicker">${t('quiz.skill_calibration_hint', undefined, 'SKILL CALIBRATION · TAP LEVEL TO ADJUST')}</span>
             </div>
-          `;
-        }).join('')}
-      </div>
 
-      <!-- Actions -->
-      <div class="action-stack radar-actions-cluster" style="display: flex; flex-direction: column; gap: 12px; width: 100%; margin-top: 22px;">
-        <button class="hud-btn btn-apply-profile" style="width: 100%; justify-content: center; padding: 12px 16px; font-weight: 700; white-space: normal; line-height: 1.3; text-align: center; background: var(--accent-gold); color: var(--bg-canvas); border-color: var(--accent-gold);">
-          ${icon('zap', 14)} ${t('quiz.apply_profile', undefined, 'Apply Profile & Calibrate App')}
-        </button>
-        <div style="display: flex; gap: 12px;">
-          <button class="hud-btn btn-retake-quiz" style="flex: 1; min-width: 0; justify-content: center; padding: 8px 12px; white-space: normal; line-height: 1.3; text-align: center;">
-            ${icon('target', 12)} ${t('quiz.retake_diagnostic', undefined, 'Retake Diagnostic')}
-          </button>
-          <button class="apple-bottom-close-btn btn-cancel-results" style="flex: 1; justify-content: center;">
-            ${t('common.close', undefined, 'Close')}
-          </button>
+            <!-- Single Unified Calibration Group (6 rows, hairline dividers, NO nested borders) -->
+            <div class="skill-calibration-group">
+              ${ALL_SKILLS.map(skill => {
+                const current = this.calibratedLevels[skill];
+                const diagLevel = this.diagnosedLevels[skill] || 'B2';
+                const isAbove = cefrIndex(current) > cefrIndex(diagLevel);
+                const skillLabel = skill === 'vocab' ? 'Vocabulary' : skill.charAt(0).toUpperCase() + skill.slice(1);
+                return `
+                  <div class="skill-calibration-row" data-skill="${skill}">
+                    <div class="skill-row-meta">
+                      <span class="skill-row-title">${skillLabel}</span>
+                      <span class="skill-amber-hint" style="${isAbove ? '' : 'display: none;'}">
+                        ${icon('alertTriangle', 11)} ${t('quiz.above_diagnosed', { level: diagLevel }, `Above diagnosed (${diagLevel})`)}
+                      </span>
+                    </div>
+                    <div class="level-track" role="radiogroup" aria-label="${skillLabel} CEFR Level" data-skill="${skill}">
+                      ${CEFR_ORDER.map(l => `
+                        <button type="button" role="radio" aria-checked="${l === current ? 'true' : 'false'}" tabindex="${l === current ? '0' : '-1'}" class="skill-level-btn ${l === current ? 'active' : ''}" data-level="${l}" data-skill="${skill}" title="${skillLabel} ${l}">
+                          <span class="btn-level-text">${l}</span>
+                          ${l === diagLevel ? `<span class="diagnosed-dot" title="${t('quiz.diagnosed_dot_aria', { level: diagLevel }, `Diagnosed: ${diagLevel}`)}"></span>` : ''}
+                        </button>
+                      `).join('')}
+                    </div>
+                  </div>
+                `;
+              }).join('')}
+            </div>
+          </div>
         </div>
-      </div>
-    `, '660px');
 
-    // Wire skill manual override buttons
-    this.overlay.querySelectorAll<HTMLElement>('.skill-level-btn').forEach(btn => {
+        <!-- Pinned Sticky Footer CTA -->
+        <footer class="multi-skill-footer">
+          <button type="button" class="hud-btn btn-apply-profile" style="width: 100%; min-height: 44px; justify-content: center; font-weight: 700; background: var(--accent-gold, #a5b4fc); color: var(--bg-canvas, #080a0f); border-color: var(--accent-gold, #a5b4fc); border-radius: var(--radius-btn, 10px);">
+            ${icon('zap', 14)} ${t('quiz.apply_profile', undefined, 'Apply Levels & Calibrate App')}
+          </button>
+          <div style="display: flex; gap: 8px; width: 100%;">
+            <button type="button" class="hud-btn btn-reset-diagnosed" style="flex: 1; min-height: 44px; justify-content: center; font-size: 13px; font-weight: 600; border-radius: var(--radius-btn, 10px); background: transparent; border: 1px solid var(--border-hairline); color: var(--ink-secondary);">
+              ${t('quiz.reset_diagnosed', undefined, 'Reset to Diagnosed')}
+            </button>
+            <button type="button" class="apple-bottom-close-btn btn-cancel-results" style="flex: 1; min-height: 44px; justify-content: center; border-radius: var(--radius-btn, 10px);">
+              ${t('common.close', undefined, 'Close')}
+            </button>
+          </div>
+        </footer>
+      </div>
+    `;
+
+    this.wireRadarInteractive();
+  }
+
+  private wireRadarInteractive(): void {
+    // 1. Close button
+    this.overlay.querySelector('.multi-skill-close-btn')?.addEventListener('click', () => {
+      AudioSynthesizer.play('click');
+      this.close();
+    });
+
+    // 2. Skill level buttons click & arrow navigation
+    this.overlay.querySelectorAll<HTMLButtonElement>('.skill-level-btn').forEach(btn => {
       btn.addEventListener('click', () => {
-        const parent = btn.closest('.skill-level-selector') as HTMLElement | null;
-        const skill = parent?.dataset.skill as SkillId;
+        const skill = btn.dataset.skill as SkillId;
         const level = btn.dataset.level as Cefr;
         if (skill && level) {
           AudioSynthesizer.play('click');
-          this.calibratedLevels[skill] = level;
-          // Re-render radar view smoothly
-          this.renderRadarResults();
+          this.updateRadarLive(skill, level);
+        }
+      });
+
+      // Arrow key navigation within track
+      btn.addEventListener('keydown', (e: KeyboardEvent) => {
+        const track = btn.closest('.level-track');
+        if (!track) return;
+        const buttons = Array.from(track.querySelectorAll<HTMLButtonElement>('.skill-level-btn'));
+        const currIdx = buttons.indexOf(btn);
+
+        let nextIdx = -1;
+        if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+          nextIdx = (currIdx + 1) % buttons.length;
+        } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+          nextIdx = (currIdx - 1 + buttons.length) % buttons.length;
+        }
+
+        if (nextIdx !== -1) {
+          e.preventDefault();
+          const nextBtn = buttons[nextIdx];
+          const skill = nextBtn.dataset.skill as SkillId;
+          const level = nextBtn.dataset.level as Cefr;
+          if (skill && level) {
+            AudioSynthesizer.play('click');
+            this.updateRadarLive(skill, level);
+            nextBtn.focus();
+          }
         }
       });
     });
 
-    // Wire Apply Profile
+    // 3. Reset to diagnosed
+    this.overlay.querySelector('.btn-reset-diagnosed')?.addEventListener('click', () => {
+      AudioSynthesizer.play('flip');
+      for (const skill of ALL_SKILLS) {
+        const orig = this.diagnosedLevels[skill] || 'B2';
+        this.updateRadarLive(skill, orig);
+      }
+    });
+
+    // 4. Apply Profile & Calibrate App
     this.overlay.querySelector('.btn-apply-profile')?.addEventListener('click', () => {
       this.applyAndSaveProfile();
     });
 
-    // Wire Retake
-    this.overlay.querySelector('.btn-retake-quiz')?.addEventListener('click', () => {
-      AudioSynthesizer.play('click');
-      this.startQuiz();
-    });
-
-    // Wire Close
+    // 5. Close / Cancel
     this.overlay.querySelector('.btn-cancel-results')?.addEventListener('click', () => {
       AudioSynthesizer.play('click');
       this.close();
     });
 
     (this.overlay.querySelector('.btn-apply-profile') as HTMLElement | null)?.focus({ preventScroll: true });
+  }
+
+  private updateRadarLive(skill: SkillId, level: Cefr): void {
+    this.calibratedLevels[skill] = level;
+
+    // Update buttons in track
+    const row = this.overlay.querySelector(`.skill-calibration-row[data-skill="${skill}"]`);
+    if (row) {
+      row.querySelectorAll<HTMLButtonElement>('.skill-level-btn').forEach(b => {
+        const isTarget = b.dataset.level === level;
+        b.classList.toggle('active', isTarget);
+        b.setAttribute('aria-checked', isTarget ? 'true' : 'false');
+        b.setAttribute('tabindex', isTarget ? '0' : '-1');
+      });
+
+      // Update amber hint
+      const diagLevel = this.diagnosedLevels[skill] || 'B2';
+      const isAbove = cefrIndex(level) > cefrIndex(diagLevel);
+      const hintEl = row.querySelector('.skill-amber-hint') as HTMLElement | null;
+      if (hintEl) {
+        hintEl.style.display = isAbove ? 'inline-flex' : 'none';
+        hintEl.innerHTML = isAbove ? `${icon('alertTriangle', 11)} ${t('quiz.above_diagnosed', { level: diagLevel }, `Above diagnosed (${diagLevel})`)}` : '';
+      }
+    }
+
+    // Update overall title
+    const newOverall = this.calculateOverallCefr(this.calibratedLevels);
+    const titleEl = this.overlay.querySelector('.radar-hero-title');
+    if (titleEl) {
+      titleEl.textContent = CEFR_LABELS[newOverall];
+    }
+
+    // Update radar SVG geometry in place
+    this.updateRadarSvgGeometry();
+  }
+
+  private updateRadarSvgGeometry(): void {
+    const cx = 160;
+    const cy = 106;
+    const maxRadius = 72;
+    const axes: SkillId[] = ['vocab', 'grammar', 'reading', 'listening', 'writing', 'speaking'];
+
+    const valuePoints = axes.map((skill, i) => {
+      const level = this.calibratedLevels[skill] || 'A1';
+      const r = maxRadius * ((cefrIndex(level) + 1) / 6);
+      const angle = -Math.PI / 2 + (i * 2 * Math.PI) / 6;
+      const x = cx + r * Math.cos(angle);
+      const y = cy + r * Math.sin(angle);
+      return { skill, x, y, ptStr: `${x.toFixed(1)},${y.toFixed(1)}` };
+    });
+
+    const polygon = this.overlay.querySelector<SVGPolygonElement>('.radar-value-polygon');
+    if (polygon) {
+      polygon.setAttribute('points', valuePoints.map(p => p.ptStr).join(' '));
+    }
+
+    valuePoints.forEach(p => {
+      const dot = this.overlay.querySelector<SVGCircleElement>(`.radar-node-dot[data-skill="${p.skill}"]`);
+      if (dot) {
+        dot.setAttribute('cx', p.x.toFixed(1));
+        dot.setAttribute('cy', p.y.toFixed(1));
+      }
+    });
   }
 
   private applyAndSaveProfile(): void {
@@ -1004,11 +1150,14 @@ export class MultiSkillQuizModal {
   // =========================================================================
   // CELESTIAL RADAR SVG HEXAGON GENERATOR (6-AXIS CEFR PROFILE)
   // =========================================================================
-  public static generateRadarSvg(skills: Record<SkillId, Cefr>, size: number = 320): string {
+  public static generateRadarSvg(
+    skills: Record<SkillId, Cefr>,
+    diagnosedLevels?: Record<SkillId, Cefr>,
+    size: number = 320
+  ): string {
     const cx = 160;
-    const cy = 120;
-    const maxRadius = 70;
-    const labelRadius = 95;
+    const cy = 106;
+    const maxRadius = 72;
 
     // 6 radar axes matching all 6 core CEFR skills
     const axes: Array<{ skill: SkillId; label: string }> = [
@@ -1021,11 +1170,10 @@ export class MultiSkillQuizModal {
     ];
 
     const numAxes = axes.length; // 6
-
-    // Angle helper (0 = top, rotating clockwise by 60 deg)
     const getAngle = (i: number) => -Math.PI / 2 + (i * 2 * Math.PI) / numAxes;
 
     // 1. Concentric Hexagon Rings for A1 to C2 (t = 1/6 to 6/6)
+    // Tier labels placed along the top spoke ONLY (axis 0), with 12px delta spacing for 100% legibility
     const ringsMarkup = CEFR_ORDER.map((tier, k) => {
       const r = maxRadius * ((k + 1) / 6);
       const points = axes.map((_, i) => {
@@ -1035,27 +1183,75 @@ export class MultiSkillQuizModal {
         return `${x.toFixed(1)},${y.toFixed(1)}`;
       }).join(' ');
 
-      // Tier label placed along the top spoke
-      const labelY = cy - r + 9;
+      const labelY = cy - r;
       return `
-        <polygon points="${points}" class="radar-ring radar-ring-${tier}" stroke="var(--ink-muted, #94a3b8)" stroke-width="0.8" stroke-dasharray="2,3" fill="none" opacity="0.35" />
-        <text x="${cx + 4}" y="${labelY.toFixed(1)}" class="radar-tier-label" font-size="11" font-weight="600" fill="var(--ink-muted, #94a3b8)" opacity="0.75">${tier}</text>
+        <polygon points="${points}" class="radar-ring radar-ring-${tier}" stroke="var(--ink-muted, #94a3b8)" stroke-width="0.8" stroke-dasharray="2,3" fill="none" opacity="0.3" />
+        <text x="${cx + 8}" y="${labelY.toFixed(1)}" class="radar-tier-label" font-size="8.5" font-weight="600" text-anchor="start" dominant-baseline="middle" fill="var(--ink-muted, #94a3b8)" opacity="0.75">${tier}</text>
       `;
     }).join('');
 
-    // 2. Axis Spoke Lines & Labels (11px font floor compliance)
+    // Optional target benchmark ring
+    let targetRingMarkup = '';
+    if (diagnosedLevels) {
+      const diagIndices = ALL_SKILLS.map(s => cefrIndex(diagnosedLevels[s] || 'A1')).sort((a, b) => a - b);
+      const diagMedianIdx = Math.round(diagIndices[Math.floor(diagIndices.length / 2)]);
+      const targetR = maxRadius * ((diagMedianIdx + 1) / 6);
+      const targetPts = axes.map((_, i) => {
+        const angle = getAngle(i);
+        const x = cx + targetR * Math.cos(angle);
+        const y = cy + targetR * Math.sin(angle);
+        return `${x.toFixed(1)},${y.toFixed(1)}`;
+      }).join(' ');
+      targetRingMarkup = `<polygon points="${targetPts}" class="radar-target-ring" stroke="var(--ink-muted, #94a3b8)" stroke-width="1.2" stroke-dasharray="3,3" fill="none" opacity="0.45" />`;
+    }
+
+    // 2. Axis Spoke Lines & Labels (11px font floor compliance, no redundant values)
     const spokesMarkup = axes.map((axis, i) => {
       const angle = getAngle(i);
       const outerX = cx + maxRadius * Math.cos(angle);
       const outerY = cy + maxRadius * Math.sin(angle);
-      const textX = cx + labelRadius * Math.cos(angle);
-      const textY = cy + labelRadius * Math.sin(angle);
-      const skillLevel = skills[axis.skill] || 'A1';
+
+      let textX = cx;
+      let textY = cy;
+      let textAnchor = 'middle';
+      let dominantBaseline = 'central';
+
+      if (i === 0) {
+        textX = cx;
+        textY = cy - maxRadius - 8;
+        textAnchor = 'middle';
+        dominantBaseline = 'auto';
+      } else if (i === 1) {
+        textX = cx + (maxRadius + 12) * Math.cos(angle);
+        textY = cy + (maxRadius + 12) * Math.sin(angle);
+        textAnchor = 'start';
+        dominantBaseline = 'central';
+      } else if (i === 2) {
+        textX = cx + (maxRadius + 12) * Math.cos(angle);
+        textY = cy + (maxRadius + 12) * Math.sin(angle);
+        textAnchor = 'start';
+        dominantBaseline = 'central';
+      } else if (i === 3) {
+        textX = cx;
+        textY = cy + maxRadius + 8;
+        textAnchor = 'middle';
+        dominantBaseline = 'hanging';
+      } else if (i === 4) {
+        textX = cx + (maxRadius + 12) * Math.cos(angle);
+        textY = cy + (maxRadius + 12) * Math.sin(angle);
+        textAnchor = 'end';
+        dominantBaseline = 'central';
+      } else if (i === 5) {
+        textX = cx + (maxRadius + 12) * Math.cos(angle);
+        textY = cy + (maxRadius + 12) * Math.sin(angle);
+        textAnchor = 'end';
+        dominantBaseline = 'central';
+      }
 
       return `
         <line x1="${cx}" y1="${cy}" x2="${outerX.toFixed(1)}" y2="${outerY.toFixed(1)}" class="radar-axis-spoke" stroke="var(--ink-muted, #94a3b8)" stroke-width="1" opacity="0.3" />
-        <text x="${textX.toFixed(1)}" y="${textY.toFixed(1)}" class="radar-axis-label" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="700" letter-spacing="0.05em" fill="var(--ink-secondary, #cbd5e1)">
-          ${axis.label} (${skillLevel})
+        <text x="${textX.toFixed(1)}" y="${textY.toFixed(1)}" class="radar-axis-label" text-anchor="${textAnchor}" dominant-baseline="${dominantBaseline}" font-size="11" font-weight="700" letter-spacing="0.06em" fill="var(--ink-secondary, #cbd5e1)">
+          ${axis.label}
         </text>
       `;
     }).join('');
@@ -1067,19 +1263,19 @@ export class MultiSkillQuizModal {
       const angle = getAngle(i);
       const x = cx + r * Math.cos(angle);
       const y = cy + r * Math.sin(angle);
-      return { x, y, ptStr: `${x.toFixed(1)},${y.toFixed(1)}` };
+      return { skill: axis.skill, x, y, ptStr: `${x.toFixed(1)},${y.toFixed(1)}` };
     });
 
     const polygonPtsStr = valuePoints.map(p => p.ptStr).join(' ');
 
     const nodesMarkup = valuePoints.map(p => `
-      <circle cx="${p.x.toFixed(1)}" cy="${p.y.toFixed(1)}" r="4" class="radar-node-dot" fill="var(--accent-gold, #a5b4fc)" stroke="var(--bg-canvas, #080a0f)" stroke-width="2" />
+      <circle cx="${p.x.toFixed(1)}" cy="${p.y.toFixed(1)}" r="4.5" class="radar-node-dot" data-skill="${p.skill}" fill="var(--accent-gold, #a5b4fc)" stroke="var(--bg-canvas, #080a0f)" stroke-width="2" />
     `).join('');
 
-    const svgHeight = Math.round(size * 240 / 320);
+    const svgHeight = 240;
 
     return `
-      <svg width="${size}" height="${svgHeight}" viewBox="0 0 320 240" class="celestial-radar-svg" role="img" aria-label="Celestial Radar Proficiency Chart">
+      <svg width="${size}" height="${svgHeight}" viewBox="0 0 320 240" class="celestial-radar-svg" role="img" aria-label="${t('quiz.radar_chart_aria', undefined, 'Celestial Radar Proficiency Chart')}">
         <defs>
           <filter id="radar-glow" x="-20%" y="-20%" width="140%" height="140%">
             <feGaussianBlur stdDeviation="3.5" result="blur" />
@@ -1091,10 +1287,12 @@ export class MultiSkillQuizModal {
         </defs>
         <!-- Concentric polygon rings -->
         ${ringsMarkup}
+        <!-- Target Ring -->
+        ${targetRingMarkup}
         <!-- Axis Spokes -->
         ${spokesMarkup}
         <!-- Learner Calibrated Filled Polygon -->
-        <polygon points="${polygonPtsStr}" class="radar-value-polygon" fill="rgba(165, 180, 252, 0.25)" stroke="var(--accent-gold, #a5b4fc)" stroke-width="2.5" filter="url(#radar-glow)" />
+        <polygon points="${polygonPtsStr}" class="radar-value-polygon" fill="rgba(165, 180, 252, 0.22)" stroke="var(--accent-gold, #a5b4fc)" stroke-width="2.5" filter="url(#radar-glow)" />
         <!-- Node Dots -->
         ${nodesMarkup}
       </svg>

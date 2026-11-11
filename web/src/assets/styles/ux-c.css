@@ -65,8 +65,8 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
     font-size: max(16px, var(--font-body)) !important;
   }
 
-  /* Hide floating duplicate corner compass on mobile (bottom nav handles navigation) */
-  .corner-compass-container {
+  /* Hide floating duplicate corner compass trigger on mobile when closed (bottom nav handles normal navigation) */
+  .corner-compass-container:not(.compass-active) {
     display: none !important;
   }
 
@@ -77,9 +77,15 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
 
   /* Reserve safe padding above the 60px mobile bottom navigation bar */
   #workspace-mount:not(.cockpit-mode):not(:has(.cd-cockpit-shell)):not(.tree-mode):not(:has(.skill-tree-view)) {
-    padding: 16px var(--pad-screen-right, 12px) calc(var(--safe-bottom-dock) + env(safe-area-inset-bottom, 0px)) var(--pad-screen-left, 12px) !important;
+    padding: 16px var(--pad-screen-right, 12px) calc(var(--safe-bottom-dock, 84px) + env(safe-area-inset-bottom, 0px) + 16px) var(--pad-screen-left, 12px) !important;
     box-sizing: border-box !important;
     margin-bottom: 0 !important;
+    height: 100% !important;
+    min-height: 0 !important;
+    max-height: 100% !important;
+    flex: 1 1 auto !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
   }
 
   #workspace-mount.cockpit-mode,
@@ -100,13 +106,30 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
 
   #workspace-mount.tree-mode,
   #workspace-mount:has(.skill-tree-view) {
-    padding: 4px var(--pad-screen-right, 12px) calc(var(--safe-bottom-dock, 84px) + env(safe-area-inset-bottom, 0px)) var(--pad-screen-left, 12px) !important;
+    padding: 4px var(--pad-screen-right, 12px) calc(var(--safe-bottom-dock, 84px) + env(safe-area-inset-bottom, 0px) + 16px) var(--pad-screen-left, 12px) !important;
     margin: 0 !important;
     box-sizing: border-box !important;
-    height: auto !important;
-    min-height: 100% !important;
+    height: 100% !important;
+    min-height: 0 !important;
+    max-height: 100% !important;
+    flex: 1 1 auto !important;
     overflow-y: auto !important;
-    padding-bottom: 24px !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  /* Explicit visible scrollbar affordance for mobile scroll containers */
+  #workspace-mount::-webkit-scrollbar {
+    width: 6px !important;
+    display: block !important;
+  }
+
+  #workspace-mount::-webkit-scrollbar-track {
+    background: transparent !important;
+  }
+
+  #workspace-mount::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb, rgba(255, 255, 255, 0.28)) !important;
+    border-radius: 9999px !important;
   }
 
   /* Clean Unified Navigation Controls: Back Button & Level Badge */
@@ -1064,25 +1087,33 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
 
   /* 13. Mobile Skill Deck: Elegant Viewport-Filling 2-Column Grid (Flexible, iPhone 6+ Ready) */
   .skill-tree-view {
-    height: 100% !important;
+    height: auto !important;
+    min-height: min-content !important;
     display: flex !important;
     flex-direction: column !important;
+    justify-content: flex-start !important;
     overflow-x: hidden !important;
     overflow-y: visible !important;
     -webkit-overflow-scrolling: touch !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .skill-tree-shell {
     height: auto !important;
+    min-height: min-content !important;
     width: 100% !important;
     box-sizing: border-box !important;
   }
 
   .skill-tree-shell.view-mode-deck {
-    min-height: 100% !important;
+    min-height: min-content !important;
     height: auto !important;
     display: flex !important;
     flex-direction: column !important;
     justify-content: flex-start !important;
     overflow: visible !important;
-    padding: 0 0 calc(var(--safe-bottom-dock, 84px) + 12px) 0 !important;
+    padding: 0 !important;
     gap: 12px !important;
     box-sizing: border-box !important;
   }
@@ -1090,9 +1121,9 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
   .workout-banner.tree-command-panel {
     display: flex !important;
     flex-direction: column !important;
-    padding: 16px !important;
+    padding: 12px 14px !important;
     gap: 10px !important;
-    margin: 0 !important;
+    margin: 0 0 12px 0 !important;
     flex: 0 0 auto !important;
     width: 100% !important;
     border-radius: 12px !important;
@@ -1127,7 +1158,7 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
     flex-shrink: 0 !important;
     font-size: var(--font-kicker, 11px) !important;
     font-weight: 700 !important;
-    color: var(--accent-gold) !important;
+    color: var(--accent-lavender, #a5b4fc) !important;
     letter-spacing: 0.08em !important;
     text-transform: uppercase !important;
   }
@@ -1151,10 +1182,10 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
     display: flex !important;
     flex-direction: row !important;
     align-items: center !important;
-    justify-content: space-between !important;
+    justify-content: flex-start !important;
     width: 100% !important;
     min-height: 0 !important;
-    gap: 8px !important;
+    gap: 6px !important;
     font-size: var(--font-kicker, 11px) !important;
     font-family: var(--font-mono) !important;
   }
@@ -1165,44 +1196,36 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
   }
 
   .workout-summit-pct strong {
-    color: var(--accent-gold) !important;
-  }
-
-  .workout-banner-count {
-    display: inline !important;
-    color: var(--ink-muted) !important;
-    font-size: var(--font-kicker, 11px) !important;
-    white-space: nowrap !important;
+    color: var(--ink-primary) !important;
   }
 
   .workout-summit-bar-track {
     display: block !important;
     width: 100% !important;
-    height: 3px !important;
-    background: rgba(255, 255, 255, 0.07) !important;
-    border-radius: 9999px !important;
+    height: 4px !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    border-radius: 2px !important;
     overflow: hidden !important;
-    margin: 3px 0 0 0 !important;
+    margin: 4px 0 0 0 !important;
   }
 
   .workout-summit-bar-fill {
     height: 100% !important;
-    background: var(--accent-gold) !important;
-    border-radius: 9999px !important;
+    background: var(--accent-lavender, #a5b4fc) !important;
+    border-radius: 2px !important;
   }
 
   .tree-command-panel .workout-panel,
   .workout-panel {
     display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: nowrap !important;
-    align-items: center !important;
-    justify-content: space-between !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    justify-content: flex-start !important;
     background: transparent !important;
     border: none !important;
     border-radius: 0 !important;
     padding: 0 !important;
-    gap: 12px !important;
+    gap: 10px !important;
     height: auto !important;
     min-height: 0 !important;
     width: 100% !important;
@@ -1219,17 +1242,17 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
     flex-direction: column !important;
     justify-content: center !important;
     gap: 6px !important;
+    width: 100% !important;
   }
 
   .workout-panel-header {
     display: flex !important;
     flex-direction: row !important;
-    flex-wrap: wrap !important;
     align-items: center !important;
-    justify-content: flex-start !important;
+    justify-content: space-between !important;
     width: 100% !important;
     min-width: 0 !important;
-    gap: 4px 8px !important;
+    gap: 8px !important;
   }
 
   .workout-panel-header .telemetry-label {
@@ -1238,25 +1261,26 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
     line-height: 1.2 !important;
     font-weight: 700 !important;
     letter-spacing: 0.08em !important;
-    color: var(--ink-primary) !important;
+    color: var(--ink-secondary) !important;
     text-transform: uppercase !important;
   }
 
+  .workout-panel-header .workout-remaining-label.chip--count,
   .workout-panel-header .workout-remaining-label {
     font-size: var(--font-kicker, 11px) !important;
-    color: var(--accent-gold) !important;
-    background: rgba(245, 158, 11, 0.12) !important;
+    color: var(--ink-muted, #94a3b8) !important;
+    background: rgba(255, 255, 255, 0.06) !important;
     padding: 2px 8px !important;
     border-radius: 4px !important;
     border: none !important;
-    font-weight: 700 !important;
+    font-weight: 600 !important;
     letter-spacing: 0.04em !important;
   }
 
   .workout-tasks {
     display: flex !important;
     flex-direction: column !important;
-    gap: 4px !important;
+    gap: 0 !important;
     width: 100% !important;
     min-width: 0 !important;
   }
@@ -1264,45 +1288,86 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
   .workout-task-chip {
     display: flex !important;
     align-items: center !important;
-    gap: 6px !important;
-    white-space: nowrap !important;
-    overflow: hidden !important;
-    font-size: var(--font-kicker, 11px) !important;
+    justify-content: space-between !important;
+    gap: 8px !important;
+    font-size: 12.5px !important;
     color: var(--ink-secondary) !important;
     line-height: 1.2 !important;
     width: 100% !important;
     min-width: 0 !important;
-    min-height: var(--touch-target-min, 44px) !important;
+    min-height: 32px !important;
+    height: 32px !important;
+    padding: 2px 4px !important;
+    border-radius: 6px !important;
+    box-sizing: border-box !important;
+    cursor: pointer !important;
+    transition: background 0.15s ease, color 0.15s ease !important;
   }
 
-  .workout-task-chip>span:first-child {
-    flex-shrink: 0 !important;
+  .workout-task-chip:hover,
+  .workout-task-chip:active {
+    background: rgba(255, 255, 255, 0.04) !important;
+    color: var(--ink-primary) !important;
   }
 
-  .workout-task-chip>span:last-child {
-    overflow: hidden !important;
-    white-space: normal !important;
+  .workout-task-left {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
     min-width: 0 !important;
     flex: 1 1 auto !important;
   }
 
+  .workout-task-status-icon {
+    flex-shrink: 0 !important;
+    color: var(--ink-muted) !important;
+    font-size: 12px !important;
+    width: 14px !important;
+    text-align: center !important;
+  }
+
+  .workout-task-text {
+    overflow: hidden !important;
+    white-space: nowrap !important;
+    text-overflow: ellipsis !important;
+    font-family: var(--font-sans) !important;
+    font-size: 12.5px !important;
+  }
+
+  .workout-task-chevron {
+    flex-shrink: 0 !important;
+    color: var(--ink-muted) !important;
+    font-size: 14px !important;
+    line-height: 1 !important;
+    opacity: 0.7 !important;
+  }
+
   .tree-command-panel .btn-continue-workout,
   .btn-continue-workout {
-    min-height: 44px !important;
-    height: 44px !important;
-    max-height: 44px !important;
-    padding: 8px 14px !important;
-    font-size: var(--font-kicker, 11px) !important;
-    font-weight: 700 !important;
-    letter-spacing: 0.04em !important;
-    white-space: nowrap !important;
-    flex: 0 0 auto !important;
-    width: auto !important;
-    border-radius: var(--radius-squircle-sm, 9px) !important;
-    background: var(--accent-gold) !important;
-    color: var(--bg-canvas) !important;
+    min-height: 40px !important;
+    height: 40px !important;
+    padding: 8px 16px !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.02em !important;
+    width: 100% !important;
+    border-radius: var(--radius-btn, 10px) !important;
+    background: var(--accent-lavender, #a5b4fc) !important;
+    color: #0b0f19 !important;
     border: none !important;
+    box-shadow: none !important;
     box-sizing: border-box !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    cursor: pointer !important;
+    transition: opacity 0.15s ease, transform 0.15s ease !important;
+  }
+
+  .btn-continue-workout:active {
+    transform: scale(0.99) !important;
+    opacity: 0.9 !important;
   }
 
   .constellation-view-switcher {
@@ -1342,24 +1407,28 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
     gap: 12px !important;
     width: 100% !important;
     box-sizing: border-box !important;
+    margin-top: 10px !important;
   }
 
-  .deck-branch-card {
+  .deck-branch-card,
+  .skill-card {
     position: relative !important;
     min-width: 0 !important;
-    min-height: 145px !important;
+    min-height: 0 !important;
     height: auto !important;
-    padding: 16px !important;
-    gap: 8px !important;
+    padding: 12px 14px !important;
+    gap: 6px !important;
     border-radius: 12px !important;
     box-sizing: border-box !important;
     display: flex !important;
     flex-direction: column !important;
+    align-items: stretch !important;
     justify-content: space-between !important;
     overflow: hidden !important;
     background: var(--bg-surface) !important;
     border: 1px solid var(--border-hairline) !important;
     cursor: pointer !important;
+    text-align: left !important;
     transition: transform 0.15s, border-color 0.15s, background 0.15s !important;
   }
 
@@ -1371,44 +1440,58 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
 
   .deck-branch-card[data-branch="collocations_grammar"] {
     grid-column: 1 / -1 !important;
-    height: 100% !important;
     min-height: 0 !important;
-    max-height: none !important;
+    height: auto !important;
   }
 
   .deck-card-top {
     display: flex !important;
     flex-direction: column !important;
-    gap: 6px !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    gap: 4px !important;
     width: 100% !important;
     min-width: 0 !important;
+    text-align: left !important;
   }
 
-  .deck-card-header {
+  .deck-card-header,
+  .skill-head {
     display: flex !important;
+    flex-direction: row !important;
     align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 8px !important;
     width: 100% !important;
     min-width: 0 !important;
     padding-right: 44px !important;
     box-sizing: border-box !important;
+    text-align: left !important;
+    position: relative !important;
   }
 
   .deck-header-lead {
     display: flex !important;
+    flex-direction: row !important;
     align-items: center !important;
-    gap: 7px !important;
+    justify-content: flex-start !important;
+    gap: 8px !important;
+    width: 100% !important;
     min-width: 0 !important;
+    text-align: left !important;
   }
 
   .deck-branch-sub {
     display: flex !important;
-    flex-wrap: wrap !important;
+    flex-direction: row !important;
     align-items: center !important;
+    justify-content: flex-start !important;
     gap: 6px !important;
     width: 100% !important;
     min-width: 0 !important;
     padding-right: 0 !important;
     box-sizing: border-box !important;
+    text-align: left !important;
   }
 
   .deck-branch-icon-badge {
@@ -1421,9 +1504,11 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
+    flex-shrink: 0 !important;
+    margin: 0 !important;
   }
 
-  /* Branch-specific subtle pastel tones */
+  /* Category hues (cyan, violet, pink, teal, indigo) - No collision with status amber/green */
   .deck-branch-card[data-branch="reading"] .deck-branch-icon-badge {
     background: rgba(56, 189, 248, 0.12) !important;
     color: #38bdf8 !important;
@@ -1445,23 +1530,23 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
   }
 
   .deck-branch-card[data-branch="listening"] .deck-branch-icon-badge {
-    background: rgba(251, 191, 36, 0.12) !important;
-    color: #fbbf24 !important;
-    border: 1px solid rgba(251, 191, 36, 0.25) !important;
+    background: rgba(244, 114, 182, 0.12) !important;
+    color: #f472b6 !important;
+    border: 1px solid rgba(244, 114, 182, 0.25) !important;
   }
 
   .deck-branch-card[data-branch="listening"] .deck-progress-bar-fill {
-    background: #fbbf24 !important;
+    background: #f472b6 !important;
   }
 
   .deck-branch-card[data-branch="speaking"] .deck-branch-icon-badge {
-    background: rgba(52, 211, 153, 0.12) !important;
-    color: #34d399 !important;
-    border: 1px solid rgba(52, 211, 153, 0.25) !important;
+    background: rgba(45, 212, 191, 0.12) !important;
+    color: #2dd4bf !important;
+    border: 1px solid rgba(45, 212, 191, 0.25) !important;
   }
 
   .deck-branch-card[data-branch="speaking"] .deck-progress-bar-fill {
-    background: #34d399 !important;
+    background: #2dd4bf !important;
   }
 
   .deck-branch-card[data-branch="collocations_grammar"] .deck-branch-icon-badge {
@@ -1474,15 +1559,17 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
     background: #818cf8 !important;
   }
 
-  .deck-cefr-badge {
+  .deck-cefr-badge,
+  .lvl-chip {
     font-size: var(--font-kicker, 11px) !important;
     padding: 2px 6px !important;
     line-height: 1.2 !important;
     border-radius: 4px !important;
     flex-shrink: 0 !important;
-    background: rgba(255, 255, 255, 0.05) !important;
-    border: 1px solid var(--border-hairline) !important;
+    background: rgba(255, 255, 255, 0.06) !important;
+    border: none !important;
     color: var(--ink-secondary) !important;
+    white-space: nowrap !important;
   }
 
   .deck-branch-name {
@@ -1492,12 +1579,15 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
     margin: 0 !important;
     white-space: nowrap !important;
     overflow: hidden !important;
+    text-align: left !important;
   }
 
   .deck-branch-tagline {
     font-size: 11px !important;
     color: var(--ink-muted) !important;
-    white-space: normal !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
     margin: 0 !important;
     font-weight: 500 !important;
     letter-spacing: -0.01em !important;
@@ -1507,11 +1597,11 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
   .deck-mastery-block {
     display: flex !important;
     flex-direction: column !important;
-    gap: 6px !important;
+    gap: 4px !important;
     width: 100% !important;
     min-width: 0 !important;
     flex: 0 0 auto !important;
-    margin-top: auto !important;
+    margin-top: 4px !important;
   }
 
   .deck-mastery-labels {
@@ -1529,19 +1619,31 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
   .deck-mastery-pct-text,
   .deck-perks-count-text {
     font-size: var(--font-kicker, 11px) !important;
+    color: var(--ink-secondary) !important;
+    font-family: var(--font-mono) !important;
     white-space: nowrap !important;
   }
 
-  .deck-progress-bar-track {
+  .deck-progress-bar-track,
+  .progress {
     height: 4px !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    border-radius: 2px !important;
+    width: 100% !important;
+    overflow: hidden !important;
+  }
+
+  .deck-progress-bar-fill {
+    height: 100% !important;
     border-radius: 2px !important;
   }
 
   /* 44x44px Corner Arrow Button - No outline, clean Apple minimal touch target */
-  .deck-branch-card .btn-enter-dossier {
+  .deck-branch-card .btn-enter-dossier,
+  .skill-arrow {
     position: absolute !important;
-    top: 6px !important;
-    right: 6px !important;
+    top: 0 !important;
+    right: 0 !important;
     width: 44px !important;
     height: 44px !important;
     min-width: 44px !important;
@@ -1680,6 +1782,168 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
     align-items: stretch !important;
     padding: 20px 16px !important;
     gap: 12px !important;
+  }
+
+  .completion-receipt-card.multi-skill-intro-modal {
+    text-align: left !important;
+    align-items: stretch !important;
+    padding: 20px 16px !important;
+    gap: 0 !important;
+  }
+
+  .completion-receipt-card.multi-skill-intro-modal:focus {
+    outline: none !important;
+  }
+
+  .completion-receipt-card.multi-skill-intro-modal button:focus:not(:focus-visible),
+  .completion-receipt-card.multi-skill-intro-modal .btn:focus:not(:focus-visible) {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+
+  .completion-receipt-card.multi-skill-intro-modal .dlg-head {
+    display: grid !important;
+    grid-template-columns: 1fr 44px !important;
+    align-items: center !important;
+    gap: 8px !important;
+    width: 100% !important;
+    margin-bottom: 12px !important;
+  }
+
+  .completion-receipt-card.multi-skill-intro-modal .dlg-kicker {
+    font-family: var(--font-mono, monospace) !important;
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+    letter-spacing: 0.08em !important;
+    text-transform: uppercase !important;
+    color: var(--ink-muted, #94a3b8) !important;
+    white-space: nowrap !important;
+    text-align: left !important;
+  }
+
+  .completion-receipt-card.multi-skill-intro-modal .dlg-head .multi-skill-close-btn {
+    width: 44px !important;
+    height: 44px !important;
+    min-width: 44px !important;
+    min-height: 44px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: transparent !important;
+    border: none !important;
+    color: var(--ink-muted, #94a3b8) !important;
+    font-size: 18px !important;
+    cursor: pointer !important;
+    border-radius: var(--radius-btn, 10px) !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    justify-self: end !important;
+  }
+
+  .completion-receipt-card.multi-skill-intro-modal .dlg-title {
+    font-family: var(--font-sans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif) !important;
+    font-size: 20px !important;
+    font-weight: 600 !important;
+    line-height: 1.3 !important;
+    letter-spacing: normal !important;
+    text-transform: none !important;
+    text-align: left !important;
+    color: var(--ink-primary, #f8fafc) !important;
+    margin: 0 0 8px 0 !important;
+  }
+
+  .completion-receipt-card.multi-skill-intro-modal .dlg-meta {
+    font-family: var(--font-mono, monospace) !important;
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.06em !important;
+    color: var(--accent-gold, #a5b4fc) !important;
+    text-transform: uppercase !important;
+    text-align: left !important;
+    margin-bottom: 6px !important;
+  }
+
+  .completion-receipt-card.multi-skill-intro-modal .dlg-body {
+    font-family: var(--font-sans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif) !important;
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+    color: var(--ink-secondary, #94a3b8) !important;
+    text-align: left !important;
+    max-width: 68ch !important;
+    margin: 0 0 16px 0 !important;
+  }
+
+  .completion-receipt-card.multi-skill-intro-modal .skill-row {
+    display: grid !important;
+    grid-template-columns: repeat(5, 1fr) !important;
+    gap: 8px !important;
+    width: 100% !important;
+    margin-bottom: 20px !important;
+    box-sizing: border-box !important;
+  }
+
+  .completion-receipt-card.multi-skill-intro-modal .skill-chip {
+    min-height: 44px !important;
+    border: 0 !important;
+    background: var(--bg-surface-sunk, #0d121c) !important;
+    border-radius: var(--radius-btn, 10px) !important;
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    color: var(--ink-secondary, #cbd5e1) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 4px !important;
+    padding: 6px 2px !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+    pointer-events: none !important;
+    user-select: none !important;
+  }
+
+  .completion-receipt-card.multi-skill-intro-modal .skill-chip-icon {
+    color: var(--accent-gold, #a5b4fc) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .completion-receipt-card.multi-skill-intro-modal .skill-chip-label {
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    max-width: 100% !important;
+  }
+
+  .completion-receipt-card.multi-skill-intro-modal .dlg-actions {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+    margin-top: 10px !important;
+    width: 100% !important;
+  }
+
+  .completion-receipt-card.multi-skill-intro-modal .btn-primary {
+    border: 0 !important;
+    background: var(--accent-gold, #a5b4fc) !important;
+    color: var(--bg-canvas, #080a0f) !important;
+    font-weight: 700 !important;
+  }
+
+  .completion-receipt-card.multi-skill-intro-modal .btn-secondary {
+    background: var(--bg-surface-sunk, rgba(255, 255, 255, 0.05)) !important;
+    color: var(--ink-primary, #f8fafc) !important;
+    border: 1px solid var(--border-hairline, rgba(255, 255, 255, 0.12)) !important;
+    font-weight: 600 !important;
+  }
+
+  .completion-receipt-card.multi-skill-intro-modal .btn-tertiary {
+    background: transparent !important;
+    border: 0 !important;
+    color: var(--ink-muted, #94a3b8) !important;
+    font-weight: 500 !important;
   }
 
   .quiz-footer-strip {
@@ -2146,38 +2410,146 @@ body:has(.lexicon-drawer-backdrop.open) #notification-toast-container {
   text-align: left !important;
   width: 100% !important;
   max-width: 520px !important;
-  border-radius: 16px 16px 0 0 !important;
+  border-radius: 20px 20px 0 0 !important;
   border-bottom: none !important;
   margin: 0 !important;
-  padding: 20px 20px calc(16px + env(safe-area-inset-bottom, 12px)) 20px !important;
+  padding: 12px 18px calc(20px + env(safe-area-inset-bottom, 12px)) 18px !important;
   box-sizing: border-box !important;
-  max-height: 85dvh !important;
+  max-height: 88dvh !important;
   overflow: hidden !important;
+}
+
+.sheet-grabber-handle {
+  width: 36px;
+  height: 4px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.22);
+  margin: 0 auto 12px;
+  flex-shrink: 0;
+}
+
+.mobile-sheet-title {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--ink-primary);
+  letter-spacing: -0.01em;
 }
 
 .mobile-sheet-grid {
   flex: 1 1 auto !important;
   min-height: 0 !important;
   overflow-y: auto !important;
+  scrollbar-gutter: stable;
+  mask-image: linear-gradient(to bottom, #000 calc(100% - 24px), transparent);
+  -webkit-mask-image: linear-gradient(to bottom, #000 calc(100% - 24px), transparent);
   padding-bottom: 24px !important;
-  padding-right: 4px;
+  padding-right: 2px;
 }
 
-.mobile-sheet-grid .hud-btn {
-  justify-content: flex-start !important;
-  text-align: left !important;
-  width: 100% !important;
+.mobile-sheet-kicker {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-muted, #94a3b8);
+  margin: 18px 0 8px 2px;
+}
+
+.mobile-sheet-kicker:first-child {
+  margin-top: 4px;
+}
+
+.mobile-sheet-row {
+  display: flex !important;
+  align-items: center !important;
   gap: 12px !important;
-  -webkit-overflow-scrolling: touch;
-  overscroll-behavior: contain;
+  min-height: 46px !important;
+  padding: 10px 14px !important;
+  border: none !important;
+  background: var(--bg-sunk, rgba(255, 255, 255, 0.04)) !important;
+  border-radius: var(--radius-btn, 10px) !important;
+  color: var(--ink-primary) !important;
+  font-family: var(--font-sans) !important;
+  text-decoration: none !important;
+  box-sizing: border-box !important;
+  cursor: pointer !important;
+  transition: background 0.15s ease, transform 0.1s ease !important;
+  width: 100% !important;
+}
+
+.mobile-sheet-row:hover {
+  background: rgba(255, 255, 255, 0.08) !important;
+}
+
+.mobile-sheet-row:active {
+  transform: scale(0.99);
+}
+
+.mobile-sheet-row .row-ico {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
+  color: var(--accent-gold, #a5b4fc);
+}
+
+.mobile-sheet-row .row-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink-primary);
+  line-height: 1.35;
+  text-align: left;
+}
+
+.mobile-sheet-row .row-val {
+  margin-left: auto;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink-secondary, #94a3b8);
+  white-space: nowrap;
+  flex-shrink: 0;
+  text-align: right;
+}
+
+.mobile-sheet-row .row-chev {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  color: var(--ink-secondary, #94a3b8);
+  opacity: 0.5;
+  flex-shrink: 0;
+}
+
+.mobile-sheet-row .row-val + .row-chev {
+  margin-left: 8px;
+}
+
+.sheet-stat-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px 14px;
+  background: var(--bg-sunk, rgba(255, 255, 255, 0.04));
+  border: none;
+  border-radius: var(--radius-btn, 10px);
+  cursor: pointer;
+  transition: background 0.15s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.sheet-stat-card:hover {
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .mobile-action-sheet .apple-modal-footer {
-  flex: 0 0 auto !important;
-  margin-top: 12px !important;
-  padding-top: 12px !important;
-  border-top: 1px solid var(--border-hairline) !important;
-  background: transparent !important;
+  display: none !important;
 }
 
 /* ==========================================================================

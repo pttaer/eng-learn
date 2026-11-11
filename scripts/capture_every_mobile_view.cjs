@@ -141,6 +141,20 @@ async function run() {
       console.log(`[CAPTURED ${captured.length.toString().padStart(2, '0')}] ${filename} — ${desc}`);
     };
 
+    const targetViewArg = process.argv.find(a => a.startsWith('--view='))?.split('=')[1] || (process.argv.includes('--view') ? process.argv[process.argv.indexOf('--view') + 1] : null);
+    if (targetViewArg === '28') {
+      await page.goto(`${BASE_URL}#tree`, { waitUntil: 'networkidle0' });
+      await new Promise(r => setTimeout(r, 800));
+      await page.evaluate(() => {
+        if (window.LexiconDrawer && typeof window.LexiconDrawer.open === 'function') {
+          window.LexiconDrawer.open('ephemeral');
+        }
+      });
+      await new Promise(r => setTimeout(r, 800));
+      await shot('28-mobile-lexicon-drawer.png', 'Universal In-Text Lexicon Drawer', true);
+      return;
+    }
+
     // =========================================================================
     // SECTION 1: MAIN ENGLISH SINGULARITY APP (MOBILE)
     // =========================================================================
@@ -425,7 +439,7 @@ async function run() {
           localStorage.setItem('eng_singularity_state_v1', JSON.stringify(st));
           const prog = { streak: 5, lastActiveDate: '2020-01-01', questsCompleted: [] };
           localStorage.setItem('eng_progression_v1', JSON.stringify(prog));
-        } catch (e) {}
+        } catch (e) { }
         if (window.NotificationEngine && typeof window.NotificationEngine.evaluateStatus === 'function') {
           window.NotificationEngine.evaluateStatus();
         }
@@ -533,11 +547,16 @@ async function run() {
     try {
       await page.goto(`${BASE_URL}ielts.html#strategy`, { waitUntil: 'networkidle0' });
       await page.evaluate(() => {
-        const vaultTab = [...document.querySelectorAll('.ie-mode-btn')].find(b => /Vault/.test(b.textContent));
-        if (vaultTab) vaultTab.click();
+        const toggle = document.querySelector('.ie-drawer-toggle');
+        if (toggle) toggle.click();
       });
       await new Promise(r => setTimeout(r, 700));
-      await shot('43-mobile-ielts-knowledge-vault.png', 'IELTS Knowledge Vault (746 Tips Articles / 415k Words)');
+      await page.evaluate(() => {
+        const drawer = document.querySelector('.ie-strategy-drawer');
+        if (drawer) drawer.scrollIntoView({ block: 'start' });
+      });
+      await new Promise(r => setTimeout(r, 300));
+      await shot('43-mobile-ielts-knowledge-vault.png', 'IELTS Strategy Blueprint Expanded Drawer & Tips Breakdown', true);
     } catch (e) {
       console.warn('Knowledge vault error:', e.message);
     }
@@ -562,6 +581,18 @@ async function run() {
     await new Promise(r => setTimeout(r, 600));
     await shot('45-mobile-ielts-mock-exam.png', 'IELTS Full CD-Exam Mock Cockpit & Band Calculator');
 
+    // 46. Floating Quick Scratchpad & Notes Manager View
+    await page.goto(`${BASE_URL}#tree`, { waitUntil: 'networkidle0' });
+    await new Promise(r => setTimeout(r, 600));
+    await page.evaluate(() => {
+      if (window.FloatingNote) window.FloatingNote.open();
+    });
+    await new Promise(r => setTimeout(r, 600));
+    await shot('46-mobile-floating-scratchpad.png', 'Floating Quick Scratchpad & Notes Manager', true);
+    await page.evaluate(() => {
+      if (window.FloatingNote) window.FloatingNote.minimize();
+    });
+
   } catch (err) {
     console.error('Fatal error during capture:', err);
   } finally {
@@ -570,6 +601,9 @@ async function run() {
   }
 
   // Generate complete README in all target directories
+  const part1 = captured.filter(c => !c.filename.includes('ielts-'));
+  const part2 = captured.filter(c => c.filename.includes('ielts-'));
+
   const indexMd = `# Complete Mobile Visual Audit Gallery (iPhone 14/15 — 390x844 Retina @2x)
 
 Captured: **${new Date().toISOString()}**  
@@ -578,12 +612,12 @@ Total Mobile Views Captured: **${captured.length}**
 ## Part 1: English Singularity C2 Mastery App (Mobile)
 | # | Filename | View Title & Description |
 |---|---|---|
-${captured.slice(0, 30).map((c, i) => `| ${i + 1} | [\`${c.filename}\`](./${c.filename}) | **${c.desc}** |`).join('\n')}
+${part1.map((c, i) => `| ${i + 1} | [\`${c.filename}\`](./${c.filename}) | **${c.desc}** |`).join('\n')}
 
 ## Part 2: Academic IELTS 7.0 Platform (Mobile)
 | # | Filename | View Title & Description |
 |---|---|---|
-${captured.slice(30).map((c, i) => `| ${i + 31} | [\`${c.filename}\`](./${c.filename}) | **${c.desc}** |`).join('\n')}
+${part2.map((c, i) => `| ${i + 1} | [\`${c.filename}\`](./${c.filename}) | **${c.desc}** |`).join('\n')}
 
 ---
 *Captured with automated headless Chrome engine on mobile touch profile.*

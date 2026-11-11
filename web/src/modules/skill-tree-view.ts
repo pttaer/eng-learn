@@ -169,7 +169,7 @@ export class SkillTreeView {
     const progress = SkillTreeEngine.calculateSummitProgress();
 
     this.container.innerHTML = `
-      <div class="skill-tree-shell ${this.viewMode === 'deck' ? 'view-mode-deck' : 'view-mode-map'}" style="width: 100%; max-width: 1200px; height: 100%; margin: 0 auto; display: flex; flex-direction: column; justify-content: ${this.viewMode === 'deck' ? 'flex-start' : 'space-between'}; box-sizing: border-box;">
+      <div class="skill-tree-shell ${this.viewMode === 'deck' ? 'view-mode-deck' : 'view-mode-map'}" style="width: 100%; max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; justify-content: ${this.viewMode === 'deck' ? 'flex-start' : 'space-between'}; box-sizing: border-box;">
         <!-- 1. Unified Command Header & Today's 15-Minute Workout -->
         ${this.renderWorkoutBanner()}
 
@@ -302,9 +302,9 @@ export class SkillTreeView {
         break;
       case 'B2':
         tasks = [
-          { route: 'colloc' as RouteId, ok: done.colloc >= 10, label: `${Math.min(done.colloc, 10)}/10 ${t('tree.task_colloc_reviewed', undefined, 'Collocations Reviewed')}` },
-          { route: 'grammar' as RouteId, ok: done.grammar >= 1, label: t('tree.task_b2_inversion', undefined, '1 B2 Inversion Rule') },
-          { route: 'speak' as RouteId, ok: done.speaking >= 1, label: t('tree.task_speech_take', undefined, '1 Speech (4-3-2 Take)') }
+          { route: 'colloc' as RouteId, ok: done.colloc >= 10, label: `${Math.min(done.colloc, 10)}/10 ${t('tree.task_colloc_reviewed', undefined, 'Collocations')}` },
+          { route: 'grammar' as RouteId, ok: done.grammar >= 1, label: `${Math.min(done.grammar, 1)}/1 ${t('tree.task_b2_inversion', undefined, 'Inversion Rule')}` },
+          { route: 'speak' as RouteId, ok: done.speaking >= 1, label: `${Math.min(done.speaking, 1)}/1 ${t('tree.task_speech_take', undefined, 'Speaking Take')}` }
         ];
         break;
       case 'C1':
@@ -349,14 +349,13 @@ export class SkillTreeView {
           <div class="workout-banner-stats">
             <span class="telemetry-label">${t('tree.roadmap', undefined, 'ROADMAP')}</span>
             <span class="workout-rank-metric">
-              ${t('tree.rank', undefined, 'RANK:')} <strong>${t('rank.' + progress.currentRank.toLowerCase().replace(/\s+/g, '_'), undefined, progress.currentRank)}</strong>
+              <strong>${t('rank.' + progress.currentRank.toLowerCase().replace(/\s+/g, '_'), undefined, progress.currentRank)}</strong> · ${progress.masteredCount}/${progress.totalNodes} ${t('tree.nodes_lowercase', undefined, 'nodes')}
             </span>
           </div>
           <div class="workout-summit-row">
             <span class="workout-summit-pct">
               ${t('tree.summit', undefined, 'SUMMIT:')} <strong class="val-progress-pct">${progress.progressPct}%</strong>
             </span>
-            <span class="workout-banner-count">(${progress.masteredCount}/${progress.totalNodes} ${t('tree.nodes', undefined, 'Nodes')})</span>
           </div>
           <div class="workout-summit-bar-track">
             <div class="workout-summit-bar-fill" style="width: ${progress.progressPct}%;"></div>
@@ -366,18 +365,23 @@ export class SkillTreeView {
         <div class="workout-panel">
           <div class="workout-panel-info">
             <div class="workout-panel-header">
-              <span class="telemetry-label">${t('tree.workout', undefined, 'DAILY WORKOUT')} • ${workout.level}</span>
-              <span class="telemetry-label workout-remaining-label">${workout.left === 0 ? t('tree.all_done', undefined, 'ALL DONE ✓') : workout.left + ' ' + t('tree.left', undefined, 'LEFT')}</span>
+              <span class="telemetry-label">${t('tree.workout', undefined, 'DAILY WORKOUT')}</span>
+              <span class="telemetry-label workout-remaining-label chip--count">${workout.left === 0 ? t('tree.all_done', undefined, 'ALL DONE ✓') : workout.left + ' ' + t('tree.left', undefined, 'LEFT')}</span>
             </div>
             <div class="workout-tasks">
               ${workout.tasks.map(tTask => `
-              <div class="workout-task-chip" data-route="${tTask.route}" title="Jump to ${tTask.route} drill">
-                <span${tTask.ok ? ' style="color: var(--accent-gold); font-weight: 700;"' : ''}>${tTask.ok ? '✓' : '○'}</span> <span>${tTask.label}</span>
+              <div class="workout-task-chip" data-route="${tTask.route}" role="button" tabindex="0" title="Jump to ${tTask.route} drill">
+                <div class="workout-task-left">
+                  <span class="workout-task-status-icon">${tTask.ok ? '✓' : '•'}</span>
+                  <span class="workout-task-text">${tTask.label}</span>
+                </div>
+                <span class="workout-task-chevron">›</span>
               </div>`).join('')}
             </div>
           </div>
           <button class="hud-btn btn-continue-workout">
-            <span>${t('common.continue', undefined, 'Continue')}</span> ${icon('arrowRight')}
+            <span>${workout.left > 0 ? `${t('common.continue', undefined, 'Continue')} · ${workout.left} ${t('tree.left_count', undefined, 'left')}` : t('tree.all_done', undefined, 'All Done ✓')}</span>
+            ${icon('arrowRight', 16)}
           </button>
         </div>
       </div>
@@ -581,62 +585,66 @@ export class SkillTreeView {
 
   private renderMobileSkillDeck(): string {
     const branches = ConstellationEngine.getMobileDeckBranches();
+    const learnerLevel = StorageManager.getLearnerLevel() || 'B2';
 
     return `
       <div class="mobile-skill-deck" role="region" aria-label="${t('tree.skill_grid_roadmap_aria', undefined, 'Skill Grid Roadmap')}">
         <div class="deck-carousel-track">
-          ${branches.map(b => `
-            <div class="deck-branch-card" data-branch="${b.id}" data-route="${b.routeTarget}" tabindex="0" role="region" aria-label="${t('tree.skill_card_aria', { name: b.name }, `${b.name} Skill Card`)}">
-              <button class="hud-btn btn-enter-dossier" data-route="${b.routeTarget}" aria-label="${t('tree.enter_skill_aria', { name: b.name }, `Enter ${b.name}`)}">
+          ${branches.map(b => {
+            const showLevel = b.cefrLevel !== learnerLevel;
+            const nextPerk = b.perks.find(p => p.status !== 'mastered');
+            const nextLabel = nextPerk ? `${t('tree.next_prefix', undefined, 'Next')}: ${nextPerk.title}` : t(`deck.${b.id}_tagline`, undefined, b.tagline);
+            return `
+            <div class="deck-branch-card skill-card" data-branch="${b.id}" data-route="${b.routeTarget}" tabindex="0" role="region" aria-label="${t('tree.skill_card_aria', { name: b.name }, `${b.name} Skill Card`)}">
+              <button class="hud-btn btn-enter-dossier skill-arrow" data-route="${b.routeTarget}" aria-label="${t('tree.enter_skill_aria', { name: b.name }, `Enter ${b.name}`)}">
                 ${icon('arrowRight', 16)}
               </button>
 
               <div class="deck-card-top">
-                <div class="deck-card-header">
-                  <div class="deck-header-lead" style="display: flex; align-items: center; gap: 7px; min-width: 0;">
-                    <div class="deck-branch-icon-badge">${icon(b.iconName, 16)}</div>
-                    <h2 class="deck-branch-name">${b.name}</h2>
-                  </div>
+                <div class="deck-card-header skill-head">
+                  <div class="deck-branch-icon-badge">${icon(b.iconName, 16)}</div>
+                  <h2 class="deck-branch-name">${b.name}</h2>
                 </div>
                 <div class="deck-branch-sub">
-                  <span class="hud-status-badge deck-cefr-badge">${b.cefrLevel}</span>
-                  <span class="deck-branch-tagline">${t(`deck.${b.id}_tagline`, undefined, b.tagline)}</span>
+                  ${showLevel ? `<span class="hud-status-badge deck-cefr-badge lvl-chip">${b.cefrLevel}</span>` : ''}
+                  <span class="deck-branch-tagline" title="${nextLabel}">${nextLabel}</span>
                 </div>
               </div>
 
               <div class="deck-mastery-block">
                 <div class="deck-mastery-labels">
                   <span class="deck-mastery-pct-text">${b.masteryPct}%</span>
-                  <span class="deck-perks-count-text">${b.unlockedPerks}/${b.totalPerks} ${t('tree.perks', undefined, 'Perks')}</span>
+                  <span class="deck-perks-count-text">${b.unlockedPerks}/${b.totalPerks} ${t('tree.perks', undefined, 'Lessons')}</span>
                 </div>
-                <div class="deck-progress-bar-track">
+                <div class="deck-progress-bar-track progress">
                   <div class="deck-progress-bar-fill" style="width: ${b.masteryPct}%;"></div>
                 </div>
               </div>
 
-              <div class="deck-card-perks-section">
+              <div class="deck-card-perks-section" style="display: none;">
                 <details class="deck-perks-details">
                   <summary class="deck-section-title deck-perks-summary">
                     <span>${b.perks.slice(0, 5).length} ${t('tree.perks_and_drills', undefined, 'Perks & Drills')}</span>
                   </summary>
-                <div class="deck-perk-badges">
-                  ${b.perks.slice(0, 5).map(p => `
-                    <div class="deck-badge deck-perk-badge ${p.status === 'mastered' ? 'is-mastered' : (p.status === 'unlocked' ? 'is-unlocked' : 'is-locked')}" data-node-id="${p.id}" data-route="${p.routeTarget}" role="button" tabindex="0" aria-label="${p.title} (${p.status})">
-                      <span class="badge-status-dot"></span>
-                      <span class="badge-text">${p.title}</span>
-                    </div>
-                  `).join('')}
-                  ${b.workoutTasks.map(t => `
-                    <div class="deck-badge deck-workout-badge ${t.ok ? 'is-complete' : 'is-pending'}" data-route="${t.route}" role="button" tabindex="0" aria-label="Workout: ${t.label}">
-                      <span class="badge-check">${t.ok ? '✓' : '○'}</span>
-                      <span class="badge-text">${t.label}</span>
-                    </div>
-                  `).join('')}
-                </div>
+                  <div class="deck-perk-badges">
+                    ${b.perks.slice(0, 5).map(p => `
+                      <div class="deck-badge deck-perk-badge ${p.status === 'mastered' ? 'is-mastered' : (p.status === 'unlocked' ? 'is-unlocked' : 'is-locked')}" data-node-id="${p.id}" data-route="${p.routeTarget}" role="button" tabindex="0" aria-label="${p.title} (${p.status})">
+                        <span class="badge-status-dot"></span>
+                        <span class="badge-text">${p.title}</span>
+                      </div>
+                    `).join('')}
+                    ${b.workoutTasks.map(tTask => `
+                      <div class="deck-badge deck-workout-badge ${tTask.ok ? 'is-complete' : 'is-pending'}" data-route="${tTask.route}" role="button" tabindex="0" aria-label="Workout: ${tTask.label}">
+                        <span class="badge-check">${tTask.ok ? '✓' : '○'}</span>
+                        <span class="badge-text">${tTask.label}</span>
+                      </div>
+                    `).join('')}
+                  </div>
                 </details>
               </div>
             </div>
-          `).join('')}
+          `;
+          }).join('')}
         </div>
       </div>
     `;

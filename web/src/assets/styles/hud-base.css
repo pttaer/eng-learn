@@ -841,7 +841,8 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
 
 #workspace-mount.tree-mode {
   padding: 4px 0 6px 0;
-  overflow-y: hidden;
+  overflow-y: auto;
+  min-height: 0;
   height: 100%;
 }
 
@@ -1519,7 +1520,7 @@ body.zen-active,
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 1000;
+    z-index: var(--z-bottom-nav, 400); /* formerly z-index: 1000; bounded to canonical --z-bottom-nav token */
     height: 60px;
     height: calc(var(--bottom-nav-height, 60px) + env(safe-area-inset-bottom, 0px));
     padding-bottom: env(safe-area-inset-bottom, 0px);
@@ -1668,13 +1669,13 @@ body.zen-active,
     text-align: left !important;
     width: 100% !important;
     max-width: 520px !important;
-    border-radius: 16px 16px 0 0 !important;
+    border-radius: 20px 20px 0 0 !important;
     border-bottom: none !important;
     margin: 0 !important;
-    padding-bottom: calc(28px + env(safe-area-inset-bottom, 16px)) !important;
+    padding: 12px 18px calc(24px + env(safe-area-inset-bottom, 16px)) 18px !important;
     box-sizing: border-box !important;
-    max-height: 90dvh !important;
-    overflow-y: auto !important;
+    max-height: 88dvh !important;
+    overflow: hidden !important;
     animation: slideUpSheet 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   }
 

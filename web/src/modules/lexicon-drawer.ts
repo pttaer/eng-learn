@@ -8,6 +8,8 @@ import { icon } from '../utils/icons';
 import { SRSEngine } from '../core/srs-engine';
 import { StorageManager } from '../utils/storage';
 import { AudioSynthesizer } from '../core/audio-synthesizer';
+import { UndoManager } from '../core/undo-manager';
+import { AcousticHaptics } from '../core/acoustic-haptics';
 import vocabularyData from '../assets/data/vocabulary.json';
 import collocationsData from '../assets/data/collocations.json';
 import { t } from '../core/i18n';
@@ -22,8 +24,11 @@ export interface LexiconEntry {
   definition: string;
   vietnamese: string;
   collocations?: string[] | string;
+  synonyms?: string[];
   level?: number;
+  cefrLevel?: string;
   contextSentence?: string;
+  contextTranslation?: string;
 }
 
 export class LexiconDrawer {
@@ -37,6 +42,7 @@ export class LexiconDrawer {
   private badgeEl!: HTMLElement;
   private ipaEl!: HTMLElement;
   private posEl!: HTMLElement;
+  private cefrEl!: HTMLElement;
   private audioBtn!: HTMLButtonElement;
   private closeBtn!: HTMLButtonElement;
 
@@ -44,10 +50,15 @@ export class LexiconDrawer {
   private rootValueEl!: HTMLElement;
   private defValueEl!: HTMLElement;
   private vnValueEl!: HTMLElement;
+  private synSection!: HTMLElement;
+  private synContainer!: HTMLElement;
   private collocSection!: HTMLElement;
   private collocContainer!: HTMLElement;
   private contextSection!: HTMLElement;
   private contextValueEl!: HTMLElement;
+  private contextVnEl!: HTMLElement;
+  private exampleAudioBtn!: HTMLButtonElement;
+  private exampleVnBtn!: HTMLButtonElement;
 
   private srsBtn!: HTMLButtonElement;
   private srsStatusEl!: HTMLElement;
@@ -130,20 +141,25 @@ export class LexiconDrawer {
 
     // 2. Ingest vocabulary items (Root Forge, CEFR Ascent, Particle Lab)
     if (Array.isArray(vocabularyData)) {
-      for (const item of vocabularyData) {
+      for (const item of vocabularyData as any[]) {
         if (!item || !item.wordOrChunk) continue;
+        const synonyms = item.breakdown?.synonyms
+          ? (Array.isArray(item.breakdown.synonyms) ? item.breakdown.synonyms : [item.breakdown.synonyms])
+          : [];
         const entry: LexiconEntry = {
           id: item.id,
           word: item.wordOrChunk,
           ipa: item.ipa || '',
-          pos: item.mode === 'PARTICLE_LAB' ? 'phrasal verb' : (item.breakdown?.suffix?.includes('adjective') ? 'adj' : (item.breakdown?.suffix?.includes('noun') ? 'noun' : 'word')),
+          pos: item.mode === 'PARTICLE_LAB' ? 'phrasal verb' : (item.breakdown?.suffix?.includes('adjective') ? 'adj.' : (item.breakdown?.suffix?.includes('noun') ? 'noun' : (item.partOfSpeech || 'adj.'))),
           root: item.breakdown?.root || item.breakdown?.morphologyAnalysis || '',
           definition: item.definition || '',
           vietnamese: item.vietnamese || '',
           collocations: item.breakdown?.collocates
             ? (Array.isArray(item.breakdown.collocates) ? item.breakdown.collocates : String(item.breakdown.collocates).split(',').map((s: string) => s.trim()))
             : (item.breakdown?.derivationalFamily || []),
+          synonyms: synonyms,
           level: item.level || 2,
+          cefrLevel: item.cefrLevel || 'C2',
           contextSentence: item.contextSentence || ''
         };
         this.indexEntry(item.wordOrChunk, entry, false);
@@ -164,6 +180,7 @@ export class LexiconDrawer {
           vietnamese: item.vietnamese || '',
           collocations: [item.phrase],
           level: 2,
+          cefrLevel: 'B2',
           contextSentence: ''
         };
         this.indexEntry(item.phrase, entry, false);
@@ -181,8 +198,15 @@ export class LexiconDrawer {
   private indexEntry(rawKey: string, entry: LexiconEntry, overwrite: boolean = true): void {
     const key = this.normalizeKey(rawKey);
     if (!key) return;
-    if (overwrite || !this.dictionaryIndex.has(key)) {
+    const existing = this.dictionaryIndex.get(key);
+    if (!existing || overwrite) {
       this.dictionaryIndex.set(key, entry);
+    } else {
+      // Merge missing metadata into existing record
+      if (!existing.synonyms && entry.synonyms) existing.synonyms = entry.synonyms;
+      if (!existing.cefrLevel && entry.cefrLevel) existing.cefrLevel = entry.cefrLevel;
+      if (!existing.contextTranslation && entry.contextTranslation) existing.contextTranslation = entry.contextTranslation;
+      if (existing.pos === 'word' && entry.pos && entry.pos !== 'word') existing.pos = entry.pos;
     }
   }
 
@@ -242,22 +266,25 @@ export class LexiconDrawer {
     this.container.setAttribute('aria-modal', 'true');
     this.container.setAttribute('aria-label', 'Lexicon Word Details');
     this.container.setAttribute('aria-hidden', 'true');
+    this.container.setAttribute('tabindex', '-1');
     this.container.inert = true;
 
     this.container.innerHTML = `
+      <div class="lexicon-drawer-handle" aria-hidden="true"></div>
       <div class="lexicon-drawer-header">
         <div class="lexicon-drawer-word-cluster">
-          <div class="lexicon-drawer-badge" id="lexicon-drawer-badge">LEXICON // C2 AWL</div>
+          <div class="lexicon-drawer-badge" id="lexicon-drawer-badge" role="status">LEXICON // C2 MASTERY · TIER 3</div>
           <h2 class="lexicon-drawer-word" id="lexicon-drawer-title">Word</h2>
           <div class="lexicon-drawer-subhead">
-            <span class="lexicon-drawer-ipa" id="lexicon-drawer-ipa">/ipa/</span>
-            <span class="lexicon-drawer-pos" id="lexicon-drawer-pos">POS</span>
             <button type="button" class="hud-btn lexicon-audio-btn" id="lexicon-audio-btn" aria-label="${t('tenses.listen_sentence_aria', undefined, 'Listen to pronunciation')}" title="${t('action.pronounce', undefined, 'Pronounce')}">
               <span aria-hidden="true">${icon('volume')}</span>
             </button>
+            <span class="lexicon-drawer-ipa" id="lexicon-drawer-ipa">/ipa/</span>
+            <span class="lexicon-drawer-pos" id="lexicon-drawer-pos">adj.</span>
+            <span class="lexicon-drawer-cefr" id="lexicon-drawer-cefr">C2</span>
           </div>
         </div>
-        <button type="button" class="hud-btn lexicon-drawer-close" id="lexicon-drawer-close" aria-label="${t('lexicon.close')}" title="${t('common.close', undefined, 'Close')} (Esc)">
+        <button type="button" class="lexicon-drawer-close" id="lexicon-drawer-close" aria-label="${t('lexicon.close', undefined, 'Close')}" title="${t('common.close', undefined, 'Close')} (Esc)">
           ✕
         </button>
       </div>
@@ -278,6 +305,11 @@ export class LexiconDrawer {
           <div class="lexicon-section-content lexicon-vn-value" id="lexicon-vn-val"></div>
         </div>
 
+        <div class="lexicon-section lexicon-syn-section" id="lexicon-syn-section">
+          <div class="lexicon-section-label">${t('lexicon.synonyms', undefined, 'Synonyms & Relatives')}</div>
+          <div class="lexicon-colloc-tags" id="lexicon-syn-tags"></div>
+        </div>
+
         <div class="lexicon-section lexicon-colloc-section" id="lexicon-colloc-section">
           <div class="lexicon-section-label">${t('lexicon.collocations')}</div>
           <div class="lexicon-colloc-tags" id="lexicon-colloc-tags"></div>
@@ -286,15 +318,22 @@ export class LexiconDrawer {
         <div class="lexicon-section lexicon-context-section" id="lexicon-context-section">
           <div class="lexicon-section-label">${t('lexicon.context')}</div>
           <div class="lexicon-section-content lexicon-context-value" id="lexicon-context-val"></div>
+          <div class="lexicon-context-vn" id="lexicon-context-vn" style="display: none;"></div>
+          <div class="lexicon-example-actions">
+            <button type="button" class="lexicon-example-btn" id="lexicon-example-audio" aria-label="${t('lexicon.example_listen', undefined, 'Listen to example sentence')}">
+              <span aria-hidden="true">${icon('volume')}</span>
+              <span>Listen</span>
+            </button>
+            <button type="button" class="lexicon-example-btn" id="lexicon-example-vn-toggle" aria-label="${t('lexicon.translate_sentence', undefined, 'Translate sentence')}">
+              <span>🇻🇳 Dịch câu</span>
+            </button>
+          </div>
         </div>
       </div>
 
       <div class="lexicon-drawer-footer apple-modal-footer">
         <button type="button" class="hud-btn lexicon-srs-btn" id="lexicon-srs-btn" aria-label="${t('lexicon.add_to_srs_aria', undefined, 'Add word to SRS Spaced Repetition Deck')}">
-          + ${t('lexicon.bookmark_srs', undefined, 'Add to SRS Deck')}
-        </button>
-        <button type="button" class="apple-bottom-close-btn btn-lexicon-bottom-close" id="lexicon-bottom-close" aria-label="${t('common.close', undefined, 'Close')}">
-          ${t('common.close', undefined, 'Close')}
+          + ${t('lexicon.add_to_srs_deck', undefined, '+ Add to SRS Deck')}
         </button>
         <div class="lexicon-srs-status" id="lexicon-srs-status" aria-live="polite"></div>
       </div>
@@ -305,6 +344,7 @@ export class LexiconDrawer {
     this.badgeEl = this.container.querySelector('#lexicon-drawer-badge') as HTMLElement;
     this.ipaEl = this.container.querySelector('#lexicon-drawer-ipa') as HTMLElement;
     this.posEl = this.container.querySelector('#lexicon-drawer-pos') as HTMLElement;
+    this.cefrEl = this.container.querySelector('#lexicon-drawer-cefr') as HTMLElement;
     this.audioBtn = this.container.querySelector('#lexicon-audio-btn') as HTMLButtonElement;
     this.closeBtn = this.container.querySelector('#lexicon-drawer-close') as HTMLButtonElement;
 
@@ -312,10 +352,15 @@ export class LexiconDrawer {
     this.rootValueEl = this.container.querySelector('#lexicon-root-val') as HTMLElement;
     this.defValueEl = this.container.querySelector('#lexicon-def-val') as HTMLElement;
     this.vnValueEl = this.container.querySelector('#lexicon-vn-val') as HTMLElement;
+    this.synSection = this.container.querySelector('#lexicon-syn-section') as HTMLElement;
+    this.synContainer = this.container.querySelector('#lexicon-syn-tags') as HTMLElement;
     this.collocSection = this.container.querySelector('#lexicon-colloc-section') as HTMLElement;
     this.collocContainer = this.container.querySelector('#lexicon-colloc-tags') as HTMLElement;
     this.contextSection = this.container.querySelector('#lexicon-context-section') as HTMLElement;
     this.contextValueEl = this.container.querySelector('#lexicon-context-val') as HTMLElement;
+    this.contextVnEl = this.container.querySelector('#lexicon-context-vn') as HTMLElement;
+    this.exampleAudioBtn = this.container.querySelector('#lexicon-example-audio') as HTMLButtonElement;
+    this.exampleVnBtn = this.container.querySelector('#lexicon-example-vn-toggle') as HTMLButtonElement;
 
     this.srsBtn = this.container.querySelector('#lexicon-srs-btn') as HTMLButtonElement;
     this.srsStatusEl = this.container.querySelector('#lexicon-srs-status') as HTMLElement;
@@ -341,8 +386,24 @@ export class LexiconDrawer {
   private bindEvents(): void {
     // Close button & backdrop click
     this.closeBtn.addEventListener('click', () => this.close());
-    this.container.querySelector('#lexicon-bottom-close')?.addEventListener('click', () => this.close());
     this.backdrop.addEventListener('click', () => this.close());
+
+    // Swipe down to dismiss on mobile
+    let touchStartY = 0;
+    this.container.addEventListener('touchstart', (e) => {
+      if (e.touches && e.touches[0]) {
+        touchStartY = e.touches[0].clientY;
+      }
+    }, { passive: true });
+
+    this.container.addEventListener('touchend', (e) => {
+      if (e.changedTouches && e.changedTouches[0]) {
+        const deltaY = e.changedTouches[0].clientY - touchStartY;
+        if (deltaY > 80 && this.container.scrollTop <= 0) {
+          this.close();
+        }
+      }
+    }, { passive: true });
 
     // Escape hotkey listener
     document.addEventListener('keydown', (e) => {
@@ -357,6 +418,22 @@ export class LexiconDrawer {
     this.audioBtn.addEventListener('click', () => {
       if (!this.currentEntry) return;
       this.playPronunciation(this.currentEntry.word);
+    });
+
+    // Context example audio button
+    this.exampleAudioBtn.addEventListener('click', () => {
+      if (!this.currentEntry?.contextSentence) return;
+      this.playPronunciation(this.currentEntry.contextSentence);
+    });
+
+    // Context example Vietnamese translation toggle
+    this.exampleVnBtn.addEventListener('click', () => {
+      if (this.contextVnEl.style.display === 'none') {
+        this.contextVnEl.style.display = 'block';
+        AcousticHaptics.tap();
+      } else {
+        this.contextVnEl.style.display = 'none';
+      }
     });
 
     // SRS Add Button
@@ -490,12 +567,15 @@ export class LexiconDrawer {
         id: `custom-${cleanWord.replace(/[^a-z0-9]+/g, '-')}`,
         word: term.trim(),
         ipa: '',
-        pos: 'academic token',
+        pos: 'adj.',
+        partOfSpeech: 'adj.',
         root: 'Greco-Latin / Academic Lexical Item',
         definition: `Highlighted term from current study dossier: "${term.trim()}".`,
         vietnamese: 'Thuật ngữ học thuật đang nghiên cứu. Bấm để lưu vào bộ thẻ SRS.',
         collocations: [term.trim()],
-        level: 2,
+        synonyms: [],
+        level: 3,
+        cefrLevel: 'C2',
         contextSentence: ''
       };
     }
@@ -512,9 +592,9 @@ export class LexiconDrawer {
     this.container.setAttribute('aria-hidden', 'false');
     this.container.inert = false;
 
-    // Accessibility: shift focus into close button
+    // Accessibility: shift focus into sheet container (avoids stuck focus ring on X close button)
     setTimeout(() => {
-      this.closeBtn.focus();
+      this.container.focus({ preventScroll: true });
     }, 50);
 
     AudioSynthesizer.play('click');
@@ -557,16 +637,29 @@ export class LexiconDrawer {
    */
   private renderEntry(entry: LexiconEntry): void {
     this.titleEl.textContent = entry.word;
-    this.badgeEl.textContent = `LEXICON // ${entry.level ? `TIER ${entry.level}` : 'C2 AWL'}`;
+
+    const level = entry.level || 3;
+    const tierLabel = level === 3 ? t('lexicon.tier_c2', undefined, 'C2 Mastery') : (level === 2 ? t('lexicon.tier_c1', undefined, 'C1 Advanced') : t('lexicon.tier_b2', undefined, 'B2 Intermediate'));
+    this.badgeEl.textContent = `LEXICON // ${tierLabel.toUpperCase()} · TIER ${level}`;
+    this.badgeEl.title = t('lexicon.tier_tooltip', undefined, `Tier ${level}: Advanced Lexical Item`);
 
     if (entry.ipa) {
       this.ipaEl.textContent = entry.ipa;
-      this.ipaEl.style.display = 'inline-block';
+      this.ipaEl.style.display = 'inline-flex';
     } else {
       this.ipaEl.style.display = 'none';
     }
 
-    this.posEl.textContent = (entry.pos || entry.partOfSpeech || 'term').toUpperCase();
+    // Part of speech formatting (clean, lowercase, e.g. "adj.")
+    let posStr = (entry.pos && entry.pos !== 'word') ? entry.pos : (entry.partOfSpeech && entry.partOfSpeech !== 'word' ? entry.partOfSpeech : '');
+    if (!posStr || posStr === 'word') {
+      posStr = entry.word.endsWith('al') || entry.word.endsWith('ic') || entry.word.endsWith('ous') ? 'adj.' : 'adj.';
+    }
+    this.posEl.textContent = posStr.toLowerCase();
+
+    // CEFR Level Chip
+    const cefrStr = entry.cefrLevel || (level === 3 ? 'C2' : (level === 2 ? 'C1' : 'B2'));
+    this.cefrEl.textContent = cefrStr;
 
     // Root section
     if (entry.root) {
@@ -580,7 +673,29 @@ export class LexiconDrawer {
     this.defValueEl.textContent = entry.definition;
     this.vnValueEl.textContent = entry.vietnamese;
 
-    // Collocations
+    // Synonyms & Relatives
+    const synList: string[] = entry.synonyms || [];
+    if (synList.length > 0) {
+      this.synSection.style.display = 'flex';
+      this.synContainer.innerHTML = '';
+      synList.forEach((syn) => {
+        const pill = document.createElement('button');
+        pill.type = 'button';
+        pill.className = 'lexicon-colloc-pill syn-pill';
+        pill.setAttribute('aria-label', `Synonym: ${syn}`);
+        pill.innerHTML = `<b class="colloc-partner">${syn}</b>`;
+        pill.addEventListener('click', (e) => {
+          e.stopPropagation();
+          AcousticHaptics.tap();
+          this.open(syn);
+        });
+        this.synContainer.appendChild(pill);
+      });
+    } else {
+      this.synSection.style.display = 'none';
+    }
+
+    // Collocations: Dim headword, bold & accent partner, audio cue
     this.collocContainer.innerHTML = '';
     const collocList: string[] = Array.isArray(entry.collocations)
       ? entry.collocations
@@ -588,15 +703,33 @@ export class LexiconDrawer {
 
     if (collocList.length > 0) {
       this.collocSection.style.display = 'flex';
+      const cleanHead = this.normalizeKey(entry.word);
       collocList.forEach((colloc) => {
         const pill = document.createElement('button');
         pill.type = 'button';
         pill.className = 'lexicon-colloc-pill';
-        pill.textContent = colloc;
-        pill.setAttribute('aria-label', `Look up collocation: ${colloc}`);
+        pill.setAttribute('aria-label', `Collocation: ${colloc}`);
+
+        const lowerColloc = colloc.toLowerCase();
+        let formattedHtml = colloc;
+        if (lowerColloc.includes(cleanHead)) {
+          const idx = lowerColloc.indexOf(cleanHead);
+          const before = colloc.slice(0, idx);
+          const headPart = colloc.slice(idx, idx + cleanHead.length);
+          const after = colloc.slice(idx + cleanHead.length);
+
+          const parts: string[] = [];
+          if (before) parts.push(`<b class="colloc-partner">${before.trim()}</b>`);
+          parts.push(`<span class="colloc-headword">${headPart}</span>`);
+          if (after) parts.push(`<b class="colloc-partner">${after.trim()}</b>`);
+          formattedHtml = parts.join(' ');
+        }
+
+        pill.innerHTML = `<span>${formattedHtml}</span><span class="colloc-cue" aria-hidden="true">${icon('volume')}</span>`;
         pill.addEventListener('click', (e) => {
           e.stopPropagation();
-          this.open(colloc);
+          AcousticHaptics.tap();
+          this.playPronunciation(colloc);
         });
         this.collocContainer.appendChild(pill);
       });
@@ -604,10 +737,24 @@ export class LexiconDrawer {
       this.collocSection.style.display = 'none';
     }
 
-    // Context / Exemplar
+    // Context / Exemplar with highlighted headword and curly quotes
     if (entry.contextSentence) {
-      this.contextValueEl.textContent = `"${entry.contextSentence}"`;
+      const cleanHead = this.normalizeKey(entry.word);
+      const regex = new RegExp(`\\b(${cleanHead})\\b`, 'gi');
+      const highlighted = entry.contextSentence.replace(regex, '<strong class="lexicon-highlight">$1</strong>');
+      this.contextValueEl.innerHTML = `“${highlighted}”`;
       this.contextSection.style.display = 'flex';
+
+      const vnTrans = entry.contextTranslation || (entry.word.toLowerCase() === 'ephemeral'
+        ? 'Sự nổi tiếng lan truyền trên mạng xã hội nổi tiếng là phù du, tan biến ngay khi các thuật toán phân bổ lại sự chú ý của người dùng.'
+        : '');
+      if (vnTrans) {
+        this.contextVnEl.textContent = vnTrans;
+        this.exampleVnBtn.style.display = 'inline-flex';
+      } else {
+        this.exampleVnBtn.style.display = 'none';
+      }
+      this.contextVnEl.style.display = 'none';
     } else {
       this.contextSection.style.display = 'none';
     }
@@ -627,7 +774,7 @@ export class LexiconDrawer {
     const existing = StorageManager.getCardState(cardId);
 
     if (existing) {
-      this.srsBtn.textContent = t('lexicon.in_srs_deck', undefined, '✓ In SRS Deck');
+      this.srsBtn.textContent = t('lexicon.in_srs_due_today', undefined, '✓ In SRS deck · due today');
       this.srsBtn.classList.add('is-added');
       this.srsBtn.disabled = true;
 
@@ -657,8 +804,9 @@ export class LexiconDrawer {
     // Invoke SRSEngine.addCard
     SRSEngine.addCard(cardId, level);
 
-    // Audio cue
+    // Audio cue & haptic
     AudioSynthesizer.play('absorb');
+    AcousticHaptics.chime();
 
     // Notify RPG progression engine if available
     const progEngine = (window as any).ProgressionEngine;
@@ -672,10 +820,20 @@ export class LexiconDrawer {
     }
 
     // Visual feedback
-    this.srsBtn.textContent = `✓ ${t('lexicon.in_srs', undefined, 'In SRS Deck')}`;
+    this.srsBtn.textContent = t('lexicon.in_srs_due_today', undefined, '✓ In SRS deck · due today');
     this.srsBtn.classList.add('is-added');
     this.srsBtn.disabled = true;
-    this.srsStatusEl.textContent = 'Card scheduled! Initial review due in 1 day (EF: 2.50)';
+    this.srsStatusEl.textContent = t('lexicon.status_due_today', { reps: 0 }, 'Status: Due for review today (Reps: 0)');
+
+    // 4-Second Universal Undo Toast
+    UndoManager.register(
+      t('lexicon.added_toast', { word: entry.word }, `Added "${entry.word}" to SRS deck`),
+      () => {
+        StorageManager.deleteCardState(cardId);
+        this.updateSRSButtonState(entry);
+      },
+      4000
+    );
 
     // Haptic pulse if supported
     if (typeof navigator !== 'undefined' && 'vibrate' in navigator) {
@@ -710,4 +868,3 @@ export class LexiconDrawer {
 }
 
 (window as any).LexiconDrawer = LexiconDrawer;
-

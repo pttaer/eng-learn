@@ -19,6 +19,7 @@ import { MistakeVault } from '../core/mistake-vault';
 import { CommuteAudioPlayer } from '../core/commute-audio-player';
 import { CognitiveScaffoldingEngine } from '../core/cognitive-scaffolding-mode';
 import { FloatingNote } from './floating-note';
+import { UndoManager } from '../core/undo-manager';
 
 export interface ContextualDockAction {
   id: string;
@@ -166,7 +167,7 @@ export class HeaderHUD {
             ${t('nav.brand_mastery', undefined, 'ENGLISH MASTERY')}
           </span>
         `}
-        <button class="hud-btn btn-level" aria-haspopup="dialog" title="${t('nav.change_level', undefined, 'Your CEFR level (click to change)')}" aria-label="${t('nav.change_level', undefined, 'Change Level')}: ${CEFR_LABELS[StorageManager.getLearnerLevel()]}">${StorageManager.getLearnerLevel()}</button>
+        <button class="hud-btn btn-level" aria-haspopup="dialog" title="${t('nav.change_level', undefined, 'Your CEFR level (click to change)')}" aria-label="${t('nav.change_level', undefined, 'Change Level')}: ${CEFR_LABELS[StorageManager.getLearnerLevel()]}"><span>${StorageManager.getLearnerLevel()}</span><span class="btn-level-arrow" style="font-size: 8px; opacity: 0.65; margin-left: 2px;">▾</span></button>
       </div>
 
       <div class="hud-telemetry-cluster" style="display: flex; gap: 20px; align-items: center;">
@@ -760,20 +761,16 @@ export class HeaderHUD {
     sheet.setAttribute('aria-label', title);
 
     sheet.innerHTML = `
-      <div class="completion-receipt-card mobile-action-sheet" style="max-width: 500px; width: 92%; max-height: 85dvh; display: flex; flex-direction: column; overflow: hidden; padding: 20px; align-items: stretch; text-align: left; box-sizing: border-box;">
-        <div class="mobile-action-sheet-header" style="display: flex; justify-content: space-between; align-items: center; width: 100%; box-sizing: border-box; margin-bottom: 16px; border-bottom: 1px solid var(--border-hairline); padding-bottom: 12px; flex-shrink: 0;">
+      <div class="completion-receipt-card mobile-action-sheet" style="max-width: 500px; width: 92%; max-height: 88dvh; display: flex; flex-direction: column; overflow: hidden; padding: 12px 18px 24px; align-items: stretch; text-align: left; box-sizing: border-box;">
+        <div class="sheet-grabber-handle" aria-hidden="true"></div>
+        <div class="mobile-action-sheet-header" style="display: flex; justify-content: space-between; align-items: center; width: 100%; box-sizing: border-box; margin-bottom: 12px; border-bottom: 1px solid var(--border-hairline); padding-bottom: 12px; flex-shrink: 0;">
           <div style="display: flex; align-items: center; gap: 8px; min-width: 0; flex: 1;">
-            <span style="color: var(--accent-gold); display: flex; align-items: center; flex-shrink: 0;">${icon('menu', 16)}</span>
-            <span class="telemetry-label" style="font-weight: 700; color: var(--ink-primary); white-space: normal; line-height: 1.3;">${title}</span>
+            <span style="color: var(--accent-gold); display: flex; align-items: center; flex-shrink: 0;">${icon('user', 18)}</span>
+            <span class="mobile-sheet-title">${title}</span>
           </div>
           <button type="button" class="sheet-btn-close btn-modal-close" aria-label="${t('common.close', undefined, 'Close')}">✕</button>
         </div>
         ${bodyHtml}
-        <div class="apple-modal-footer">
-          <button type="button" class="apple-bottom-close-btn btn-modal-close sheet-btn-close" aria-label="${t('common.close', undefined, 'Close')}">
-            ${t('common.close', undefined, 'Close')}
-          </button>
-        </div>
       </div>
     `;
 
@@ -840,83 +837,174 @@ export class HeaderHUD {
     const currentTheme = this.currentTheme;
     const ambientMode = ambientMusicEngine.getMode();
     const progression = ProgressionEngine.getState();
+    const levelInfo = ProgressionEngine.getLevelInfo();
+    const rankTitleKey = 'rank.' + levelInfo.rankTitle.toLowerCase().replace(/\s+/g, '_');
+    const localizedRank = t(rankTitleKey, undefined, levelInfo.rankTitle);
+    const timeBudget = StorageManager.getDailyTimeBudget();
+    const targetExamDate = StorageManager.getTargetExamDate();
+    const examDaysRemaining = StorageManager.getExamDaysRemaining();
 
-    const { sheet, close } = this.openSheetShell('mobile-action-sheet', t('nav.me_sheet', undefined, 'Me: progress & settings'), `
+    const { sheet, close } = this.openSheetShell('mobile-action-sheet', t('nav.me_sheet', undefined, 'Me: Progress & Settings'), `
+        <div class="mobile-sheet-grid" style="display: flex; flex-direction: column; gap: 8px; overflow-y: auto; flex: 1; min-height: 0; padding-right: 2px;">
+          <!-- SECTION 1: TIẾN ĐỘ & MỤC TIÊU -->
+          <div class="mobile-sheet-kicker">${t('sheet.kicker_progress', undefined, 'PROGRESS & MILESTONES')}</div>
 
-        <div class="mobile-sheet-grid" style="display: flex; flex-direction: column; gap: 10px; overflow-y: auto; flex: 1; min-height: 0; padding-right: 2px;">
-          <!-- Time Budget & Exam Countdown -->
-          <button class="hud-btn sheet-btn-budget" style="min-height: 48px; padding: 12px 14px; justify-content: flex-start; font-weight: 600; background: var(--bg-card); border: 1px solid var(--border-hairline); color: var(--ink-primary); border-radius: var(--radius-btn, 10px); gap: 10px;">
-            <span style="color: var(--good); display: inline-flex;">⏱️</span> <span style="white-space: normal; line-height: 1.35; text-align: left;">${t('drawer.time_budget', { budget: StorageManager.getDailyTimeBudget() }, `Quỹ thời gian: <strong>${StorageManager.getDailyTimeBudget()}m / ngày</strong>`)}</span>
+          <!-- Level/XP Stat Card Hero -->
+          <div class="sheet-stat-card sheet-btn-progression" role="button" tabindex="0" aria-label="${t('nav.level', undefined, 'Level')} ${levelInfo.level} • ${progression.xp} XP">
+            <div style="display: flex; align-items: center; justify-content: space-between; width: 100%;">
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <span class="hud-badge" style="background: var(--soft-gold, rgba(245, 158, 11, 0.15)); color: var(--accent-gold, #f59e0b); font-weight: 700; font-size: 12px; padding: 2px 8px; border-radius: 9999px; white-space: nowrap;">
+                  ${t('nav.level', undefined, 'Level')} ${levelInfo.level}
+                </span>
+                <span style="font-weight: 600; font-size: 13px; color: var(--ink-primary);">${localizedRank}</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 4px; font-size: 12px; font-weight: 600; color: var(--ink-secondary);">
+                <span class="font-mono">${levelInfo.progressInLevel} / ${levelInfo.spanInLevel} XP</span>
+                <span style="opacity: 0.6; display: flex; align-items: center;">${icon('chevronRight', 14)}</span>
+              </div>
+            </div>
+            <!-- XP Progress Track -->
+            <div style="width: 100%; height: 5px; background: rgba(255, 255, 255, 0.08); border-radius: 9999px; overflow: hidden; position: relative;">
+              <div style="width: ${Math.min(100, Math.max(4, levelInfo.percentage))}%; height: 100%; background: linear-gradient(90deg, var(--accent-gold, #f59e0b), var(--accent-cyan, #38bdf8)); border-radius: 9999px;"></div>
+            </div>
+          </div>
+
+          <!-- Habits & 30-Day Mission Log -->
+          <button type="button" class="hud-btn mobile-sheet-row sheet-btn-habits">
+            <span class="row-ico">${icon('flame', 16)}</span>
+            <span class="row-label">${t('nav.habits_mission_log', undefined, 'Habits & 30-Day Mission Log')}</span>
+            <span class="row-chev">${icon('chevronRight', 16)}</span>
           </button>
-          ${StorageManager.getTargetExamDate() ? `
-            <button class="hud-btn sheet-btn-exam" style="min-height: 48px; padding: 12px 14px; justify-content: flex-start; font-weight: 600; background: var(--bg-card); border: 1px solid var(--border-hairline); color: var(--ink-primary); border-radius: var(--radius-btn, 10px); gap: 10px;">
-              <span style="color: var(--accent-gold); display: inline-flex;">⏳</span> <span>${(StorageManager.getExamDaysRemaining() ?? 0) >= 0 ? t('drawer.exam_days_left', { days: StorageManager.getExamDaysRemaining() ?? 0 }, `Thi IELTS: còn ${StorageManager.getExamDaysRemaining()} ngày`) : t('drawer.exam_passed', undefined, 'Thi IELTS: Đã qua')}</span>
+
+          <!-- CEFR Analytics & SERL -->
+          <button type="button" class="hud-btn mobile-sheet-row sheet-btn-analytics">
+            <span class="row-ico">${icon('layers', 16)}</span>
+            <span class="row-label">${t('nav.analytics_serl', undefined, 'CEFR Analytics & SERL')}</span>
+            <span class="row-chev">${icon('chevronRight', 16)}</span>
+          </button>
+
+          <!-- SECTION 2: CÔNG CỤ HỌC TẬP -->
+          <div class="mobile-sheet-kicker">${t('sheet.kicker_tools', undefined, 'STUDY TOOLS & EXAM')}</div>
+
+          <!-- Skill Radar Check -->
+          <button type="button" class="hud-btn mobile-sheet-row sheet-btn-radar">
+            <span class="row-ico">${icon('compass', 16)}</span>
+            <span class="row-label">${t('nav.radar_full', undefined, 'Skill Radar Diagnostic')}</span>
+            <span class="row-chev">${icon('chevronRight', 16)}</span>
+          </button>
+
+          <!-- CD-IELTS Exam Station -->
+          <button type="button" class="hud-btn mobile-sheet-row sheet-btn-cockpit">
+            <span class="row-ico">${icon('graduationCap', 16)}</span>
+            <span class="row-label">${t('nav.cd_ielts_cockpit', undefined, 'CD-IELTS Exam Station')}</span>
+            <span class="row-chev">${icon('chevronRight', 16)}</span>
+          </button>
+
+          <!-- Smart Mistake Vault & Blitz (60s Blitz) -->
+          <button type="button" class="hud-btn mobile-sheet-row sheet-btn-mistake-vault">
+            <span class="row-ico">${icon('zap', 16)}</span>
+            <span class="row-label">${t('nav.mistake_vault', undefined, 'Smart Mistake Vault & Blitz')}</span>
+            <span class="row-chev">${icon('chevronRight', 16)}</span>
+          </button>
+
+          <!-- Hands-Free Commute Audio -->
+          <button type="button" class="hud-btn mobile-sheet-row sheet-btn-commute-audio">
+            <span class="row-ico">${icon('headphones', 16)}</span>
+            <span class="row-label">${t('nav.commute_audio', undefined, 'Hands-Free Commute Audio Loop')}</span>
+            <span class="row-chev">${icon('chevronRight', 16)}</span>
+          </button>
+
+          <!-- Quick Notes -->
+          <button type="button" class="hud-btn mobile-sheet-row sheet-btn-notes">
+            <span class="row-ico">${icon('note', 16)}</span>
+            <span class="row-label">${t('nav.quick_notes', undefined, 'Quick Notes')}</span>
+            <span class="row-chev">${icon('chevronRight', 16)}</span>
+          </button>
+
+          <!-- SECTION 3: CÀI ĐẶT & HỆ THỐNG -->
+          <div class="mobile-sheet-kicker">${t('sheet.kicker_settings', undefined, 'SETTINGS & SYSTEM')}</div>
+
+          <!-- Time Budget -->
+          <button type="button" class="hud-btn mobile-sheet-row sheet-btn-budget">
+            <span class="row-ico">${icon('clock', 16)}</span>
+            <span class="row-label">${t('drawer.time_budget_label', undefined, 'Daily Study Budget')}</span>
+            <span class="row-val font-mono">${t('drawer.time_budget_val', { budget: timeBudget }, `${timeBudget}m / ngày`)}</span>
+            <span class="row-chev">${icon('chevronRight', 16)}</span>
+          </button>
+
+          ${targetExamDate ? `
+            <button type="button" class="hud-btn mobile-sheet-row sheet-btn-exam">
+              <span class="row-ico">${icon('alarm', 16)}</span>
+              <span class="row-label">${t('settings.target_exam_date_label', undefined, 'Target IELTS Exam Date:')}</span>
+              <span class="row-val font-mono">${(examDaysRemaining ?? 0) >= 0 ? t('drawer.exam_days_left', { days: examDaysRemaining ?? 0 }, `Thi IELTS: còn ${examDaysRemaining} ngày`) : t('drawer.exam_passed', undefined, 'Thi IELTS: Đã qua')}</span>
+              <span class="row-chev">${icon('chevronRight', 16)}</span>
             </button>
           ` : ''}
 
           <!-- Language Switcher Row -->
-          <button class="hud-btn sheet-btn-locale" style="min-height: 48px; padding: 12px 14px; justify-content: flex-start; font-weight: 600; background: var(--bg-card); border: 1px solid var(--border-hairline); color: var(--ink-primary); border-radius: var(--radius-btn, 10px); gap: 10px;">
-            <span style="color: var(--accent-cyan, #38bdf8); display: inline-flex;">${icon('globe', 16)}</span> <span>${t('settings.language', undefined, 'Language')}: ${I18n.getLocale() === 'en' ? 'English (EN)' : 'Tiếng Việt (VI)'}</span>
+          <button type="button" class="hud-btn mobile-sheet-row sheet-btn-locale">
+            <span class="row-ico">${icon('globe', 16)}</span>
+            <span class="row-label">${t('settings.language_label', undefined, 'Interface Language')}</span>
+            <span class="row-val">${I18n.getLocale() === 'en' ? 'English (EN)' : 'Tiếng Việt (VI)'}</span>
+            <span class="row-chev">${icon('chevronRight', 16)}</span>
           </button>
 
-          <!-- Study Workbenches & RPG Progression -->
-          <button class="hud-btn sheet-btn-progression" style="min-height: 48px; padding: 12px 14px; justify-content: flex-start; font-weight: 600; background: var(--bg-card); border: 1px solid var(--border-hairline); color: var(--ink-primary); border-radius: var(--radius-btn, 10px); gap: 10px;">
-            <span style="color: var(--accent-gold); display: inline-flex;">${icon('zap', 16)}</span> <span>${t('nav.level', undefined, 'Level')} ${progression.level} • ${progression.xp} XP ${t('widget.quests', undefined, 'Quests')}</span>
-          </button>
-          <button class="hud-btn sheet-btn-habits" style="min-height: 48px; padding: 12px 14px; justify-content: flex-start; font-weight: 600; background: var(--bg-card); border: 1px solid var(--border-hairline); color: var(--ink-primary); border-radius: var(--radius-btn, 10px); gap: 10px;">
-            <span style="color: var(--accent-gold); display: inline-flex;">${icon('flame', 16)}</span> <span>${t('nav.habits_mission_log', undefined, 'Habits & 30-Day Mission Log')}</span>
-          </button>
-          <button class="hud-btn sheet-btn-analytics" style="min-height: 48px; padding: 12px 14px; justify-content: flex-start; font-weight: 600; background: var(--bg-card); border: 1px solid var(--border-hairline); color: var(--ink-primary); border-radius: var(--radius-btn, 10px); gap: 10px;">
-            <span style="color: var(--accent-purple, #a855f7); display: inline-flex;">${icon('layers', 16)}</span> <span>${t('nav.analytics_serl', undefined, 'CEFR Analytics & SERL Dashboard')}</span>
-          </button>
-          <button class="hud-btn sheet-btn-radar" style="min-height: 48px; padding: 12px 14px; justify-content: flex-start; font-weight: 600; background: var(--bg-card); border: 1px solid var(--border-hairline); color: var(--ink-primary); border-radius: var(--radius-btn, 10px); gap: 10px;">
-            ${icon('target', 16)} <span>${t('nav.radar_full', undefined, 'Skill Radar check')}</span>
-          </button>
-          <button class="hud-btn sheet-btn-cockpit" style="min-height: 48px; padding: 12px 14px; justify-content: flex-start; font-weight: 600; background: var(--bg-card); border: 1px solid var(--border-hairline); color: var(--ink-primary); border-radius: var(--radius-btn, 10px); gap: 10px;">
-            ${icon('graduationCap', 16)} <span>${t('nav.cd_ielts_cockpit', undefined, 'CD-IELTS Exam Station')}</span>
-          </button>
-          <button class="hud-btn sheet-btn-mistake-vault" style="min-height: 48px; padding: 12px 14px; justify-content: flex-start; font-weight: 600; background: var(--bg-card); border: 1px solid var(--border-hairline); color: var(--ink-primary); border-radius: var(--radius-btn, 10px); gap: 10px;">
-            <span style="color: var(--critical, #ef4444); display: inline-flex;">${icon('target', 16)}</span> <span>${t('nav.mistake_vault', undefined, 'Smart Mistake Vault & Blitz')}</span>
-          </button>
-          <button class="hud-btn sheet-btn-commute-audio" style="min-height: 48px; padding: 12px 14px; justify-content: flex-start; font-weight: 600; background: var(--bg-card); border: 1px solid var(--border-hairline); color: var(--ink-primary); border-radius: var(--radius-btn, 10px); gap: 10px;">
-            <span style="color: var(--accent-gold); display: inline-flex;">${icon('headphones', 16)}</span> <span>${t('nav.commute_audio', undefined, 'Hands-Free Commute Audio Loop')}</span>
-          </button>
-          <button class="hud-btn sheet-btn-notes" style="min-height: 48px; padding: 12px 14px; justify-content: flex-start; font-weight: 600; background: var(--bg-card); border: 1px solid var(--border-hairline); color: var(--ink-primary); border-radius: var(--radius-btn, 10px); gap: 10px;">
-            <span style="color: var(--accent-gold); display: inline-flex;">${icon('note', 16)}</span> <span>${t('nav.quick_notes', undefined, 'Quick Notes')}</span>
+          <!-- Theme Toggle -->
+          <button type="button" class="hud-btn mobile-sheet-row sheet-btn-theme">
+            <span class="row-ico">${currentTheme === 'dark' ? icon('sun', 16) : icon('moon', 16)}</span>
+            <span class="row-label">${t('nav.theme_toggle', undefined, 'Toggle Theme')}</span>
+            <span class="row-val">${currentTheme === 'dark' ? t('settings.light', undefined, 'Light') : t('settings.dark', undefined, 'Dark')}</span>
+            <span class="row-chev">${icon('chevronRight', 16)}</span>
           </button>
 
-          <div style="height: 1px; background: var(--border-hairline); margin: 4px 0;"></div>
-
-          <!-- Secondary Audio & Immersion Controls -->
-          <button class="hud-btn sheet-btn-theme" style="min-height: 48px; padding: 12px; justify-content: flex-start; font-weight: 600; gap: 8px;">
-            ${currentTheme === 'dark' ? icon('sun', 16) : icon('moon', 16)} <span>${t('nav.theme_toggle', undefined, 'Toggle Theme')}: ${currentTheme === 'dark' ? t('settings.light', undefined, 'Light') : t('settings.dark', undefined, 'Dark')}</span>
-          </button>
-          <button class="hud-btn sheet-btn-sound" style="min-height: 48px; padding: 12px; justify-content: flex-start; font-weight: 600; gap: 8px;">
-            ${isMuted ? icon('mute', 16) : icon('volume', 16)} <span>${t('settings.sound_music', undefined, 'Audio Sound Effects')}: ${isMuted ? t('nav.muted', undefined, 'Muted') : t('nav.enabled', undefined, 'Enabled')}</span>
-          </button>
-          <button class="hud-btn sheet-btn-music" style="min-height: 48px; padding: 12px; justify-content: flex-start; font-weight: 600; gap: 8px;">
-            ${icon('music', 16)} <span>${t('settings.ambient_music', undefined, 'Ambient Soundscape')}: ${HeaderHUD.ambientLabel(ambientMode)}</span>
-          </button>
-          <button class="hud-btn sheet-btn-zen ${isZen ? 'active' : ''}" style="min-height: 48px; padding: 12px; justify-content: flex-start; font-weight: 600; gap: 8px;">
-            ${icon('eye', 16)} <span>${t('nav.zen_immersion_mode', undefined, 'Zen Immersion Mode')}: ${isZen ? t('nav.active', undefined, 'Active') : t('nav.off', undefined, 'Off')}</span>
-          </button>
-          <button class="hud-btn sheet-btn-tour" style="min-height: 48px; padding: 12px; justify-content: flex-start; font-weight: 600; gap: 8px;">
-            ${icon('compass', 16)} <span>${t('settings.reset_tour', undefined, 'Re-run Onboarding Tour')}</span>
+          <!-- Audio Sound Effects -->
+          <button type="button" class="hud-btn mobile-sheet-row sheet-btn-sound">
+            <span class="row-ico">${isMuted ? icon('mute', 16) : icon('volume', 16)}</span>
+            <span class="row-label">${t('settings.sound_music', undefined, 'Audio Sound Effects')}</span>
+            <span class="row-val">${isMuted ? t('nav.muted', undefined, 'Muted') : t('nav.enabled', undefined, 'Enabled')}</span>
+            <span class="row-chev">${icon('chevronRight', 16)}</span>
           </button>
 
-          <div style="height: 1px; background: var(--border-hairline); margin: 4px 0;"></div>
+          <!-- Ambient Soundscape -->
+          <button type="button" class="hud-btn mobile-sheet-row sheet-btn-music">
+            <span class="row-ico">${icon('music', 16)}</span>
+            <span class="row-label">${t('settings.ambient_music', undefined, 'Ambient Soundscape')}</span>
+            <span class="row-val">${HeaderHUD.ambientLabel(ambientMode)}</span>
+            <span class="row-chev">${icon('chevronRight', 16)}</span>
+          </button>
+
+          <!-- Zen Immersion Mode -->
+          <button type="button" class="hud-btn mobile-sheet-row sheet-btn-zen ${isZen ? 'active' : ''}">
+            <span class="row-ico">${icon('eye', 16)}</span>
+            <span class="row-label">${t('nav.zen_immersion_mode', undefined, 'Zen Immersion Mode')}</span>
+            <span class="row-val">${isZen ? t('nav.active', undefined, 'Active') : t('nav.off', undefined, 'Off')}</span>
+            <span class="row-chev">${icon('chevronRight', 16)}</span>
+          </button>
+
+          <!-- Onboarding Tour -->
+          <button type="button" class="hud-btn mobile-sheet-row sheet-btn-tour">
+            <span class="row-ico">${icon('rotateCcw', 16)}</span>
+            <span class="row-label">${t('settings.reset_tour', undefined, 'Re-run Onboarding Tour')}</span>
+            <span class="row-chev">${icon('chevronRight', 16)}</span>
+          </button>
 
           <!-- Profile Portability & Settings -->
-          <button class="hud-btn sheet-btn-export" style="min-height: 48px; padding: 12px; justify-content: flex-start; font-weight: 600; color: var(--accent-gold); border-color: var(--accent-gold); gap: 8px;">
-            ${icon('download', 16)} <span>[ ${t('settings.export_profile', undefined, 'EXPORT PROFILE (JSON)')} ]</span>
+          <button type="button" class="hud-btn mobile-sheet-row sheet-btn-export">
+            <span class="row-ico">${icon('download', 16)}</span>
+            <span class="row-label">${t('settings.export_profile', undefined, 'Export Profile (JSON)')}</span>
+            <span class="row-chev">${icon('chevronRight', 16)}</span>
           </button>
-          <button class="hud-btn sheet-btn-import" style="min-height: 48px; padding: 12px; justify-content: flex-start; font-weight: 600; color: var(--accent-cyan); border-color: var(--accent-cyan); gap: 8px;">
-            ${icon('upload', 16)} <span>[ ${t('settings.import_profile', undefined, 'IMPORT PROFILE (JSON)')} ]</span>
+          <button type="button" class="hud-btn mobile-sheet-row sheet-btn-import">
+            <span class="row-ico">${icon('upload', 16)}</span>
+            <span class="row-label">${t('settings.import_profile', undefined, 'Import Profile (JSON)')}</span>
+            <span class="row-chev">${icon('chevronRight', 16)}</span>
           </button>
           <input type="file" class="sheet-profile-file-input" accept=".json,application/json" style="display: none;" />
 
-          <button class="hud-btn sheet-btn-settings" style="min-height: 48px; padding: 12px; justify-content: flex-start; font-weight: 700; gap: 12px;">
-            ${icon('settings', 16)} <span>${t('nav.settings_data_management', undefined, 'Settings & Data Management')}</span>
+          <button type="button" class="hud-btn mobile-sheet-row sheet-btn-settings" style="font-weight: 700;">
+            <span class="row-ico">${icon('settings', 16)}</span>
+            <span class="row-label">${t('nav.settings_data_management', undefined, 'Settings & Data Management')}</span>
+            <span class="row-chev">${icon('chevronRight', 16)}</span>
           </button>
         </div>
     `);
@@ -945,10 +1033,20 @@ export class HeaderHUD {
       this.openMobileActionSheet();
     });
 
-    sheet.querySelector('.sheet-btn-progression')?.addEventListener('click', () => {
+    const progCard = sheet.querySelector('.sheet-btn-progression');
+    progCard?.addEventListener('click', () => {
       AudioSynthesizer.play('click');
       close();
       ProgressionModal.open();
+    });
+    progCard?.addEventListener('keydown', (e: Event) => {
+      const ke = e as KeyboardEvent;
+      if (ke.key === 'Enter' || ke.key === ' ') {
+        ke.preventDefault();
+        AudioSynthesizer.play('click');
+        close();
+        ProgressionModal.open();
+      }
     });
 
     sheet.querySelector('.sheet-btn-habits')?.addEventListener('click', () => {
@@ -1062,103 +1160,179 @@ export class HeaderHUD {
     const existing = document.getElementById('settings-modal');
     if (existing) existing.remove();
 
+    const isGentle = CognitiveScaffoldingEngine.isGentle();
+    const notifEnabled = StorageManager.isNotificationsEnabled();
+    const motionReduced = document.documentElement.dataset.motion === 'reduce';
+    const noteEnabled = FloatingNote.isEnabled();
+    const sfxVol = Math.round(AudioSynthesizer.getVolume() * 100);
+    const musicVol = Math.round(ambientMusicEngine.getMusicVolume() * 100);
+    const currentMode = ambientMusicEngine.getMode();
+
     const modal = document.createElement('div');
     modal.id = 'settings-modal';
     modal.className = 'completion-modal-overlay interactive';
     modal.innerHTML = `
-      <div class="completion-receipt-card" style="max-width: 520px; width: 100%; max-height: 90dvh; overflow-y: auto; padding: 20px 16px; gap: 12px; box-sizing: border-box;">
-        <div class="telemetry-label" style="margin-bottom: 0;">${t('settings.kicker', undefined, 'SYSTEM SETTINGS')}</div>
-        <h2 style="font-family: var(--font-mono); font-size: var(--font-h2); font-weight: 700; margin: 0;">
-          ${t('settings.storage_title', undefined, 'Storage & Local Data')}
-        </h2>
-        <p style="font-size: var(--font-body-compact); line-height: 1.5; margin: 0; color: var(--ink-secondary);">
-          ${t('settings.storage_desc', undefined, "Your progress, SRS intervals, and streaks are safely stored in your browser's local memory. You can export or import a backup JSON file anytime.")}
-        </p>
-
-        <div style="display: flex; flex-direction: column; gap: 12px; width: 100%;">
-          <!-- Language Segmented Control -->
-          <div class="settings-locale-section" style="display: flex; flex-direction: column; gap: 8px; padding: 12px; background: rgba(255,255,255,0.03); border: none; border-radius: var(--radius-squircle-sm, 10px);">
-            <div style="font-size: var(--font-kicker); font-weight: 700; color: var(--accent-gold); letter-spacing: 0.08em; text-transform: uppercase; display: flex; align-items: center; gap: 6px;">
-              ${icon('globe', 12)} ${t('settings.language', undefined, 'LANGUAGE / NGÔN NGỮ')}
+      <div class="completion-receipt-card settings-modal-card">
+        <!-- Sticky Header (Never scrolls away) -->
+        <div class="settings-modal-head">
+          <div style="display: flex; flex-direction: column; gap: 4px; min-width: 0;">
+            <div class="settings-group-kicker" style="margin: 0;">
+              ${t('settings.kicker', undefined, 'SYSTEM SETTINGS')}
             </div>
-            <div class="locale-segmented-control" style="display: flex; gap: 8px; width: 100%;">
-              <button type="button" class="hud-btn btn-locale-select ${I18n.getLocale() === 'en' ? 'active' : ''}" data-locale="en" style="flex: 1; justify-content: center; padding: 10px 14px; font-weight: 600; min-height: var(--touch-target-min, 44px); ${I18n.getLocale() === 'en' ? 'background: var(--accent-gold) !important; color: #080a0f !important; font-weight: 700;' : ''}">
-                English
+            <h2 style="font-family: var(--font-sans); font-size: 20px; font-weight: 700; margin: 0; color: var(--ink-primary); line-height: 1.3;">
+              ${t('settings.modal_title', undefined, 'Settings')}
+            </h2>
+          </div>
+          <button type="button" class="btn-modal-close-icon btn-modal-close" aria-label="${t('settings.close_settings', undefined, 'Close Settings')}">
+            ${icon('x', 20)}
+          </button>
+        </div>
+
+        <!-- Scrollable Modal Body with Fade Mask -->
+        <div class="settings-modal-body modal-body">
+          <!-- Group 1: Language / Ngôn ngữ -->
+          <div class="settings-group">
+            <div class="settings-group-kicker">
+              ${icon('globe', 12)} ${t('settings.group_language', undefined, 'LANGUAGE')}
+            </div>
+            <div class="settings-card-surface">
+              <div class="locale-segmented-control" style="display: flex; gap: 8px; width: 100%;">
+                <button type="button" class="hud-btn btn-locale-select ${I18n.getLocale() === 'en' ? 'active' : ''}" data-locale="en" style="flex: 1; justify-content: center; padding: 10px 14px; font-weight: 600; min-height: var(--touch-target-min, 44px); border-radius: var(--radius-btn, 10px); ${I18n.getLocale() === 'en' ? 'background: var(--accent-gold) !important; color: #080a0f !important; font-weight: 700;' : ''}">
+                  English
+                </button>
+                <button type="button" class="hud-btn btn-locale-select ${I18n.getLocale() === 'vi' ? 'active' : ''}" data-locale="vi" style="flex: 1; justify-content: center; padding: 10px 14px; font-weight: 600; min-height: var(--touch-target-min, 44px); border-radius: var(--radius-btn, 10px); ${I18n.getLocale() === 'vi' ? 'background: var(--accent-gold) !important; color: #080a0f !important; font-weight: 700;' : ''}">
+                  Tiếng Việt
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Group 2: Learning / Học tập -->
+          <div class="settings-group">
+            <div class="settings-group-kicker">
+              ${icon('book', 12)} ${t('settings.group_learning', undefined, 'LEARNING')}
+            </div>
+            <div class="settings-card-surface">
+              <!-- Cognitive Mode Value Row -->
+              <div class="switch-row btn-cognitive-modal-toggle" role="button" tabindex="0" style="cursor: pointer;" title="${t('settings.cognitive_mode', undefined, 'Cognitive Mode')}">
+                <span class="switch-label">${t('settings.cognitive_mode', undefined, 'Cognitive Mode')}</span>
+                <div class="setting-value-pill" style="display: inline-flex; align-items: center; gap: 6px; font-size: 13.5px; font-weight: 600; color: var(--accent-gold); background: rgba(165, 180, 252, 0.1); padding: 6px 12px; border-radius: var(--radius-btn, 10px); border: 1px solid rgba(165, 180, 252, 0.2); min-height: 36px; box-sizing: border-box;">
+                  <span class="cognitive-mode-label">${isGentle ? t('settings.scaffolding_gentle_short', undefined, 'Gentle Scaffolding') : t('settings.scaffolding_tactical_short', undefined, 'Tactical Cockpit')}</span>
+                  ${icon('chevron-right', 14)}
+                </div>
+              </div>
+
+              <!-- Daily Reminders Switch Row -->
+              <div class="switch-row btn-notifications-row" role="button" tabindex="0" style="cursor: pointer;">
+                <span class="switch-label">${t('settings.daily_alerts', undefined, 'Daily Review Alerts')}</span>
+                <button type="button" class="hud-switch btn-notifications-toggle ${notifEnabled ? 'active' : ''}" role="switch" aria-checked="${notifEnabled}" aria-label="${t('settings.daily_alerts', undefined, 'Daily Review Alerts')}">
+                  <span class="hud-switch-track"><span class="switch-thumb"></span></span>
+                </button>
+              </div>
+
+              <!-- Motion Switch Row -->
+              <div class="switch-row btn-motion-row" role="button" tabindex="0" style="cursor: pointer;">
+                <span class="switch-label">${t('settings.motion_title', undefined, 'Reduced Motion')}</span>
+                <button type="button" class="hud-switch btn-motion-toggle ${motionReduced ? 'active' : ''}" role="switch" aria-checked="${motionReduced}" aria-label="${t('settings.motion_title', undefined, 'Reduced Motion')}">
+                  <span class="hud-switch-track"><span class="switch-thumb"></span></span>
+                </button>
+              </div>
+
+              <!-- Floating Quick Note Switch Row -->
+              <div class="switch-row btn-floating-note-row" role="button" tabindex="0" style="cursor: pointer;">
+                <span class="switch-label">${t('settings.floating_note', undefined, 'Floating Quick Note')}</span>
+                <button type="button" class="hud-switch btn-floating-note-toggle ${noteEnabled ? 'active' : ''}" role="switch" aria-checked="${noteEnabled}" aria-label="${t('settings.floating_note', undefined, 'Floating Quick Note')}">
+                  <span class="hud-switch-track"><span class="switch-thumb"></span></span>
+                </button>
+              </div>
+
+              <div style="height: 1px; background: var(--border-hairline); margin: 2px 0;"></div>
+
+              <!-- Ghost Actions -->
+              <button type="button" class="btn--ghost btn-restart-placement" style="width: 100%;">
+                ${icon('refresh-cw', 16)} <span>${t('settings.reset_placement', undefined, 'Retake 2-Min Placement Assessment')}</span>
               </button>
-              <button type="button" class="hud-btn btn-locale-select ${I18n.getLocale() === 'vi' ? 'active' : ''}" data-locale="vi" style="flex: 1; justify-content: center; padding: 10px 14px; font-weight: 600; min-height: var(--touch-target-min, 44px); ${I18n.getLocale() === 'vi' ? 'background: var(--accent-gold) !important; color: #080a0f !important; font-weight: 700;' : ''}">
-                Tiếng Việt
+              <button type="button" class="btn--ghost btn-restart-tour" style="width: 100%;">
+                ${icon('compass', 16)} <span>${t('settings.reset_tour', undefined, 'Re-run Onboarding Tour')}</span>
               </button>
             </div>
           </div>
 
-          <button class="hud-btn btn-restart-placement" style="padding: 12px; justify-content: center; font-weight: 700; color: var(--accent-cyan, #38bdf8); border-color: var(--accent-cyan, #38bdf8); gap: 8px;">
-            ${icon('target')} ${t('settings.reset_placement', undefined, 'Retake 2-Min Placement Assessment')}
-          </button>
-          <button class="hud-btn btn-restart-tour" style="padding: 12px; justify-content: center; font-weight: 700; color: var(--accent-gold); border-color: var(--accent-gold); gap: 8px;">
-            ${icon('compass')} ${t('settings.reset_tour', undefined, 'Re-run Onboarding Tour')}
-          </button>
-          <button class="hud-btn btn-cognitive-modal-toggle" style="padding: 12px; justify-content: center; font-weight: 600; gap: 8px;">
-            ${CognitiveScaffoldingEngine.isGentle() ? `🌱 ${t('settings.scaffolding_gentle', undefined, 'Mode: Gentle Scaffolding')}` : `⚡ ${t('settings.scaffolding_tactical', undefined, 'Mode: Tactical Cockpit')}`}
-          </button>
-          <button class="hud-btn btn-notifications-toggle ${StorageManager.isNotificationsEnabled() ? 'active' : ''}" style="padding: 12px; justify-content: center; font-weight: 600; gap: 8px;" aria-pressed="${StorageManager.isNotificationsEnabled()}">
-            🔔 ${t('settings.daily_alerts', undefined, 'Daily Review Alerts')}: ${StorageManager.isNotificationsEnabled() ? (I18n.getLocale() === 'vi' ? 'BẬT' : 'ON') : (I18n.getLocale() === 'vi' ? 'TẮT' : 'OFF')}
-          </button>
-          <button class="hud-btn btn-backup-export btn-profile-export" style="padding: 12px; justify-content: center; font-weight: 600; gap: 8px;">
-            ${icon('download', 16)} ${t('settings.export_profile', undefined, 'Export Profile')}
-          </button>
-          <button class="hud-btn btn-backup-import btn-profile-import" style="padding: 12px; justify-content: center; font-weight: 600; gap: 8px;">
-            ${icon('upload', 16)} ${t('settings.import_profile', undefined, 'Import Profile')}
-          </button>
-          <!-- Dual Audio Bus Controls -->
-          <div class="settings-audio-section" style="display: flex; flex-direction: column; gap: 12px; padding: 12px; background: rgba(255,255,255,0.03); border: none; border-radius: var(--radius-squircle-sm, 10px);">
-            <div style="font-size: var(--font-kicker); font-weight: 700; color: var(--accent-gold); letter-spacing: 0.05em; display: flex; align-items: center; gap: 6px;">
-              ${icon('volume', 12)} ${t('settings.sound_music', undefined, 'DUAL AUDIO BUS CONTROLS')}
+          <!-- Group 3: Audio / Âm thanh -->
+          <div class="settings-group">
+            <div class="settings-group-kicker">
+              ${icon('volume', 12)} ${t('settings.group_audio', undefined, 'AUDIO')}
             </div>
+            <div class="settings-card-surface">
+              <!-- SFX Volume Row -->
+              <div class="setting-row">
+                <div class="setting-head">
+                  <label for="sfx-volume-slider">${t('settings.sfx_volume', undefined, 'SFX Volume')}</label>
+                  <output id="sfx-vol-label" for="sfx-volume-slider">${sfxVol}%</output>
+                </div>
+                <input type="range" id="sfx-volume-slider" min="0" max="100" value="${sfxVol}" aria-label="${t('settings.sfx_volume', undefined, 'SFX Volume')}" />
+              </div>
 
-            <div style="display: flex; justify-content: space-between; align-items: center; font-size: var(--font-body-compact); gap: 12px;">
-              <label for="sfx-volume-slider" style="display: flex; align-items: center; gap: 6px; white-space: nowrap; flex-shrink: 0;">
-                ${t('settings.sfx_volume', undefined, 'SFX Volume')}: <span id="sfx-vol-label" style="font-family: var(--font-mono); font-weight: 600;">${Math.round(AudioSynthesizer.getVolume() * 100)}%</span>
-              </label>
-              <input type="range" id="sfx-volume-slider" min="0" max="100" value="${Math.round(AudioSynthesizer.getVolume() * 100)}" style="width: 130px; cursor: pointer; flex-shrink: 0;" />
-            </div>
+              <!-- Music Volume Row -->
+              <div class="setting-row">
+                <div class="setting-head">
+                  <label for="music-volume-slider">${t('settings.music_volume', undefined, 'Music Volume')}</label>
+                  <output id="music-vol-label" for="music-volume-slider">${musicVol}%</output>
+                </div>
+                <input type="range" id="music-volume-slider" min="0" max="100" value="${musicVol}" aria-label="${t('settings.music_volume', undefined, 'Music Volume')}" />
+              </div>
 
-            <div style="display: flex; justify-content: space-between; align-items: center; font-size: var(--font-body-compact); gap: 12px;">
-              <label for="music-volume-slider" style="display: flex; align-items: center; gap: 6px; white-space: nowrap; flex-shrink: 0;">
-                ${t('settings.music_volume', undefined, 'Music Volume')}: <span id="music-vol-label" style="font-family: var(--font-mono); font-weight: 600;">${Math.round(ambientMusicEngine.getMusicVolume() * 100)}%</span>
-              </label>
-              <input type="range" id="music-volume-slider" min="0" max="100" value="${Math.round(ambientMusicEngine.getMusicVolume() * 100)}" style="width: 130px; cursor: pointer; flex-shrink: 0;" />
-            </div>
-
-            <div style="display: flex; justify-content: space-between; align-items: center; font-size: var(--font-body-compact); gap: 12px;">
-              <label for="music-mode-select" style="white-space: nowrap; flex-shrink: 0;">${t('settings.ambient_music', undefined, 'Ambient Soundscape')}:</label>
-              <select id="music-mode-select" class="hud-select" style="width: 140px; background: var(--bg-card); color: var(--ink-primary); border: 1px solid var(--border-line); padding: 6px 8px; border-radius: 4px; font-size: max(16px, var(--font-body)); min-height: var(--touch-target-min, 44px); cursor: pointer; flex-shrink: 0;">
-                <option value="off" ${ambientMusicEngine.getMode() === 'off' ? 'selected' : ''}>Off</option>
-                <option value="calm-chords" ${ambientMusicEngine.getMode() === 'calm-chords' ? 'selected' : ''}>Calm Chords</option>
-                <option value="celestial-void" ${ambientMusicEngine.getMode() === 'celestial-void' ? 'selected' : ''}>Celestial Void</option>
-                <option value="zen-drone" ${ambientMusicEngine.getMode() === 'zen-drone' ? 'selected' : ''}>Zen Drone</option>
-                <option value="alpha-baroque" ${ambientMusicEngine.getMode() === 'alpha-baroque' ? 'selected' : ''}>Alpha Baroque (60 BPM)</option>
-                <option value="lofi-study" ${ambientMusicEngine.getMode() === 'lofi-study' ? 'selected' : ''}>Lo-Fi Study Beats</option>
-                <option value="gamma-focus" ${ambientMusicEngine.getMode() === 'gamma-focus' ? 'selected' : ''}>Gamma Focus (40Hz)</option>
-                <option value="rain-piano" ${ambientMusicEngine.getMode() === 'rain-piano' ? 'selected' : ''}>Rain & Piano</option>
-                <option value="binaural-theta" ${ambientMusicEngine.getMode() === 'binaural-theta' ? 'selected' : ''}>Binaural Theta (6Hz)</option>
-                <option value="synthwave-drive" ${ambientMusicEngine.getMode() === 'synthwave-drive' ? 'selected' : ''}>Synthwave Sprint (80 BPM)</option>
-              </select>
+              <!-- Ambient Soundscape Row -->
+              <div class="setting-row">
+                <div class="setting-head">
+                  <label for="music-mode-select">${t('settings.ambient_music', undefined, 'Ambient Soundscape')}</label>
+                </div>
+                <select id="music-mode-select" class="hud-select" aria-label="${t('settings.ambient_music', undefined, 'Ambient Soundscape')}">
+                  <option value="off" ${currentMode === 'off' ? 'selected' : ''}>${t('settings.ambient_off', undefined, 'Off')}</option>
+                  <option value="calm-chords" ${currentMode === 'calm-chords' ? 'selected' : ''}>${t('settings.ambient_chords_label', undefined, 'Calm Chords')}</option>
+                  <option value="celestial-void" ${currentMode === 'celestial-void' ? 'selected' : ''}>${t('settings.ambient_void_label', undefined, 'Celestial Void')}</option>
+                  <option value="zen-drone" ${currentMode === 'zen-drone' ? 'selected' : ''}>${t('settings.ambient_zen_label', undefined, 'Zen Drone')}</option>
+                  <option value="alpha-baroque" ${currentMode === 'alpha-baroque' ? 'selected' : ''}>${t('settings.ambient_alpha_label', undefined, 'Alpha Baroque (60 BPM)')}</option>
+                  <option value="lofi-study" ${currentMode === 'lofi-study' ? 'selected' : ''}>${t('settings.ambient_lofi_label', undefined, 'Lo-Fi Study Beats')}</option>
+                  <option value="gamma-focus" ${currentMode === 'gamma-focus' ? 'selected' : ''}>${t('settings.ambient_gamma_label', undefined, 'Gamma Focus (40Hz)')}</option>
+                  <option value="rain-piano" ${currentMode === 'rain-piano' ? 'selected' : ''}>${t('settings.ambient_rain_label', undefined, 'Rain & Piano')}</option>
+                  <option value="binaural-theta" ${currentMode === 'binaural-theta' ? 'selected' : ''}>${t('settings.ambient_theta_label', undefined, 'Binaural Theta (6Hz)')}</option>
+                  <option value="synthwave-drive" ${currentMode === 'synthwave-drive' ? 'selected' : ''}>${t('settings.ambient_synthwave_label', undefined, 'Synthwave Sprint (80 BPM)')}</option>
+                </select>
+              </div>
             </div>
           </div>
 
-          <button class="hud-btn btn-motion-toggle" style="padding: 12px; justify-content: center; font-weight: 600;" aria-pressed="${document.documentElement.dataset.motion === 'reduce'}">
-            ${icon('zap')} <span class="motion-label">${document.documentElement.dataset.motion === 'reduce' ? t('settings.reduced_motion', undefined, 'Motion: Reduced') : t('settings.motion', undefined, 'Motion: Full')}</span>
-          </button>
-          <button class="hud-btn btn-floating-note-toggle ${FloatingNote.isEnabled() ? 'active' : ''}" style="padding: 12px; justify-content: center; font-weight: 600; gap: 8px;" aria-pressed="${FloatingNote.isEnabled()}">
-            ${icon('note', 16)} ${t('settings.floating_note', undefined, 'Floating Quick Note')}: ${FloatingNote.isEnabled() ? (I18n.getLocale() === 'vi' ? 'BẬT' : 'ON') : (I18n.getLocale() === 'vi' ? 'TẮT' : 'OFF')}
-          </button>
+          <!-- Group 4: Data & Storage / Dữ liệu & Lưu trữ -->
+          <div class="settings-group">
+            <div class="settings-group-kicker">
+              ${icon('database', 12)} ${t('settings.group_data', undefined, 'DATA & STORAGE')}
+            </div>
+            <div class="settings-card-surface">
+              <p style="font-size: var(--font-body-compact, 13px); line-height: 1.5; margin: 0; color: var(--ink-secondary); text-align: left;">
+                ${t('settings.storage_desc', undefined, "Your progress, SRS intervals, and streaks are safely stored in your browser's local memory. You can export or import a backup JSON file anytime.")}
+              </p>
 
-          <div class="apple-modal-footer">
-            <button type="button" class="apple-bottom-close-btn btn-modal-close">
-              ${t('settings.close', undefined, 'Close Settings')}
-            </button>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; width: 100%; min-width: 0;">
+                <button type="button" class="hud-btn btn-backup-export btn-profile-export" style="justify-content: center; min-height: 44px; padding: 10px 14px; font-weight: 600; gap: 8px; border-radius: var(--radius-btn, 10px);">
+                  ${icon('download', 16)} <span>${t('settings.export_profile', undefined, 'Export Profile')}</span>
+                </button>
+                <button type="button" class="hud-btn btn-backup-import btn-profile-import" style="justify-content: center; min-height: 44px; padding: 10px 14px; font-weight: 600; gap: 8px; border-radius: var(--radius-btn, 10px);">
+                  ${icon('upload', 16)} <span>${t('settings.import_profile', undefined, 'Import Profile')}</span>
+                </button>
+              </div>
+
+              <div id="settings-data-status" style="display: none; font-size: 12.5px; font-family: var(--font-mono); color: var(--accent-gold); padding: 8px 12px; border-radius: var(--radius-btn, 10px); background: rgba(245, 158, 11, 0.1); border: 1px solid rgba(245, 158, 11, 0.25); text-align: left;"></div>
+              <input type="file" class="backup-file-input" accept=".json,application/json" style="display: none;" />
+            </div>
           </div>
-          <input type="file" class="backup-file-input" accept=".json,application/json" style="display: none;" />
+        </div>
+
+        <!-- Sticky Footer (Always in view) -->
+        <div class="settings-modal-footer">
+          <button type="button" class="apple-bottom-close-btn btn-modal-close" style="width: 100%; min-height: 44px; border-radius: var(--radius-btn, 10px); justify-content: center; font-weight: 600; display: inline-flex; align-items: center;">
+            ${t('settings.close_settings', undefined, 'Close Settings')}
+          </button>
         </div>
       </div>
     `;
@@ -1179,32 +1353,27 @@ export class HeaderHUD {
       });
     });
 
-    modal.querySelector('.btn-restart-placement')?.addEventListener('click', () => {
-      AudioSynthesizer.play('click');
-      closeModal();
-      PlacementQuiz.open();
-    });
-
-    modal.querySelector('.btn-restart-tour')?.addEventListener('click', () => {
-      AudioSynthesizer.play('click');
-      closeModal();
-      SpotlightTour.start(true);
-    });
-
-    modal.querySelector('.btn-cognitive-modal-toggle')?.addEventListener('click', (e) => {
+    const cogRow = modal.querySelector('.btn-cognitive-modal-toggle') as HTMLElement | null;
+    cogRow?.addEventListener('click', () => {
       CognitiveScaffoldingEngine.toggle();
-      const isGentle = CognitiveScaffoldingEngine.isGentle();
-      const btn = e.currentTarget as HTMLElement;
-      btn.textContent = isGentle ? '🌱 Mode: Gentle Scaffolding' : '⚡ Mode: Tactical Cockpit';
+      AudioSynthesizer.play('click');
+      AcousticHaptics.tap();
+      const isGentleNow = CognitiveScaffoldingEngine.isGentle();
+      const labelEl = modal.querySelector('.cognitive-mode-label');
+      if (labelEl) {
+        labelEl.textContent = isGentleNow
+          ? t('settings.scaffolding_gentle_short', undefined, 'Gentle Scaffolding')
+          : t('settings.scaffolding_tactical_short', undefined, 'Tactical Cockpit');
+      }
       const headerCogBtn = this.element.querySelector('.btn-cognitive-mode-toggle');
       if (headerCogBtn) {
-        headerCogBtn.innerHTML = `${isGentle ? '🌱' : '⚡'}<span class="btn-label"> ${isGentle ? 'Gentle' : 'Cockpit'}</span>`;
+        headerCogBtn.innerHTML = `${isGentleNow ? '🌱' : '⚡'}<span class="btn-label"> ${isGentleNow ? 'Gentle' : 'Cockpit'}</span>`;
       }
-      AudioSynthesizer.play('click');
     });
 
-    const notifBtn = modal.querySelector('.btn-notifications-toggle') as HTMLElement | null;
-    notifBtn?.addEventListener('click', async () => {
+    const notifRow = modal.querySelector('.btn-notifications-row') as HTMLElement | null;
+    const notifSwitch = modal.querySelector('.btn-notifications-toggle') as HTMLElement | null;
+    notifRow?.addEventListener('click', async () => {
       AudioSynthesizer.play('click');
       const currentlyEnabled = StorageManager.isNotificationsEnabled();
 
@@ -1212,45 +1381,97 @@ export class HeaderHUD {
         if (typeof window !== 'undefined' && 'Notification' in window) {
           if (Notification.permission === 'granted') {
             StorageManager.setNotificationsEnabled(true);
-            updateNotifButton(true);
+            updateNotifSwitch(true);
             AudioSynthesizer.play('absorb');
           } else if (Notification.permission === 'denied') {
             alert('Notification permission was blocked in your browser settings.\nPlease grant notification permissions in your browser address bar to enable daily review alerts.');
             StorageManager.setNotificationsEnabled(false);
-            updateNotifButton(false);
+            updateNotifSwitch(false);
           } else {
             try {
               const res = await Notification.requestPermission();
               if (res === 'granted') {
                 StorageManager.setNotificationsEnabled(true);
-                updateNotifButton(true);
+                updateNotifSwitch(true);
                 AudioSynthesizer.play('absorb');
               } else {
                 StorageManager.setNotificationsEnabled(false);
-                updateNotifButton(false);
+                updateNotifSwitch(false);
               }
             } catch {
               StorageManager.setNotificationsEnabled(true);
-              updateNotifButton(true);
+              updateNotifSwitch(true);
             }
           }
         } else {
           StorageManager.setNotificationsEnabled(true);
-          updateNotifButton(true);
+          updateNotifSwitch(true);
           AudioSynthesizer.play('absorb');
         }
       } else {
         StorageManager.setNotificationsEnabled(false);
-        updateNotifButton(false);
+        updateNotifSwitch(false);
       }
     });
 
-    const updateNotifButton = (enabled: boolean) => {
-      if (!notifBtn) return;
-      notifBtn.classList.toggle('active', enabled);
-      notifBtn.setAttribute('aria-pressed', String(enabled));
-      notifBtn.innerHTML = `${icon('bell')} <span class="notifications-label">Daily Review Alerts: ${enabled ? 'ON' : 'OFF'}</span>`;
+    const updateNotifSwitch = (enabled: boolean) => {
+      if (!notifSwitch) return;
+      notifSwitch.classList.toggle('active', enabled);
+      notifSwitch.setAttribute('aria-checked', String(enabled));
     };
+
+    const motionRow = modal.querySelector('.btn-motion-row') as HTMLElement | null;
+    const motionSwitch = modal.querySelector('.btn-motion-toggle') as HTMLElement | null;
+    motionRow?.addEventListener('click', () => {
+      const root = document.documentElement;
+      const reduce = root.dataset.motion !== 'reduce';
+      if (reduce) root.dataset.motion = 'reduce'; else delete root.dataset.motion;
+      localStorage.setItem('eng_motion', reduce ? 'reduce' : 'full');
+      AudioSynthesizer.play('click');
+      AcousticHaptics.tap();
+      if (motionSwitch) {
+        motionSwitch.classList.toggle('active', reduce);
+        motionSwitch.setAttribute('aria-checked', String(reduce));
+      }
+    });
+
+    const noteRow = modal.querySelector('.btn-floating-note-row') as HTMLElement | null;
+    const noteSwitch = modal.querySelector('.btn-floating-note-toggle') as HTMLElement | null;
+    noteRow?.addEventListener('click', () => {
+      AudioSynthesizer.play('click');
+      AcousticHaptics.tap();
+      HapticEngine.trigger('selection');
+      const next = FloatingNote.toggleEnabled();
+      if (noteSwitch) {
+        noteSwitch.classList.toggle('active', next);
+        noteSwitch.setAttribute('aria-checked', String(next));
+      }
+    });
+
+    modal.querySelector('.btn-restart-placement')?.addEventListener('click', () => {
+      AudioSynthesizer.play('click');
+      const confirmed = window.confirm(
+        t('settings.reset_placement_confirm', undefined, 'Current CEFR proficiency level will be overwritten. Proceed to retake assessment?')
+      );
+      if (!confirmed) return;
+      const prevLevel = StorageManager.getLearnerLevel();
+      closeModal();
+      PlacementQuiz.open();
+      UndoManager.register(
+        t('settings.reset_placement_undo', undefined, 'Placement assessment reset'),
+        () => {
+          StorageManager.setLearnerLevel(prevLevel);
+          this.render();
+        },
+        4000
+      );
+    });
+
+    modal.querySelector('.btn-restart-tour')?.addEventListener('click', () => {
+      AudioSynthesizer.play('click');
+      closeModal();
+      SpotlightTour.start(true);
+    });
 
     const sfxSlider = modal.querySelector('#sfx-volume-slider') as HTMLInputElement | null;
     sfxSlider?.addEventListener('input', (e) => {
@@ -1275,30 +1496,6 @@ export class HeaderHUD {
       AudioSynthesizer.play('click');
     });
 
-    modal.querySelector('.btn-motion-toggle')?.addEventListener('click', (e) => {
-      const root = document.documentElement;
-      const reduce = root.dataset.motion !== 'reduce';
-      if (reduce) root.dataset.motion = 'reduce'; else delete root.dataset.motion;
-      localStorage.setItem('eng_motion', reduce ? 'reduce' : 'full');
-      const btn = e.currentTarget as HTMLElement;
-      btn.setAttribute('aria-pressed', String(reduce));
-      btn.querySelector('.motion-label')!.textContent = reduce ? t('settings.reduced_motion', undefined, 'Motion: Reduced') : t('settings.motion', undefined, 'Motion: Full');
-      AudioSynthesizer.play('click');
-    });
-
-    modal.querySelector('.btn-floating-note-toggle')?.addEventListener('click', () => {
-      AudioSynthesizer.play('click');
-      AcousticHaptics.tap();
-      HapticEngine.trigger('selection');
-      const next = FloatingNote.toggleEnabled();
-      const btn = modal.querySelector('.btn-floating-note-toggle');
-      if (btn) {
-        btn.classList.toggle('active', next);
-        btn.setAttribute('aria-pressed', String(next));
-        btn.innerHTML = `${icon('note', 16)} ${t('settings.floating_note', undefined, 'Floating Quick Note')}: ${next ? (I18n.getLocale() === 'vi' ? 'BẬT' : 'ON') : (I18n.getLocale() === 'vi' ? 'TẮT' : 'OFF')}`;
-      }
-    });
-
     const closeModal = () => {
       document.removeEventListener('keydown', onKeyDown);
       modal.remove();
@@ -1317,15 +1514,27 @@ export class HeaderHUD {
       }
     });
 
-    modal.querySelector('.btn-modal-close')?.addEventListener('click', () => {
-      AudioSynthesizer.play('click');
-      closeModal();
+    modal.querySelectorAll('.btn-modal-close').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        AudioSynthesizer.play('click');
+        closeModal();
+      });
     });
 
     const exportBtn = modal.querySelector('.btn-profile-export') || modal.querySelector('.btn-backup-export');
     exportBtn?.addEventListener('click', () => {
       AudioSynthesizer.play('click');
-      HeaderHUD.exportUnifiedProfile();
+      const jsonStr = HeaderHUD.exportUnifiedProfile(true);
+      const sizeKB = (new Blob([jsonStr]).size / 1024).toFixed(1);
+      const statusEl = modal.querySelector('#settings-data-status') as HTMLElement | null;
+      if (statusEl) {
+        statusEl.style.display = 'block';
+        statusEl.style.color = 'var(--accent-gold)';
+        statusEl.textContent = `${t('settings.data_exported', undefined, 'Exported profile backup')} · ${sizeKB} KB`;
+        setTimeout(() => {
+          if (statusEl) statusEl.style.display = 'none';
+        }, 4000);
+      }
     });
 
     const fileInput = modal.querySelector('.backup-file-input') as HTMLInputElement | null;
@@ -1338,22 +1547,38 @@ export class HeaderHUD {
     fileInput?.addEventListener('change', async () => {
       const file = fileInput.files?.[0];
       if (!file) return;
-      const success = await HeaderHUD.importUnifiedProfile(file);
-      if (success) {
-        modal.remove();
+      const statusEl = modal.querySelector('#settings-data-status') as HTMLElement | null;
+      try {
+        const success = await HeaderHUD.importUnifiedProfile(file);
+        if (success) {
+          if (statusEl) {
+            statusEl.style.display = 'block';
+            statusEl.style.color = 'var(--ink-good, #4ade80)';
+            statusEl.textContent = t('settings.data_imported', undefined, 'Profile imported successfully');
+          }
+          setTimeout(() => closeModal(), 1500);
+        }
+      } catch (err: any) {
+        if (statusEl) {
+          statusEl.style.display = 'block';
+          statusEl.style.color = 'var(--critical, #ef4444)';
+          statusEl.textContent = `${t('settings.data_import_error', undefined, 'Import failed')}: ${err?.message || ''}`;
+        }
       }
       fileInput.value = '';
     });
   }
 
-  public static exportUnifiedProfile(): string {
+  public static exportUnifiedProfile(silent = false): string {
     AudioSynthesizer.play('click');
     const jsonStr = StorageManager.exportUnifiedProfile(true);
-    HeaderHUD.showStatusDialog({
-      title: 'PROFILE EXPORTED',
-      message: 'Unified Student Profile (v5) successfully exported to your downloads folder.',
-      type: 'success'
-    });
+    if (!silent) {
+      HeaderHUD.showStatusDialog({
+        title: 'PROFILE EXPORTED',
+        message: 'Unified Student Profile (v5) successfully exported to your downloads folder.',
+        type: 'success'
+      });
+    }
     return jsonStr;
   }
 

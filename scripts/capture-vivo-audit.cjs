@@ -60,7 +60,7 @@ function createStaticServer() {
   });
 }
 
-const MODAL_SCROLL_SELECTOR = '.completion-receipt-card, .progression-modal-card, .quiz-modal-card, .mistake-vault-sheet, .floating-note-body, .floating-note-window, .compass-radial-menu, .modal-body, .mobile-action-sheet, .lexicon-drawer-body, .sheet-body, .drawer-content, .completion-modal-overlay, .commute-player-sheet, .ie-tip-modal-body, .skill-node-card, .ie-tip-modal-box, .cd-band-modal-card, .ie-diag-dashboard, .ie-sim-panel';
+const MODAL_SCROLL_SELECTOR = '.mobile-sheet-grid, .completion-receipt-card, .progression-modal-card, .quiz-modal-card, .mistake-vault-sheet, .floating-note-body, .floating-note-window, .compass-radial-menu, .modal-body, .mobile-action-sheet, .lexicon-drawer-body, .sheet-body, .drawer-content, .completion-modal-overlay, .commute-player-sheet, .ie-tip-modal-body, .skill-node-card, .ie-tip-modal-box, .cd-band-modal-card, .ie-diag-dashboard, .ie-sim-panel';
 
 const auditIssues = [];
 const capturedHashes = new Map(); // hash -> first file path
@@ -1025,20 +1025,15 @@ async function run() {
     await new Promise(r => setTimeout(r, 600));
     await captureFlowView(page, '06-ielts-academic', '14-ielts-study-path', 'IELTS Guided 7.0 Study Path');
 
-    // 15 Strategy Detail Modal
+    // 15 Strategy Blueprint Drawer Open State
     await page.goto(`${BASE_URL}ielts.html#strategy`, { waitUntil: 'networkidle0' });
     await new Promise(r => setTimeout(r, 600));
     await page.evaluate(() => {
-      const vaultBtn = Array.from(document.querySelectorAll('.ie-mode-btn')).find(b => b.textContent.includes('Vault') || b.textContent.includes('Tips'));
-      if (vaultBtn) vaultBtn.dispatchEvent(new MouseEvent('click', { bubbles: true }));
-    });
-    await new Promise(r => setTimeout(r, 600));
-    await page.evaluate(() => {
-      const tip = document.querySelector('.ie-tip-card');
-      if (tip) tip.dispatchEvent(new MouseEvent('click', { bubbles: true }));
+      const toggle = document.querySelector('.ie-strategy-card .ie-drawer-toggle');
+      if (toggle) toggle.dispatchEvent(new MouseEvent('click', { bubbles: true }));
     });
     await new Promise(r => setTimeout(r, 500));
-    await captureFlowView(page, '06-ielts-academic', '15-ielts-strategy-modal', 'IELTS Strategy Guide Tactical Modal');
+    await captureFlowView(page, '06-ielts-academic', '15-ielts-strategy-modal', 'IELTS Strategy Blueprint Expanded Drawer');
     await page.evaluate(() => {
       document.querySelector('.apple-bottom-close-btn, .ie-tip-modal-close')?.dispatchEvent(new MouseEvent('click', { bubbles: true }));
       document.querySelector('.ie-tip-modal-overlay')?.classList.remove('is-active');
