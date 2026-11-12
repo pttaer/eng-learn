@@ -10,6 +10,7 @@ import { SRSEngine } from './srs-engine';
 import { I18n, LOCALE_EVENT } from './i18n';
 import { NotificationCatalog } from './notification-catalog';
 import collocationsData from '../assets/data/collocations.json';
+import lexiconData from '../assets/data/lexicon-dictionary.json';
 
 declare global {
   interface Window {
@@ -44,6 +45,15 @@ export interface WidgetPayload {
   notification_hook?: string;
   notification_tip?: string;
   locale?: string;
+  level?: number;
+  completed_quests?: number;
+  quests_total?: number;
+  quests?: {
+    title: string;
+    completed: boolean;
+    xp: number;
+    category: string;
+  }[];
 }
 
 const FALLBACK_WORDS: WidgetCustomWord[] = [
@@ -134,6 +144,8 @@ for (const item of (collocationsData as any[])) {
   if (item && item.id) COLLOC_MAP.set(item.id, item);
 }
 
+const LEX_DICT = (lexiconData || {}) as Record<string, any>;
+
 export class WidgetBridge {
   private static instance: WidgetBridge | null = null;
   private lastSyncTime: number = 0;
@@ -222,6 +234,7 @@ export class WidgetBridge {
   public getPersonalizedWordsQueue(isVi: boolean): WidgetCustomWord[] {
     const queue: WidgetCustomWord[] = [];
     const seenWords = new Set<string>();
+    const seenMeanings = new Set<string>();
 
     try {
       const states = StorageManager.loadState().cardStates || {};
@@ -241,10 +254,12 @@ export class WidgetBridge {
         if (COLLOC_MAP.has(cardId)) {
           const c = COLLOC_MAP.get(cardId);
           const w = c.phrase || '';
-          if (w && !seenWords.has(w.toLowerCase())) {
+          const vn = (c.vietnamese || '').trim();
+          const def = (c.meaning || c.category || '').trim();
+          const meaningKey = (def || vn).toLowerCase();
+          if (w && def && !seenWords.has(w.toLowerCase()) && !seenMeanings.has(meaningKey)) {
             seenWords.add(w.toLowerCase());
-            const vn = c.vietnamese || '';
-            const def = c.meaning || c.category || '';
+            seenMeanings.add(meaningKey);
             const meaning = isVi && vn ? (def && def !== vn ? `${def}\n\n🇻🇳 ${vn}` : `🇻🇳 ${vn}`) : def;
             queue.push({
               word: w,
@@ -257,18 +272,30 @@ export class WidgetBridge {
             });
           }
         } else if (cardId.startsWith('lex-')) {
-          const rawWord = cardId.slice(4).replace(/-/g, ' ');
-          if (rawWord && !seenWords.has(rawWord.toLowerCase())) {
-            seenWords.add(rawWord.toLowerCase());
-            queue.push({
-              word: rawWord.charAt(0).toUpperCase() + rawWord.slice(1),
-              phonetic: '/lexicon/ • vocab',
-              meaning: isVi ? 'Từ vựng lưu từ Lexicon Drawer' : 'Saved Lexicon Vocabulary',
-              definition: 'Saved Lexicon Vocabulary',
-              vietnamese: 'Từ vựng trong sổ tay',
-              example: '',
-              tags: 'Source: Lexicon Notebook'
-            });
+          const rawWord = cardId.slice(4).replace(/-/g, ' ').trim().toLowerCase();
+          const lexEntry = LEX_DICT[rawWord];
+          if (lexEntry) {
+            const w = lexEntry.word || rawWord;
+            const def = (lexEntry.definition || '').trim();
+            const vn = (lexEntry.vietnamese || '').trim();
+            const meaningKey = (def || vn).toLowerCase();
+            if (w && def && !seenWords.has(w.toLowerCase()) && !seenMeanings.has(meaningKey)) {
+              seenWords.add(w.toLowerCase());
+              seenMeanings.add(meaningKey);
+              const meaning = isVi && vn ? (def && def !== vn ? `${def}\n\n🇻🇳 ${vn}` : `🇻🇳 ${vn}`) : def;
+              const collocText = Array.isArray(lexEntry.collocations) && lexEntry.collocations.length > 0
+                ? `Collocations: ${lexEntry.collocations.slice(0, 3).join(', ')}`
+                : '';
+              queue.push({
+                word: w.charAt(0).toUpperCase() + w.slice(1),
+                phonetic: `${lexEntry.ipa || ''} • ${lexEntry.pos || 'vocab'}`.trim(),
+                meaning,
+                definition: def,
+                vietnamese: vn,
+                example: lexEntry.contextSentence ? `“${lexEntry.contextSentence}”` : '',
+                tags: collocText || 'Source: Lexicon Notebook'
+              });
+            }
           }
         }
       }
@@ -279,9 +306,11 @@ export class WidgetBridge {
     // Complement with high-utility curated fallback words to guarantee at least 10 words
     for (const fb of FALLBACK_WORDS) {
       if (queue.length >= 15) break;
-      if (!seenWords.has(fb.word.toLowerCase())) {
+      const baseDef = (fb.definition || fb.meaning || '').trim();
+      const meaningKey = baseDef.toLowerCase();
+      if (!seenWords.has(fb.word.toLowerCase()) && !seenMeanings.has(meaningKey)) {
         seenWords.add(fb.word.toLowerCase());
-        const baseDef = fb.definition || fb.meaning || '';
+        seenMeanings.add(meaningKey);
         let meaning = baseDef;
         if (isVi && fb.vietnamese) {
           meaning = baseDef && baseDef !== fb.vietnamese ? `${baseDef}\n\n🇻🇳 ${fb.vietnamese}` : `🇻🇳 ${fb.vietnamese}`;
@@ -328,6 +357,7 @@ export class WidgetBridge {
       let level = 1;
       let completedQuests = 0;
       let questsLeft = 3;
+      let questItems: { title: string; completed: boolean; xp: number; category: string }[] = [];
 
       try {
         const prog = ProgressionEngine.getInstance().getState();
@@ -335,6 +365,22 @@ export class WidgetBridge {
         level = prog.level || 1;
         completedQuests = prog.quests.filter(q => q.completed).length;
         questsLeft = prog.quests.filter(q => !q.completed).length;
+        if (prog.quests && Array.isArray(prog.quests)) {
+          questItems = prog.quests.map(q => {
+            let localizedTitle = q.title;
+            try {
+              localizedTitle = I18n.t(`quest.${q.id}_title`, undefined, q.title);
+            } catch {
+              localizedTitle = q.title;
+            }
+            return {
+              title: localizedTitle,
+              completed: !!q.completed,
+              xp: q.xpReward || 50,
+              category: q.category || 'studio'
+            };
+          });
+        }
       } catch {
         const state = StorageManager.loadState();
         streak = state.streak?.currentStreak || 1;
@@ -370,6 +416,10 @@ export class WidgetBridge {
         progress: hook,
         notification_hook: hook,
         locale: isVi ? 'vi' : 'en',
+        level,
+        completed_quests: completedQuests,
+        quests_total: questItems.length > 0 ? questItems.length : 3,
+        quests: questItems,
         words: personalizedQueue
       };
 

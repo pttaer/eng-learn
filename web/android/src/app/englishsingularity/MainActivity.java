@@ -52,6 +52,18 @@ public class MainActivity extends Activity {
                 if (obj.has("locale")) {
                     editor.putString("app_locale", obj.optString("locale", "en"));
                 }
+                if (obj.has("level")) {
+                    editor.putInt(SingularityWidgetProvider.PREF_LEVEL, obj.optInt("level", 1));
+                }
+                if (obj.has("completed_quests")) {
+                    editor.putInt(SingularityWidgetProvider.PREF_COMPLETED_QUESTS, obj.optInt("completed_quests", 0));
+                }
+                if (obj.has("quests_total")) {
+                    editor.putInt(SingularityWidgetProvider.PREF_QUESTS_TOTAL, obj.optInt("quests_total", 3));
+                }
+                if (obj.has("quests")) {
+                    editor.putString(SingularityWidgetProvider.PREF_QUESTS_JSON, obj.getJSONArray("quests").toString());
+                }
                 if (obj.has("words")) {
                     editor.putString(SingularityWidgetProvider.PREF_CUSTOM_WORDS_JSON, obj.getJSONArray("words").toString());
                 }
@@ -78,11 +90,11 @@ public class MainActivity extends Activity {
         @JavascriptInterface
         public int consumeWidgetQuizScore() {
             SharedPreferences prefs = getSharedPreferences(SingularityWidgetProvider.PREFS_NAME, Context.MODE_PRIVATE);
-            int score = prefs.getInt(SingularityWidgetProvider.PREF_QUIZ_SCORE, 0);
-            if (score > 0) {
-                prefs.edit().putInt(SingularityWidgetProvider.PREF_QUIZ_SCORE, 0).apply();
+            int pending = prefs.getInt(SingularityWidgetProvider.PREF_QUIZ_PENDING_SCORE, 0);
+            if (pending > 0) {
+                prefs.edit().putInt(SingularityWidgetProvider.PREF_QUIZ_PENDING_SCORE, 0).apply();
             }
-            return score;
+            return pending;
         }
 
         @JavascriptInterface

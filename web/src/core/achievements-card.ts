@@ -56,7 +56,7 @@ const hexIcon = (a: Achievement): string => `
   <div style="position: relative; flex: none; width: 48px; height: 48px; color: #4a4f7a; ${a.earned ? '' : 'filter: grayscale(1); opacity: 0.45;'}">
     <svg width="48" height="48" viewBox="0 0 48 48" aria-hidden="true"><polygon points="24,2 44,13 44,35 24,46 4,35 4,13" fill="${a.color}"/></svg>
     <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;">${icon(a.icon, 20)}</div>
-    <span style="position: absolute; top: -4px; right: 0; font-size: var(--font-kicker); font-weight: 700; color: #fff; background: #7f83e6; border-radius: 8px; padding: 1px 5px;">+${a.points}</span>
+    <span style="position: absolute; top: -6px; right: -2px; font-size: 11px; line-height: 1.2; font-weight: 700; color: #fff; background: #7f83e6; border-radius: var(--radius-btn, 10px); padding: 2px 6px;">+${a.points}</span>
   </div>`;
 
 const achievementRow = (a: Achievement): string => {
@@ -103,7 +103,7 @@ export function achievementsHtml(includeHeader = true): string {
   const streak = engine.streak;
   const list = achievementsFor(summary, streak);
   return `
-    <section aria-label="${t('nav.profile', undefined, 'Achievements')}" style="width: 100%; margin: 0 auto var(--space-16); border-radius: var(--radius-squircle-md, 12px); overflow: hidden; background: var(--bg-surface); color: var(--ink-primary); border: 1px solid var(--border-hairline); box-shadow: var(--shadow-card);">
+    <section aria-label="${t('nav.profile', undefined, 'Achievements')}" style="width: 100%; margin: 0 auto var(--space-16); border-radius: var(--radius-squircle-md, 12px); overflow: hidden; background: ${includeHeader ? 'var(--bg-surface)' : 'rgba(255, 255, 255, 0.03)'}; color: var(--ink-primary); border: ${includeHeader ? '1px solid var(--border-hairline)' : 'none'}; box-shadow: ${includeHeader ? 'var(--shadow-card)' : 'none'};">
       ${includeHeader ? headerHtml(info, summary, streak) : ''}
       <div>
         ${list.map(achievementRow).join('')}

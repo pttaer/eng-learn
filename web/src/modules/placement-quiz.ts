@@ -82,13 +82,12 @@ export class PlacementQuiz {
         ${t('placement.intro', undefined, 'Takes about 2 minutes with gentle exploratory questions (from A1 to C2). The test stops dynamically as soon as questions exceed your pace so you never feel exhausted. You can adjust your level anytime.')}
       </p>
       <div class="action-stack placement-actions-cluster" style="width: 100%; display: flex; flex-direction: column; gap: 12px; margin-top: 20px;">
-        <button class="hud-btn placement-start btn-start-placement apple-press" style="width: 100%; justify-content: center; min-height: 44px; padding: 12px 0; font-weight: 700; border-radius: var(--radius-btn, 10px);">${t('placement.start_btn', undefined, 'Start (~2 mins)')}</button>
-        <button class="hud-btn placement-skip apple-press" style="width: 100%; justify-content: center; min-height: 44px; padding: 10px 0; border-radius: var(--radius-btn, 10px);">${t('placement.skip_to_a1', undefined, 'Skip and start at A1')}</button>
+        <button class="hud-btn placement-start btn-start-placement apple-press" style="width: 100%; justify-content: center; min-height: 44px; padding: 12px 0; font-weight: 700; border: none; background: var(--accent-gold, #a5b4fc); color: #080a0f; border-radius: var(--radius-btn, 10px);">${t('placement.start_btn', undefined, 'Start (~2 mins)')}</button>
+        <button class="hud-btn placement-skip apple-press" style="width: 100%; justify-content: center; min-height: 44px; padding: 10px 0; border: none; background: var(--bg-surface-sunk, rgba(255, 255, 255, 0.04)); color: var(--ink-secondary); border-radius: var(--radius-btn, 10px);">${t('placement.skip_to_a1', undefined, 'Skip and start at A1')}</button>
       </div>
     `);
     this.overlay.querySelector('.placement-start')?.addEventListener('click', () => this.renderQuestion());
     this.overlay.querySelector('.placement-skip')?.addEventListener('click', () => this.skip());
-    (this.overlay.querySelector('.placement-start') as HTMLElement | null)?.focus();
   }
 
   private renderQuestion(): void {
@@ -104,20 +103,19 @@ export class PlacementQuiz {
     this.card(`
       <div class="telemetry-label" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 4px 8px; margin-bottom: var(--space-8);">
         <span>${t('placement.question_header', { current: this.index + 1, total: this.questions.length, level: q.level }, `QUESTION ${this.index + 1} / ${this.questions.length} · LEVEL ${q.level}`)}</span>
-        <span class="hud-badge placement-skill-badge" style="letter-spacing: 0.08em; font-weight: 700; color: var(--gold-primary, #ca8a04); text-transform: uppercase; white-space: nowrap; flex-shrink: 0;">${badgeText}</span>
+        <span class="hud-badge placement-skill-badge" style="letter-spacing: 0.08em; font-weight: 700; color: var(--gold-primary, #ca8a04); text-transform: uppercase; white-space: nowrap; flex-shrink: 0; border: none;">${badgeText}</span>
       </div>
       <div class="placement-prompt-title" style="font-size: var(--font-h3); font-weight: 700; line-height: 1.35; margin: 0 0 ${q.context ? 'var(--space-8)' : 'var(--space-16)'} 0; color: var(--ink-primary);">${this.escape(q.prompt)}</div>
       ${q.context ? `<div class="placement-context-box" style="font-size: var(--font-body-compact); color: var(--ink-secondary); line-height: 1.5; margin: 0 0 var(--space-16) 0;">${this.escape(q.context)}</div>` : ''}
       <div role="group" aria-label="${t('quiz.choose_answer_aria', undefined, 'Choose the answer')}" class="action-stack" style="width: 100%; display: flex; flex-direction: column; gap: 12px; margin-top: 14px;">
-        ${q.options.map((o, i) => `<button class="hud-btn placement-option apple-press" data-i="${i}" style="width: 100%; box-sizing: border-box; justify-content: flex-start; padding: 12px 14px; text-align: left; white-space: normal; min-height: 44px; text-transform: none; border-radius: var(--radius-btn, 10px); font-family: var(--font-sans); font-size: var(--font-body-compact); line-height: 1.4; display: inline-flex; align-items: center; gap: 8px;"><strong style="font-family: var(--font-mono); flex-shrink: 0;">${i + 1}.</strong> <span>${this.escape(o)}</span></button>`).join('')}
+        ${q.options.map((o, i) => `<button class="hud-btn placement-option apple-press" data-i="${i}" style="width: 100%; box-sizing: border-box; justify-content: flex-start; padding: 12px 14px; text-align: left; white-space: normal; min-height: 44px; text-transform: none; border: none; background: var(--bg-surface-sunk, rgba(255, 255, 255, 0.04)); color: var(--ink-primary); border-radius: var(--radius-btn, 10px); font-family: var(--font-sans); font-size: var(--font-body-compact); line-height: 1.4; display: inline-flex; align-items: center; gap: 8px;"><strong style="font-family: var(--font-mono); flex-shrink: 0;">${i + 1}.</strong> <span>${this.escape(o)}</span></button>`).join('')}
       </div>
-      <button class="hud-btn placement-skip apple-press" style="width: 100%; justify-content: center; min-height: 44px; padding: 8px 0; margin-top: 18px; border-radius: var(--radius-btn, 10px);">${t('placement.skip_survey', undefined, 'Skip diagnostic quiz')}</button>
+      <button class="hud-btn placement-skip apple-press" style="width: 100%; justify-content: center; min-height: 44px; padding: 8px 0; margin-top: 18px; border: none; background: transparent; color: var(--ink-muted); border-radius: var(--radius-btn, 10px);">${t('placement.skip_survey', undefined, 'Skip diagnostic quiz')}</button>
     `);
     this.overlay.querySelectorAll<HTMLElement>('.placement-option').forEach(btn => {
       btn.addEventListener('click', () => this.answer(Number(btn.dataset.i)));
     });
     this.overlay.querySelector('.placement-skip')?.addEventListener('click', () => this.skip());
-    (this.overlay.querySelector('.placement-option') as HTMLElement | null)?.focus();
   }
 
   private answer(choice: number): void {
@@ -152,9 +150,9 @@ export class PlacementQuiz {
         ${t('placement.result_desc', undefined, 'This is a balanced 24-question multi-skill diagnostic estimate (Vocabulary, Collocations, Grammar, and Reading). Pick another level if it feels too easy or too hard.')}
       </p>
       <div class="action-stack placement-actions-cluster" style="width: 100%; display: flex; flex-direction: column; gap: 12px; margin-top: 20px;">
-        <button class="hud-btn placement-accept" style="width: 100%; justify-content: center; min-height: 44px; padding: 12px 0; font-weight: 700; border-radius: var(--radius-btn, 10px);">${t('placement.start_at', { level }, `Start at ${level}`)}</button>
+        <button class="hud-btn placement-accept" style="width: 100%; justify-content: center; min-height: 44px; padding: 12px 0; font-weight: 700; border: none; background: var(--accent-gold, #a5b4fc); color: #080a0f; border-radius: var(--radius-btn, 10px);">${t('placement.start_at', { level }, `Start at ${level}`)}</button>
         <div style="display: flex; flex-wrap: wrap; gap: 8px 10px; justify-content: center; margin-top: 6px;">
-          ${CEFR_ORDER.filter(l => l !== level).map(l => `<button class="hud-btn placement-pick" data-level="${l}" style="padding: 6px 14px; min-height: 44px; min-width: 44px; border-radius: var(--radius-btn, 10px); display: inline-flex; align-items: center; justify-content: center;">${l}</button>`).join('')}
+          ${CEFR_ORDER.filter(l => l !== level).map(l => `<button class="hud-btn placement-pick" data-level="${l}" style="padding: 6px 14px; min-height: 44px; min-width: 44px; border: 1px solid var(--border-hairline); border-radius: var(--radius-btn, 10px); display: inline-flex; align-items: center; justify-content: center;">${l}</button>`).join('')}
         </div>
       </div>
     `);
@@ -162,7 +160,6 @@ export class PlacementQuiz {
     this.overlay.querySelectorAll<HTMLElement>('.placement-pick').forEach(b => {
       b.addEventListener('click', () => this.finish(b.dataset.level as Cefr));
     });
-    (this.overlay.querySelector('.placement-accept') as HTMLElement | null)?.focus();
   }
 
   private skip(): void {

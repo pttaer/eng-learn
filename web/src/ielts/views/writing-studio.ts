@@ -541,7 +541,7 @@ export function writingStudioView(root: HTMLElement): () => void {
   const t2TabBtn = h('button', 'ie-tab');
   t2TabBtn.innerHTML = `${icon('edit', 13)} ${t('wstudio.tab_task2', undefined, 'Task 2 Essays (5)')}`;
   const clauseTabBtn = h('button', 'ie-tab');
-  clauseTabBtn.innerHTML = `${icon('target', 13)} ${t('wstudio.tab_clauses', undefined, 'Tactical Clause Builder')}`;
+  clauseTabBtn.innerHTML = `${icon('target', 13)} ${t('wstudio.tab_clauses', undefined, 'Clause Builder')}`;
   modeSwitcher.append(t1TabBtn, t2TabBtn, clauseTabBtn);
 
   const contentArea = h('div', 'ie-studio-content');
@@ -916,7 +916,7 @@ export function writingStudioView(root: HTMLElement): () => void {
       <div class="ie-bp-prompt-card">
         <div class="ie-bp-header-row">
           <span class="ie-skill-badge">TASK 1 // ${bp.kind.toUpperCase()}</span>
-          <button type="button" class="ie-btn ie-btn-sm ie-load-t1-model">${t('wstudio.btn_load_t1_model', undefined, 'Load Band 8.5 Model Blueprint')}</button>
+          <button type="button" class="ie-btn ie-btn-sm ie-load-t1-model"><span class="ie-model-btn-full">${t('wstudio.btn_load_t1_model', undefined, 'Load Band 8.5 Model Blueprint')}</span><span class="ie-model-btn-short">${t('wstudio.btn_load_model_short', undefined, 'Band 8.5 Model')}</span></button>
         </div>
         <h2 class="ie-sub">${esc(bp.title)}</h2>
         <p class="ie-prompt-text"><b>Prompt:</b> ${esc(bp.prompt)}</p>
@@ -1163,7 +1163,7 @@ export function writingStudioView(root: HTMLElement): () => void {
       <div class="ie-arch-prompt-card">
         <div class="ie-bp-header-row">
           <span class="ie-skill-badge">TASK 2 // ${arch.type.toUpperCase()}</span>
-          <button type="button" class="ie-btn ie-btn-sm ie-load-t2-model">${t('wstudio.btn_load_t2_model')}</button>
+          <button type="button" class="ie-btn ie-btn-sm ie-load-t2-model"><span class="ie-model-btn-full">${t('wstudio.btn_load_t2_model')}</span><span class="ie-model-btn-short">${t('wstudio.btn_load_model_short', undefined, 'Band 8.5 Model')}</span></button>
         </div>
         <h2 class="ie-sub">${esc(arch.title)}</h2>
         <p class="ie-prompt-text"><b>Prompt:</b> ${esc(arch.prompt)}</p>

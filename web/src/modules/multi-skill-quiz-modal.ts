@@ -962,7 +962,7 @@ export class MultiSkillQuizModal {
 
         <!-- Pinned Sticky Footer CTA -->
         <footer class="multi-skill-footer">
-          <button type="button" class="hud-btn btn-apply-profile" style="width: 100%; min-height: 44px; justify-content: center; font-weight: 700; background: var(--accent-gold, #a5b4fc); color: var(--bg-canvas, #080a0f); border-color: var(--accent-gold, #a5b4fc); border-radius: var(--radius-btn, 10px);">
+          <button type="button" class="hud-btn btn-apply-profile" style="width: 100%; min-height: 44px; justify-content: center; font-weight: 700; background: var(--accent-gold, #a5b4fc); color: var(--bg-canvas, #080a0f); border: none; border-radius: var(--radius-btn, 10px);">
             ${icon('zap', 14)} ${t('quiz.apply_profile', undefined, 'Apply Levels & Calibrate App')}
           </button>
           <div style="display: flex; gap: 8px; width: 100%;">
@@ -1045,8 +1045,6 @@ export class MultiSkillQuizModal {
       AudioSynthesizer.play('click');
       this.close();
     });
-
-    (this.overlay.querySelector('.btn-apply-profile') as HTMLElement | null)?.focus({ preventScroll: true });
   }
 
   private updateRadarLive(skill: SkillId, level: Cefr): void {
@@ -1186,7 +1184,7 @@ export class MultiSkillQuizModal {
       const labelY = cy - r;
       return `
         <polygon points="${points}" class="radar-ring radar-ring-${tier}" stroke="var(--ink-muted, #94a3b8)" stroke-width="0.8" stroke-dasharray="2,3" fill="none" opacity="0.3" />
-        <text x="${cx + 8}" y="${labelY.toFixed(1)}" class="radar-tier-label" font-size="8.5" font-weight="600" text-anchor="start" dominant-baseline="middle" fill="var(--ink-muted, #94a3b8)" opacity="0.75">${tier}</text>
+        <text x="${cx + 14}" y="${labelY.toFixed(1)}" class="radar-tier-label" font-size="8.5" font-weight="600" text-anchor="start" dominant-baseline="middle" fill="var(--ink-muted, #94a3b8)" opacity="0.75">${tier}</text>
       `;
     }).join('');
 

@@ -177,20 +177,18 @@ export class WritingDossier {
     const item = this.items[this.currentIndex];
 
     this.container.innerHTML = `
-      <div class="copywork-studio" style="width: 100%; max-width: 1040px; margin: 0 auto; display: flex; flex-direction: column; gap: var(--space-16);">
+      <div class="copywork-studio" style="width: 100%; max-width: 1040px; margin: 0 auto; display: flex; flex-direction: column; gap: var(--space-16); padding-bottom: calc(var(--safe-bottom-dock, 84px) + env(safe-area-inset-bottom, 0px) + 24px);">
         <!-- Top Studio Bar -->
         <div class="dossier-control-bar" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-hairline); padding-bottom: 12px;">
           <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px;">
             <span class="telemetry-label" style="color: var(--accent-gold); font-weight: 700;">${t('writing.franklin_copywork')}</span>
-            <span class="hud-status-badge register-badge" title="${t('writing.register_label', undefined, 'REGISTER:')} ${item.register}">${t('writing.register_label', undefined, 'REGISTER:')} ${item.register.split('/')[0].trim()}</span>
+            <span class="hud-status-badge register-badge" style="border: none !important; background: var(--bg-surface-sunk, rgba(255, 255, 255, 0.06)) !important;" title="${t('writing.register_label', undefined, 'REGISTER:')} ${item.register}">${t('writing.register_label', undefined, 'REGISTER:')} ${item.register.split('/')[0].trim()}</span>
             ${levelRowHtml(this.allItems, this.activeLevel)}
           </div>
-          <div class="step-indicator" style="display: flex; gap: 8px; font-family: var(--font-mono); font-size: var(--font-kicker);">
-            <span class="${this.currentStep === 'analyze' ? 'active-step' : ''}">${t('writing.step1_analyze')}</span>
-            <span>→</span>
-            <span class="${this.currentStep === 'type' ? 'active-step' : ''}">${t('writing.step2_type')}</span>
-            <span>→</span>
-            <span class="${this.currentStep === 'diff' ? 'active-step' : ''}">${t('writing.step3_evaluate')}</span>
+          <div class="step-indicator copywork-stepper-grid" role="tablist" aria-label="Copywork steps">
+            <span class="step-item ${this.currentStep === 'analyze' ? 'active-step' : ''}">${t('writing.step1_analyze')}</span>
+            <span class="step-item ${this.currentStep === 'type' ? 'active-step' : ''}">${t('writing.step2_type')}</span>
+            <span class="step-item ${this.currentStep === 'diff' ? 'active-step' : ''}">${t('writing.step3_evaluate')}</span>
           </div>
         </div>
 
@@ -249,7 +247,7 @@ export class WritingDossier {
             </div>
 
             <!-- MEAL Structural Decomposition -->
-            <div class="meal-blueprint-box" style="border: none; padding: 16px; background: var(--bg-surface-sunk); border-radius: var(--radius-squircle-sm, 10px); margin-bottom: 20px;">
+            <div class="meal-blueprint-box" style="border: none; padding: 16px 16px 24px 16px; background: var(--bg-surface-sunk); border-radius: var(--radius-squircle-sm, 10px); margin-bottom: 20px;">
               <div class="telemetry-label" style="margin-bottom: 10px;">${t('writing.meal_scaffolding')}</div>
               <div style="display: grid; grid-template-columns: 32px 1fr; gap: 8px 12px; font-size: var(--font-body-compact); line-height: 1.5;">
                 <strong style="font-family: var(--font-mono); color: var(--accent-gold);">M:</strong> <span>${item.meal.m}</span>
@@ -274,7 +272,7 @@ export class WritingDossier {
           <div class="copywork-card" style="background: var(--bg-surface); border: 1px solid var(--border-hairline); padding: 16px; border-radius: 12px; box-shadow: var(--shadow-card);">
             <div class="copywork-header-row">
               <span class="telemetry-label" style="color: var(--accent-gold); font-weight: 700;">${t('writing.step2_title', undefined, 'STEP 2 · RECONSTRUCT FROM MEMORY')}</span>
-              <button class="hud-btn btn-peek-model" style="padding: 8px 14px; min-height: 44px; display: inline-flex; align-items: center; font-size: var(--font-kicker); border-radius: var(--radius-btn, 10px);">${icon('eye')} ${t('writing.peek_model', undefined, 'Peek Model (2s)')}</button>
+              <button class="hud-btn btn-peek-model" style="padding: 8px 14px; min-height: 44px; display: inline-flex; align-items: center; font-size: var(--font-kicker); border-radius: var(--radius-btn, 10px); border: none; background: var(--bg-surface-sunk);">${icon('eye')} ${t('writing.peek_model', undefined, 'Peek Model (2s)')}</button>
             </div>
 
             <div id="peek-container" style="display: none; font-size: var(--font-body); line-height: 1.5; color: var(--ink-muted); padding: 12px; background: var(--bg-surface-sunk); border: none; margin-bottom: 16px; border-radius: var(--radius-squircle-sm, 10px);">
@@ -289,7 +287,7 @@ export class WritingDossier {
               class="copywork-input"
               rows="6"
               placeholder="${t('writing.reconstruct_placeholder', undefined, 'Reconstruct the complete master sentence from memory...')}"
-              style="width: 100%; font-family: var(--font-sans); font-size: max(16px, var(--font-h3)); line-height: 1.65; padding: 16px; border: 1px solid var(--border-subtle); border-radius: var(--radius-squircle-sm, 10px); box-sizing: border-box; resize: vertical; outline: none; background: var(--bg-canvas); color: var(--ink-primary);"
+              style="width: 100%; font-family: var(--font-sans); font-size: max(16px, var(--font-h3)); line-height: 1.65; padding: 16px; border: 1px solid transparent; border-radius: var(--radius-squircle-sm, 10px); box-sizing: border-box; resize: vertical; outline: none; background: var(--bg-surface-sunk); color: var(--ink-primary);"
             >${this.typedContent}</textarea>
 
             <div class="typing-telemetry-bar" style="display: flex; justify-content: space-between; align-items: center; margin: 12px 0 20px 0; font-family: var(--font-mono); font-size: var(--font-body-compact); color: var(--ink-muted);">
@@ -308,7 +306,7 @@ export class WritingDossier {
         const tokens = computeDiffTokens(item.masterSentence, this.typedContent);
         const semantic = SemanticParaphraseEvaluator.evaluate(item.masterSentence, this.typedContent);
 
-        const accuracyColor = metrics.accuracyPct >= 80 ? 'var(--ink-good)' : metrics.accuracyPct >= 60 ? 'var(--warning)' : 'var(--critical)';
+        const accuracyColor = metrics.accuracyPct >= 80 ? 'var(--ink-good)' : metrics.accuracyPct >= 60 ? 'var(--accent-gold)' : 'var(--status-warning, #fbbf24)';
 
         return `
           <div class="copywork-card" style="background: var(--bg-surface); border: 1px solid var(--border-hairline); padding: 16px; border-radius: 12px; box-shadow: var(--shadow-card);">
@@ -329,7 +327,7 @@ export class WritingDossier {
               </div>
               <div>
                 <div class="telemetry-label">${t('writing.errors', undefined, 'ERRORS')}</div>
-                <div class="val-errors" style="font-size: var(--font-body); font-weight: 700; color: ${metrics.errorCount === 0 ? 'var(--ink-good)' : 'var(--ink-critical)'};">${metrics.errorCount}</div>
+                <div class="val-errors" style="font-size: var(--font-body); font-weight: 700; color: ${metrics.errorCount === 0 ? 'var(--ink-good)' : 'var(--status-warning, #fbbf24)'};">${metrics.errorCount}</div>
               </div>
               <div>
                 <div class="telemetry-label">${t('writing.time', undefined, 'TIME')}</div>
@@ -343,10 +341,10 @@ export class WritingDossier {
                 <div class="telemetry-label">${t('writing.reconstruction_corrections', undefined, 'YOUR RECONSTRUCTION (HIGHLIGHTED ERRORS)')}</div>
                 <div class="diff-legend" style="display: flex; gap: 8px; font-size: var(--font-kicker); font-family: var(--font-mono);">
                   <span style="color: var(--ink-primary); display: inline-flex; align-items: center; gap: 4px;">${t('writing.diff_matched', undefined, '● Matched')}</span>
-                  <span style="color: #ef4444; display: inline-flex; align-items: center; gap: 4px; text-decoration: line-through;">${t('writing.diff_needs_correction', undefined, '● Needs correction')}</span>
+                  <span style="color: var(--status-warning, #fbbf24); display: inline-flex; align-items: center; gap: 4px; text-decoration: line-through;">${t('writing.diff_needs_correction', undefined, '● Needs correction')}</span>
                 </div>
               </div>
-              <div class="diff-sub-block candidate-attempt-container" style="font-size: var(--font-body); line-height: 1.8; padding: 14px; border: 1px solid var(--border-hairline); border-radius: var(--radius-squircle-sm, 10px); background: var(--bg-surface-sunk); white-space: pre-wrap; word-break: break-word; margin-bottom: 14px;">
+              <div class="diff-sub-block candidate-attempt-container" style="font-size: var(--font-body); line-height: 1.8; padding: 14px; border: none; border-left: 3px solid var(--status-warning, #fbbf24); border-radius: var(--radius-squircle-sm, 10px); background: var(--bg-surface-sunk); white-space: pre-wrap; word-break: break-word; margin-bottom: 14px;">
                 ${this.renderCandidateDiffHTML(tokens)}
               </div>
 
@@ -442,7 +440,7 @@ export class WritingDossier {
       if (chunk.type === 'match') {
         return `<span class="diff-match" style="color: var(--ink-primary);">${this.escapeHTML(chunk.value)}</span>`;
       } else {
-        return `<span class="diff-delete" style="color: #ef4444; text-decoration: line-through; background: rgba(239, 68, 68, 0.12); padding: 1px 4px; border-radius: 4px; margin: 0 1px;">${this.escapeHTML(chunk.value)}</span>`;
+        return `<span class="diff-delete" style="color: var(--status-warning, #fbbf24); text-decoration: line-through; background: rgba(251, 191, 36, 0.12); padding: 1px 4px; border-radius: 4px; margin: 0 1px;">${this.escapeHTML(chunk.value)}</span>`;
       }
     }).join('');
   }

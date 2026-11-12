@@ -757,7 +757,7 @@ export class SpeakingDossier {
       </div>
 
       <!-- 15s Mental Anchor -->
-      <div style="font-family: var(--font-mono); font-size: var(--font-kicker); color: var(--ink-secondary); margin-bottom: 10px; border-left: 3px solid var(--accent-gold); padding: 8px 12px; background: var(--bg-surface-sunk); border-radius: 0 var(--radius-btn, 10px) var(--radius-btn, 10px) 0; line-height: 1.45;">
+      <div style="font-family: var(--font-mono); font-size: var(--font-kicker); color: var(--ink-secondary); margin-bottom: 10px; border: none; border-left: 3px solid var(--accent-gold); padding: 8px 12px; background: var(--bg-surface-sunk); border-radius: 0 var(--radius-btn, 10px) var(--radius-btn, 10px) 0; line-height: 1.45;">
         <strong style="color: var(--accent-gold);">${t('speaking.mental_anchor', undefined, '15S MENTAL ANCHOR:')}</strong> ${item.anchor}
       </div>
 

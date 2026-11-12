@@ -475,7 +475,7 @@ export class ExamCockpitDossier {
       <div class="cd-test-hub-overlay" id="cd-test-hub-overlay" role="dialog" aria-modal="true" aria-labelledby="cd-test-hub-title">
         <div class="cd-test-hub-card" style="position: relative;">
           <button type="button" class="cd-test-hub-close" id="btn-close-test-hub" aria-label="${t('common.close', undefined, 'Close')}" style="position: absolute; top: 16px; right: 16px; min-width: 44px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; background: transparent; border: none; color: var(--ink-muted); font-size: 20px; cursor: pointer; border-radius: var(--radius-btn, 10px); z-index: 5;">✕</button>
-          <header class="cd-test-hub-header">
+          <header class="cd-test-hub-header" style="padding-right: 48px;">
             <span class="cd-test-hub-kicker">${t('cockpit.test_hub_kicker', undefined, 'OFFICIAL CD-IELTS EXAM HUB · TEST CATALOG')}</span>
             <h2 class="cd-test-hub-title" id="cd-test-hub-title">${t('cockpit.test_hub_title', undefined, 'Select Standardized CD-IELTS Test')}</h2>
             <p class="cd-test-hub-lead">

@@ -431,7 +431,7 @@ export class AnalyticsDossier {
       }
       ringsHtml += `
         <polygon points="${ringPoints.join(' ')}" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="0.8" stroke-dasharray="2,3" />
-        <text x="${cx + 4}" y="${(cy - r + 3).toFixed(1)}" font-size="11" fill="var(--ink-muted, #94a3b8)" opacity="0.6">${tier}</text>
+        <text x="${cx + 12}" y="${(cy - r + 3).toFixed(1)}" font-size="10" font-family="var(--font-mono, monospace)" font-weight="600" fill="var(--ink-muted, #94a3b8)" opacity="0.75">${tier}</text>
       `;
     });
 

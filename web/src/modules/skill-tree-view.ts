@@ -371,7 +371,7 @@ export class SkillTreeView {
             </div>
             <div class="workout-tasks">
               ${workout.tasks.map(tTask => `
-              <div class="workout-task-chip" data-route="${tTask.route}" title="Jump to ${tTask.route} drill">
+              <div class="workout-task-chip workout-item-row" data-route="${tTask.route}" title="Jump to ${tTask.route} drill">
                 <span${tTask.ok ? ' style="color: var(--accent-gold); font-weight: 700;"' : ''}>${tTask.ok ? '✓' : '○'}</span> <span>${tTask.label}</span>
               </div>`).join('')}
             </div>

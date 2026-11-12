@@ -367,10 +367,10 @@ export class ListeningDossier {
         ${t('listening.topic_label', undefined, 'Topic')}: ${item.title}
       </div>
       <div style="display: flex; gap: 8px; margin-bottom: 12px; flex-wrap: wrap;">
-        <button type="button" class="hud-btn btn-play-audio" style="font-size: var(--font-kicker); padding: 8px 14px; min-height: 44px; border-radius: var(--radius-btn, 10px); display: inline-flex; align-items: center;">${t('listening.play_normal', undefined, '▶ Play 1.0x')}</button>
-        <button type="button" class="hud-btn btn-play-slow" style="font-size: var(--font-kicker); padding: 8px 14px; min-height: 44px; border-radius: var(--radius-btn, 10px); display: inline-flex; align-items: center;">${t('listening.play_slow', undefined, '⏵ Play 0.8x')}</button>
+        <button type="button" class="hud-btn btn-play-audio" style="font-size: var(--font-kicker); padding: 8px 14px; min-height: 44px; border-radius: var(--radius-btn, 10px); display: inline-flex; align-items: center; border: none; background: var(--bg-surface-sunk);">${t('listening.play_normal', undefined, '▶ Play 1.0x')}</button>
+        <button type="button" class="hud-btn btn-play-slow" style="font-size: var(--font-kicker); padding: 8px 14px; min-height: 44px; border-radius: var(--radius-btn, 10px); display: inline-flex; align-items: center; border: none; background: var(--bg-surface-sunk);">${t('listening.play_slow', undefined, '⏵ Play 0.8x')}</button>
       </div>
-      <textarea class="listening-transcribe-box" placeholder="${t('listening.transcribe_ph', undefined, 'Pass 2: Transcribe word-for-word here...')}" rows="3" style="width: 100%; font-family: var(--font-mono); font-size: max(16px, var(--font-body)); padding: 10px; border: 1px solid var(--border-subtle); background: var(--bg-surface-sunk); color: var(--ink-primary); border-radius: var(--radius-squircle-sm, 10px); outline: none; resize: none; box-sizing: border-box;"></textarea>
+      <textarea class="listening-transcribe-box" placeholder="${t('listening.transcribe_ph', undefined, 'Pass 2: Transcribe word-for-word here...')}" rows="3" style="width: 100%; font-family: var(--font-mono); font-size: max(16px, var(--font-body)); padding: 10px; border: none; background: var(--bg-surface-sunk); color: var(--ink-primary); border-radius: var(--radius-squircle-sm, 10px); outline: none; resize: none; box-sizing: border-box;"></textarea>
       <div style="font-family: var(--font-mono); font-size: var(--font-kicker); color: var(--ink-muted); margin-top: 6px;">
         ${t('listening.flip_hint', undefined, 'Listen at least twice before flipping the card to reveal phonetic analysis.')}
       </div>

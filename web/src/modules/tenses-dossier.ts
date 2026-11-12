@@ -11,7 +11,7 @@ import { MotionEngine } from '../core/motion-engine';
 import { ProgressionEngine } from '../core/progression-engine';
 import { ScrollAffordance } from '../core/scroll-affordance';
 import tensesData from '../assets/data/tenses-bank.json';
-import { t } from '../core/i18n';
+import { t, getLocale } from '../core/i18n';
 import { illustration } from '../utils/illustrations';
 
 export interface TenseMetadata {
@@ -163,8 +163,7 @@ export class TensesDossier {
           </h2>
           <div style="font-size: var(--font-kicker); color: var(--ink-secondary); display: flex; gap: 8px; flex-wrap: wrap;">
             <span>${t('tenses.family_label', undefined, 'FAMILY:')} ${t('tenses.family_' + this.activeFamily.toLowerCase(), undefined, this.activeFamily)}</span>
-            <span>•</span>
-            <span>${this.selectedTenseId === 'ALL' ? t('tenses.all_in_family') : this.selectedTenseId.replace(/_/g, ' ')}</span>
+            ${this.selectedTenseId !== 'ALL' ? `<span>•</span><span>${this.selectedTenseId.replace(/_/g, ' ')}</span>` : ''}
             <span>•</span>
             <span>${t('tenses.prompts_count', { count: this.currentPool.length }, `${this.currentPool.length} PROMPTS`)}</span>
           </div>
@@ -269,7 +268,8 @@ export class TensesDossier {
     }
 
     const tenseMeta = (tensesData as any).tenses.find((t: TenseMetadata) => t.id === q.tenseId);
-    const vnName = tenseMeta ? tenseMeta.vietnameseName : '';
+    const isVi = getLocale() === 'vi';
+    const vnName = (isVi && tenseMeta) ? tenseMeta.vietnameseName : '';
     const spokenText = q.prompt.replace(/_{3,}/g, q.blankTarget);
 
     return `
@@ -509,6 +509,7 @@ export class TensesDossier {
   }
 
   private renderReferenceView(): string {
+    const isVi = getLocale() === 'vi';
     const tenses = (tensesData as any).tenses.filter((item: TenseMetadata) =>
       this.activeFamily === 'ALL' || item.family === this.activeFamily
     );
@@ -521,7 +522,7 @@ export class TensesDossier {
               <div class="codex-title-wrap">
                 <span class="hud-badge tense-family-badge family-${item.family.toLowerCase()}">${item.family}</span>
                 <h3 class="codex-name">${item.name}</h3>
-                <span class="codex-vn-name">${item.vietnameseName}</span>
+                ${isVi && item.vietnameseName ? `<span class="codex-vn-name">${item.vietnameseName}</span>` : ''}
               </div>
               <button class="hud-btn btn-drill-this-tense" data-tense="${item.id}" title="${t('tenses.drill_this_tense_title', undefined, 'Drill questions for this tense')}" style="display: inline-flex; align-items: center; gap: 6px;">
                 ${icon('dice', 12)} ${t('action.drill', undefined, 'Drill')}
@@ -529,31 +530,31 @@ export class TensesDossier {
             </div>
 
             <div class="codex-formula-box">
-              <div class="telemetry-label" style="margin-bottom: 4px;">SYNTACTIC FORMULA:</div>
+              <div class="telemetry-label" style="margin-bottom: 4px;">${t('tenses.syntactic_formula', undefined, 'SYNTACTIC FORMULA:')}</div>
               <div class="formula-line"><span class="formula-type">[ + ]</span> ${this.escapeHtml(item.formula.affirmative)}</div>
               <div class="formula-line"><span class="formula-type">[ - ]</span> ${this.escapeHtml(item.formula.negative)}</div>
               <div class="formula-line"><span class="formula-type">[ ? ]</span> ${this.escapeHtml(item.formula.interrogative)}</div>
             </div>
 
             <div class="codex-section">
-              <div class="telemetry-label">SIGNALS / DẤU HIỆU NHẬN BIẾT:</div>
+              <div class="telemetry-label">${t('tenses.signals', undefined, 'SIGNALS:')}</div>
               <div class="signal-tags-wrap">
                 ${item.signals.map(s => `<span class="signal-tag">${this.escapeHtml(s)}</span>`).join('')}
               </div>
             </div>
 
             <div class="codex-section">
-              <div class="telemetry-label">CORE USAGE · CÁCH DÙNG:</div>
+              <div class="telemetry-label">${t('tenses.core_usage', undefined, 'CORE USAGE:')}</div>
               <p class="codex-text">${this.escapeHtml(item.coreUsage)}</p>
             </div>
 
             <div class="codex-section pitfall-section">
-              <div class="telemetry-label" style="color: var(--alarm, #ef4444);">LỖI SAI KINH ĐIỂN · PITFALL:</div>
+              <div class="telemetry-label" style="color: var(--alarm, #ef4444);">${t('tenses.pitfall', undefined, 'COMMON PITFALL:')}</div>
               <p class="codex-text">${this.escapeHtml(item.commonPitfall)}</p>
             </div>
 
             <div class="codex-example-box">
-              <div class="telemetry-label">EXEMPLAR:</div>
+              <div class="telemetry-label">${t('tenses.exemplar', undefined, 'EXEMPLAR:')}</div>
               <div class="example-quote">“${this.escapeHtml(item.example)}”</div>
               <button class="hud-btn btn-speak-example" data-text="${this.escapeHtml(item.example)}" title="${t('tenses.listen_pronunciation_title', undefined, 'Listen to pronunciation')}" aria-label="${t('tenses.listen_example_aria', undefined, 'Listen to example')}">
                 ${icon('volume', 14)}

@@ -122,7 +122,7 @@ export class MissionLog {
       const chip = document.createElement('button');
       chip.className = `day-chip ${isSelected ? 'selected' : ''} ${isCompleted ? 'completed' : ''}`;
       chip.textContent = String(d.day).padStart(2, '0');
-      chip.title = `Day ${d.day}: ${d.title}`;
+      chip.title = `Day ${d.day}: ${t('habits.day_title_' + d.day, undefined, d.title)}`;
 
       chip.addEventListener('click', () => {
         this.activeDayIndex = idx;
@@ -173,7 +173,7 @@ export class MissionLog {
         <div class="mission-body">
           <div class="card-prompt-label">${t('habits.daily_objective', undefined, 'DAILY OBJECTIVE')}</div>
           <div class="card-main-text" style="font-size: var(--font-h3); margin-bottom: 16px;">
-            ${day.title}
+            ${t('habits.day_title_' + day.day, undefined, day.title)}
           </div>
 
           <div class="mission-tasks-list">

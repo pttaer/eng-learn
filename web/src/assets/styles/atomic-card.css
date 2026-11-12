@@ -156,8 +156,8 @@
 
 .card-audio-btn,
 .btn-audio-speak {
-  background: transparent;
-  border: 1px solid var(--border-hairline);
+  background: var(--bg-surface-sunk, rgba(255, 255, 255, 0.06));
+  border: none;
   border-radius: var(--radius-btn, 10px);
   min-width: 44px;
   min-height: 44px;
@@ -383,6 +383,10 @@
 
 .dock-btn-flip {
   flex: 1.4;
+  border: none !important;
+  background: var(--accent-gold) !important;
+  color: var(--bg-canvas) !important;
+  font-weight: 700 !important;
 }
 
 /* ==========================================================================
@@ -474,12 +478,11 @@
     flex-wrap: nowrap;
     gap: 6px;
     width: 100%;
-    position: sticky;
-    bottom: 0;
-    background: var(--bg-card, #121622);
-    padding-top: 8px;
+    position: relative;
+    margin-top: auto;
+    background: transparent;
+    padding-top: 10px;
     padding-bottom: 2px;
-    z-index: 3;
   }
 
   .dock-btn,

@@ -95,10 +95,14 @@
   }
 
   .dossier-reading .reading-pass-stepper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 6px;
-    overflow: visible;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    white-space: nowrap;
+    gap: 8px;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    border: none;
   }
 
   .dossier-reading .reading-pass-stepper .stepper-arrow {
@@ -106,7 +110,8 @@
   }
 
   .dossier-reading .reading-pass-stepper>* {
-    white-space: normal;
+    flex-shrink: 0;
+    white-space: nowrap;
     min-width: 0;
   }
 }

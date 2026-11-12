@@ -3,7 +3,7 @@ const path = require('path');
 const puppeteer = require(path.resolve(__dirname, '../web/node_modules/puppeteer-core'));
 
 const CHROME_PATH = 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe';
-const THIS_CONV_ARTIFACT_DIR = process.env.CONV_ARTIFACT_DIR || 'C:\\Users\\thanh\\.gemini\\antigravity\\brain\\c615b0ea-5fd8-42a0-b47d-cdb1d5a6d4ff';
+const THIS_CONV_ARTIFACT_DIR = process.env.CONV_ARTIFACT_DIR || 'C:\\Users\\thanh\\.gemini\\antigravity\\brain\\333eb3e9-aa7b-4f48-9b64-558b1935505a';
 const OUT_FILE_LOCAL = path.resolve(__dirname, '../screenshots/mobile-widget-preview.png');
 const OUT_FILE_THIS_CONV = path.join(THIS_CONV_ARTIFACT_DIR, 'mobile-widget-preview.png');
 const OUT_FILE_FLOWS = path.resolve(__dirname, '../Mobile/flows/07-android-widgets/01-widget-showcase-all-sizes.png');
@@ -112,12 +112,11 @@ const htmlContent = `<!DOCTYPE html>
     align-items: center;
     justify-content: center;
     gap: 3.5px;
-    padding: 6.5px 2px 5.5px;
+    padding: 7px 2px 6px;
     font-size: 11px;
     font-weight: 600;
-    border-radius: 8px 8px 0 0;
-    border: 1px solid #252e42;
-    border-bottom: 1px solid #2d384e;
+    border-radius: 10px 10px 0 0;
+    border: none;
     background: #11151f;
     color: #64748b;
     cursor: pointer;
@@ -131,8 +130,7 @@ const htmlContent = `<!DOCTYPE html>
   }
   .widget-folder-tab.active {
     background: #182030;
-    border: 1px solid #2d384e;
-    border-bottom: 1px solid #182030; /* Seamlessly joins the folder body */
+    border: none;
     color: #a5b4fc;
     font-weight: 700;
     box-shadow: inset 0 2.5px 0 0 #a5b4fc, 0 -2px 6px rgba(0, 0, 0, 0.25);
@@ -143,9 +141,9 @@ const htmlContent = `<!DOCTYPE html>
   /* FILE EXPLORER FOLDER BODY */
   .widget-folder-body {
     background: #182030;
-    border: 1px solid #2d384e;
+    border: none;
     border-radius: 0 0 12px 12px;
-    padding: 9px 10px 8px;
+    padding: 10px 10px 9px;
     position: relative;
     z-index: 1;
     display: flex;
@@ -156,9 +154,9 @@ const htmlContent = `<!DOCTYPE html>
   /* Streak / Pill */
   .widget-streak-badge {
     background: #1c2233;
-    border: 1px solid #2f3647;
-    border-radius: 999px;
-    padding: 2.5px 8px;
+    border: none;
+    border-radius: 10px;
+    padding: 3px 8px;
     font-size: 11px;
     font-weight: 700;
     color: #a5b4fc;
@@ -170,9 +168,9 @@ const htmlContent = `<!DOCTYPE html>
   }
   .widget-badge-cefr {
     background: #1c2233;
-    border: 1px solid #2f3647;
-    border-radius: 999px;
-    padding: 2.5px 8px;
+    border: none;
+    border-radius: 10px;
+    padding: 3px 8px;
     font-size: 10.5px;
     font-weight: 700;
     color: #a5b4fc;
@@ -184,9 +182,13 @@ const htmlContent = `<!DOCTYPE html>
   .widget-btn-next {
     background: #252b3b;
     border: 1px solid #2f3647;
-    border-radius: 8px;
-    padding: 3px 8px;
-    font-size: 10.5px;
+    border-radius: 10px;
+    min-height: 44px;
+    padding: 4px 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
     font-weight: 700;
     color: #9ca3af;
     cursor: pointer;
@@ -224,13 +226,15 @@ const htmlContent = `<!DOCTYPE html>
   .widget-util-btn {
     background: #252b3b;
     border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 8px;
-    padding: 3.5px 8px;
+    border-radius: 10px;
+    min-height: 44px;
+    padding: 6px 10px;
     font-size: 11px;
     font-weight: 600;
     color: #a5b4fc;
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 4px;
     cursor: pointer;
     white-space: nowrap;
@@ -263,10 +267,10 @@ const htmlContent = `<!DOCTYPE html>
     margin-top: 5px;
   }
   .widget-tags-box {
-    background: #141a26;
+    background: #0d121c;
     border: none;
-    border-radius: 8px;
-    padding: 6px 9px;
+    border-radius: 10px;
+    padding: 7px 10px;
     margin-top: 8px;
     font-size: 11px;
     color: #a5b4fc;
@@ -277,8 +281,9 @@ const htmlContent = `<!DOCTYPE html>
   .widget-quiz-option {
     background: #252b3b;
     border: 1px solid #2f3647;
-    border-radius: 8px;
-    padding: 5px 8px;
+    border-radius: 10px;
+    min-height: 44px;
+    padding: 6px 10px;
     font-size: 11px;
     color: #f3f4f6;
     margin-bottom: 4px;
@@ -296,10 +301,10 @@ const htmlContent = `<!DOCTYPE html>
     color: #64748b;
   }
   .widget-quiz-feedback {
-    background: #141a26;
-    border: 1px solid #232c3d;
-    border-radius: 8px;
-    padding: 4px 8px;
+    background: #0d121c;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 8px;
     margin-top: 4px;
     font-size: 10.5px;
     color: #a5b4fc;
@@ -312,9 +317,9 @@ const htmlContent = `<!DOCTYPE html>
   /* TAB 3: Quests Styling */
   .widget-quest-banner {
     background: #1c2233;
-    border: 1px solid #2f3647;
-    border-radius: 999px;
-    padding: 4px 10px;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 10px;
     font-size: 11px;
     font-weight: 700;
     color: #a5b4fc;
@@ -343,8 +348,9 @@ const htmlContent = `<!DOCTYPE html>
   .widget-quest-item {
     background: #252b3b;
     border: 1px solid #2f3647;
-    border-radius: 8px;
-    padding: 5px 8px;
+    border-radius: 10px;
+    min-height: 44px;
+    padding: 6px 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -371,15 +377,19 @@ const htmlContent = `<!DOCTYPE html>
   .widget-tiles-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 5px;
+    gap: 6px;
     margin-top: 4px;
   }
   .widget-pillar-tile {
     background: #252b3b;
     border: 1px solid #2f3647;
-    border-radius: 8px;
-    padding: 6px 8px;
+    border-radius: 10px;
+    min-height: 44px;
+    padding: 8px 10px;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   .widget-tile-title {
     font-size: 11.5px;
@@ -390,18 +400,6 @@ const htmlContent = `<!DOCTYPE html>
     font-size: 10.5px;
     color: #64748b;
     margin-top: 1px;
-  }
-  .widget-suite-btn {
-    background: #22283a;
-    border: 1.5px solid #a5b4fc;
-    border-radius: 8px;
-    padding: 6px 8px;
-    font-size: 11px;
-    font-weight: 700;
-    color: #a5b4fc;
-    text-align: center;
-    margin-top: 6px;
-    cursor: pointer;
   }
 
   /* Bottom Actions Bar */
@@ -426,9 +424,13 @@ const htmlContent = `<!DOCTYPE html>
   .widget-btn {
     background: #252b3b;
     border: 1px solid #2f3647;
-    border-radius: 8px;
-    padding: 3px 9px;
-    font-size: 10.5px;
+    border-radius: 10px;
+    min-height: 44px;
+    padding: 6px 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
     font-weight: 700;
     color: #f3f4f6;
     cursor: pointer;
@@ -541,10 +543,10 @@ const htmlContent = `<!DOCTYPE html>
 
   .tab-card-wrapper {
     background: #12141a;
-    border: 1px solid #262a36;
+    border: none;
     border-radius: 14px;
     padding: 10px 10px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.3);
     display: flex;
     flex-direction: column;
     gap: 6px;
@@ -562,9 +564,9 @@ const htmlContent = `<!DOCTYPE html>
   }
   .tab-badge {
     background: #1c2233;
-    border: 1px solid #2a354d;
+    border: none;
     border-radius: 6px;
-    padding: 1.5px 6px;
+    padding: 2px 6px;
     font-size: 10px;
     font-weight: 600;
     color: #a5b4fc;
@@ -579,8 +581,15 @@ const htmlContent = `<!DOCTYPE html>
     gap: 10px;
   }
   .mini-card-wrapper {
-    background: #0f1218;
-    border: 1px solid #1f2430;
+    background: #12141a;
+    border: none;
+    border-radius: 14px;
+    padding: 10px 10px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
     border-radius: 14px;
     padding: 10px 12px;
     display: flex;
@@ -691,7 +700,7 @@ const htmlContent = `<!DOCTYPE html>
     <!-- Header -->
     <div class="panel-header">
       <div class="panel-header-title">
-        <span>⚡ File Explorer 4-Tab Android Widget & Responsive Matrix</span>
+        <span>File Explorer 4-Tab Android Widget & Responsive Matrix</span>
       </div>
       <p class="panel-header-desc">
         Integrated File Explorer tab navigation with mathematically equal 25% tab distribution, native <code style="color: #a5b4fc;">ViewFlipper</code> transitions, offline dual TTS audio (<code style="color: #a5b4fc;">🔊 Word</code> & <code style="color: #a5b4fc;">🎧 Sentence</code>), active recall mask toggle (<code style="color: #a5b4fc;">👁 Hide / Reveal</code>), interactive multiple-choice Vocab Flash Quiz, live quest checklist, and direct 4 Pillars launchers.
@@ -703,7 +712,7 @@ const htmlContent = `<!DOCTYPE html>
       <!-- 1. TAB 1: Word Card -->
       <div class="tab-card-wrapper">
         <div class="tab-header-label">
-          <span class="tab-title">📖 Tab 1: Word Card</span>
+          <span class="tab-title">Tab 1: Word Card</span>
           <span class="tab-badge">Dual Audio & Recall</span>
         </div>
         
@@ -756,7 +765,7 @@ const htmlContent = `<!DOCTYPE html>
       <!-- 2. TAB 2: Vocab Flash Quiz -->
       <div class="tab-card-wrapper">
         <div class="tab-header-label">
-          <span class="tab-title">🧠 Tab 2: Vocab Quiz</span>
+          <span class="tab-title">Tab 2: Vocab Quiz</span>
           <span class="tab-badge">Offline MCQ Quiz</span>
         </div>
         
@@ -814,7 +823,7 @@ const htmlContent = `<!DOCTYPE html>
       <!-- 3. TAB 3: Quests & Streak -->
       <div class="tab-card-wrapper">
         <div class="tab-header-label">
-          <span class="tab-title">🎯 Tab 3: Quests</span>
+          <span class="tab-title">Tab 3: Quests</span>
           <span class="tab-badge">Streak & Checklist</span>
         </div>
         
@@ -866,7 +875,7 @@ const htmlContent = `<!DOCTYPE html>
       <!-- 4. TAB 4: 4 Pillars Studios -->
       <div class="tab-card-wrapper">
         <div class="tab-header-label">
-          <span class="tab-title">⚡ Tab 4: 4 Pillars</span>
+          <span class="tab-title">Tab 4: 4 Pillars</span>
           <span class="tab-badge">Studio Launchers</span>
         </div>
         
@@ -898,8 +907,6 @@ const htmlContent = `<!DOCTYPE html>
               <div class="widget-tile-desc">Examiner Sim</div>
             </div>
           </div>
-
-          <div class="widget-suite-btn">🏛️ Launch IELTS Suite →</div>
         </div>
 
         <div class="widget-footer" style="margin-top: 4px; padding-top: 3px;">
@@ -917,7 +924,7 @@ const htmlContent = `<!DOCTYPE html>
       <!-- Compact Widget -->
       <div class="mini-card-wrapper">
         <div class="tab-header-label">
-          <span class="tab-title">🔹 Compact Size (2x1 / 2x2)</span>
+          <span class="tab-title">Compact Size (2x1 / 2x2)</span>
           <span class="tab-badge">&lt; 90dp height</span>
         </div>
         <div class="singularity-widget" style="padding: 9px; gap: 4px;">
@@ -939,7 +946,7 @@ const htmlContent = `<!DOCTYPE html>
       <!-- Standard Widget -->
       <div class="mini-card-wrapper">
         <div class="tab-header-label">
-          <span class="tab-title">🔸 Standard Size (4x1 / 4x2 Default)</span>
+          <span class="tab-title">Standard Size (4x1 / 4x2 Default)</span>
           <span class="tab-badge">90dp–170dp height</span>
         </div>
         <div class="singularity-widget" style="padding: 9px; gap: 4px;">

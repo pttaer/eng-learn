@@ -441,7 +441,8 @@ async function run() {
         window.FloatingNote.close?.();
         window.FloatingNote.minimize?.();
       }
-      document.getElementById('floating-scratchpad')?.remove();
+      document.getElementById('floating-note-window')?.remove();
+      document.querySelector('.floating-note-backdrop')?.remove();
       document.querySelectorAll('.modal-backdrop, .modal-backdrop-blur, .completion-modal-overlay').forEach(el => el.remove());
     });
 

@@ -644,7 +644,14 @@ export function readingView(root: HTMLElement): () => void {
     const metaText = t('reading.card_meta', { words, questions: p.questions.length, types }, `${words} words · ${p.questions.length} questions · ${types} types`);
     const topicKey = 'ielts.reading_topic_' + p.topic.toLowerCase().replace(/[^a-z0-9]+/g, '_');
     const topicLabel = t(topicKey, undefined, p.topic);
-    const c = h('button', 'ie-card ie-passage-card ie-card-action', `<b>${esc(p.title)}</b><span>${esc(topicLabel)}</span><small>${metaText}</small><div class="ie-card-affordance" aria-hidden="true">${icon('chevronRight', 16)}</div>`);
+    const c = h('button', 'ie-card ie-passage-card ie-card-action', `
+      <div class="ie-card-header-row" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+        <div class="ie-card-badge" style="border: none; background: var(--accent-cyan-soft, rgba(6, 182, 212, 0.14)); color: var(--accent-cyan); border-radius: var(--radius-squircle-sm, 8px);">${esc(topicLabel)}</div>
+        <span class="ie-card-affordance" aria-hidden="true" style="border: none; background: transparent; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; margin: -6px 0 -6px 0; color: var(--ink-muted);">${icon('arrowRight', 18)}</span>
+      </div>
+      <b style="font-size: var(--text-base); line-height: 1.35; margin-top: 4px; text-align: left;">${esc(p.title)}</b>
+      <small style="color: var(--ink-secondary); text-align: left;">${metaText}</small>
+    `);
     c.addEventListener('click', () => {
       root.innerHTML = '';
       const back = h('button', 'ie-btn', t('ielts.all_passages', undefined, 'All passages'));

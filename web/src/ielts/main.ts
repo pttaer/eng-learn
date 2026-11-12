@@ -121,23 +121,23 @@ function workoutHeroBanner(): HTMLElement {
       : t('ielts.start_daily_workout', undefined, 'Start Daily Workout');
 
   hero.innerHTML = `
-    <div style="flex: 1; min-width: 240px;">
-      <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 4px;">
-        <span class="ie-card-badge" style="background: var(--accent-cyan); color: #0b0f19; font-weight: 800;">
+    <div class="ie-workout-hero-content" style="flex: 1 1 auto; width: 100%; text-align: left; margin: 0; padding: 0;">
+      <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 4px; text-align: left;">
+        <span class="ie-card-badge" style="background: var(--accent-cyan-soft, rgba(6, 182, 212, 0.14)); color: var(--accent-cyan); font-weight: 700; border-radius: var(--radius-squircle-sm, 8px); border: none;">
           ${t('ielts.daily_flow', undefined, 'DAILY FLOW')}
         </span>
         <span style="font-size: var(--font-kicker, 11px); color: var(--accent-gold); font-weight: 700;">
           ${streakText}
         </span>
       </div>
-      <h3 style="font-size: var(--text-base, 17px); font-weight: 800; margin: 4px 0;">
+      <h3 style="font-size: var(--text-base, 17px); font-weight: 800; margin: 4px 0; text-align: left;">
         ${t('ielts.hero_daily_workout_title', undefined, "Today's Guided Workout")}
       </h3>
-      <p style="font-size: var(--font-body-compact, 13px); color: var(--ink-secondary); margin: 0;">
+      <p style="font-size: var(--font-body-compact, 13px); color: var(--ink-secondary); margin: 0; text-align: left;">
         ${statusText}
       </p>
     </div>
-    <a class="ie-btn ie-btn-primary ie-hero-workout-btn" href="#workout" style="min-height: 44px; padding: 10px 22px; border-radius: var(--radius-btn, 10px); display: inline-flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; font-weight: 700; background: #f59e0b !important; color: #0b0f19 !important; box-shadow: 0 2px 10px rgba(245, 158, 11, 0.35) !important;">
+    <a class="ie-btn ie-btn-primary ie-hero-workout-btn" href="#workout" style="min-height: 44px; padding: 10px 22px; border-radius: var(--radius-btn, 10px); display: inline-flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; font-weight: 700; background: #f59e0b !important; color: #0b0f19 !important; box-shadow: 0 2px 10px rgba(245, 158, 11, 0.35) !important; width: 100%;">
       <span style="color: #0b0f19 !important; font-weight: 700;">${actionText}</span>
       <span style="color: #0b0f19 !important; display: inline-flex; align-items: center;">${icon('arrowRight', 16)}</span>
     </a>
@@ -334,7 +334,7 @@ function renderHeader(): void {
       <button type="button" class="ie-btn ie-btn-sm ie-btn-commute" title="${t('ielts.commute_tooltip', undefined, 'Hands-Free Commute Audio Loop')}" aria-label="${t('ielts.commute_tooltip', undefined, 'Hands-Free Commute Audio Loop')}" style="padding: 4px 10px; display: inline-flex; align-items: center; gap: 6px;">
         ${icon('headphones', 14)} <span class="ie-action-label" style="font-size: var(--font-kicker); font-weight: 700;">${t('ielts.audio_commute', undefined, 'AUDIO')}</span>
       </button>
-      <button type="button" class="ie-btn ie-btn-sm ie-btn-vault" title="${t('ielts.vault_tooltip', undefined, 'Smart Mistake Vault')}" aria-label="${t('ielts.vault_tooltip', undefined, 'Smart Mistake Vault')}" style="padding: 4px 10px; display: inline-flex; align-items: center; gap: 6px; color: var(--accent-gold); border-color: var(--accent-gold);">
+      <button type="button" class="ie-btn ie-btn-sm ie-btn-vault" title="${t('ielts.vault_tooltip', undefined, 'Smart Mistake Vault')}" aria-label="${t('ielts.vault_tooltip', undefined, 'Smart Mistake Vault')}" style="padding: 4px 10px; display: inline-flex; align-items: center; gap: 6px; color: var(--accent-gold);">
         ${icon('target', 14)} <span class="ie-action-label" style="font-size: var(--font-kicker); font-weight: 700;">${t('ielts.vault', undefined, 'VAULT')}</span>
       </button>
     </div>

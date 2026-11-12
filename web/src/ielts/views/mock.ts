@@ -83,18 +83,22 @@ export function mockView(root: HTMLElement): () => void {
       `</div>`
     );
     heroBanner.style.marginBottom = 'var(--space-12, 12px)';
+    root.style.paddingBottom = 'calc(var(--safe-bottom-dock, 84px) + env(safe-area-inset-bottom, 0px) + 16px)';
     root.append(heroBanner);
 
     const cards = h('div', 'ie-cards');
 
+    const cardArrowAffordance = `<div class="ie-card-affordance" aria-hidden="true" style="position: absolute; top: 12px; right: 12px; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; border: none; background: transparent; color: var(--ink-muted); pointer-events: none;">${icon('arrowRight', 18)}</div>`;
+
     // 1. Prominent CD-IELTS 40-Question Exam Cockpit Station Card
-    const cockpitCard = h('button', 'ie-card ie-card-hero btn-launch-cockpit-mock', `
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+    const cockpitCard = h('button', 'ie-card ie-card-hero ie-card-action btn-launch-cockpit-mock', `
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; padding-right: 36px;">
         <span style="font-size: var(--font-kicker); font-weight: 700; color: var(--accent-gold, #a5b4fc); letter-spacing: 0.08em; text-transform: uppercase;">${t('mock.cockpit_station_badge', undefined, 'CD-IELTS STATION')}</span>
         <span style="font-size: var(--font-body-compact); font-weight: 700; color: var(--accent-cyan, #a5b4fc);">${t('mock.completed_count', { count: mocks('reading') }, `${mocks('reading')} completed`)}</span>
       </div>
       <b style="font-size: var(--font-body);">${icon('graduationCap', 16)} ${t('mock.cockpit_card_title', undefined, 'Full 40-Question CD-IELTS Mock (Exam Cockpit)')}</b>
       <span>${t('mock.cockpit_card_desc', undefined, '3 Passages (1–40) · 60m Timer · 10m/5m Alerts · 1-40 Navigator &amp; Passage Filters · Draggable Split Gutter · Band 9.0 Modal')}</span>
+      ${cardArrowAffordance}
     `);
     cockpitCard.addEventListener('click', () => {
       root.innerHTML = '';
@@ -105,7 +109,7 @@ export function mockView(root: HTMLElement): () => void {
     cards.append(cockpitCard);
 
     // 2. Reading Mock card
-    const r = h('button', 'ie-card', `<b>${t('mock.reading_standard', undefined, 'Reading mock (Standard Split)')}</b><span>${t('mock.passages_60m', undefined, '3 passages · 60 minutes')}</span><small>${t('mock.taken_count', { count: mocks('reading') }, `${mocks('reading')} taken`)}</small>`);
+    const r = h('button', 'ie-card ie-card-action', `<b>${t('mock.reading_standard', undefined, 'Reading mock (Standard Split)')}</b><span>${t('mock.passages_60m', undefined, '3 passages · 60 minutes')}</span><small>${t('mock.taken_count', { count: mocks('reading') }, `${mocks('reading')} taken`)}</small>${cardArrowAffordance}`);
     r.addEventListener('click', () => {
       root.innerHTML = '';
       const host = h('div', 'ie-stage');
@@ -115,7 +119,7 @@ export function mockView(root: HTMLElement): () => void {
     cards.append(r);
 
     // 2b. Original reading set, written for this app and kept apart from the 10-test ladder
-    const ro = h('button', 'ie-card', `<b>${t('mock.original_set1', undefined, 'Original reading set 1')}</b><span>${t('mock.passages_60m', undefined, '3 passages · 60 minutes')}</span><small>${t('mock.written_for_app', undefined, 'Written for this app')}</small>`);
+    const ro = h('button', 'ie-card ie-card-action', `<b>${t('mock.original_set1', undefined, 'Original reading set 1')}</b><span>${t('mock.passages_60m', undefined, '3 passages · 60 minutes')}</span><small>${t('mock.written_for_app', undefined, 'Written for this app')}</small>${cardArrowAffordance}`);
     ro.addEventListener('click', () => {
       root.innerHTML = '';
       const host = h('div', 'ie-stage');
@@ -127,7 +131,7 @@ export function mockView(root: HTMLElement): () => void {
     // 3. Listening Mocks with 1-40 question coverage
     listeningTests().forEach((tMock, i) => {
       const qCount = tMock.reduce((a, s) => a + s.questions.length, 0);
-      const c = h('button', 'ie-card', `<b>${t('mock.listening_mock_n', { n: i + 1 }, `Listening mock ${i + 1}`)}</b><span>${t('mock.sections_played_once', undefined, '4 sections · played once')}</span><small>${t('mock.questions_1_40', { count: qCount }, `${qCount} questions (1–40)`)}</small>`);
+      const c = h('button', 'ie-card ie-card-action', `<b>${t('mock.listening_mock_n', { n: i + 1 }, `Listening mock ${i + 1}`)}</b><span>${t('mock.sections_played_once', undefined, '4 sections · played once')}</span><small>${t('mock.questions_1_40', { count: qCount }, `${qCount} questions (1–40)`)}</small>${cardArrowAffordance}`);
       c.addEventListener('click', () => {
         root.innerHTML = '';
         const host = h('div', 'ie-stage');

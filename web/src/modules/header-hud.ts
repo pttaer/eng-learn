@@ -94,6 +94,14 @@ export class HeaderHUD {
   private static instance: HeaderHUD | null = null;
   private contextualActions: ContextualDockAction[] | null = null;
 
+  public static getInstance(): HeaderHUD | null {
+    return HeaderHUD.instance;
+  }
+
+  public static openSettingsModal(): void {
+    HeaderHUD.instance?.openSettingsModal();
+  }
+
   constructor() {
     HeaderHUD.instance = this;
     this.element = document.createElement('header');
@@ -762,7 +770,7 @@ export class HeaderHUD {
 
     sheet.innerHTML = `
       <div class="completion-receipt-card mobile-action-sheet" style="max-width: 500px; width: 92%; max-height: 88dvh; display: flex; flex-direction: column; overflow: hidden; padding: 12px 18px 24px; align-items: stretch; text-align: left; box-sizing: border-box;">
-        <div class="sheet-grabber-handle" aria-hidden="true"></div>
+        <div class="sheet-grabber-handle" aria-hidden="true" style="margin: 0 auto 12px !important; align-self: center !important;"></div>
         <div class="mobile-action-sheet-header" style="display: flex; justify-content: space-between; align-items: center; width: 100%; box-sizing: border-box; margin-bottom: 12px; border-bottom: 1px solid var(--border-hairline); padding-bottom: 12px; flex-shrink: 0;">
           <div style="display: flex; align-items: center; gap: 8px; min-width: 0; flex: 1;">
             <span style="color: var(--accent-gold); display: flex; align-items: center; flex-shrink: 0;">${icon('user', 18)}</span>

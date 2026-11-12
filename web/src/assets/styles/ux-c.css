@@ -253,6 +253,20 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
     box-sizing: border-box !important;
   }
 
+  /* Section 11 Flush Left Edge Invariant: all cards, hero banners, and control bars align flush at screen inset (12px) */
+  .app-hero-banner,
+  .dossier-control-bar,
+  .speaking-workspace-body,
+  .dossier-card-slot,
+  .atomic-card-perspective-wrapper,
+  .atomic-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
   /* Block layout gives children no gap; these stacked blocks get a real one */
   .reading-content-slot,
   .speaking-workspace-body,
@@ -322,7 +336,10 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
     max-width: 100% !important;
     box-sizing: border-box !important;
     min-width: 0 !important;
-    padding: 12px !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
   }
 
   .lexicon-table-scroll-wrapper {
@@ -357,12 +374,26 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
     flex-wrap: wrap !important;
     align-items: center !important;
     gap: 8px !important;
-    padding: 10px !important;
+    padding: 12px 14px !important;
     background: var(--bg-surface, #11151f) !important;
     border: 1px solid var(--border-hairline) !important;
-    border-radius: var(--radius-btn, 10px) !important;
+    border-radius: var(--radius-squircle-md, 16px) !important;
     width: 100% !important;
     box-sizing: border-box !important;
+  }
+
+  .lexicon-table tr .hud-btn {
+    border: none !important;
+    background: var(--bg-surface-sunk, rgba(255, 255, 255, 0.06)) !important;
+    border-radius: var(--radius-btn, 10px) !important;
+  }
+
+  .lexicon-table tr .btn-drill-row {
+    background: var(--accent-gold) !important;
+    color: var(--bg-canvas) !important;
+    font-weight: 700 !important;
+    border: none !important;
+    border-radius: var(--radius-btn, 10px) !important;
   }
 
   .lexicon-table td {
@@ -504,6 +535,8 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
     grid-template-columns: repeat(2, 1fr) !important;
     gap: 12px !important;
     padding: 12px !important;
+    border: none !important;
+    text-align: left !important;
   }
 
   .copywork-srs-grid {
@@ -518,16 +551,36 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
     font-size: var(--font-body-compact) !important;
   }
 
-  .copywork-studio .step-indicator {
-    display: flex !important;
-    justify-content: space-between !important;
+  .copywork-studio .step-indicator,
+  .copywork-stepper-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
     align-items: center !important;
-    flex-wrap: wrap !important;
-    gap: 4px 8px !important;
+    gap: 6px !important;
     width: 100% !important;
     font-size: var(--font-kicker) !important;
     padding-top: 6px !important;
     border-top: 1px solid var(--border-hairline) !important;
+    box-sizing: border-box !important;
+  }
+
+  .copywork-stepper-grid .step-item {
+    padding: 6px 4px !important;
+    border-radius: var(--radius-btn, 10px) !important;
+    background: var(--bg-surface-sunk, rgba(255, 255, 255, 0.04)) !important;
+    color: var(--ink-muted) !important;
+    font-size: var(--font-kicker, 11px) !important;
+    font-family: var(--font-mono) !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    text-align: center !important;
+  }
+
+  .copywork-stepper-grid .step-item.active-step {
+    color: var(--accent-gold, #f59e0b) !important;
+    font-weight: 700 !important;
+    background: rgba(245, 158, 11, 0.12) !important;
   }
 
   /* Drill Mode Vertical Ergonomics on Mobile: Hide redundant search & compress headers */
@@ -616,6 +669,8 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
     flex-wrap: nowrap !important;
     gap: 8px !important;
     width: 100% !important;
+    position: relative !important;
+    bottom: auto !important;
     margin-top: auto !important;
     padding-top: 10px !important;
     border-top: 1px solid var(--border-hairline) !important;
@@ -741,7 +796,7 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
 
   .tenses-top-actions {
     display: flex !important;
-    justify-content: flex-end !important;
+    justify-content: flex-start !important;
     width: 100% !important;
     margin: 0 !important;
     padding: 0 !important;
@@ -749,10 +804,10 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
 
   .tenses-top-actions .btn-switch-grammar {
     width: auto !important;
-    justify-content: flex-end !important;
+    justify-content: flex-start !important;
     min-height: 28px !important;
     font-size: var(--font-kicker) !important;
-    padding: 2px 6px !important;
+    padding: 2px 0 !important;
     margin: 0 !important;
   }
 
@@ -925,8 +980,12 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
   }
 
   .speaking-mode-cluster {
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important;
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
     gap: 8px !important;
     width: 100% !important;
     padding-bottom: 4px !important;
@@ -966,13 +1025,13 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
 
   .speaking-mode-cluster>*,
   .speaking-mode-cluster .mode-tab {
-    flex: none !important;
-    width: 100% !important;
+    flex: 0 0 auto !important;
+    width: auto !important;
     min-width: 0 !important;
-    white-space: normal !important;
+    white-space: nowrap !important;
     text-align: center !important;
     min-height: var(--touch-target-min, 44px) !important;
-    padding: 8px 10px !important;
+    padding: 8px 14px !important;
     font-size: var(--font-kicker, 11px) !important;
     line-height: 1.25 !important;
     border-radius: var(--radius-btn, 10px) !important;
@@ -986,7 +1045,7 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
   .day-picker-track>* {
     min-width: 0 !important;
     width: 100% !important;
-    min-height: 40px !important;
+    min-height: 44px !important;
     padding: 0 !important;
   }
 
@@ -1035,23 +1094,22 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
   .grammar-level-selector {
     display: flex !important;
     flex-direction: row !important;
-    flex-wrap: nowrap !important;
+    flex-wrap: wrap !important;
     align-items: center !important;
     width: 100% !important;
     gap: 4px !important;
+    row-gap: 6px !important;
     padding-bottom: 2px !important;
-    overflow-x: auto !important;
-    -webkit-overflow-scrolling: touch !important;
-    scrollbar-width: none !important;
+    overflow-x: visible !important;
   }
 
   .vocab-level-selector .level-tab,
   .vocab-level-chips .level-tab,
   .grammar-level-selector .level-tab {
-    flex: 1 0 auto !important;
-    min-width: 38px !important;
+    flex: 1 1 0 !important;
+    min-width: var(--touch-target-min, 44px) !important;
     min-height: var(--touch-target-min, 44px) !important;
-    padding: 6px 4px !important;
+    padding: 6px 2px !important;
     font-size: var(--font-kicker) !important;
     justify-content: center !important;
     text-align: center !important;
@@ -1060,13 +1118,16 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
     white-space: nowrap !important;
   }
 
-  /* Level label stays inline with chips */
+  /* Level label stacks above the 6 level buttons to give full horizontal width */
   .vocab-level-selector>.telemetry-label,
   .grammar-level-selector>.telemetry-label {
-    flex: 0 0 auto !important;
-    align-self: center !important;
+    flex: 0 0 100% !important;
+    display: block !important;
+    width: 100% !important;
+    align-self: flex-start !important;
     white-space: nowrap !important;
-    margin-right: 4px !important;
+    margin-right: 0 !important;
+    margin-bottom: 4px !important;
     font-size: var(--text-2xs) !important;
   }
 
@@ -1303,10 +1364,11 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
     min-width: 0 !important;
   }
 
-  .workout-task-chip {
+  .workout-task-chip,
+  .workout-item-row {
     display: flex !important;
     align-items: center !important;
-    justify-content: space-between !important;
+    justify-content: flex-start !important;
     gap: 8px !important;
     font-size: 12.5px !important;
     color: var(--ink-secondary) !important;
@@ -1319,11 +1381,14 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
     border-radius: var(--radius-btn, 10px) !important;
     box-sizing: border-box !important;
     cursor: pointer !important;
+    flex-shrink: 0 !important;
     transition: background 0.15s ease, color 0.15s ease !important;
   }
 
   .workout-task-chip:hover,
-  .workout-task-chip:active {
+  .workout-task-chip:active,
+  .workout-item-row:hover,
+  .workout-item-row:active {
     background: rgba(255, 255, 255, 0.04) !important;
     color: var(--ink-primary) !important;
   }
@@ -1725,8 +1790,8 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
 
   .reading-mobile-tab-btn,
   .cd-mobile-tab-btn {
-    padding: 8px 12px !important;
-    gap: 6px !important;
+    padding: 6px 6px !important;
+    gap: 4px !important;
     border-radius: var(--radius-btn, 10px) !important;
     min-height: var(--touch-target-min, 44px) !important;
     width: 100% !important;
@@ -1735,6 +1800,10 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
     align-items: center !important;
     justify-content: center !important;
     text-align: center !important;
+    font-size: clamp(11px, 3vw, 13px) !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
     line-height: 1.25 !important;
     box-sizing: border-box !important;
   }
@@ -1798,7 +1867,7 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
     display: none !important;
   }
 
-  .completion-receipt-card>*:not(.action-stack):not(.modal-actions):not(.placement-actions-cluster):not(.radar-actions-cluster):not(.button-stack):not(.skill-node-actions) {
+  .completion-receipt-card>*:not(.action-stack):not(.modal-actions):not(.placement-actions-cluster):not(.radar-actions-cluster):not(.button-stack):not(.skill-node-actions):not(.sheet-grabber-handle) {
     margin: 0 !important;
   }
 
@@ -2060,11 +2129,23 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
 
 @media (max-width: 768px) {
 
-  /* Prevent header, badge, and prompt truncation/wrapping */
-  .card-prompt-label,
+  /* Prevent header, badge, and prompt truncation/wrapping; flush kickers left */
+  .card-prompt-label {
+    white-space: normal !important;
+    line-height: 1.25 !important;
+    text-align: left !important;
+  }
+
   .listening-header-row .telemetry-label,
-  .mission-phase-badge,
+  .mission-phase-badge {
+    white-space: normal !important;
+    line-height: 1.25 !important;
+    text-align: center !important;
+  }
+
   .register-badge {
+    border: none !important;
+    background: var(--bg-surface-sunk, rgba(255, 255, 255, 0.06)) !important;
     white-space: normal !important;
     line-height: 1.25 !important;
     text-align: center !important;
@@ -2171,23 +2252,23 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
     flex: 1 1 0 !important;
     min-width: 0 !important;
     min-height: var(--touch-target-min, 44px) !important;
-    padding: 6px 8px !important;
-    font-size: var(--text-xs) !important;
+    padding: 8px 10px !important;
+    font-size: var(--font-kicker, 11px) !important;
+    display: inline-flex !important;
+    align-items: center !important;
     justify-content: center !important;
+    gap: 6px !important;
     text-align: center !important;
-    white-space: normal !important;
-    line-height: 1.25 !important;
-    word-break: break-word !important;
-    text-overflow: clip !important;
+    white-space: nowrap !important;
+    border-radius: var(--radius-btn, 10px) !important;
     box-sizing: border-box !important;
   }
 
   .listening-mode-cluster .mode-tab .tab-label {
-    overflow: visible !important;
-    text-overflow: clip !important;
-    white-space: normal !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
     text-align: center !important;
-    word-break: break-word !important;
   }
 
   .listening-mode-cluster .tab-label-prefix,
@@ -2439,7 +2520,11 @@ body:has(.mistake-vault-modal-overlay) #notification-toast-container,
 body:has(.commute-player-overlay) #notification-toast-container,
 body:has(.ie-tip-modal-overlay.is-active) #notification-toast-container,
 body:has(#ielts-confirm-dialog) #notification-toast-container,
-body:has(.lexicon-drawer-backdrop.open) #notification-toast-container {
+body:has(.lexicon-drawer-backdrop.open) #notification-toast-container,
+body:has(.floating-note-window.is-open) #notification-toast-container,
+body:has(.floating-note-window.is-open) .notification-toast,
+body:has(.floating-note-window.is-open) .apple-toast,
+body:has(.floating-note-window.is-open) .toast-container {
   display: none !important;
 }
 
@@ -2703,12 +2788,15 @@ html[data-cognitive-mode="cockpit"] .gentle-only {
     width: 100% !important;
     min-width: 0 !important;
     min-height: var(--touch-target-min, 44px) !important;
-    padding: 8px 8px !important;
+    padding: 8px 10px !important;
     border-radius: var(--radius-btn, 10px) !important;
+    display: inline-flex !important;
+    align-items: center !important;
     justify-content: center !important;
+    gap: 6px !important;
     text-align: center !important;
     white-space: nowrap !important;
-    font-size: var(--text-xs) !important;
+    font-size: var(--font-kicker, 11px) !important;
     box-sizing: border-box !important;
   }
 
@@ -2853,13 +2941,13 @@ html[data-cognitive-mode="cockpit"] .gentle-only {
   }
 
   .skill-level-btn {
-    min-height: 38px !important;
+    min-height: 44px !important;
     min-width: 0 !important;
     font-size: 13px !important;
     font-weight: 700 !important;
-    border-radius: 8px !important;
+    border-radius: var(--radius-btn, 10px) !important;
     background: rgba(255, 255, 255, 0.05) !important;
-    border: 1px solid var(--border-hairline) !important;
+    border: none !important;
     color: var(--ink-secondary) !important;
     display: inline-flex !important;
     align-items: center !important;
@@ -2869,8 +2957,160 @@ html[data-cognitive-mode="cockpit"] .gentle-only {
   .skill-level-btn.active {
     background: var(--accent-gold, #a5b4fc) !important;
     color: #080a0f !important;
-    border-color: var(--accent-gold, #a5b4fc) !important;
+    border: none !important;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3) !important;
+  }
+
+  /* Grammar Matrix mobile telemetry ergonomics & unoccluded stimulus (Screen 11) */
+  .dossier-grammar .vocab-telemetry-banner {
+    display: none !important;
+  }
+
+  .vocab-telemetry-banner .telemetry-item {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 2px !important;
+    text-align: left !important;
+  }
+
+  .vocab-telemetry-banner .telemetry-label {
+    font-size: var(--font-kicker, 11px) !important;
+    letter-spacing: 0.08em !important;
+    text-transform: uppercase !important;
+    color: var(--accent-gold) !important;
+    font-weight: 700 !important;
+  }
+
+  .vocab-telemetry-banner .telemetry-value {
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    color: var(--ink-primary) !important;
+  }
+
+  /* Tenses Master Vault Clean Alignment & Subtitle (Screens 12, 13, 14) */
+  .tenses-top-actions {
+    align-self: flex-start !important;
+    margin-top: 2px !important;
+  }
+
+  .btn-switch-grammar {
+    padding: 6px 0 !important;
+    font-size: 12px !important;
+  }
+
+  .tense-family-badge {
+    border: none !important;
+  }
+
+  .btn-speak-prompt,
+  .btn-drill-this-tense {
+    border: none !important;
+    background: var(--bg-surface-sunk, rgba(255, 255, 255, 0.06)) !important;
+    box-shadow: none !important;
+  }
+
+  .tenses-signal-pill,
+  .tense-signal-callout {
+    border: none !important;
+  }
+
+  .tenses-blank-marker {
+    border: 1px solid transparent !important;
+    background: var(--bg-surface-sunk) !important;
+  }
+
+  .codex-formula-box {
+    border: none !important;
+    background: var(--bg-surface-sunk) !important;
+  }
+
+  /* Speed Blitz mobile left-aligned ergonomics (Screen 16) */
+  .blitz-ready-card,
+  .blitz-summary-card {
+    align-items: stretch !important;
+    text-align: left !important;
+  }
+
+  .blitz-badge-cluster {
+    justify-content: flex-start !important;
+  }
+
+  .blitz-ready-title,
+  .blitz-summary-title,
+  .blitz-ready-desc {
+    text-align: left !important;
+  }
+
+  .blitz-mechanic-card {
+    align-items: flex-start !important;
+    text-align: left !important;
+    border: none !important;
+    background: var(--bg-surface-sunk, rgba(0, 0, 0, 0.3)) !important;
+  }
+
+  .blitz-start-btn {
+    width: 100% !important;
+  }
+
+  /* Mediation Workbench mobile step switcher & textarea (Screen 17) */
+  .mediation-mobile-toggle-bar {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    width: 100% !important;
+    gap: 4px !important;
+    border: none !important;
+    background: var(--bg-surface-sunk) !important;
+  }
+
+  .mobile-toggle-btn {
+    border: none !important;
+    min-height: 44px !important;
+    border-radius: var(--radius-btn, 10px) !important;
+  }
+
+  .mediation-textarea {
+    border: 1px solid transparent !important;
+    background: var(--bg-surface-sunk) !important;
+  }
+
+  .btn-evaluate-resolution {
+    width: 100% !important;
+    display: inline-flex !important;
+    justify-content: center !important;
+  }
+
+  /* CD-IELTS Test Hub Header & Concentric Outer Stroke Fix (Screen 19) */
+  .cd-test-hub-header {
+    padding-right: 48px !important;
+  }
+
+  .cd-test-hub-card {
+    border: none !important;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8) !important;
+  }
+
+  /* Mobile Action Sheet Drawer Drag Handle & Item Borders (Screen 20) */
+  .sheet-grabber-handle {
+    width: 36px !important;
+    height: 4px !important;
+    border-radius: 9999px !important;
+    background: rgba(255, 255, 255, 0.22) !important;
+    margin: 0 auto 12px !important;
+    align-self: center !important;
+    flex-shrink: 0 !important;
+  }
+
+  .mobile-action-sheet .mobile-sheet-row,
+  .mobile-action-sheet .sheet-stat-card {
+    border: none !important;
+    box-shadow: none !important;
+    background: var(--bg-surface-sunk, rgba(255, 255, 255, 0.04)) !important;
+  }
+
+  .mobile-action-sheet-overlay {
+    background: var(--modal-backdrop, rgba(5, 7, 13, 0.78)) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
   }
 }
 
@@ -3181,3 +3421,28 @@ html[data-cognitive-mode="cockpit"] .gentle-only {
   color: var(--ink-primary, #ffffff) !important;
   background: rgba(165, 180, 252, 0.08) !important;
 }
+
+/* Placement Quiz Modal Cleanups (Screens 26 & 27) */
+.completion-receipt-card.placement-quiz-card button:focus:not(:focus-visible),
+.completion-receipt-card.placement-quiz-card .hud-btn:focus:not(:focus-visible) {
+  outline: none !important;
+  box-shadow: none !important;
+}
+.completion-receipt-card.placement-quiz-card .hud-btn,
+.completion-receipt-card.placement-quiz-card .placement-option,
+.completion-receipt-card.placement-quiz-card .placement-skip {
+  border: none !important;
+}
+
+/* IELTS Hero Unconstrained Text Wrap (Screens 29 & 30) */
+.app-hero-banner-content .ie-lead,
+.app-hero-banner-content p,
+.ie-diag-lead,
+.ielts-reading-hero .ie-lead {
+  white-space: normal !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+  -webkit-line-clamp: unset !important;
+  line-clamp: unset !important;
+  max-width: 100% !important;
+}

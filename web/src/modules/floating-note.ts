@@ -750,6 +750,8 @@ export class FloatingNote {
     this.renderActiveNote();
 
     setTimeout(() => {
+      this.textareaEl.setSelectionRange(0, 0);
+      this.textareaEl.scrollTop = 0;
       this.textareaEl.focus();
     }, 50);
 
@@ -862,6 +864,7 @@ export class FloatingNote {
 
     this.titleInputEl.value = note.title;
     this.textareaEl.value = note.content;
+    this.textareaEl.scrollTop = 0;
     this.updateTelemetry();
   }
 

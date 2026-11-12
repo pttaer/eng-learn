@@ -6,7 +6,7 @@ const puppeteer = require(path.resolve(__dirname, '../web/node_modules/puppeteer
 const CHROME_PATH = 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe';
 const DIST_DIR = path.resolve(__dirname, '../web/dist');
 const OUTPUT_DIR = path.resolve(__dirname, '../Mobile/1.0.0');
-const PORT = 4195;
+const PORT = process.env.PORT ? parseInt(process.env.PORT) : 4198;
 const BASE_URL = `http://localhost:${PORT}/`;
 
 if (!fs.existsSync(OUTPUT_DIR)) fs.mkdirSync(OUTPUT_DIR, { recursive: true });
@@ -142,6 +142,28 @@ async function run() {
     };
 
     const targetViewArg = process.argv.find(a => a.startsWith('--view='))?.split('=')[1] || (process.argv.includes('--view') ? process.argv[process.argv.indexOf('--view') + 1] : null);
+    if (targetViewArg === '45') {
+      await page.goto(`${BASE_URL}ielts.html#mock`, { waitUntil: 'networkidle0' });
+      await new Promise(r => setTimeout(r, 800));
+      await shot('45-mobile-ielts-mock-exam.png', 'IELTS Full CD-Exam Mock Cockpit & Band Calculator');
+      const convArtifactDir = process.env.CONV_ARTIFACT_DIR || 'C:\\Users\\thanh\\.gemini\\antigravity\\brain\\333eb3e9-aa7b-4f48-9b64-558b1935505a';
+      if (!fs.existsSync(convArtifactDir)) fs.mkdirSync(convArtifactDir, { recursive: true });
+      const convArtifactPath = path.join(convArtifactDir, '45-mobile-ielts-mock-exam.png');
+      fs.copyFileSync(path.join(OUTPUT_DIR, '45-mobile-ielts-mock-exam.png'), convArtifactPath);
+      console.log('[Puppeteer] Copied to conv artifact:', convArtifactPath);
+
+      // Also scroll to bottom to verify clearance of bottom cards
+      await page.evaluate(() => {
+        window.scrollTo(0, document.body.scrollHeight || document.documentElement.scrollHeight);
+      });
+      await new Promise(r => setTimeout(r, 400));
+      const scrolledPath = path.join(OUTPUT_DIR, '45-mobile-ielts-mock-exam-scrolled.png');
+      await page.screenshot({ path: scrolledPath, fullPage: false });
+      const convScrolledPath = path.join(convArtifactDir, '45-mobile-ielts-mock-exam-scrolled.png');
+      fs.copyFileSync(scrolledPath, convScrolledPath);
+      console.log('[Puppeteer] Copied scrolled to conv artifact:', convScrolledPath);
+      return;
+    }
     if (targetViewArg === '28') {
       await page.goto(`${BASE_URL}#tree`, { waitUntil: 'networkidle0' });
       await new Promise(r => setTimeout(r, 800));
@@ -376,14 +398,18 @@ async function run() {
     // 27. Settings & Dual-Bus Audio Sliders Modal
     try {
       await page.evaluate(() => {
-        const btn = document.querySelector('.btn-settings');
-        if (btn) btn.click();
+        if (window.HeaderHUD && typeof window.HeaderHUD.openSettingsModal === 'function') {
+          window.HeaderHUD.openSettingsModal();
+        } else if (window.HeaderHUD && window.HeaderHUD.getInstance) {
+          window.HeaderHUD.getInstance()?.openSettingsModal();
+        } else if (window.HeaderHUD && window.HeaderHUD.instance) {
+          window.HeaderHUD.instance.openSettingsModal();
+        }
       });
       await new Promise(r => setTimeout(r, 600));
       await shot('27-mobile-settings-modal.png', 'Settings Modal (Dual-Bus Audio Sliders, Theme & Storage)', true);
-      await page.keyboard.press('Escape');
       await page.evaluate(() => {
-        document.getElementById('settings-modal')?.remove();
+        document.querySelector('#settings-modal .btn-modal-close')?.click() || document.getElementById('settings-modal')?.remove();
         document.querySelectorAll('.completion-modal-overlay, .mobile-action-sheet-overlay').forEach(el => el.remove());
       });
       await new Promise(r => setTimeout(r, 300));

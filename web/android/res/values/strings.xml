@@ -42,6 +42,7 @@
     <string name="widget_btn_audio_sentence">🎧 Sentence</string>
     <string name="widget_btn_recall_hide">👁 Hide</string>
     <string name="widget_btn_recall_reveal">👁 Reveal</string>
+    <string name="widget_recall_hint">[Active Recall Mode] Tap \'👁 Reveal\' to uncover meaning &amp; collocations</string>
 
     <!-- Pillar Subtitles & Suite Button -->
     <string name="widget_reading_subtitle">Speed &amp; Synthesis</string>

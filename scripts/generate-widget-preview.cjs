@@ -6,6 +6,8 @@ const puppeteer = require(path.resolve(__dirname, '../web/node_modules/puppeteer
 const CHROME_PATH = 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe';
 const OUT_FILE = path.resolve(__dirname, '../web/android/res/drawable/widget_preview.png');
 const OUT_SCREENSHOT = path.resolve(__dirname, '../screenshots/widget-preview-rendered.png');
+const THIS_CONV_ARTIFACT_DIR = process.env.CONV_ARTIFACT_DIR || 'C:\\Users\\thanh\\.gemini\\antigravity\\brain\\333eb3e9-aa7b-4f48-9b64-558b1935505a';
+const OUT_CONV = path.join(THIS_CONV_ARTIFACT_DIR, 'widget_preview.png');
 
 const htmlContent = `<!DOCTYPE html>
 <html lang="en">
@@ -66,12 +68,11 @@ const htmlContent = `<!DOCTYPE html>
     align-items: center;
     justify-content: center;
     gap: 5px;
-    padding: 8px 4px 7px;
+    padding: 10px 4px 8px;
     font-size: 13px;
     font-weight: 600;
-    border-radius: 9px 9px 0 0;
-    border: 1px solid #252e42;
-    border-bottom: 1px solid #2d384e;
+    border-radius: 10px 10px 0 0;
+    border: none;
     background: #11151f;
     color: #64748b;
     box-sizing: border-box;
@@ -81,8 +82,7 @@ const htmlContent = `<!DOCTYPE html>
 
   .widget-folder-tab.active {
     background: #182030;
-    border: 1px solid #2d384e;
-    border-bottom: 1px solid #182030;
+    border: none;
     color: #a5b4fc;
     font-weight: 700;
     box-shadow: inset 0 2.5px 0 0 #a5b4fc, 0 -2px 6px rgba(0, 0, 0, 0.25);
@@ -92,9 +92,9 @@ const htmlContent = `<!DOCTYPE html>
 
   .widget-folder-body {
     background: #182030;
-    border: 1px solid #2d384e;
+    border: none;
     border-radius: 0 0 14px 14px;
-    padding: 14px 16px 12px;
+    padding: 14px 16px 14px;
     position: relative;
     z-index: 1;
     display: flex;
@@ -118,9 +118,9 @@ const htmlContent = `<!DOCTYPE html>
 
   .badge-streak {
     background: #1c2233;
-    border: 1px solid #2f3647;
-    border-radius: 9999px;
-    padding: 3px 10px;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 12px;
     font-size: 12px;
     font-weight: 700;
     color: #a5b4fc;
@@ -131,9 +131,9 @@ const htmlContent = `<!DOCTYPE html>
 
   .badge-cefr {
     background: #1c2233;
-    border: 1px solid #2f3647;
-    border-radius: 9999px;
-    padding: 3px 10px;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 12px;
     font-size: 11.5px;
     font-weight: 700;
     color: #a5b4fc;
@@ -143,8 +143,12 @@ const htmlContent = `<!DOCTYPE html>
   .btn-next {
     background: #252b3b;
     border: 1px solid #2f3647;
-    border-radius: 9px;
-    padding: 4px 12px;
+    border-radius: 10px;
+    padding: 8px 14px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     font-size: 12px;
     font-weight: 700;
     color: #9ca3af;
@@ -183,13 +187,15 @@ const htmlContent = `<!DOCTYPE html>
   .action-pill {
     background: #252b3b;
     border: 1px solid #2f3647;
-    border-radius: 8px;
-    padding: 4px 10px;
-    font-size: 11.5px;
+    border-radius: 10px;
+    padding: 8px 14px;
+    min-height: 44px;
+    font-size: 12px;
     font-weight: 700;
     color: #a5b4fc;
-    display: flex;
+    display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 5px;
   }
 
@@ -215,9 +221,10 @@ const htmlContent = `<!DOCTYPE html>
 
   /* Tag Box */
   .tag-box {
-    background: #141a26;
-    border-radius: 8px;
-    padding: 7px 10px;
+    background: #0d121c;
+    border: none;
+    border-radius: 10px;
+    padding: 8px 12px;
     margin-top: 10px;
     font-size: 11.5px;
     color: #a5b4fc;
@@ -249,9 +256,13 @@ const htmlContent = `<!DOCTYPE html>
   .footer-btn {
     background: #252b3b;
     border: 1px solid #2f3647;
-    border-radius: 8px;
-    padding: 5px 14px;
-    font-size: 11.5px;
+    border-radius: 10px;
+    padding: 8px 18px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
     font-weight: 700;
     color: #f3f4f6;
   }
@@ -335,6 +346,7 @@ async function main() {
   // Ensure output directory exists
   fs.mkdirSync(path.dirname(OUT_FILE), { recursive: true });
   fs.mkdirSync(path.dirname(OUT_SCREENSHOT), { recursive: true });
+  if (!fs.existsSync(THIS_CONV_ARTIFACT_DIR)) fs.mkdirSync(THIS_CONV_ARTIFACT_DIR, { recursive: true });
 
   const card = await page.$('.widget-card');
   if (card) {
@@ -356,9 +368,11 @@ async function main() {
       omitBackground: true
     });
   }
+  fs.copyFileSync(OUT_SCREENSHOT, OUT_CONV);
 
   await browser.close();
   console.log('✅ Generated widget preview at:', OUT_FILE);
+  console.log('✅ Copied widget preview to artifact:', OUT_CONV);
 }
 
 main().catch(err => {

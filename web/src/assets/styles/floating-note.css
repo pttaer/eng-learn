@@ -42,38 +42,21 @@
 }
 
 body.has-active-modal .floating-note-bubble,
-body.has-active-modal .floating-note-window,
 body:has(.modal-backdrop) .floating-note-bubble,
-body:has(.modal-backdrop) .floating-note-window,
 body:has(.hud-modal-overlay) .floating-note-bubble,
-body:has(.hud-modal-overlay) .floating-note-window,
 body:has(.mistake-vault-modal-overlay) .floating-note-bubble,
-body:has(.mistake-vault-modal-overlay) .floating-note-window,
-body:has(.completion-modal-overlay) .floating-note-bubble,
-body:has(.completion-modal-overlay) .floating-note-window,
+body:has(.completion-modal-overlay.interactive) .floating-note-bubble,
 body:has(#skill-node-modal) .floating-note-bubble,
-body:has(#skill-node-modal) .floating-note-window,
 body:has(#ielts-confirm-dialog) .floating-note-bubble,
-body:has(#ielts-confirm-dialog) .floating-note-bubble,
-body:has(#ielts-confirm-dialog) .floating-note-window,
 body:has(.tour-overlay.open) .floating-note-bubble,
-body:has(.tour-overlay.open) .floating-note-window,
 body:has(.commute-player-overlay) .floating-note-bubble,
-body:has(.commute-player-overlay) .floating-note-window,
 body:has(.cd-test-hub-overlay) .floating-note-bubble,
-body:has(.cd-test-hub-overlay) .floating-note-window,
 body:has(.lexicon-drawer-backdrop.open) .floating-note-bubble,
-body:has(.lexicon-drawer-backdrop.open) .floating-note-window,
 body:has(.ie-tip-modal-overlay.is-active) .floating-note-bubble,
-body:has(.ie-tip-modal-overlay.is-active) .floating-note-window,
 body:has(.multi-skill-card) .floating-note-bubble,
-body:has(.multi-skill-card) .floating-note-window,
 body:has(.score-modal-overlay) .floating-note-bubble,
-body:has(.score-modal-overlay) .floating-note-window,
 body:has(.diagnostic-assessment-modal) .floating-note-bubble,
-body:has(.diagnostic-assessment-modal) .floating-note-window,
-body:has([aria-modal="true"]) .floating-note-bubble,
-body:has([aria-modal="true"]) .floating-note-window {
+body:has([aria-modal="true"]:not([aria-hidden="true"]):not([inert])) .floating-note-bubble {
   opacity: 0 !important;
   pointer-events: none !important;
   visibility: hidden !important;
@@ -120,7 +103,12 @@ body:has([aria-modal="true"]) .floating-note-window {
 }
 
 .floating-note-backdrop {
-  display: none;
+  position: fixed;
+  inset: 0;
+  background: var(--modal-backdrop, rgba(5, 7, 13, 0.78)) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  z-index: calc(var(--z-modal, 900) - 1);
 }
 
 /* 2. Expanded Floating Note Window */
@@ -218,7 +206,7 @@ body:has([aria-modal="true"]) .floating-note-window {
   min-height: 32px;
   padding: 6px 10px;
   border-radius: var(--radius-btn, 10px);
-  border: 1px solid var(--border-hairline, rgba(255, 255, 255, 0.1));
+  border: none !important;
   background: var(--bg-surface, #111622);
   color: var(--ink-secondary, #cbd5e1);
   font-family: var(--font-sans, system-ui, sans-serif);
@@ -231,7 +219,6 @@ body:has([aria-modal="true"]) .floating-note-window {
 .floating-note-btn:hover {
   background: var(--bg-card, #182030);
   color: var(--ink-primary, #f8fafc);
-  border-color: var(--border-subtle, rgba(255, 255, 255, 0.2));
 }
 
 .floating-note-btn:active {
@@ -241,7 +228,7 @@ body:has([aria-modal="true"]) .floating-note-window {
 .floating-note-btn.btn-accent {
   background: var(--accent-gold-soft, rgba(165, 180, 252, 0.16));
   color: var(--accent-gold, #a5b4fc);
-  border-color: rgba(165, 180, 252, 0.3);
+  border: none !important;
 }
 
 .floating-note-btn.btn-accent:hover {
@@ -311,8 +298,8 @@ body:has([aria-modal="true"]) .floating-note-window {
   gap: 4px;
   padding: 4px 10px;
   border-radius: var(--radius-btn, 10px);
-  border: 1px solid var(--border-hairline, rgba(255, 255, 255, 0.08));
-  background: var(--bg-card, #182030);
+  border: none !important;
+  background: var(--bg-surface-sunk, #0d121c);
   color: var(--ink-secondary, #cbd5e1);
   font-family: var(--font-sans, system-ui, sans-serif);
   font-size: 11px;
@@ -324,14 +311,14 @@ body:has([aria-modal="true"]) .floating-note-window {
 }
 
 .floating-cat-chip:hover {
-  border-color: var(--border-subtle, rgba(255, 255, 255, 0.2));
+  background: var(--bg-surface, #111622);
   color: var(--ink-primary, #f8fafc);
 }
 
 .floating-cat-chip.active {
-  background: var(--accent-cyan-soft, rgba(165, 180, 252, 0.18));
-  color: var(--accent-cyan, #a5b4fc);
-  border-color: var(--accent-cyan, #a5b4fc);
+  background: var(--accent-cyan-soft, rgba(165, 180, 252, 0.18)) !important;
+  color: var(--accent-cyan, #a5b4fc) !important;
+  border: none !important;
 }
 
 /* Note Tabs / Switcher Bar */
@@ -354,11 +341,11 @@ body:has([aria-modal="true"]) .floating-note-window {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 4px 10px;
-  border-radius: 8px 8px 0 0;
+  padding: 6px 12px;
+  border-radius: var(--radius-btn, 10px) var(--radius-btn, 10px) 0 0;
   background: transparent;
   color: var(--ink-muted, #94a3b8);
-  border: 1px solid transparent;
+  border: none !important;
   border-bottom: none;
   font-family: var(--font-sans, system-ui, sans-serif);
   font-size: 11px;
@@ -381,11 +368,12 @@ body:has([aria-modal="true"]) .floating-note-window {
 }
 
 .floating-note-tab-item.active {
-  background: var(--bg-card, #182030);
-  color: var(--ink-primary, #f8fafc);
-  border-color: var(--border-hairline, rgba(255, 255, 255, 0.12));
-  box-shadow: inset 0 2px 0 0 var(--accent-cyan, #a5b4fc);
+  background: var(--bg-card, #182030) !important;
+  color: var(--ink-primary, #f8fafc) !important;
+  border: none !important;
+  box-shadow: inset 0 2.5px 0 0 var(--accent-cyan, #a5b4fc) !important;
   font-weight: 600;
+  border-radius: var(--radius-btn, 10px) var(--radius-btn, 10px) 0 0 !important;
 }
 
 /* Note Workspace Body */
@@ -402,20 +390,21 @@ body:has([aria-modal="true"]) .floating-note-window {
 /* Note Title Input */
 .floating-note-title-input {
   width: 100%;
-  padding: 6px 10px;
+  padding: 8px 12px;
   background: var(--bg-surface-sunk, #0d121c);
-  border: 1px solid var(--border-hairline, rgba(255, 255, 255, 0.08));
+  border: none !important;
   border-radius: var(--radius-btn, 10px);
   color: var(--ink-primary, #f8fafc);
   font-family: var(--font-sans, system-ui, sans-serif);
   font-size: 14px;
   font-weight: 600;
   outline: none;
-  transition: border-color 0.15s ease;
+  box-sizing: border-box;
+  transition: background 0.15s ease;
 }
 
 .floating-note-title-input:focus {
-  border-color: var(--accent-cyan, #a5b4fc);
+  background: var(--bg-surface, #111622);
   box-shadow: 0 0 0 2px var(--accent-cyan-soft, rgba(165, 180, 252, 0.16));
 }
 
@@ -434,10 +423,10 @@ body:has([aria-modal="true"]) .floating-note-window {
   justify-content: center;
   gap: 4px;
   min-height: 28px;
-  padding: 3px 8px;
+  padding: 4px 8px;
   border-radius: var(--radius-btn, 10px);
-  border: 1px solid var(--border-hairline, rgba(255, 255, 255, 0.08));
-  background: var(--bg-surface, #111622);
+  border: none !important;
+  background: var(--bg-surface-sunk, #0d121c);
   color: var(--ink-secondary, #cbd5e1);
   font-family: var(--font-mono, monospace);
   font-size: 11px;
@@ -447,15 +436,14 @@ body:has([aria-modal="true"]) .floating-note-window {
 }
 
 .floating-note-tool-btn:hover {
-  background: var(--bg-surface-sunk, #0d121c);
-  border-color: var(--accent-cyan, #a5b4fc);
+  background: var(--bg-surface, #111622);
   color: var(--ink-primary, #f8fafc);
 }
 
 .floating-note-tool-btn.btn-template {
   background: var(--accent-gold-soft, rgba(165, 180, 252, 0.12));
   color: var(--accent-gold, #a5b4fc);
-  border-color: rgba(165, 180, 252, 0.25);
+  border: none !important;
   font-weight: 600;
 }
 
@@ -470,9 +458,9 @@ body:has([aria-modal="true"]) .floating-note-window {
 .floating-note-textarea {
   width: 100%;
   height: 100%;
-  padding: 10px 12px;
+  padding: 14px 14px 12px 14px !important;
   background: var(--bg-surface-sunk, #0d121c);
-  border: 1px solid var(--border-hairline, rgba(255, 255, 255, 0.08));
+  border: none !important;
   border-radius: var(--radius-btn, 10px);
   color: var(--ink-primary, #f8fafc);
   font-family: var(--font-sans, system-ui, sans-serif);
@@ -482,11 +470,11 @@ body:has([aria-modal="true"]) .floating-note-window {
   outline: none;
   overflow-y: auto;
   tab-size: 2;
-  transition: border-color 0.15s ease;
+  box-sizing: border-box;
 }
 
 .floating-note-textarea:focus {
-  border-color: var(--accent-cyan, #a5b4fc);
+  background: var(--bg-surface, #111622);
 }
 
 /* Window Footer Telemetry */
@@ -661,5 +649,7 @@ body:has([aria-modal="true"]) .floating-note-window {
 
   .floating-note-textarea {
     font-size: max(16px, var(--font-body, 14px));
+    padding: 14px 14px 12px 14px !important;
+    border: none !important;
   }
 }

@@ -42,6 +42,7 @@
     <string name="widget_btn_audio_sentence">🎧 Câu</string>
     <string name="widget_btn_recall_hide">👁 Ẩn</string>
     <string name="widget_btn_recall_reveal">👁 Hiện</string>
+    <string name="widget_recall_hint">[Chế độ Gợi nhớ Tích cực] Chạm \'👁 Hiện\' để mở nghĩa &amp; cụm từ</string>
 
     <!-- Pillar Subtitles & Suite Button -->
     <string name="widget_reading_subtitle">Tốc độ &amp; Tổng hợp</string>

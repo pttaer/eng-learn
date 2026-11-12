@@ -115,12 +115,10 @@ export class CollocationsDossier {
           <h2 style="margin: 0; font-size: var(--font-h3, 16px); font-weight: 700; color: var(--ink-primary); line-height: 1.3;">
             ${this.viewMode === 'drill' ? t('colloc.active_srs') : t('colloc.full_lexicon', { total: total.toLocaleString() })}
           </h2>
-          <div style="font-size: var(--font-kicker); color: var(--ink-secondary); display: flex; gap: 8px; flex-wrap: wrap;">
+          <div style="font-size: var(--font-kicker); color: var(--ink-secondary); display: flex; gap: 8px; flex-wrap: wrap; align-items: center;">
             <span>CEFR ${this.activeLevel === 'ALL' ? t('category.all') : this.activeLevel}</span>
-            <span>•</span>
-            <span>${this.activeCategory === 'DUE' ? t('colloc.srs_due') : this.activeCategory === 'ALL' ? t('category.all_categories') : this.activeCategory === 'EVERYDAY' ? t('category.everyday') : this.activeCategory === 'BUSINESS' ? t('category.business') : this.activeCategory === 'ACADEMIC' ? t('category.academic') : this.activeCategory === 'IDIOMS' ? t('category.idioms') : this.activeCategory}</span>
-            <span>•</span>
-            <span>${t('colloc.total_count', { total: total.toLocaleString() })}</span>
+            <span style="white-space: nowrap;"><span style="margin-right: 8px;">•</span>${this.activeCategory === 'DUE' ? t('colloc.srs_due') : this.activeCategory === 'ALL' ? t('category.all_categories') : this.activeCategory === 'EVERYDAY' ? t('category.everyday') : this.activeCategory === 'BUSINESS' ? t('category.business') : this.activeCategory === 'ACADEMIC' ? t('category.academic') : this.activeCategory === 'IDIOMS' ? t('category.idioms') : this.activeCategory}</span>
+            ${this.viewMode === 'drill' ? `<span style="white-space: nowrap;"><span style="margin-right: 8px;">•</span>${t('colloc.total_count', { total: total.toLocaleString() })}</span>` : ''}
           </div>
         </div>
         <div class="app-hero-banner-art">
@@ -134,8 +132,8 @@ export class CollocationsDossier {
           <button class="hud-btn view-toggle-btn ${this.viewMode === 'dictionary' ? 'active' : ''}" data-view="dictionary">${icon('book')} ${t('colloc.full_lexicon', { total: total.toLocaleString() })}</button>
         </div>
         ${this.viewMode === 'dictionary' ? `
-          <div class="lexicon-badge-summary">
-            <span class="telemetry-value">${t('colloc.total_count', { total: total.toLocaleString() })}</span>
+          <div class="lexicon-badge-summary" style="text-align: left; margin: 4px 0 0 0;">
+            <span class="telemetry-value" style="text-align: left;">${t('colloc.total_count', { total: total.toLocaleString() })}</span>
           </div>
         ` : ''}
       </div>

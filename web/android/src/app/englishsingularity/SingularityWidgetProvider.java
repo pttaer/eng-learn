@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.speech.tts.TextToSpeech;
+import android.speech.tts.UtteranceProgressListener;
 import android.util.ArrayMap;
 import android.util.SizeF;
 import android.view.View;
@@ -42,6 +43,11 @@ public class SingularityWidgetProvider extends AppWidgetProvider {
     public static final String PREF_QUIZ_INDEX = "widget_quiz_index";
     public static final String PREF_QUIZ_SELECTED = "widget_quiz_selected";
     public static final String PREF_QUIZ_SCORE = "widget_quiz_score";
+    public static final String PREF_QUIZ_PENDING_SCORE = "widget_quiz_pending_score";
+    public static final String PREF_LEVEL = "player_level";
+    public static final String PREF_COMPLETED_QUESTS = "completed_quests_count";
+    public static final String PREF_QUESTS_TOTAL = "quests_total_count";
+    public static final String PREF_QUESTS_JSON = "daily_quests_json";
     public static final String PREF_CUSTOM_WORDS_JSON = "custom_words_json";
 
     public static class WordCardData {
@@ -256,12 +262,63 @@ public class SingularityWidgetProvider extends AppWidgetProvider {
     };
 
     /**
+     * Resolves concise gloss for Flash Quiz options (prioritizing pure translation/definition over long blocks).
+     */
+    private static String getOptionGloss(org.json.JSONObject obj, boolean isVietnamese) {
+        if (obj == null) return "";
+        if (isVietnamese) {
+            String vn = obj.optString("vietnamese", "").trim();
+            if (!vn.isEmpty()) return vn;
+        }
+        String def = obj.optString("definition", "").trim();
+        if (!def.isEmpty()) return def;
+        return obj.optString("meaning", "").trim();
+    }
+
+    /**
      * Internal singleton TTS engine for instant home-screen word pronunciation.
      */
     static class WidgetTtsManager {
         private static TextToSpeech tts;
         private static String pendingWord;
         private static boolean isInitializing = false;
+        private static volatile Runnable currentCallback = null;
+
+        private static void setupUtteranceListener(TextToSpeech engine) {
+            engine.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                @Override
+                public void onStart(String utteranceId) {}
+
+                @Override
+                public void onDone(String utteranceId) {
+                    dispatchFinish();
+                }
+
+                @Override
+                public void onError(String utteranceId) {
+                    dispatchFinish();
+                }
+
+                @Deprecated
+                public void onError(String utteranceId, int errorCode) {
+                    dispatchFinish();
+                }
+            });
+        }
+
+        private static synchronized void dispatchFinish() {
+            Runnable cb = currentCallback;
+            if (cb != null) {
+                currentCallback = null;
+                cb.run();
+            }
+        }
+
+        private static void speakText(TextToSpeech engine, String text, Runnable callback) {
+            currentCallback = callback;
+            String utteranceId = "singularity_widget_audio_" + System.currentTimeMillis();
+            engine.speak(text, TextToSpeech.QUEUE_FLUSH, null, utteranceId);
+        }
 
         public static synchronized void speak(Context context, final String text, final PendingResult pendingResult) {
             final AtomicBoolean isFinished = new AtomicBoolean(false);
@@ -280,9 +337,9 @@ public class SingularityWidgetProvider extends AppWidgetProvider {
 
             final Context appContext = context.getApplicationContext();
 
-            // Safety timeout: ensure pendingResult is finished within 5s even if engine hangs
+            // Safety timeout: ensure pendingResult is finished within 6s even if engine hangs
             if (pendingResult != null) {
-                new Handler(Looper.getMainLooper()).postDelayed(safeFinish, 5000);
+                new Handler(Looper.getMainLooper()).postDelayed(safeFinish, 6000);
             }
 
             if (tts == null) {
@@ -301,18 +358,21 @@ public class SingularityWidgetProvider extends AppWidgetProvider {
                                     }
                                 }
                                 tts.setSpeechRate(0.92f);
+                                setupUtteranceListener(tts);
                                 if (pendingWord != null) {
-                                    tts.speak(pendingWord, TextToSpeech.QUEUE_FLUSH, null, "singularity_widget_audio");
+                                    speakText(tts, pendingWord, safeFinish);
                                     pendingWord = null;
+                                } else {
+                                    safeFinish.run();
                                 }
+                            } else {
+                                safeFinish.run();
                             }
-                            safeFinish.run();
                         }
                     });
                 }
             } else {
-                tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, "singularity_widget_audio");
-                safeFinish.run();
+                speakText(tts, text, safeFinish);
             }
         }
     }
@@ -538,7 +598,15 @@ public class SingularityWidgetProvider extends AppWidgetProvider {
             views.setOnClickPendingIntent(R.id.widget_tags, createActivityPendingIntent(context, ACTION_OPEN_VOCAB, 216));
             if (hasTags) {
                 if (isMasked) {
-                    views.setTextViewText(R.id.widget_tags, "[Active Recall Mode] Tap '👁 Reveal' to uncover meaning & collocations");
+                    String recallHint;
+                    try {
+                        recallHint = context.getString(R.string.widget_recall_hint);
+                    } catch (Exception e) {
+                        recallHint = isVietnamese
+                            ? "[Chế độ Gợi nhớ Tích cực] Chạm '👁 Hiện' để mở nghĩa & cụm từ"
+                            : "[Active Recall Mode] Tap '👁 Reveal' to uncover meaning & collocations";
+                    }
+                    views.setTextViewText(R.id.widget_tags, recallHint);
                 } else {
                     views.setTextViewText(R.id.widget_tags, tags);
                 }
@@ -565,24 +633,49 @@ public class SingularityWidgetProvider extends AppWidgetProvider {
             String quizWord;
             String quizPhonetic;
             String correctDef;
-            String distractor1;
-            String distractor2;
+            String distractor1 = null;
+            String distractor2 = null;
 
             if (customArr != null) {
                 int len = customArr.length();
                 int targetWordIdx = Math.abs(quizIdx) % len;
-                int distractor1Idx = (targetWordIdx + 1) % len;
-                int distractor2Idx = (targetWordIdx + 2) % len;
-
                 org.json.JSONObject targetObj = customArr.optJSONObject(targetWordIdx);
-                org.json.JSONObject d1Obj = customArr.optJSONObject(distractor1Idx);
-                org.json.JSONObject d2Obj = customArr.optJSONObject(distractor2Idx);
 
-                quizWord = targetObj.optString("word", "Ephemeral");
-                quizPhonetic = targetObj.optString("phonetic", "");
-                correctDef = targetObj.optString("meaning", "");
-                distractor1 = d1Obj.optString("meaning", "");
-                distractor2 = d2Obj.optString("meaning", "");
+                quizWord = targetObj != null ? targetObj.optString("word", "Ephemeral") : "Ephemeral";
+                quizPhonetic = targetObj != null ? targetObj.optString("phonetic", "") : "";
+                correctDef = getOptionGloss(targetObj, isVietnamese);
+                if (correctDef.isEmpty()) correctDef = "Ephemeral definition";
+
+                for (int step = 1; step < len; step++) {
+                    int candIdx = (targetWordIdx + step) % len;
+                    org.json.JSONObject candObj = customArr.optJSONObject(candIdx);
+                    String candDef = getOptionGloss(candObj, isVietnamese);
+                    if (!candDef.isEmpty() && !candDef.equalsIgnoreCase(correctDef)) {
+                        if (distractor1 == null) {
+                            distractor1 = candDef;
+                        } else if (!distractor1.equalsIgnoreCase(candDef)) {
+                            distractor2 = candDef;
+                            break;
+                        }
+                    }
+                }
+
+                // If fewer than 2 distinct distractors found in customArr, backfill from OFFLINE_WORDS
+                int offIdx = 0;
+                while ((distractor1 == null || distractor2 == null) && offIdx < OFFLINE_WORDS.length) {
+                    String offDef = (isVietnamese && OFFLINE_WORDS[offIdx].length > 5)
+                        ? OFFLINE_WORDS[offIdx][5]
+                        : OFFLINE_WORDS[offIdx][2];
+                    if (!offDef.equalsIgnoreCase(correctDef)) {
+                        if (distractor1 == null) {
+                            distractor1 = offDef;
+                        } else if (!distractor1.equalsIgnoreCase(offDef)) {
+                            distractor2 = offDef;
+                            break;
+                        }
+                    }
+                    offIdx++;
+                }
             } else {
                 int targetWordIdx = Math.abs(quizIdx) % OFFLINE_WORDS.length;
                 quizWord = OFFLINE_WORDS[targetWordIdx][0];
@@ -591,16 +684,24 @@ public class SingularityWidgetProvider extends AppWidgetProvider {
                     ? OFFLINE_WORDS[targetWordIdx][5]
                     : OFFLINE_WORDS[targetWordIdx][2];
 
-                int distractor1Idx = (targetWordIdx + 3) % OFFLINE_WORDS.length;
-                distractor1 = (isVietnamese && OFFLINE_WORDS[distractor1Idx].length > 5)
-                    ? OFFLINE_WORDS[distractor1Idx][5]
-                    : OFFLINE_WORDS[distractor1Idx][2];
-
-                int distractor2Idx = (targetWordIdx + 7) % OFFLINE_WORDS.length;
-                distractor2 = (isVietnamese && OFFLINE_WORDS[distractor2Idx].length > 5)
-                    ? OFFLINE_WORDS[distractor2Idx][5]
-                    : OFFLINE_WORDS[distractor2Idx][2];
+                for (int step = 1; step < OFFLINE_WORDS.length; step++) {
+                    int candIdx = (targetWordIdx + step) % OFFLINE_WORDS.length;
+                    String candDef = (isVietnamese && OFFLINE_WORDS[candIdx].length > 5)
+                        ? OFFLINE_WORDS[candIdx][5]
+                        : OFFLINE_WORDS[candIdx][2];
+                    if (!candDef.equalsIgnoreCase(correctDef)) {
+                        if (distractor1 == null) {
+                            distractor1 = candDef;
+                        } else if (!distractor1.equalsIgnoreCase(candDef)) {
+                            distractor2 = candDef;
+                            break;
+                        }
+                    }
+                }
             }
+
+            if (distractor1 == null) distractor1 = isVietnamese ? "Phổ biến khắp nơi" : "Present everywhere simultaneously";
+            if (distractor2 == null) distractor2 = isVietnamese ? "Làm giảm nhẹ tác hại" : "Make less severe or damaging";
 
             // Determine randomized correct position (0, 1, or 2)
             int correctSlot = Math.abs(quizIdx * 7 + 1) % 3;
@@ -690,70 +791,105 @@ public class SingularityWidgetProvider extends AppWidgetProvider {
                 context, 800, nextQuizIntent, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE));
 
             // --- TAB 3 (Quests) ---
-            int level = 4;
-            int completedQuests = 2;
-            if (progress != null) {
-                try {
-                    if (progress.contains("Lv.")) {
-                        String afterLv = progress.substring(progress.indexOf("Lv.") + 3).trim();
-                        String lvNum = afterLv.split("[^0-9]")[0];
-                        if (!lvNum.isEmpty()) level = Integer.parseInt(lvNum);
-                    } else if (progress.contains("Cấp")) {
-                        String afterLv = progress.substring(progress.indexOf("Cấp") + 3).trim();
-                        String lvNum = afterLv.split("[^0-9]")[0];
-                        if (!lvNum.isEmpty()) level = Integer.parseInt(lvNum);
-                    }
-                    if (progress.contains("/3")) {
-                        String beforeSlash = progress.substring(0, progress.indexOf("/3")).trim();
-                        int lastSpace = beforeSlash.lastIndexOf(' ');
-                        if (lastSpace >= 0) beforeSlash = beforeSlash.substring(lastSpace + 1);
-                        if (!beforeSlash.isEmpty()) completedQuests = Integer.parseInt(beforeSlash);
-                    }
-                } catch (Exception ignored) {}
+            int level = prefs.getInt(PREF_LEVEL, 1);
+            int questsTotal = prefs.getInt(PREF_QUESTS_TOTAL, 3);
+            if (questsTotal <= 0) questsTotal = 3;
+            int completedQuests = prefs.getInt(PREF_COMPLETED_QUESTS, -1);
+
+            if (completedQuests == -1) {
+                // Fallback to progress string parsing if not yet synced via explicit fields
+                completedQuests = 0;
+                if (progress != null) {
+                    try {
+                        if (progress.contains("Lv.")) {
+                            String afterLv = progress.substring(progress.indexOf("Lv.") + 3).trim();
+                            String lvNum = afterLv.split("[^0-9]")[0];
+                            if (!lvNum.isEmpty()) level = Integer.parseInt(lvNum);
+                        } else if (progress.contains("Cấp")) {
+                            String afterLv = progress.substring(progress.indexOf("Cấp") + 3).trim();
+                            String lvNum = afterLv.split("[^0-9]")[0];
+                            if (!lvNum.isEmpty()) level = Integer.parseInt(lvNum);
+                        }
+                        if (progress.contains("/3")) {
+                            String beforeSlash = progress.substring(0, progress.indexOf("/3")).trim();
+                            int lastSpace = beforeSlash.lastIndexOf(' ');
+                            if (lastSpace >= 0) beforeSlash = beforeSlash.substring(lastSpace + 1);
+                            if (!beforeSlash.isEmpty()) completedQuests = Integer.parseInt(beforeSlash);
+                        }
+                    } catch (Exception ignored) {}
+                }
             }
             if (completedQuests < 0) completedQuests = 0;
-            if (completedQuests > 3) completedQuests = 3;
+            if (completedQuests > questsTotal) completedQuests = questsTotal;
 
-            int questPct = Math.round((completedQuests / 3.0f) * 100);
+            int questPct = Math.round(((float) completedQuests / (float) questsTotal) * 100);
             String bannerTitle = streakText + " • " + (isVietnamese ? ("Cấp " + level + " Khám phá") : ("Lv." + level + " Explorer"));
             views.setTextViewText(R.id.widget_quest_banner, bannerTitle);
             views.setProgressBar(R.id.widget_quest_progress_bar, 100, questPct, false);
-            views.setTextViewText(R.id.widget_quest_progress_text, completedQuests + "/3 " + (isVietnamese ? "Hoàn thành (" : "Completed (") + questPct + "%)");
+            views.setTextViewText(R.id.widget_quest_progress_text, completedQuests + "/" + questsTotal + " " + (isVietnamese ? "Hoàn thành (" : "Completed (") + questPct + "%)");
             views.setOnClickPendingIntent(R.id.widget_quest_banner, createActivityPendingIntent(context, ACTION_OPEN_HABITS, 230));
             views.setOnClickPendingIntent(R.id.widget_quest_progress_text, createActivityPendingIntent(context, ACTION_OPEN_HABITS, 231));
 
-            // Quest Checklist Item 1
-            boolean q1Done = completedQuests >= 1;
-            views.setTextViewText(R.id.widget_quest_title_1, (q1Done ? "✔  " : "○  ") + (isVietnamese ? "15 Thẻ SRS Ôn Tập" : "15 SRS Cards Reviewed"));
-            views.setTextColor(R.id.widget_quest_title_1, q1Done ? 0xFFA5B4FC : 0xFFF3F4F6);
-            views.setTextViewText(R.id.widget_quest_status_1, q1Done ? (isVietnamese ? "Xong (+50 XP)" : "Done (+50 XP)") : (isVietnamese ? "Bắt đầu →" : "Start →"));
-            views.setTextColor(R.id.widget_quest_status_1, q1Done ? 0xFF64748B : 0xFFA5B4FC);
+            String questsJson = prefs.getString(PREF_QUESTS_JSON, null);
+            org.json.JSONArray qArr = null;
+            if (questsJson != null && !questsJson.trim().isEmpty()) {
+                try {
+                    qArr = new org.json.JSONArray(questsJson);
+                } catch (Exception ignored) {}
+            }
 
-            // Quest Checklist Item 2
-            boolean q2Done = completedQuests >= 2;
-            views.setTextViewText(R.id.widget_quest_title_2, (q2Done ? "✔  " : "○  ") + (isVietnamese ? "1 Bài Viết Franklin Copywork" : "1 Franklin Rhetorical Copywork"));
-            views.setTextColor(R.id.widget_quest_title_2, q2Done ? 0xFFA5B4FC : 0xFFF3F4F6);
-            views.setTextViewText(R.id.widget_quest_status_2, q2Done ? (isVietnamese ? "Xong (+50 XP)" : "Done (+50 XP)") : (isVietnamese ? "Bắt đầu →" : "Start →"));
-            views.setTextColor(R.id.widget_quest_status_2, q2Done ? 0xFF64748B : 0xFFA5B4FC);
+            int[] qTitleIds = { R.id.widget_quest_title_1, R.id.widget_quest_title_2, R.id.widget_quest_title_3 };
+            int[] qStatusIds = { R.id.widget_quest_status_1, R.id.widget_quest_status_2, R.id.widget_quest_status_3 };
+            int[] qItemIds = { R.id.widget_quest_item_1, R.id.widget_quest_item_2, R.id.widget_quest_item_3 };
 
-            // Quest Checklist Item 3
-            boolean q3Done = completedQuests >= 3;
-            views.setTextViewText(R.id.widget_quest_title_3, (q3Done ? "✔  " : "○  ") + (isVietnamese ? "1 Bài Luyện Nói Examiner" : "1 Examiner Speaking Simulation"));
-            views.setTextColor(R.id.widget_quest_title_3, q3Done ? 0xFFA5B4FC : 0xFFF3F4F6);
-            views.setTextViewText(R.id.widget_quest_status_3, q3Done ? (isVietnamese ? "Xong (+50 XP)" : "Done (+50 XP)") : (isVietnamese ? "Bắt đầu →" : "Start →"));
-            views.setTextColor(R.id.widget_quest_status_3, q3Done ? 0xFF64748B : 0xFFA5B4FC);
+            for (int i = 0; i < 3; i++) {
+                boolean qDone = false;
+                String qTitle = "";
+                int xpReward = 50;
+                String category = "";
 
-            // Quest Item Launchers
-            views.setOnClickPendingIntent(R.id.widget_quest_item_1, createActivityPendingIntent(context, ACTION_OPEN_VOCAB, 420));
-            views.setOnClickPendingIntent(R.id.widget_quest_item_2, createActivityPendingIntent(context, ACTION_OPEN_WRITING, 421));
-            views.setOnClickPendingIntent(R.id.widget_quest_item_3, createActivityPendingIntent(context, ACTION_OPEN_SPEAKING, 422));
+                if (qArr != null && i < qArr.length()) {
+                    org.json.JSONObject qObj = qArr.optJSONObject(i);
+                    if (qObj != null) {
+                        qDone = qObj.optBoolean("completed", false);
+                        qTitle = qObj.optString("title", "");
+                        xpReward = qObj.optInt("xp", 50);
+                        category = qObj.optString("category", "");
+                    }
+                } else {
+                    qDone = completedQuests > i;
+                    if (i == 0) qTitle = isVietnamese ? "15 Thẻ SRS Ôn Tập" : "15 SRS Cards Reviewed";
+                    else if (i == 1) qTitle = isVietnamese ? "1 Bài Viết Franklin Copywork" : "1 Franklin Rhetorical Copywork";
+                    else qTitle = isVietnamese ? "1 Bài Luyện Nói Examiner" : "1 Examiner Speaking Simulation";
+                }
 
-            // --- TAB 3 (4 Pillars Studios) ---
+                views.setTextViewText(qTitleIds[i], (qDone ? "✔  " : "○  ") + qTitle);
+                views.setTextColor(qTitleIds[i], qDone ? 0xFFA5B4FC : 0xFFF3F4F6);
+
+                String statusText = qDone
+                    ? (isVietnamese ? "Xong (+" + xpReward + " XP)" : "Done (+" + xpReward + " XP)")
+                    : (isVietnamese ? "Bắt đầu →" : "Start →");
+                views.setTextViewText(qStatusIds[i], statusText);
+                views.setTextColor(qStatusIds[i], qDone ? 0xFF64748B : 0xFFA5B4FC);
+
+                String actionTarget = ACTION_OPEN_VOCAB;
+                if ("copywork".equalsIgnoreCase(category) || "writing".equalsIgnoreCase(category)) {
+                    actionTarget = ACTION_OPEN_WRITING;
+                } else if ("speech".equalsIgnoreCase(category) || "speaking".equalsIgnoreCase(category)) {
+                    actionTarget = ACTION_OPEN_SPEAKING;
+                } else if ("reading".equalsIgnoreCase(category)) {
+                    actionTarget = ACTION_OPEN_READING;
+                } else if ("listening".equalsIgnoreCase(category)) {
+                    actionTarget = ACTION_OPEN_LISTENING;
+                }
+                views.setOnClickPendingIntent(qItemIds[i], createActivityPendingIntent(context, actionTarget, 420 + i));
+            }
+
+            // --- TAB 4 (4 Pillars Studios) ---
             views.setOnClickPendingIntent(R.id.widget_tile_reading, createActivityPendingIntent(context, ACTION_OPEN_READING, 410));
             views.setOnClickPendingIntent(R.id.widget_tile_writing, createActivityPendingIntent(context, ACTION_OPEN_WRITING, 411));
             views.setOnClickPendingIntent(R.id.widget_tile_listening, createActivityPendingIntent(context, ACTION_OPEN_LISTENING, 412));
             views.setOnClickPendingIntent(R.id.widget_tile_speaking, createActivityPendingIntent(context, ACTION_OPEN_SPEAKING, 413));
-            views.setOnClickPendingIntent(R.id.widget_btn_launch_ielts, createActivityPendingIntent(context, ACTION_OPEN_IELTS, 414));
 
             // Universal bottom deep links
             views.setOnClickPendingIntent(R.id.widget_kicker, createActivityPendingIntent(context, ACTION_OPEN_TREE, 250));
@@ -836,12 +972,15 @@ public class SingularityWidgetProvider extends AppWidgetProvider {
                 int quizIdx = prefs.getInt(PREF_QUIZ_INDEX, 0);
                 int correctSlot = Math.abs(quizIdx * 7 + 1) % 3;
                 int score = prefs.getInt(PREF_QUIZ_SCORE, 0);
+                int pending = prefs.getInt(PREF_QUIZ_PENDING_SCORE, 0);
                 if (opt == correctSlot) {
                     score++;
+                    pending++;
                 }
                 prefs.edit()
                     .putInt(PREF_QUIZ_SELECTED, opt)
                     .putInt(PREF_QUIZ_SCORE, score)
+                    .putInt(PREF_QUIZ_PENDING_SCORE, pending)
                     .apply();
                 updateAllWidgets(context);
             }
