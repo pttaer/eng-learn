@@ -563,17 +563,17 @@ export function listeningTrapsView(root: HTMLElement): () => void {
       // Highlight decoy in strike-through red
       colorized = colorized.replace(
         new RegExp(`\\b${esc(s.decoy)}\\b`, 'gi'),
-        `<span class="ie-decoy-chip"><del>${esc(s.decoy)}</del> [DECOY]</span>`
+        `<span class="ie-decoy-chip"><del>${esc(s.decoy)}</del> (${esc(t('traps.chip_decoy', undefined, 'DECOY'))})</span>`
       );
       // Highlight trap cue in cyan
       colorized = colorized.replace(
         new RegExp(esc(s.trapCue).replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&'), 'gi'),
-        `<span class="ie-cue-chip"><strong>$&</strong> [TRAP CUE]</span>`
+        (match) => `<span class="ie-cue-chip"><strong>${match}</strong> (${esc(t('traps.chip_cue', undefined, 'TRAP CUE'))})</span>`
       );
       // Highlight target in green
       colorized = colorized.replace(
         new RegExp(`\\b${esc(s.targetAnswer)}\\b`, 'gi'),
-        `<span class="ie-target-chip"><strong>${esc(s.targetAnswer)}</strong> [ANSWER]</span>`
+        `<span class="ie-target-chip"><strong>${esc(s.targetAnswer)}</strong> (${esc(t('traps.chip_answer', undefined, 'ANSWER'))})</span>`
       );
 
       const transcriptBox = h('div', 'ie-transcript-box',

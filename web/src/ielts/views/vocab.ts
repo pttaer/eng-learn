@@ -58,7 +58,7 @@ export function vocabView(root: HTMLElement): () => void {
     'app-hero-banner ielts-vocab-hero',
     `<div class="app-hero-banner-content">` +
       `<span class="telemetry-label" style="color: var(--accent-gold); font-size: var(--font-kicker); font-family: var(--font-mono); font-weight: 700;">` +
-        `[IELTS ACADEMIC // VOCABULARY & COLLOCATIONS]` +
+        `${esc(t('ielts.kicker_vocab', undefined, 'IELTS ACADEMIC · VOCABULARY & COLLOCATIONS'))}` +
       `</span>` +
       `<h1 class="ie-title" style="margin: 0; font-size: var(--font-h1); line-height: 1.25;">${esc(t('ielts.vocab_title', undefined, 'IELTS Academic Vocabulary & Collocations'))}</h1>` +
       `<p class="ie-lead" style="margin: 0; font-size: var(--font-body-compact); color: var(--ink-secondary); line-height: 1.5;">${esc(t('ielts.vocab_lead', undefined, '1,502 high-yield academic vocabulary items across 20 core topics with authentic collocations and spaced repetition.'))}</p>` +

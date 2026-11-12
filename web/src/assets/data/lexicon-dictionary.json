@@ -12011,9 +12011,9 @@
     "id": "vocab-cefr-32",
     "word": "ephemeral",
     "ipa": "/ɪˈfem.ər.əl/",
-    "pos": "adj.",
-    "partOfSpeech": "adj.",
-    "root": "Greek ephēmeros (epi- 'upon' + hēmera 'day' → lasting only a day)",
+    "pos": "word",
+    "partOfSpeech": "word",
+    "root": "",
     "definition": "Lasting for a very short time; transient, fleeting.",
     "vietnamese": "phù du, chóng tàn, tồn tại trong chốc lát",
     "collocations": [
@@ -12021,15 +12021,8 @@
       "ephemeral pleasures",
       "ephemeral trend"
     ],
-    "synonyms": [
-      "transient",
-      "fleeting",
-      "evanescent"
-    ],
     "level": 3,
-    "cefrLevel": "C2",
-    "contextSentence": "Viral social media fame is notoriously ephemeral, fading as soon as algorithms reweight user attention.",
-    "contextTranslation": "Sự nổi tiếng lan truyền trên mạng xã hội nổi tiếng là phù du, tan biến ngay khi các thuật toán phân bổ lại sự chú ý của người dùng."
+    "contextSentence": "Viral social media fame is notoriously ephemeral, fading as soon as algorithms reweight user attention."
   },
   "disparate": {
     "id": "vocab-cefr-33",

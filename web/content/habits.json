@@ -4,11 +4,11 @@
       "day": 1,
       "week": 1,
       "phase": "Foundation & Reflex Calibration",
-      "title": "Đọc Chuyên Sâu & Khởi Tạo Kho Thẻ Từ Vựng",
+      "title": "Đọc hiểu sâu & Tạo bộ thẻ từ vựng",
       "tasks": [
         "**15m:** Thực hiện *Intensive Reading Protocol* (`reading.md`) trên 1 bài xã luận 400 từ (*BBC/The Guardian*). Đánh dấu cấu trúc ngữ pháp và từ lạ.",
         "**25m:** Đọc Extensive 8–10 trang sách phi hư cấu yêu thích. Tuân thủ *Quy tắc 98%* (không dừng lại tra từ).",
-        "**10m:** Nhặt 5 mẫu câu i+1 tạo thẻ Anki theo chuẩn (`reading.md`)."
+        "**10m:** Chọn 5 mẫu câu hay vừa sức để tạo thẻ từ vựng theo chuẩn (`reading.md`)."
       ],
       "tasksByLevel": {
         "A1": [
@@ -27,19 +27,19 @@
           "**10m:** Ôn tập thẻ phản xạ SRS và ghi chép cấu trúc mới."
         ],
         "B2": [
-          "**20m:** Đọc bài xã luận 300 từ, đánh dấu mệnh đề phân từ và liên từ nâng cao.",
-          "**15m:** Luyện 10 Collocations B2 và chạy drill ghép câu.",
-          "**10m:** Ôn tập 15 thẻ SRS đến hạn trong ứng dụng."
+          "**20m:** Đọc bài xã luận 300 từ, chú ý các liên từ và cách rút gọn mệnh đề (V-ing / V-ed).",
+          "**15m:** Luyện 10 Collocations B2 và thực hành ghép câu hoàn chỉnh.",
+          "**10m:** Ôn tập 15 thẻ từ vựng cần nhớ hôm nay trong ứng dụng."
         ],
         "C1": [
           "**15m:** Thực hiện *Intensive Reading Protocol* (`reading.md`) trên 1 bài xã luận 400 từ (*BBC/The Guardian*). Đánh dấu cấu trúc ngữ pháp và từ lạ.",
           "**25m:** Đọc Extensive 8–10 trang sách phi hư cấu yêu thích. Tuân thủ *Quy tắc 98%* (không dừng lại tra từ).",
-          "**10m:** Nhặt 5 mẫu câu i+1 tạo thẻ Anki theo chuẩn (`reading.md`)."
+          "**10m:** Chọn 5 mẫu câu hay vừa sức để tạo thẻ từ vựng theo chuẩn (`reading.md`)."
         ],
         "C2": [
           "**15m:** Thực hiện *Intensive Reading Protocol* (`reading.md`) trên 1 bài xã luận 400 từ (*BBC/The Guardian*). Đánh dấu cấu trúc ngữ pháp và từ lạ.",
           "**25m:** Đọc Extensive 8–10 trang sách phi hư cấu yêu thích. Tuân thủ *Quy tắc 98%* (không dừng lại tra từ).",
-          "**10m:** Nhặt 5 mẫu câu i+1 tạo thẻ Anki theo chuẩn (`reading.md`).",
+          "**10m:** Chọn 5 mẫu câu hay vừa sức để tạo thẻ từ vựng theo chuẩn (`reading.md`).",
           "**10m:** Native Velocity: chép 1 đoạn 80 từ trong reading.md (copywork), so từng dấu câu và cụm với bản gốc."
         ]
       }
@@ -48,7 +48,7 @@
       "day": 2,
       "week": 1,
       "phase": "Foundation & Reflex Calibration",
-      "title": "Giải Mã Âm Thanh & Nuốt Âm Liên Kết",
+      "title": "Luyện nghe nhận diện âm & Nối âm, nuốt âm",
       "tasks": [
         "**25m:** Thực hiện quy trình 3 lượt nghe (nghe, viết, đối chiếu) trên đoạn 45 giây ở mức trung bình (*NPR Planet Money*).",
         "**15m:** Phân tích độ chênh lệch: xác định các hiện tượng *Catenation* (nối âm) và *Elision* (nuốt âm) xuất hiện trong bài (`listening.md`).",
@@ -92,7 +92,7 @@
       "day": 3,
       "week": 1,
       "phase": "Foundation & Reflex Calibration",
-      "title": "Khẩu Hình IPA & Shadowing Khởi Động",
+      "title": "Khẩu hình phát âm IPA & Luyện nói nhại (Shadowing)",
       "tasks": [
         "**15m:** Luyện phát âm các cặp âm ma sát răng (`/θ/` và `/ð/`) cùng dark L (`[ɫ]`) (`drills.md`, speaking).",
         "**25m:** Áp dụng *5-Step Shadowing Pipeline* (`drills.md`, speaking) trên 1 phút phát biểu của Steve Jobs hoặc Barack Obama (tập trung bước 1 đến bước 3).",
@@ -111,7 +111,7 @@
         ],
         "B1": [
           "**20m:** Áp dụng 5-Step Shadowing trên 1 phút phát biểu rõ ràng.",
-          "**15m:** Chạy drill phản xạ 4-3-2 về một chủ đề quen thuộc (sở thích, công việc).",
+          "**15m:** Luyện nói phản xạ 4-3-2 về một chủ đề quen thuộc (sở thích, công việc).",
           "**10m:** Ôn tập thẻ SRS Collocations."
         ],
         "B2": [
@@ -136,7 +136,7 @@
       "day": 4,
       "week": 1,
       "phase": "Foundation & Reflex Calibration",
-      "title": "Tái Cấu Trúc Đoạn Văn & Nắm Bắt Trục Động Từ MAKE vs. DO",
+      "title": "Cấu trúc lại đoạn văn & Phân biệt cụm từ MAKE và DO",
       "tasks": [
         "**20m:** Nghiên cứu kỹ bảng so sánh *Make vs. Do* (`collocations.md`). Học thuộc 10 mục đầu (1–10) trong danh sách.",
         "**25m:** Viết 1 đoạn văn chuẩn mô hình MEAL (`drills.md`, writing) chủ đề: *\"Why remote work requires disciplined routines\"*. Sử dụng ít nhất 3 cụm từ *Make/Do*.",
@@ -180,7 +180,7 @@
       "day": 5,
       "week": 1,
       "phase": "Foundation & Reflex Calibration",
-      "title": "Bài Tập Tăng Tốc Fluency 4-3-2 & Spontaneous Jamming",
+      "title": "Luyện nói trôi chảy 4-3-2 & Phản xạ nói ngẫu hứng",
       "tasks": [
         "**20m:** Thực hiện *Paul Nation 4-3-2 Speaking Drill* (`drills.md`, speaking) về chủ đề: *\"The most impactful book or article I have ever read\"*.",
         "**15m:** Chạy *2-Minute Impromptu Jamming* với 1 chủ đề ngẫu nhiên. Áp dụng kỹ thuật nói vòng (circumlocution).",
@@ -193,7 +193,7 @@
           "**10m:** Ôn nhanh thẻ SRS hàng ngày."
         ],
         "A2": [
-          "**15m:** Chạy drill nói 2 phút kể về kế hoạch cuối tuần (áp dụng will/going to).",
+          "**15m:** Luyện nói 2 phút kể về kế hoạch cuối tuần (áp dụng will/going to).",
           "**15m:** Ghép nhanh 10 cụm từ Collocations với nghĩa tiếng Việt tương ứng.",
           "**10m:** Ôn tập flashcards phản xạ."
         ],
@@ -203,7 +203,7 @@
           "**10m:** Ôn tập thẻ SRS Collocations."
         ],
         "B2": [
-          "**20m:** Chạy drill 4-3-2 về chủ đề phản biện xã hội hoặc công nghệ.",
+          "**20m:** Luyện nói theo phương pháp 4-3-2 về chủ đề phản biện xã hội hoặc công nghệ.",
           "**20m:** Bài tập Speed-Pacing 250 WPM trên 2 trang văn bản học thuật.",
           "**10m:** Ôn tập 20 thẻ Collocations nâng cao."
         ],
@@ -224,7 +224,7 @@
       "day": 6,
       "week": 1,
       "phase": "Foundation & Reflex Calibration",
-      "title": "Nghe Nhìn Đắm Chìm & Bẫy Dịch Thuật Tiếng Việt",
+      "title": "Luyện nghe tự nhiên & Khắc phục thói quen dịch thô",
       "tasks": [
         "**30m:** Nghe 30 phút trích từ một tập podcast ở mức khó (*Radiolab* hoặc *In Our Time*), tốc độ 1.0x, không phụ đề.",
         "**20m:** Rà soát mục *Common Learner Traps & Vietnamese Interference* (`collocations.md`), ghi nhớ 10 lỗi dịch từng chữ kinh điển.",
@@ -268,10 +268,10 @@
       "day": 7,
       "week": 1,
       "phase": "Foundation & Reflex Calibration",
-      "title": "Điểm Kiểm Tra Tuần 1 (Weekly Benchmark 1)",
+      "title": "Bài kiểm tra tổng hợp Tuần 1",
       "tasks": [
         "**25m:** Tự ghi âm bài nói 3 phút phân tích một xu hướng công nghệ hoặc kinh tế. Chấm điểm theo thang 20 điểm (`drills.md`, speaking).",
-        "**20m:** Quét toàn bộ kho thẻ Anki đã tạo trong tuần (đảm bảo không tồn đọng thẻ chưa học).",
+        "**20m:** Ôn tập toàn bộ thẻ từ vựng đã tạo trong tuần (không để dồn thẻ chưa ôn).",
         "**10m:** Điền số liệu vào bảng theo dõi tiến độ Tuần 1."
       ],
       "tasksByLevel": {
@@ -287,22 +287,22 @@
         ],
         "B1": [
           "**20m:** Tự ghi âm bài nói 3 phút chia sẻ quan điểm về một vấn đề đời sống.",
-          "**20m:** Quét toàn bộ kho thẻ SRS B1 đã tạo trong tuần (đạt 0 thẻ tồn đọng).",
+          "**20m:** Ôn tập toàn bộ thẻ từ vựng B1 đã tạo trong tuần (hoàn thành hết thẻ đến hạn).",
           "**10m:** Điền số liệu vào bảng theo dõi tiến độ tuần."
         ],
         "B2": [
           "**25m:** Tự ghi âm bài nói 3 phút phân tích một chủ đề chuyên môn (chấm theo thang 20 điểm).",
-          "**20m:** Quét sạch toàn bộ kho thẻ SRS Collocations và Grammar đã học.",
+          "**20m:** Ôn tập lại toàn bộ thẻ cụm từ và ngữ pháp đã học trong tuần.",
           "**10m:** Tổng kết số lượng từ đệm và WPM đạt được trong tuần."
         ],
         "C1": [
           "**25m:** Tự ghi âm bài nói 3 phút phân tích một xu hướng công nghệ hoặc kinh tế. Chấm điểm theo thang 20 điểm (`drills.md`, speaking).",
-          "**20m:** Quét toàn bộ kho thẻ Anki đã tạo trong tuần (đảm bảo không tồn đọng thẻ chưa học).",
+          "**20m:** Ôn tập toàn bộ thẻ từ vựng đã tạo trong tuần (không để dồn thẻ chưa ôn).",
           "**10m:** Điền số liệu vào bảng theo dõi tiến độ Tuần 1."
         ],
         "C2": [
           "**25m:** Tự ghi âm bài nói 3 phút phân tích một xu hướng công nghệ hoặc kinh tế. Chấm điểm theo thang 20 điểm (`drills.md`, speaking).",
-          "**20m:** Quét toàn bộ kho thẻ Anki đã tạo trong tuần (đảm bảo không tồn đọng thẻ chưa học).",
+          "**20m:** Ôn tập toàn bộ thẻ từ vựng đã tạo trong tuần (không để dồn thẻ chưa ôn).",
           "**10m:** Điền số liệu vào bảng theo dõi tiến độ Tuần 1.",
           "**10m:** Native Velocity: chép 1 đoạn 80 từ trong reading.md (copywork), so từng dấu câu và cụm với bản gốc."
         ]
@@ -312,7 +312,7 @@
       "day": 8,
       "week": 2,
       "phase": "Structural Complexity & Syntactic Precision",
-      "title": "Đọc Đảo Ngữ, Tách Nhánh Cú Pháp & Đào Cụm Từ TAKE/HAVE/GET",
+      "title": "Đọc hiểu câu đảo ngữ & Cụm từ với TAKE, HAVE, GET",
       "tasks": [
         "**20m:** Bài tập *Syntactic Reverse-Engineering* (`reading.md`): Tách 3 câu phức dài 40 từ thành các mệnh đề độc lập rồi viết lại bằng liên từ khác.",
         "**20m:** Học thuộc bảng *Take vs. Have vs. Get* (`collocations.md`) và mục 51–60 trong `collocations.md`",
@@ -356,7 +356,7 @@
       "day": 9,
       "week": 2,
       "phase": "Structural Complexity & Syntactic Precision",
-      "title": "Luyện Nghe Trọng Âm Câu (Nuclear Tonic) & Bộ Nhớ Tiếng Vang",
+      "title": "Luyện nghe trọng âm câu & Trí nhớ âm thanh",
       "tasks": [
         "**20m:** Thực hiện *Echoic Memory Drill* (`listening.md`): Nghe 10 câu phức tạp, giữ độ trễ âm thanh trong đầu 3 giây trước khi ghi chép.",
         "**20m:** Luyện nhận diện trọng âm câu và từ hạt nhân (tonic stress) qua audio ngắn (`drills.md`, speaking).",
@@ -400,7 +400,7 @@
       "day": 10,
       "week": 2,
       "phase": "Structural Complexity & Syntactic Precision",
-      "title": "Shadowing Không Nhìn Kịch Bản (Blind Shadowing)",
+      "title": "Luyện nói Shadowing không nhìn phụ đề",
       "tasks": [
         "**30m:** Nâng cấp lên Bước 4 của Pipeline: *Blind Shadowing* (`drills.md`, speaking). Nhại giọng ngay khi nghe âm phát ra không cần nhìn text.",
         "**15m:** Tập độc thoại nội tâm: *The Silent Narration Walk* trong 15 phút miêu tả cảm xúc và hành động bằng tiếng Anh.",
@@ -444,7 +444,7 @@
       "day": 11,
       "week": 2,
       "phase": "Structural Complexity & Syntactic Precision",
-      "title": "Phương Pháp Chép Phạt Benjamin Franklin (Copywork Protocol)",
+      "title": "Luyện viết theo phương pháp chép mẫu (Copywork)",
       "tasks": [
         "**30m:** Áp dụng *Benjamin Franklin Copywork Method* (`drills.md`, writing): Chọn 1 đoạn văn 250 từ của tác giả bậc thầy (George Orwell/Joan Didion), ghi chú ý chính, cất bản gốc và tự viết lại.",
         "**15m:** Đối chiếu từng câu với bản gốc để phát hiện sự khác biệt về động từ mạnh và nhịp điệu câu.",
@@ -488,11 +488,11 @@
       "day": 12,
       "week": 2,
       "phase": "Structural Complexity & Syntactic Precision",
-      "title": "Đột Phá Ma Trận Tính Từ + Danh Từ (Adjective + Noun)",
+      "title": "Cụm tính từ đi với danh từ thông dụng",
       "tasks": [
         "**20m:** Học chuyên sâu bảng *Adjective + Noun Collocations* (`collocations.md`) (*glaring discrepancy, viable alternative, steep learning curve...*).",
         "**20m:** Viết 5 câu ngắn mô tả các bài toán kỹ thuật/công việc sử dụng đúng các cặp Adj+Noun vừa học.",
-        "**15m:** Chạy drill phản xạ 4-3-2 với chủ đề: *\"A mistake that taught me a valuable lesson\"*."
+        "**15m:** Luyện nói phản xạ 4-3-2 với chủ đề: *\"A mistake that taught me a valuable lesson\"*."
       ],
       "tasksByLevel": {
         "A1": [
@@ -518,12 +518,12 @@
         "C1": [
           "**20m:** Học chuyên sâu bảng *Adjective + Noun Collocations* (`collocations.md`) (*glaring discrepancy, viable alternative, steep learning curve...*).",
           "**20m:** Viết 5 câu ngắn mô tả các bài toán kỹ thuật/công việc sử dụng đúng các cặp Adj+Noun vừa học.",
-          "**15m:** Chạy drill phản xạ 4-3-2 với chủ đề: *\"A mistake that taught me a valuable lesson\"*."
+          "**15m:** Luyện nói phản xạ 4-3-2 với chủ đề: *\"A mistake that taught me a valuable lesson\"*."
         ],
         "C2": [
           "**20m:** Học chuyên sâu bảng *Adjective + Noun Collocations* (`collocations.md`) (*glaring discrepancy, viable alternative, steep learning curve...*).",
           "**20m:** Viết 5 câu ngắn mô tả các bài toán kỹ thuật/công việc sử dụng đúng các cặp Adj+Noun vừa học.",
-          "**15m:** Chạy drill phản xạ 4-3-2 với chủ đề: *\"A mistake that taught me a valuable lesson\"*.",
+          "**15m:** Luyện nói phản xạ 4-3-2 với chủ đề: *\"A mistake that taught me a valuable lesson\"*.",
           "**10m:** Native Velocity: chép 1 đoạn 80 từ trong reading.md (copywork), so từng dấu câu và cụm với bản gốc."
         ]
       }
@@ -532,7 +532,7 @@
       "day": 13,
       "week": 2,
       "phase": "Structural Complexity & Syntactic Precision",
-      "title": "Thử Thách Nghe Đa Giọng Điệu (Accents Lab)",
+      "title": "Luyện nghe các ngữ điệu tiếng Anh phổ biến",
       "tasks": [
         "**30m:** Nghe 15 phút giọng Anh-Anh (*Desert Island Discs*) và 15 phút giọng Mỹ (*NPR*), ghi chú các khác biệt.",
         "**15m:** Ghi chú 5 điểm khác biệt về nguyên âm và cách phát âm âm `/r/` của từng giọng.",
@@ -576,7 +576,7 @@
       "day": 14,
       "week": 2,
       "phase": "Structural Complexity & Syntactic Precision",
-      "title": "Điểm Kiểm Tra Tuần 2 (Weekly Benchmark 2)",
+      "title": "Bài kiểm tra tổng hợp Tuần 2",
       "tasks": [
         "**25m:** Tự ghi âm bài nói 3 phút về chủ đề phản biện. Đánh giá độ trôi chảy (WPM) và đếm số lượng từ đệm (*um, uh*). Mục tiêu: dưới 3 từ đệm/phút.",
         "**20m:** Tổng kết 50 collocations đã thu nạp trong tuần 2 qua bài test cloze tự tạo.",
@@ -595,12 +595,12 @@
         ],
         "B1": [
           "**20m:** Tự ghi âm bài nói 3 phút chia sẻ quan điểm về một vấn đề đời sống.",
-          "**20m:** Quét toàn bộ kho thẻ SRS B1 đã tạo trong tuần (đạt 0 thẻ tồn đọng).",
+          "**20m:** Ôn tập toàn bộ thẻ từ vựng B1 đã tạo trong tuần (hoàn thành hết thẻ đến hạn).",
           "**10m:** Điền số liệu vào bảng theo dõi tiến độ tuần."
         ],
         "B2": [
           "**25m:** Tự ghi âm bài nói 3 phút phân tích một chủ đề chuyên môn (chấm theo thang 20 điểm).",
-          "**20m:** Quét sạch toàn bộ kho thẻ SRS Collocations và Grammar đã học.",
+          "**20m:** Ôn tập lại toàn bộ thẻ cụm từ và ngữ pháp đã học trong tuần.",
           "**10m:** Tổng kết số lượng từ đệm và WPM đạt được trong tuần."
         ],
         "C1": [
@@ -620,7 +620,7 @@
       "day": 15,
       "week": 3,
       "phase": "Acoustic Mastery & Impromptu Jamming",
-      "title": "Tốc Độ Đọc 200–250 WPM & Nhịp Điệu Chấm Đọc",
+      "title": "Tăng tốc độ đọc & Kỹ thuật đọc lướt theo cụm từ",
       "tasks": [
         "**20m:** Bài tập *Speed-Pacing Drill* (`reading.md`): Dùng ngón tay/con trỏ quét chữ với tốc độ 250 WPM trên 3 trang văn bản học thuật để giảm thiểu tiếng nói thầm trong đầu (subvocalization).",
         "**20m:** Học bảng *Verb + Noun Collocations* (`collocations.md`) (*breach a contract, shed light on, pave the way for...*).",
@@ -664,7 +664,7 @@
       "day": 16,
       "week": 3,
       "phase": "Acoustic Mastery & Impromptu Jamming",
-      "title": "Chép Chính Tả (Dictation) & Đối Soát Nhược Điểm",
+      "title": "Nghe chép chính tả & Nhận diện lỗi sai thường gặp",
       "tasks": [
         "**30m:** Thực hiện quy trình 3 lượt nghe trên đoạn âm thanh 60 giây ở mức khó (*Freakonomics Radio* hoặc bài phát biểu TED).",
         "**15m:** Đánh dấu những từ bị nghe sót: phân loại rõ do chưa biết từ vựng hay do âm yếu (weak forms / schwa `/ə/`).",
@@ -708,7 +708,7 @@
       "day": 17,
       "week": 3,
       "phase": "Acoustic Mastery & Impromptu Jamming",
-      "title": "Đồng Bộ Thời Gian Thực (Synchronous Duet Shadowing)",
+      "title": "Luyện nói nhại đồng bộ cùng người bản xứ",
       "tasks": [
         "**30m:** Thực hiện Bước 5: *Synchronous Duet* (`drills.md`, speaking). Nói đồng thanh cùng lúc 100% với diễn giả bản xứ, đạt độ trùng khớp ngữ điệu trên 90%.",
         "**15m:** Luyện kỹ thuật phản biện tức thì (*Opposite Perspective Rebuttal*): nêu quan điểm và tự phản bác bằng 2 câu tiếng Anh sắc bén (`drills.md`, speaking).",
@@ -752,7 +752,7 @@
       "day": 18,
       "week": 3,
       "phase": "Acoustic Mastery & Impromptu Jamming",
-      "title": "Luyện Viết Câu Chu Kỳ (Periodic Sentences) & Giọng Văn Điều Hành",
+      "title": "Luyện viết câu phức định hướng kết luận & Văn phong học thuật",
       "tasks": [
         "**25m:** Viết 3 câu phức dạng *Periodic Sentence* (`drills.md`, writing) đẩy trọng tâm thông tin về cuối câu.",
         "**20m:** Soạn 1 bản ghi nhớ phong cách BLUF (Bottom Line Up Front) giải quyết một sự cố kỹ thuật giả định (`drills.md`, writing).",
@@ -796,10 +796,10 @@
       "day": 19,
       "week": 3,
       "phase": "Acoustic Mastery & Impromptu Jamming",
-      "title": "Collocations Phó Từ + Tính Từ & Impromptu Jamming",
+      "title": "Cụm phó từ đi cùng tính từ & Luyện phản xạ nói ngẫu hứng",
       "tasks": [
         "**20m:** Học bảng *Adverb + Adjective Collocations* (`collocations.md`) (*blatantly obvious, bitterly disappointed, fiercely competitive...*).",
-        "**20m:** Chạy drill *2-Minute Impromptu Jamming* sử dụng ít nhất 3 cặp Adv+Adj đã học.",
+        "**20m:** Luyện phản xạ nói ngẫu hứng 2 phút sử dụng ít nhất 3 cặp Adv+Adj đã học.",
         "**15m:** Ôn tập Anki."
       ],
       "tasksByLevel": {
@@ -825,12 +825,12 @@
         ],
         "C1": [
           "**20m:** Học bảng *Adverb + Adjective Collocations* (`collocations.md`) (*blatantly obvious, bitterly disappointed, fiercely competitive...*).",
-          "**20m:** Chạy drill *2-Minute Impromptu Jamming* sử dụng ít nhất 3 cặp Adv+Adj đã học.",
+          "**20m:** Luyện phản xạ nói ngẫu hứng 2 phút sử dụng ít nhất 3 cặp Adv+Adj đã học.",
           "**15m:** Ôn tập Anki."
         ],
         "C2": [
           "**20m:** Học bảng *Adverb + Adjective Collocations* (`collocations.md`) (*blatantly obvious, bitterly disappointed, fiercely competitive...*).",
-          "**20m:** Chạy drill *2-Minute Impromptu Jamming* sử dụng ít nhất 3 cặp Adv+Adj đã học.",
+          "**20m:** Luyện phản xạ nói ngẫu hứng 2 phút sử dụng ít nhất 3 cặp Adv+Adj đã học.",
           "**15m:** Ôn tập Anki.",
           "**10m:** Native Velocity: chép 1 đoạn 80 từ trong reading.md (copywork), so từng dấu câu và cụm với bản gốc."
         ]
@@ -840,7 +840,7 @@
       "day": 20,
       "week": 3,
       "phase": "Acoustic Mastery & Impromptu Jamming",
-      "title": "Thử Thách Nghe Đối Thoại Tự Nhiên Chưa Chuẩn Bị (mức rất khó)",
+      "title": "Luyện nghe hội thoại đời sống tự nhiên",
       "tasks": [
         "**35m:** Nghe 35 phút podcast phỏng vấn chuyên sâu chưa có kịch bản (*The Joe Rogan Experience* hoặc *Huberman Lab*) (`listening.md`).",
         "**15m:** Tóm tắt 3 luận điểm cốt lõi của người được phỏng vấn bằng 3 câu tiếng Anh chuẩn chỉnh.",
@@ -884,7 +884,7 @@
       "day": 21,
       "week": 3,
       "phase": "Acoustic Mastery & Impromptu Jamming",
-      "title": "Điểm Kiểm Tra Tuần 3 (Weekly Benchmark 3)",
+      "title": "Bài kiểm tra tổng hợp Tuần 3",
       "tasks": [
         "**25m:** Ghi âm bài thuyết trình 4 phút không dùng giấy ghi chú. Chấm điểm theo rubric 20 điểm. So sánh sự tiến bộ với file ghi âm của Day 7.",
         "**20m:** Tổng kết toàn bộ cụm từ cố định thuộc nhóm học thuật và phản biện (`collocations.md`).",
@@ -903,12 +903,12 @@
         ],
         "B1": [
           "**20m:** Tự ghi âm bài nói 3 phút chia sẻ quan điểm về một vấn đề đời sống.",
-          "**20m:** Quét toàn bộ kho thẻ SRS B1 đã tạo trong tuần (đạt 0 thẻ tồn đọng).",
+          "**20m:** Ôn tập toàn bộ thẻ từ vựng B1 đã tạo trong tuần (hoàn thành hết thẻ đến hạn).",
           "**10m:** Điền số liệu vào bảng theo dõi tiến độ tuần."
         ],
         "B2": [
           "**25m:** Tự ghi âm bài nói 3 phút phân tích một chủ đề chuyên môn (chấm theo thang 20 điểm).",
-          "**20m:** Quét sạch toàn bộ kho thẻ SRS Collocations và Grammar đã học.",
+          "**20m:** Ôn tập lại toàn bộ thẻ cụm từ và ngữ pháp đã học trong tuần.",
           "**10m:** Tổng kết số lượng từ đệm và WPM đạt được trong tuần."
         ],
         "C1": [
@@ -928,7 +928,7 @@
       "day": 22,
       "week": 4,
       "phase": "Native Velocity & Cognitive Synthesis",
-      "title": "Phê Bình Luận Điểm Bên Lề & Ma Trận Giới Từ Phức Hợp",
+      "title": "Phân tích luận điểm phản biện & Cụm giới từ nâng cao",
       "tasks": [
         "**20m:** Đọc 1 bài tiểu luận triết học hoặc xã hội (*The Atlantic / Aeon*). Thực hiện kỹ thuật *Margin Argumentation* ghi chú dấu `+`, `-`, `?` bên lề (`reading.md`).",
         "**25m:** Học và ứng dụng các cụm cố định giới từ: *at the expense of, in light of, by virtue of, with a view to (+V-ing)* (`collocations.md`).",
@@ -972,7 +972,7 @@
       "day": 23,
       "week": 4,
       "phase": "Native Velocity & Cognitive Synthesis",
-      "title": "Thử Thách Nghe Nhanh Nhiều Đoạn Ngắn",
+      "title": "Luyện nghe bắt thông tin nhanh qua đoạn ngắn",
       "tasks": [
         "**30m:** Xem/nghe 30 phút phim truyền hình tốc độ cao hoặc talkshow tranh luận có người nói chen ngang (*Succession* hoặc *Have I Got News For You*) (`listening.md`).",
         "**20m:** Tua lại và chép chính tả 3 phân đoạn tranh luận nảy lửa (mỗi đoạn 15 giây).",
@@ -1016,10 +1016,10 @@
       "day": 24,
       "week": 4,
       "phase": "Native Velocity & Cognitive Synthesis",
-      "title": "Diễn Thuyết Tự Nhiên & Biến Hóa Ngữ Điệu Cảm Xúc",
+      "title": "Luyện diễn đạt tự nhiên & Ngữ điệu biểu cảm",
       "tasks": [
         "**25m:** Shadowing 1 trích đoạn hùng biện có biến thiên ngữ điệu Fall-Rise (↘↗) để thể hiện sự dè dặt và lịch thiệp (`drills.md`, speaking).",
-        "**25m:** Chạy drill 4-3-2 về chủ đề kinh tế vĩ mô: *\"How artificial intelligence alters the labor paradigm\"*.",
+        "**25m:** Luyện nói theo phương pháp 4-3-2 về chủ đề kinh tế vĩ mô: *\"How artificial intelligence alters the labor paradigm\"*.",
         "**10m:** Ôn nhanh các thẻ SRS đến hạn trong ứng dụng và ghi lại 1 điều học được hôm nay."
       ],
       "tasksByLevel": {
@@ -1045,12 +1045,12 @@
         ],
         "C1": [
           "**25m:** Shadowing 1 trích đoạn hùng biện có biến thiên ngữ điệu Fall-Rise (↘↗) để thể hiện sự dè dặt và lịch thiệp (`drills.md`, speaking).",
-          "**25m:** Chạy drill 4-3-2 về chủ đề kinh tế vĩ mô: *\"How artificial intelligence alters the labor paradigm\"*.",
+          "**25m:** Luyện nói theo phương pháp 4-3-2 về chủ đề kinh tế vĩ mô: *\"How artificial intelligence alters the labor paradigm\"*.",
           "**10m:** Ôn nhanh các thẻ SRS đến hạn trong ứng dụng và ghi lại 1 điều học được hôm nay."
         ],
         "C2": [
           "**25m:** Shadowing 1 trích đoạn hùng biện có biến thiên ngữ điệu Fall-Rise (↘↗) để thể hiện sự dè dặt và lịch thiệp (`drills.md`, speaking).",
-          "**25m:** Chạy drill 4-3-2 về chủ đề kinh tế vĩ mô: *\"How artificial intelligence alters the labor paradigm\"*.",
+          "**25m:** Luyện nói theo phương pháp 4-3-2 về chủ đề kinh tế vĩ mô: *\"How artificial intelligence alters the labor paradigm\"*.",
           "**10m:** Ôn nhanh các thẻ SRS đến hạn trong ứng dụng và ghi lại 1 điều học được hôm nay.",
           "**10m:** Native Velocity: chép 1 đoạn 80 từ trong reading.md (copywork), so từng dấu câu và cụm với bản gốc."
         ]
@@ -1060,7 +1060,7 @@
       "day": 25,
       "week": 4,
       "phase": "Native Velocity & Cognitive Synthesis",
-      "title": "Viết Tiểu Luận Nhanh 250 Từ & Quy Trình 4-Pass Editing Khắt Khe",
+      "title": "Luyện viết nhanh 250 từ & Quy trình tự soát lỗi 4 bước",
       "tasks": [
         "**25m:** Viết bài luận 250 từ trong 15 phút.",
         "**25m:** Chạy đủ 4 vòng biên tập khắt khe (`drills.md`, writing): Cắt bỏ câu mở đầu \"There is/It is\", xóa 80% trạng từ đuôi *-ly*, và kiểm tra độ trôi chảy bằng cách đọc to thành tiếng.",
@@ -1104,7 +1104,7 @@
       "day": 26,
       "week": 4,
       "phase": "Native Velocity & Cognitive Synthesis",
-      "title": "Khám Phá Miền Công Nghệ & Dữ Liệu (Technology & Innovation)",
+      "title": "Chủ đề Công nghệ & Đổi mới sáng tạo",
       "tasks": [
         "**25m:** Thuần thục toàn bộ cụm từ trong bảng *Technology, Data & Innovation* (`collocations.md`) (*disrupt the industry, state-of-the-art, patch vulnerabilities...*).",
         "**20m:** Viết một đoạn Architectural Decision Record (ADR) hoặc tóm tắt kỹ thuật ngắn sử dụng các cụm từ này.",
@@ -1148,7 +1148,7 @@
       "day": 27,
       "week": 4,
       "phase": "Native Velocity & Cognitive Synthesis",
-      "title": "Nhập Vai Đàm Phán & Giao Tiếp Đỉnh Cao",
+      "title": "Nhập vai đàm phán & Thuyết phục trong tình huống thực tế",
       "tasks": [
         "**30m:** Tự mô phỏng một buổi đàm phán hợp đồng 5 phút (độc thoại). Sử dụng các cụm: *drive a hard bargain, make concessions, reach a consensus, bottom line*.",
         "**20m:** Đọc Extensive 15 trang tài liệu nâng cao.",
@@ -1192,7 +1192,7 @@
       "day": 28,
       "week": 4,
       "phase": "Native Velocity & Cognitive Synthesis",
-      "title": "Điểm Kiểm Tra Tuần 4 (Weekly Benchmark 4)",
+      "title": "Bài kiểm tra tổng hợp Tuần 4",
       "tasks": [
         "**30m:** Ghi âm bài nói phân tích chuyên sâu 5 phút. Tự chấm điểm theo rubric chuẩn.",
         "**20m:** Rà soát lại 50 cụm đã học trong `collocations.md` (đọc to 10 cụm khó nhất)",
@@ -1211,12 +1211,12 @@
         ],
         "B1": [
           "**20m:** Tự ghi âm bài nói 3 phút chia sẻ quan điểm về một vấn đề đời sống.",
-          "**20m:** Quét toàn bộ kho thẻ SRS B1 đã tạo trong tuần (đạt 0 thẻ tồn đọng).",
+          "**20m:** Ôn tập toàn bộ thẻ từ vựng B1 đã tạo trong tuần (hoàn thành hết thẻ đến hạn).",
           "**10m:** Điền số liệu vào bảng theo dõi tiến độ tuần."
         ],
         "B2": [
           "**25m:** Tự ghi âm bài nói 3 phút phân tích một chủ đề chuyên môn (chấm theo thang 20 điểm).",
-          "**20m:** Quét sạch toàn bộ kho thẻ SRS Collocations và Grammar đã học.",
+          "**20m:** Ôn tập lại toàn bộ thẻ cụm từ và ngữ pháp đã học trong tuần.",
           "**10m:** Tổng kết số lượng từ đệm và WPM đạt được trong tuần."
         ],
         "C1": [
@@ -1236,7 +1236,7 @@
       "day": 29,
       "week": 4,
       "phase": "Native Velocity & Cognitive Synthesis",
-      "title": "Đại Thử Thách Tổng Hợp (The Capstone Integration Drill)",
+      "title": "Bài kiểm tra kỹ năng tổng hợp toàn diện",
       "tasks": [
         "**25m:** Nghe 1 bài giảng học thuật 20 phút không dừng. Vừa nghe vừa ghi chép dàn ý (Cornell note-taking).",
         "**25m:** Dựa trên dàn ý vừa ghi, viết ngay 1 bản tóm tắt sắc sảo 200 từ trong vòng 20 phút; 10 phút sau dùng kỹ thuật *Read-Aloud Test* để tự sửa lỗi.",
@@ -1280,7 +1280,7 @@
       "day": 30,
       "week": 4,
       "phase": "Native Velocity & Cognitive Synthesis",
-      "title": "Đánh Giá Toàn Diện Sau 30 Ngày & Hoạch Định Chu Kỳ Tiếp Theo",
+      "title": "Tổng kết hành trình 30 ngày & Kế hoạch tiếp theo",
       "tasks": [
         "**30m:** So sánh bản ghi âm của **Day 7** với bản ghi âm của **Day 28**, ghi nhận rõ sự chuyển biến về: (1) độ trôi chảy, (2) số từ đệm (filler words), (3) tốc độ nói (WPM).",
         "**20m:** Hoàn tất bảng tổng kết số liệu 30 ngày và thiết lập mục tiêu cho chu kỳ 30 ngày tiếp theo.",

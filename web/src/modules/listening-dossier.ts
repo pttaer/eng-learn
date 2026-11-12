@@ -234,7 +234,7 @@ export class ListeningDossier {
       <div class="app-hero-banner listening-hero-banner" style="margin-bottom: var(--space-12, 12px);">
         <div class="app-hero-banner-content">
           <span class="telemetry-label" style="color: var(--accent-gold); font-size: var(--font-kicker); font-family: var(--font-mono); font-weight: 700;">
-            [${t('listening.title')} // ${t('listening.active_transcription')}]
+            ${t('listening.title')} · ${t('listening.active_transcription')}
           </span>
           <h2 style="margin: 0; font-size: var(--font-h3, 16px); font-weight: 700; color: var(--ink-primary); line-height: 1.3;">
             ${this.currentMode === 'cloze' ? t('listening.cloze_transcription') : t('listening.passive_passages')}
@@ -367,10 +367,10 @@ export class ListeningDossier {
         ${t('listening.topic_label', undefined, 'Topic')}: ${item.title}
       </div>
       <div style="display: flex; gap: 8px; margin-bottom: 12px; flex-wrap: wrap;">
-        <button type="button" class="hud-btn btn-play-audio" style="font-size: var(--font-kicker); padding: 8px 14px; min-height: 44px; border-radius: var(--radius-btn, 10px); display: inline-flex; align-items: center;">▶ Play 1.0x</button>
-        <button type="button" class="hud-btn btn-play-slow" style="font-size: var(--font-kicker); padding: 8px 14px; min-height: 44px; border-radius: var(--radius-btn, 10px); display: inline-flex; align-items: center;">⏵ Play 0.8x</button>
+        <button type="button" class="hud-btn btn-play-audio" style="font-size: var(--font-kicker); padding: 8px 14px; min-height: 44px; border-radius: var(--radius-btn, 10px); display: inline-flex; align-items: center;">${t('listening.play_normal', undefined, '▶ Play 1.0x')}</button>
+        <button type="button" class="hud-btn btn-play-slow" style="font-size: var(--font-kicker); padding: 8px 14px; min-height: 44px; border-radius: var(--radius-btn, 10px); display: inline-flex; align-items: center;">${t('listening.play_slow', undefined, '⏵ Play 0.8x')}</button>
       </div>
-      <textarea class="listening-transcribe-box" placeholder="${t('listening.transcribe_ph', undefined, 'Pass 2: Transcribe word-for-word here...')}" rows="3" style="width: 100%; font-family: var(--font-mono); font-size: max(16px, var(--font-body)); padding: 10px; border: 1px solid var(--border-subtle); background: var(--bg-surface-sunk); color: var(--ink-primary); border-radius: 6px; outline: none; resize: none; box-sizing: border-box;"></textarea>
+      <textarea class="listening-transcribe-box" placeholder="${t('listening.transcribe_ph', undefined, 'Pass 2: Transcribe word-for-word here...')}" rows="3" style="width: 100%; font-family: var(--font-mono); font-size: max(16px, var(--font-body)); padding: 10px; border: 1px solid var(--border-subtle); background: var(--bg-surface-sunk); color: var(--ink-primary); border-radius: var(--radius-squircle-sm, 10px); outline: none; resize: none; box-sizing: border-box;"></textarea>
       <div style="font-family: var(--font-mono); font-size: var(--font-kicker); color: var(--ink-muted); margin-top: 6px;">
         ${t('listening.flip_hint', undefined, 'Listen at least twice before flipping the card to reveal phonetic analysis.')}
       </div>
@@ -404,26 +404,26 @@ export class ListeningDossier {
     frontEl.innerHTML = `
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
         <div class="card-prompt-label">
-          CLOZE TRANSCRIPTION // CEFR ${item.cefrLevel}
+          ${t('listening.cloze_title', undefined, 'CLOZE TRANSCRIPTION')} // CEFR ${item.cefrLevel}
         </div>
         <div class="cloze-progress-badge" style="font-family: var(--font-mono); font-size: var(--font-kicker);">
-          GAPS: <span class="cloze-correct-count" style="font-weight: 700; color: ${isComplete ? 'var(--good)' : 'var(--accent-gold)'};">${score.correct}</span> / <span class="cloze-total-count">${totalGaps}</span> (${score.percentage}%)
+          ${t('listening.gaps_label', undefined, 'GAPS:')} <span class="cloze-correct-count" style="font-weight: 700; color: ${isComplete ? 'var(--good)' : 'var(--accent-gold)'};">${score.correct}</span> / <span class="cloze-total-count">${totalGaps}</span> (${score.percentage}%)
         </div>
       </div>
 
       <div style="font-family: var(--font-sans); font-size: var(--font-body); font-weight: 600; margin-bottom: 12px; color: var(--ink-primary);">
-        Topic: ${item.title}
+        ${t('listening.topic_label', undefined, 'Topic')}: ${item.title}
       </div>
 
       <!-- Audio Player Strip with Speed Controls -->
       <div class="cloze-player-strip">
         <div style="display: flex; align-items: center; gap: 6px;">
           <button type="button" class="hud-btn btn-cloze-play" style="font-size: var(--font-kicker); padding: 8px 14px; min-height: 44px; border-radius: var(--radius-btn, 10px); display: inline-flex; align-items: center; font-weight: 700; background: var(--accent-gold); color: var(--bg-canvas); border: none;">
-            ▶ Play Audio
+            ${t('listening.play_audio', undefined, '▶ Play Audio')}
           </button>
         </div>
         <div class="speed-control-group">
-          <span style="font-family: var(--font-mono); font-size: var(--font-kicker); color: var(--ink-muted); margin-right: 4px;">SPEED:</span>
+          <span style="font-family: var(--font-mono); font-size: var(--font-kicker); color: var(--ink-muted); margin-right: 4px;">${t('listening.speed_label', undefined, 'SPEED:')}</span>
           <button type="button" class="hud-btn btn-speed ${Math.abs(this.playbackSpeed - 0.8) < 0.01 ? 'active-speed' : ''}" data-speed="0.8" aria-pressed="${Math.abs(this.playbackSpeed - 0.8) < 0.01}">0.8x</button>
           <button type="button" class="hud-btn btn-speed ${Math.abs(this.playbackSpeed - 1.0) < 0.01 ? 'active-speed' : ''}" data-speed="1.0" aria-pressed="${Math.abs(this.playbackSpeed - 1.0) < 0.01}">1.0x</button>
           <button type="button" class="hud-btn btn-speed ${Math.abs(this.playbackSpeed - 1.2) < 0.01 ? 'active-speed' : ''}" data-speed="1.2" aria-pressed="${Math.abs(this.playbackSpeed - 1.2) < 0.01}">1.2x</button>
@@ -441,14 +441,14 @@ export class ListeningDossier {
           ${t('listening.transcribe_missing', undefined, 'Listen closely & transcribe the missing phonetic words.')}
         </div>
         <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-          <button type="button" class="hud-btn btn-cloze-hint" style="font-size: var(--font-kicker); padding: 8px 12px; min-height: 44px; border-radius: var(--radius-btn, 10px); display: inline-flex; align-items: center;">${icon('lightbulb', 11)} Hint</button>
-          <button type="button" class="hud-btn btn-cloze-reset" style="font-size: var(--font-kicker); padding: 8px 12px; min-height: 44px; border-radius: var(--radius-btn, 10px); display: inline-flex; align-items: center;">↺ Reset</button>
+          <button type="button" class="hud-btn btn-cloze-hint" style="font-size: var(--font-kicker); padding: 8px 12px; min-height: 44px; border-radius: var(--radius-btn, 10px); display: inline-flex; align-items: center;">${icon('lightbulb', 11)} ${t('listening.hint_btn', undefined, 'Hint')}</button>
+          <button type="button" class="hud-btn btn-cloze-reset" style="font-size: var(--font-kicker); padding: 8px 12px; min-height: 44px; border-radius: var(--radius-btn, 10px); display: inline-flex; align-items: center;">↺ ${t('listening.reset_btn', undefined, 'Reset')}</button>
         </div>
       </div>
 
       <!-- Completion Celebration Banner -->
       <div class="cloze-completion-banner" style="display: ${isComplete ? 'block' : 'none'};">
-        ☆ ALL GAPS CORRECT (100% ACCURACY)! Press <span class="kbd-only">Space or </span>Flip to review IPA & connected speech.
+        ${t('listening.all_gaps_correct', undefined, '☆ ALL GAPS CORRECT (100% ACCURACY)! Press Space or Flip to review IPA & connected speech.')}
       </div>
     `;
 
@@ -620,15 +620,15 @@ export class ListeningDossier {
       : `"${this.escapeHTML(item.audioText)}"`;
 
     backEl.innerHTML = `
-      <div class="card-prompt-label">Pass 3 · Phonetic Gap Analysis & Transcript</div>
+      <div class="card-prompt-label">${t('listening.pass3_title', undefined, 'Pass 3 · Phonetic Gap Analysis & Transcript')}</div>
       <div class="card-main-text" style="font-size: var(--font-body); font-weight: 600; line-height: 1.6; margin-bottom: 10px;">
         ${transcriptHtml}
       </div>
-      <div class="card-ipa-text" style="font-size: var(--font-kicker); margin-bottom: 8px; background: var(--bg-surface-sunk); color: var(--accent-gold); border: 1px solid var(--border-subtle); border-radius: 4px; padding: 6px 10px; font-family: var(--font-mono);">
+      <div class="card-ipa-text" style="font-size: var(--font-kicker); margin-bottom: 8px; background: var(--bg-surface-sunk); color: var(--accent-gold); border: 1px solid var(--border-subtle); border-radius: var(--radius-squircle-sm, 10px); padding: 6px 10px; font-family: var(--font-mono);">
         IPA: ${this.escapeHTML(item.ipa)}
       </div>
       <div style="font-family: var(--font-mono); font-size: var(--font-kicker); line-height: 1.4; border-top: 1px solid var(--border-hairline); padding-top: 6px;">
-        <strong>CONNECTED SPEECH PHENOMENA:</strong><br />
+        <strong>${t('listening.connected_speech_label', undefined, 'CONNECTED SPEECH PHENOMENA:')}</strong><br />
         ${this.escapeHTML(item.traps)}
       </div>
     `;

@@ -192,7 +192,7 @@ export class SpeakingDossier {
       <div class="app-hero-banner speaking-hero-banner" style="margin-bottom: var(--space-12, 12px);">
         <div class="app-hero-banner-content">
           <span class="telemetry-label" style="color: var(--accent-gold); font-size: var(--font-kicker); font-family: var(--font-mono); font-weight: 700;">
-            [${t('speaking.title', undefined, 'SPEAKING STUDIO')} // ${this.mode.toUpperCase()}]
+            ${t('speaking.title', undefined, 'SPEAKING STUDIO')} · ${this.mode.toUpperCase()}
           </span>
           <h2 style="margin: 0; font-size: var(--font-h3, 16px); font-weight: 700; color: var(--ink-primary); line-height: 1.3;">
             ${this.mode === 'nation' ? t('speaking.mode_nation', undefined, '4-3-2 Fluency') :
@@ -709,6 +709,7 @@ export class SpeakingDossier {
       category: '4-3-2',
       indexStr: `[ ${String(this.currentIndex + 1).padStart(2, '0')} / ${this.items.length} ]`,
       statusBadge,
+      hideFrontRating: true,
       front: {
         customContent: frontEl,
         mainText: item.prompt
@@ -737,7 +738,7 @@ export class SpeakingDossier {
 
     const counter = this.container.querySelector('.card-counter');
     if (counter) {
-      counter.textContent = `PROMPT [ ${this.currentIndex + 1} / ${this.items.length} ]`;
+      counter.textContent = t('common.prompt_counter', { current: this.currentIndex + 1, total: this.items.length }, `PROMPT [ ${this.currentIndex + 1} / ${this.items.length} ]`);
     }
   }
 
@@ -756,8 +757,8 @@ export class SpeakingDossier {
       </div>
 
       <!-- 15s Mental Anchor -->
-      <div style="font-family: var(--font-mono); font-size: var(--font-kicker); color: var(--ink-secondary); margin-bottom: 10px; border-left: 2px solid var(--ink-primary); padding-left: 8px; background: rgba(0, 0, 0, 0.02);">
-        <strong>${t('speaking.mental_anchor', undefined, '15S MENTAL ANCHOR:')}</strong> ${item.anchor}
+      <div style="font-family: var(--font-mono); font-size: var(--font-kicker); color: var(--ink-secondary); margin-bottom: 10px; border-left: 3px solid var(--accent-gold); padding: 8px 12px; background: var(--bg-surface-sunk); border-radius: 0 var(--radius-btn, 10px) var(--radius-btn, 10px) 0; line-height: 1.45;">
+        <strong style="color: var(--accent-gold);">${t('speaking.mental_anchor', undefined, '15S MENTAL ANCHOR:')}</strong> ${item.anchor}
       </div>
 
       <!-- Collocation Voice Radar Strip -->

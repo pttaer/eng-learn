@@ -135,7 +135,7 @@ export class AtomicCard {
     frontHeader.className = 'card-header-bar card-header-hud';
     frontHeader.innerHTML = `
       <div class="card-meta-left header-left">
-        <span class="telemetry-badge">[${t('card.pillar.' + config.pillar.toLowerCase(), undefined, config.pillar)} // ${t('card.cat.' + config.category.toLowerCase().replace(/[^a-z0-9]+/g, '_'), undefined, config.category)}]</span>
+        <span class="telemetry-badge">${t('card.pillar.' + config.pillar.toLowerCase(), undefined, config.pillar)} · ${t('card.cat.' + config.category.toLowerCase().replace(/[^a-z0-9]+/g, '_'), undefined, config.category)}</span>
         <span class="card-badge-status card-status-badge">${statusLabel}</span>
       </div>
       <div class="card-meta-right header-right">
@@ -223,7 +223,7 @@ export class AtomicCard {
     backHeader.className = 'card-header-bar card-header-hud';
     backHeader.innerHTML = `
       <div class="card-meta-left header-left">
-        <span class="telemetry-badge">[${t('card.pillar.' + config.pillar.toLowerCase(), undefined, config.pillar)} // ${t('card.resolution', undefined, 'RESOLUTION')}]</span>
+        <span class="telemetry-badge">${t('card.pillar.' + config.pillar.toLowerCase(), undefined, config.pillar)} · ${t('card.resolution', undefined, 'RESOLUTION')}</span>
       </div>
       <div class="card-meta-right header-right">
         <span class="card-index-counter">${config.indexStr}</span>

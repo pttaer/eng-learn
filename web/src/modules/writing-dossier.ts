@@ -182,7 +182,7 @@ export class WritingDossier {
         <div class="dossier-control-bar" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-hairline); padding-bottom: 12px;">
           <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px;">
             <span class="telemetry-label" style="color: var(--accent-gold); font-weight: 700;">${t('writing.franklin_copywork')}</span>
-            <span class="hud-status-badge register-badge" title="Register: ${item.register}">REGISTER: ${item.register.split('/')[0].trim()}</span>
+            <span class="hud-status-badge register-badge" title="${t('writing.register_label', undefined, 'REGISTER:')} ${item.register}">${t('writing.register_label', undefined, 'REGISTER:')} ${item.register.split('/')[0].trim()}</span>
             ${levelRowHtml(this.allItems, this.activeLevel)}
           </div>
           <div class="step-indicator" style="display: flex; gap: 8px; font-family: var(--font-mono); font-size: var(--font-kicker);">
@@ -289,7 +289,7 @@ export class WritingDossier {
               class="copywork-input"
               rows="6"
               placeholder="${t('writing.reconstruct_placeholder', undefined, 'Reconstruct the complete master sentence from memory...')}"
-              style="width: 100%; font-family: var(--font-sans); font-size: var(--font-h3); line-height: 1.65; padding: 16px; border: 1px solid var(--border-subtle); border-radius: 6px; box-sizing: border-box; resize: vertical; outline: none; background: var(--bg-canvas); color: var(--ink-primary);"
+              style="width: 100%; font-family: var(--font-sans); font-size: max(16px, var(--font-h3)); line-height: 1.65; padding: 16px; border: 1px solid var(--border-subtle); border-radius: var(--radius-squircle-sm, 10px); box-sizing: border-box; resize: vertical; outline: none; background: var(--bg-canvas); color: var(--ink-primary);"
             >${this.typedContent}</textarea>
 
             <div class="typing-telemetry-bar" style="display: flex; justify-content: space-between; align-items: center; margin: 12px 0 20px 0; font-family: var(--font-mono); font-size: var(--font-body-compact); color: var(--ink-muted);">
@@ -342,8 +342,8 @@ export class WritingDossier {
               <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; flex-wrap: wrap; gap: 8px;">
                 <div class="telemetry-label">${t('writing.reconstruction_corrections', undefined, 'YOUR RECONSTRUCTION (HIGHLIGHTED ERRORS)')}</div>
                 <div class="diff-legend" style="display: flex; gap: 8px; font-size: var(--font-kicker); font-family: var(--font-mono);">
-                  <span style="color: var(--ink-primary); display: inline-flex; align-items: center; gap: 4px;">● Matched</span>
-                  <span style="color: #ef4444; display: inline-flex; align-items: center; gap: 4px; text-decoration: line-through;">● Needs correction</span>
+                  <span style="color: var(--ink-primary); display: inline-flex; align-items: center; gap: 4px;">${t('writing.diff_matched', undefined, '● Matched')}</span>
+                  <span style="color: #ef4444; display: inline-flex; align-items: center; gap: 4px; text-decoration: line-through;">${t('writing.diff_needs_correction', undefined, '● Needs correction')}</span>
                 </div>
               </div>
               <div class="diff-sub-block candidate-attempt-container" style="font-size: var(--font-body); line-height: 1.8; padding: 14px; border: 1px solid var(--border-hairline); border-radius: var(--radius-squircle-sm, 10px); background: var(--bg-surface-sunk); white-space: pre-wrap; word-break: break-word; margin-bottom: 14px;">
@@ -354,7 +354,7 @@ export class WritingDossier {
               <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; flex-wrap: wrap; gap: 8px;">
                 <div class="telemetry-label">${t('writing.original_exemplar', undefined, 'TARGET EXEMPLAR')}</div>
                 <div class="diff-legend" style="display: flex; gap: 8px; font-size: var(--font-kicker); font-family: var(--font-mono);">
-                  <span style="color: var(--accent-gold); display: inline-flex; align-items: center; gap: 4px; font-weight: 600;">● Target / Missed</span>
+                  <span style="color: var(--accent-gold); display: inline-flex; align-items: center; gap: 4px; font-weight: 600;">${t('writing.diff_target_missed', undefined, '● Target / Missed')}</span>
                 </div>
               </div>
               <div class="diff-sub-block target-exemplar-container" style="font-size: var(--font-body); line-height: 1.8; padding: 14px; border-left: 3px solid var(--accent-gold); border-radius: var(--radius-squircle-sm, 10px); background: var(--bg-surface-sunk); white-space: pre-wrap; word-break: break-word;">
@@ -366,24 +366,24 @@ export class WritingDossier {
             <div class="semantic-evaluation-panel" style="margin-bottom: 24px; padding: 14px; background: var(--bg-surface-sunk); border-radius: var(--radius-squircle-sm, 10px); border-left: 3px solid ${semantic.isAcceptableParaphrase ? 'var(--ink-good)' : 'var(--accent-gold)'};">
               <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px; margin-bottom: 10px;">
                 <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px;">
-                  <span class="telemetry-label" style="color: var(--accent-gold); font-weight: 700;">SEMANTIC PARAPHRASE EVALUATION</span>
+                  <span class="telemetry-label" style="color: var(--accent-gold); font-weight: 700;">${t('writing.semantic_paraphrase_eval', undefined, 'SEMANTIC PARAPHRASE EVALUATION')}</span>
                   <span class="hud-status-badge" style="background: ${semantic.isAcceptableParaphrase ? 'var(--good-soft)' : 'var(--warning-soft)'}; color: ${semantic.isAcceptableParaphrase ? 'var(--good)' : 'var(--warning)'}; border: none; white-space: nowrap;">
-                    ${semantic.isAcceptableParaphrase ? '✓ VALID PARAPHRASE' : 'SYNTACTIC VARIATION'}
+                    ${semantic.isAcceptableParaphrase ? t('writing.valid_paraphrase', undefined, '✓ VALID PARAPHRASE') : t('writing.syntactic_variation', undefined, 'SYNTACTIC VARIATION')}
                   </span>
                 </div>
                 <span style="font-family: var(--font-mono); font-size: var(--font-body-compact); font-weight: 700; color: ${semantic.isAcceptableParaphrase ? 'var(--ink-good)' : 'var(--accent-gold)'};">
-                  OVERALL: ${semantic.overallScore}%
+                  ${t('writing.overall_score', { score: semantic.overallScore }, `OVERALL: ${semantic.overallScore}%`)}
                 </span>
               </div>
 
               <!-- Multi-dimensional scoring bars -->
               <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); gap: 8px; margin-bottom: 12px; font-size: var(--font-kicker);">
                 ${[
-            ['Concept Recall', `${semantic.conceptCoveragePct}%`, 'var(--ink-primary)'],
-            ['Syntactic Level', `${semantic.syntacticSophisticationScore}%`, 'var(--ink-primary)'],
-            ['Collocation Bonus', `+${semantic.collocationBonus} pts`, 'var(--ink-good)']
+            [t('writing.concept_recall', undefined, 'Concept Recall'), `${semantic.conceptCoveragePct}%`, 'var(--ink-primary)'],
+            [t('writing.syntactic_level', undefined, 'Syntactic Level'), `${semantic.syntacticSophisticationScore}%`, 'var(--ink-primary)'],
+            [t('writing.collocation_bonus', undefined, 'Collocation Bonus'), `+${semantic.collocationBonus} pts`, 'var(--ink-good)']
           ].map(([label, val, col]) => `
-                  <div style="padding: 6px 10px; background: rgba(255,255,255,0.03); border-radius: 6px;">
+                  <div style="padding: 6px 10px; background: rgba(255,255,255,0.03); border-radius: var(--radius-squircle-sm, 10px);">
                     <div style="color: var(--ink-muted);">${label}</div>
                     <div style="font-weight: 700; color: ${col}; font-size: var(--font-body-compact);">${val}</div>
                   </div>`).join('')}
@@ -392,14 +392,14 @@ export class WritingDossier {
               <!-- Synonyms & Syntactic shifts badges -->
               ${semantic.detectedSynonyms.length > 0 ? `
                 <div style="margin-bottom: 8px; font-size: var(--font-kicker); color: var(--ink-muted);">
-                  <strong style="color: var(--accent-gold);">Synonyms Accepted:</strong>
+                  <strong style="color: var(--accent-gold);">${t('writing.synonyms_accepted', undefined, 'Synonyms Accepted:')}</strong>
                   ${semantic.detectedSynonyms.map(s => `<span class="hud-status-badge" style="margin-left: 4px; padding: 2px 8px; border: none; background: rgba(165,180,252,0.12); color: var(--accent-gold);">${s.used} ↔ ${s.original}</span>`).join('')}
                 </div>
               ` : ''}
 
               ${semantic.detectedSyntacticShifts.length > 0 ? `
                 <div style="margin-bottom: 8px; font-size: var(--font-kicker); color: var(--ink-muted);">
-                  <strong style="color: var(--accent-gold);">Syntactic Transformations:</strong>
+                  <strong style="color: var(--accent-gold);">${t('writing.syntactic_transformations', undefined, 'Syntactic Transformations:')}</strong>
                   ${semantic.detectedSyntacticShifts.map(s => `<span class="hud-status-badge" style="margin-left: 4px; padding: 2px 8px; border: none; background: var(--good-soft); color: var(--ink-good);">${s}</span>`).join('')}
                 </div>
               ` : ''}
@@ -428,7 +428,7 @@ export class WritingDossier {
   private renderCandidateDiffHTML(tokens: ProofreadDiffToken[]): string {
     const candidateTokens = tokens.filter(t => t.type !== 'delete');
     if (candidateTokens.length === 0) {
-      return `<em style="color: var(--ink-muted); font-style: italic;">[Chưa có văn bản gõ]</em>`;
+      return `<em style="color: var(--ink-muted); font-style: italic;">${t('writing.no_text_typed', undefined, '[No text typed yet]')}</em>`;
     }
     const chunked: ProofreadDiffToken[] = [];
     for (const t of candidateTokens) {

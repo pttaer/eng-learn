@@ -110,15 +110,15 @@ export class CollocationsDossier {
       <div class="app-hero-banner collocations-hero-banner" style="margin-bottom: var(--space-12, 12px);">
         <div class="app-hero-banner-content">
           <span class="telemetry-label" style="color: var(--accent-gold); font-size: var(--font-kicker); font-family: var(--font-mono); font-weight: 700;">
-            [${t('colloc.title', undefined, 'COLLOCATION FORGE')}]
+            ${t('colloc.title', undefined, 'COLLOCATION VAULT')}
           </span>
           <h2 style="margin: 0; font-size: var(--font-h3, 16px); font-weight: 700; color: var(--ink-primary); line-height: 1.3;">
             ${this.viewMode === 'drill' ? t('colloc.active_srs') : t('colloc.full_lexicon', { total: total.toLocaleString() })}
           </h2>
           <div style="font-size: var(--font-kicker); color: var(--ink-secondary); display: flex; gap: 8px; flex-wrap: wrap;">
-            <span>CEFR ${this.activeLevel}</span>
+            <span>CEFR ${this.activeLevel === 'ALL' ? t('category.all') : this.activeLevel}</span>
             <span>•</span>
-            <span>${this.activeCategory}</span>
+            <span>${this.activeCategory === 'DUE' ? t('colloc.srs_due') : this.activeCategory === 'ALL' ? t('category.all_categories') : this.activeCategory === 'EVERYDAY' ? t('category.everyday') : this.activeCategory === 'BUSINESS' ? t('category.business') : this.activeCategory === 'ACADEMIC' ? t('category.academic') : this.activeCategory === 'IDIOMS' ? t('category.idioms') : this.activeCategory}</span>
             <span>•</span>
             <span>${t('colloc.total_count', { total: total.toLocaleString() })}</span>
           </div>
@@ -178,7 +178,7 @@ export class CollocationsDossier {
       <div class="dossier-card-slot"></div>
       <div class="dossier-nav-bar">
         <button class="hud-btn nav-btn-prev">${icon('arrowLeft')} ${t('action.prev')}</button>
-        <span class="telemetry-value card-counter">VAULT ${this.currentIndex + 1} / ${Math.max(1, this.currentList.length)}</span>
+        <span class="telemetry-value card-counter">${t('colloc.counter', { current: this.currentIndex + 1, total: Math.max(1, this.currentList.length) }, `VAULT ${this.currentIndex + 1} / ${Math.max(1, this.currentList.length)}`)}</span>
         <button class="hud-btn nav-btn-next">${t('action.next')} ${icon('arrowRight')}</button>
       </div>
     `;
@@ -304,7 +304,7 @@ export class CollocationsDossier {
         this.renderCurrentCard();
         const counter = this.container.querySelector('.card-counter');
         if (counter) {
-          counter.textContent = `VAULT [ ${this.currentIndex + 1} / ${Math.max(1, this.currentList.length)} ]`;
+          counter.textContent = t('colloc.counter', { current: this.currentIndex + 1, total: Math.max(1, this.currentList.length) }, `VAULT ${this.currentIndex + 1} / ${Math.max(1, this.currentList.length)}`);
         }
       } else {
         this.updateDictionaryView();
@@ -399,7 +399,7 @@ export class CollocationsDossier {
     this.renderCurrentCard();
     const counter = this.container.querySelector('.card-counter');
     if (counter) {
-      counter.textContent = `VAULT [ ${this.currentIndex + 1} / ${Math.max(1, this.currentList.length)} ]`;
+      counter.textContent = t('colloc.counter', { current: this.currentIndex + 1, total: Math.max(1, this.currentList.length) }, `VAULT ${this.currentIndex + 1} / ${Math.max(1, this.currentList.length)}`);
     }
   }
 

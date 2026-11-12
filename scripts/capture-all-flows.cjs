@@ -7,7 +7,7 @@ const puppeteer = require(path.resolve(__dirname, '../web/node_modules/puppeteer
 
 const CHROME_PATH = 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe';
 const DIST_DIR = path.resolve(__dirname, '../web/dist');
-const OUTPUT_BASE = path.resolve(__dirname, '../Mobile/flows');
+const OUTPUT_BASE = path.resolve(__dirname, '../Mobile/vivo');
 const PORT = 4192;
 const BASE_URL = `http://localhost:${PORT}/`;
 
@@ -72,6 +72,8 @@ async function cleanPopupsAndOverlays(page) {
     document.getElementById('ielts-confirm-dialog')?.remove();
     document.getElementById('hud-confirm-dialog')?.remove();
     document.getElementById('tour-welcome-toast')?.remove();
+    document.querySelectorAll('#notification-toast-container').forEach(el => el.remove());
+    document.querySelectorAll('.corner-compass-container').forEach(c => c.classList.remove('compass-active'));
 
     // 2. Clear any lingering test session in IELTS
     if (window.setIeltsTestInProgress) {
@@ -195,14 +197,14 @@ async function run() {
   const browser = await puppeteer.launch({
     executablePath: CHROME_PATH,
     headless: 'new',
-    args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage', '--window-size=390,844']
+    args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage', '--window-size=360,803']
   });
 
   const page = await browser.newPage();
   await page.setViewport({
-    width: 390,
-    height: 844,
-    deviceScaleFactor: 2,
+    width: 360,
+    height: 803,
+    deviceScaleFactor: 3,
     isMobile: true,
     hasTouch: true
   });
@@ -236,7 +238,7 @@ async function run() {
     // FLOW 01: ONBOARDING & PLACEMENT
     // =========================================================================
     console.log('\n--- FLOW 01: ONBOARDING & PLACEMENT ---');
-    await page.goto(`${BASE_URL}#placement`, { waitUntil: 'networkidle0' });
+    await page.goto(`${BASE_URL}#placement`, { waitUntil: 'domcontentloaded' });
     await new Promise(r => setTimeout(r, 600));
     await captureFlowView(page, '01-onboarding-placement', '01-placement-intro', 'Placement Quiz Intro');
 
@@ -264,7 +266,7 @@ async function run() {
     });
 
     // Spotlight Tour
-    await page.goto(`${BASE_URL}#tree`, { waitUntil: 'networkidle0' });
+    await page.goto(`${BASE_URL}#tree`, { waitUntil: 'domcontentloaded' });
     await new Promise(r => setTimeout(r, 500));
     await page.evaluate(() => {
       if (window.SpotlightTour) window.SpotlightTour.start(true);
@@ -280,17 +282,17 @@ async function run() {
     // FLOW 02: NAVIGATION & SYSTEM HUD
     // =========================================================================
     console.log('\n--- FLOW 02: NAVIGATION & SYSTEM HUD ---');
-    await page.goto(`${BASE_URL}#tree`, { waitUntil: 'networkidle0' });
+    await page.goto(`${BASE_URL}#tree`, { waitUntil: 'domcontentloaded' });
     await new Promise(r => setTimeout(r, 600));
     await captureFlowView(page, '02-navigation-hud', '01-constellation-deck', 'Constellation Tree (Mobile Skill Deck)');
 
     // Living Urchin Canvas
-    await page.goto(`${BASE_URL}#singularity`, { waitUntil: 'networkidle0' });
+    await page.goto(`${BASE_URL}#singularity`, { waitUntil: 'domcontentloaded' });
     await new Promise(r => setTimeout(r, 600));
     await captureFlowView(page, '02-navigation-hud', '02-living-canvas', 'Living Urchin 2.5D Canvas');
 
     // Mobile Navigation Drawer
-    await page.goto(`${BASE_URL}#tree`, { waitUntil: 'networkidle0' });
+    await page.goto(`${BASE_URL}#tree`, { waitUntil: 'domcontentloaded' });
     await new Promise(r => setTimeout(r, 500));
     await page.evaluate(() => {
       document.querySelector('.btn-mobile-menu-drawer')?.click();
@@ -313,7 +315,7 @@ async function run() {
     });
 
     // Settings Dossier (Full 6-Card)
-    await page.goto(`${BASE_URL}#settings`, { waitUntil: 'networkidle0' });
+    await page.goto(`${BASE_URL}#settings`, { waitUntil: 'domcontentloaded' });
     await new Promise(r => setTimeout(r, 600));
     await captureFlowView(page, '02-navigation-hud', '05-settings-dossier', 'Full 6-Card Settings & Audio Dossier');
 
@@ -364,7 +366,7 @@ async function run() {
     });
 
     // Star Map (2.5D SVG Constellation Tree)
-    await page.goto(`${BASE_URL}#tree`, { waitUntil: 'networkidle0' });
+    await page.goto(`${BASE_URL}#tree`, { waitUntil: 'domcontentloaded' });
     await new Promise(r => setTimeout(r, 500));
     await page.evaluate(() => {
       const btn = document.querySelector('.view-switch-btn[data-view="map"]');
@@ -387,7 +389,7 @@ async function run() {
     });
 
     // Corner Compass Radial Menu
-    await page.goto(`${BASE_URL}#read`, { waitUntil: 'networkidle0' });
+    await page.goto(`${BASE_URL}#read`, { waitUntil: 'domcontentloaded' });
     await new Promise(r => setTimeout(r, 500));
     await page.evaluate(() => {
       const trigger = document.querySelector('.compass-orb-trigger, .corner-compass-container canvas');
@@ -396,7 +398,12 @@ async function run() {
     await new Promise(r => setTimeout(r, 500));
     await captureFlowView(page, '02-navigation-hud', '11-corner-compass', 'Corner Compass Radial Navigation Menu');
     await page.evaluate(() => {
-      document.body.click();
+      const compass = window.CornerCompass;
+      if (compass && typeof compass.closeMenu === 'function') {
+        compass.closeMenu();
+      }
+      document.querySelectorAll('.corner-compass-container').forEach(c => c.classList.remove('compass-active'));
+      document.querySelector('.compass-btn-close')?.click();
     });
 
     // Autonomous Commute Audio Player Loop Sheet
@@ -407,17 +414,20 @@ async function run() {
     await captureFlowView(page, '02-navigation-hud', '12-commute-player', 'Autonomous Commute Audio Player Loop');
     await page.evaluate(() => {
       if (window.CommuteAudioPlayer) window.CommuteAudioPlayer.close();
+      document.querySelectorAll('.commute-player-overlay, .commute-player-sheet').forEach(e => e.remove());
     });
 
     // Level Picker Modal
     await page.evaluate(() => {
-      const hud = window.HeaderHUD?.getInstance ? window.HeaderHUD.getInstance() : null;
-      if (hud) hud.openLevelPicker();
+      const btn = document.querySelector('.btn-level');
+      if (btn) btn.click();
     });
     await new Promise(r => setTimeout(r, 500));
     await captureFlowView(page, '02-navigation-hud', '13-level-picker-modal', 'CEFR Level Picker Modal');
     await page.evaluate(() => {
-      document.querySelector('#level-picker-modal .btn-modal-close')?.click() || document.getElementById('level-picker-modal')?.remove();
+      document.querySelector('#level-modal .btn-modal-close, #level-picker-modal .btn-modal-close')?.click() || document.getElementById('level-modal')?.remove();
+      document.getElementById('level-picker-modal')?.remove();
+      document.querySelectorAll('.completion-modal-overlay, #level-modal, .modal-backdrop').forEach(el => el.remove());
     });
 
     // Floating Scratchpad Note Window
@@ -427,15 +437,23 @@ async function run() {
     await new Promise(r => setTimeout(r, 500));
     await captureFlowView(page, '02-navigation-hud', '14-floating-scratchpad', 'Floating Quick Scratchpad Window');
     await page.evaluate(() => {
-      if (window.FloatingNote) window.FloatingNote.minimize();
+      if (window.FloatingNote) {
+        window.FloatingNote.close?.();
+        window.FloatingNote.minimize?.();
+      }
+      document.getElementById('floating-scratchpad')?.remove();
+      document.querySelectorAll('.modal-backdrop, .modal-backdrop-blur, .completion-modal-overlay').forEach(el => el.remove());
     });
 
     // =========================================================================
     // FLOW 03: FOUR PILLARS
     // =========================================================================
     console.log('\n--- FLOW 03: FOUR PILLARS STUDY WORKBENCHES ---');
+    await page.evaluate(() => {
+      document.querySelectorAll('.completion-modal-overlay, #level-modal, #skill-node-modal, #settings-modal, #progression-modal, #mistake-vault-modal, #floating-scratchpad, .mobile-action-sheet, .modal-backdrop, .modal-backdrop-blur').forEach(e => e.remove());
+    });
     // Reading Pass 1
-    await page.goto(`${BASE_URL}#read`, { waitUntil: 'networkidle0' });
+    await page.goto(`${BASE_URL}#read`, { waitUntil: 'domcontentloaded' });
     await new Promise(r => setTimeout(r, 600));
     await captureFlowView(page, '03-four-pillars', '01-reading-pass1', 'Reading Lab (Pass 1 Skim Protocol)');
 
@@ -447,7 +465,7 @@ async function run() {
     await new Promise(r => setTimeout(r, 400));
 
     // Writing Studio Step 1 (Scaffold)
-    await page.goto(`${BASE_URL}#write`, { waitUntil: 'networkidle0' });
+    await page.goto(`${BASE_URL}#write`, { waitUntil: 'domcontentloaded' });
     await new Promise(r => setTimeout(r, 600));
     await captureFlowView(page, '03-four-pillars', '03-writing-scaffold', 'Franklin Copywork Studio (Step 1 Scaffolding)');
 
@@ -471,12 +489,12 @@ async function run() {
     await captureFlowView(page, '03-four-pillars', '05-writing-diff', 'Franklin Copywork Studio (Step 3 Myers Split Diff)');
 
     // Listening Chamber
-    await page.goto(`${BASE_URL}#listen`, { waitUntil: 'networkidle0' });
+    await page.goto(`${BASE_URL}#listen`, { waitUntil: 'domcontentloaded' });
     await new Promise(r => setTimeout(r, 600));
     await captureFlowView(page, '03-four-pillars', '06-listening-chamber', 'Active Listening Chamber & Transcription');
 
     // Speaking Studio
-    await page.goto(`${BASE_URL}#speak`, { waitUntil: 'networkidle0' });
+    await page.goto(`${BASE_URL}#speak`, { waitUntil: 'domcontentloaded' });
     await new Promise(r => setTimeout(r, 600));
     await captureFlowView(page, '03-four-pillars', '07-speaking-studio', 'Acoustic Speaking Studio & Oscilloscope');
 
@@ -485,7 +503,7 @@ async function run() {
     // =========================================================================
     console.log('\n--- FLOW 04: LANGUAGE MASTERY FOUNDATIONS ---');
     // Vocab Vault (Front Face)
-    await page.goto(`${BASE_URL}#vocab`, { waitUntil: 'networkidle0' });
+    await page.goto(`${BASE_URL}#vocab`, { waitUntil: 'domcontentloaded' });
     await new Promise(r => setTimeout(r, 600));
     await captureFlowView(page, '04-mastery-foundations', '01-vocab-front', 'Vocabulary Vault (Front Flashcard Prompt)');
 
@@ -497,7 +515,7 @@ async function run() {
     await captureFlowView(page, '04-mastery-foundations', '02-vocab-back', 'Vocabulary Vault (Flipped Resolution Face)');
 
     // Collocations Drill Mode
-    await page.goto(`${BASE_URL}#colloc`, { waitUntil: 'networkidle0' });
+    await page.goto(`${BASE_URL}#colloc`, { waitUntil: 'domcontentloaded' });
     await new Promise(r => setTimeout(r, 600));
     await captureFlowView(page, '04-mastery-foundations', '03-collocations-drill', 'Collocation Forge (SRS Active Drill Mode)');
 
@@ -510,12 +528,12 @@ async function run() {
     await captureFlowView(page, '04-mastery-foundations', '04-collocations-lexicon', 'Collocation Forge (1,000 Searchable Dictionary Table)');
 
     // Grammar Codex Interactive Transform
-    await page.goto(`${BASE_URL}#grammar`, { waitUntil: 'networkidle0' });
+    await page.goto(`${BASE_URL}#grammar`, { waitUntil: 'domcontentloaded' });
     await new Promise(r => setTimeout(r, 600));
     await captureFlowView(page, '04-mastery-foundations', '05-grammar-codex', 'Grammar Codex (Syntax Transformation Console)');
 
     // 12 Verb Tenses (Random Drill)
-    await page.goto(`${BASE_URL}#tenses`, { waitUntil: 'networkidle0' });
+    await page.goto(`${BASE_URL}#tenses`, { waitUntil: 'domcontentloaded' });
     await new Promise(r => setTimeout(r, 600));
     await captureFlowView(page, '04-mastery-foundations', '06-tenses-drill', '12 Verb Tenses (Random Drill Mode)');
 
@@ -556,7 +574,7 @@ async function run() {
     });
 
     // Cambridge 36 Practice Drills Sets
-    await page.goto(`${BASE_URL}#drills`, { waitUntil: 'networkidle0' });
+    await page.goto(`${BASE_URL}#drills`, { waitUntil: 'domcontentloaded' });
     await new Promise(r => setTimeout(r, 600));
     await captureFlowView(page, '04-mastery-foundations', '10-cambridge-drills', 'Cambridge 36-Set Practice Drills');
 
@@ -581,27 +599,27 @@ async function run() {
     // =========================================================================
     console.log('\n--- FLOW 05: SPEED, MEDIATION & HABITS ---');
     // Speed Blitz
-    await page.goto(`${BASE_URL}#blitz`, { waitUntil: 'networkidle0' });
+    await page.goto(`${BASE_URL}#blitz`, { waitUntil: 'domcontentloaded' });
     await new Promise(r => setTimeout(r, 600));
     await captureFlowView(page, '05-speed-mediation-habits', '01-speed-blitz', 'Roguelike 60-Second Speed Blitz');
 
     // CEFR Mediation Workbench
-    await page.goto(`${BASE_URL}#mediate`, { waitUntil: 'networkidle0' });
+    await page.goto(`${BASE_URL}#mediate`, { waitUntil: 'domcontentloaded' });
     await new Promise(r => setTimeout(r, 600));
     await captureFlowView(page, '05-speed-mediation-habits', '02-mediation-workbench', 'CEFR Mediation Workbench');
 
     // Daily Habits & Mission Log
-    await page.goto(`${BASE_URL}#habits`, { waitUntil: 'networkidle0' });
+    await page.goto(`${BASE_URL}#habits`, { waitUntil: 'domcontentloaded' });
     await new Promise(r => setTimeout(r, 600));
     await captureFlowView(page, '05-speed-mediation-habits', '03-mission-log', 'Habit Formation & Daily Mission Log');
 
     // CEFR Analytics & SERL 2.0
-    await page.goto(`${BASE_URL}#analytics`, { waitUntil: 'networkidle0' });
+    await page.goto(`${BASE_URL}#analytics`, { waitUntil: 'domcontentloaded' });
     await new Promise(r => setTimeout(r, 600));
     await captureFlowView(page, '05-speed-mediation-habits', '04-analytics-serl', 'CEFR Analytics & SERL 2.0 Cockpit');
 
     // Exam Cockpit Reading & Writing Modes
-    await page.goto(`${BASE_URL}#cockpit`, { waitUntil: 'networkidle0' });
+    await page.goto(`${BASE_URL}#cockpit`, { waitUntil: 'domcontentloaded' });
     await new Promise(r => setTimeout(r, 600));
     await captureFlowView(page, '05-speed-mediation-habits', '05-exam-cockpit-reading', 'Exam Cockpit (Reading Passage & Gap-Fill Navigator)');
 
@@ -682,7 +700,7 @@ async function run() {
     });
 
     // 01 Home / Overview
-    await page.goto(`${BASE_URL}ielts.html#home`, { waitUntil: 'networkidle0' });
+    await page.goto(`${BASE_URL}ielts.html#home`, { waitUntil: 'domcontentloaded' });
     await new Promise(r => setTimeout(r, 600));
     await captureFlowView(page, '06-ielts-academic', '01-ielts-overview', 'IELTS Road to 7.0 Overview & Summary');
 
@@ -695,8 +713,8 @@ async function run() {
     await page.evaluate(() => {
       localStorage.removeItem('ielts_diagnostic_profile');
     });
-    await page.goto(`${BASE_URL}ielts.html#diagnostic`, { waitUntil: 'networkidle0' });
-    await page.reload({ waitUntil: 'networkidle0' });
+    await page.goto(`${BASE_URL}ielts.html#diagnostic`, { waitUntil: 'domcontentloaded' });
+    await page.reload({ waitUntil: 'domcontentloaded' });
     await new Promise(r => setTimeout(r, 600));
     await captureFlowView(page, '06-ielts-academic', '02-ielts-diagnostic', 'IELTS 4-Skill Diagnostic Assessment');
 
@@ -727,7 +745,7 @@ async function run() {
       };
       localStorage.setItem('ielts_diagnostic_profile', JSON.stringify(report));
     });
-    await page.reload({ waitUntil: 'networkidle0' });
+    await page.reload({ waitUntil: 'domcontentloaded' });
     await new Promise(r => setTimeout(r, 600));
     await page.evaluate(() => {
       document.querySelector('#btn-view-cached')?.click();
@@ -738,7 +756,7 @@ async function run() {
     });
 
     // 03 Reading Timed Passages (Active Test View)
-    await page.goto(`${BASE_URL}ielts.html#reading`, { waitUntil: 'networkidle0' });
+    await page.goto(`${BASE_URL}ielts.html#reading`, { waitUntil: 'domcontentloaded' });
     await new Promise(r => setTimeout(r, 600));
     await page.evaluate(() => {
       const firstCard = document.querySelector('.ie-passage-card');
@@ -763,12 +781,12 @@ async function run() {
     });
 
     // 04 Reading 14 Attack Drills Lab
-    await page.goto(`${BASE_URL}ielts.html#reading-drills`, { waitUntil: 'networkidle0' });
+    await page.goto(`${BASE_URL}ielts.html#reading-drills`, { waitUntil: 'domcontentloaded' });
     await new Promise(r => setTimeout(r, 600));
     await captureFlowView(page, '06-ielts-academic', '04-ielts-reading-attack-drills', 'IELTS Reading (14 Attack Drills Studio)');
 
     // 05 Listening Audio Sections (Active Section View)
-    await page.goto(`${BASE_URL}ielts.html#listening`, { waitUntil: 'networkidle0' });
+    await page.goto(`${BASE_URL}ielts.html#listening`, { waitUntil: 'domcontentloaded' });
     await new Promise(r => setTimeout(r, 600));
     await page.evaluate(() => {
       const firstSection = document.querySelector('.ie-listening-card') || document.querySelector('.ie-cards button.ie-card');
@@ -793,27 +811,27 @@ async function run() {
     });
 
     // 06 Listening Traps Lab
-    await page.goto(`${BASE_URL}ielts.html#listening-traps`, { waitUntil: 'networkidle0' });
+    await page.goto(`${BASE_URL}ielts.html#listening-traps`, { waitUntil: 'domcontentloaded' });
     await new Promise(r => setTimeout(r, 600));
     await captureFlowView(page, '06-ielts-academic', '06-ielts-listening-traps', 'IELTS Listening (Traps & Acoustic Self-Correction Lab)');
 
     // 07 Writing Prompts & Rubrics
-    await page.goto(`${BASE_URL}ielts.html#writing`, { waitUntil: 'networkidle0' });
+    await page.goto(`${BASE_URL}ielts.html#writing`, { waitUntil: 'domcontentloaded' });
     await new Promise(r => setTimeout(r, 600));
     await captureFlowView(page, '06-ielts-academic', '07-ielts-writing-prompts', 'IELTS Writing (Prompts & 4-Band Rubrics)');
 
     // 08 Writing Blueprints & Architect
-    await page.goto(`${BASE_URL}ielts.html#writing-studio`, { waitUntil: 'networkidle0' });
+    await page.goto(`${BASE_URL}ielts.html#writing-studio`, { waitUntil: 'domcontentloaded' });
     await new Promise(r => setTimeout(r, 600));
     await captureFlowView(page, '06-ielts-academic', '08-ielts-writing-blueprints', 'IELTS Writing (Blueprints & Paragraph Architect)');
 
     // 09 Speaking Prompts & Notepad
-    await page.goto(`${BASE_URL}ielts.html#speaking`, { waitUntil: 'networkidle0' });
+    await page.goto(`${BASE_URL}ielts.html#speaking`, { waitUntil: 'domcontentloaded' });
     await new Promise(r => setTimeout(r, 600));
     await captureFlowView(page, '06-ielts-academic', '09-ielts-speaking-prompts', 'IELTS Speaking (Cue Cards & Notepad Prep)');
 
     // 10 Speaking Examiner Simulator
-    await page.goto(`${BASE_URL}ielts.html#speaking-simulator`, { waitUntil: 'networkidle0' });
+    await page.goto(`${BASE_URL}ielts.html#speaking-simulator`, { waitUntil: 'domcontentloaded' });
     await new Promise(r => setTimeout(r, 600));
     await captureFlowView(page, '06-ielts-academic', '10-ielts-speaking-simulator', 'IELTS Speaking (AI Examiner Simulator & Nation 4-3-2)');
 
@@ -826,27 +844,27 @@ async function run() {
     await captureFlowView(page, '06-ielts-academic', '10b-ielts-speaking-assessment-feedback', 'IELTS Speaking 4-Criteria Assessment Feedback (Examiner FC/LR/GRA/PR Rubrics)');
 
     // 11 Topic Lexicon
-    await page.goto(`${BASE_URL}ielts.html#vocab`, { waitUntil: 'networkidle0' });
+    await page.goto(`${BASE_URL}ielts.html#vocab`, { waitUntil: 'domcontentloaded' });
     await new Promise(r => setTimeout(r, 600));
     await captureFlowView(page, '06-ielts-academic', '11-ielts-vocab-lexicon', 'IELTS Academic Topic Lexicon & Band Collocations');
 
     // 12 Strategy Codex
-    await page.goto(`${BASE_URL}ielts.html#strategy`, { waitUntil: 'networkidle0' });
+    await page.goto(`${BASE_URL}ielts.html#strategy`, { waitUntil: 'domcontentloaded' });
     await new Promise(r => setTimeout(r, 600));
     await captureFlowView(page, '06-ielts-academic', '12-ielts-strategy-codex', 'IELTS 46 Master Strategy Cards Codex');
 
     // 13 Mock Tests
-    await page.goto(`${BASE_URL}ielts.html#mock`, { waitUntil: 'networkidle0' });
+    await page.goto(`${BASE_URL}ielts.html#mock`, { waitUntil: 'domcontentloaded' });
     await new Promise(r => setTimeout(r, 600));
     await captureFlowView(page, '06-ielts-academic', '13-ielts-mock-exam', 'IELTS Full Offline Mock Exam Simulation');
 
     // 14 Guided 7.0 Study Path
-    await page.goto(`${BASE_URL}ielts.html#path`, { waitUntil: 'networkidle0' });
+    await page.goto(`${BASE_URL}ielts.html#path`, { waitUntil: 'domcontentloaded' });
     await new Promise(r => setTimeout(r, 600));
     await captureFlowView(page, '06-ielts-academic', '14-ielts-study-path', 'IELTS Guided 7.0 Study Path');
 
     // 15 Strategy Detail Modal
-    await page.goto(`${BASE_URL}ielts.html#strategy`, { waitUntil: 'networkidle0' });
+    await page.goto(`${BASE_URL}ielts.html#strategy`, { waitUntil: 'domcontentloaded' });
     await new Promise(r => setTimeout(r, 600));
     await page.evaluate(() => {
       const vaultBtn = Array.from(document.querySelectorAll('.ie-mode-btn')).find(b => b.textContent.includes('Vault') || b.textContent.includes('Tips'));

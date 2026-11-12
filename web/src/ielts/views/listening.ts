@@ -829,7 +829,7 @@ export function listeningView(root: HTMLElement): () => void {
     'app-hero-banner ielts-listening-hero',
     `<div class="app-hero-banner-content">` +
       `<span class="telemetry-label" style="color: var(--accent-gold); font-size: var(--font-kicker); font-family: var(--font-mono); font-weight: 700;">` +
-        `[IELTS ACADEMIC // LISTENING HUB]` +
+        `${esc(t('ielts.kicker_listening', undefined, 'IELTS ACADEMIC · LISTENING'))}` +
       `</span>` +
       `<h1 class="ie-title" style="margin: 0; font-size: var(--font-h1); line-height: 1.25;">${esc(t('ielts.nav_listening', undefined, 'Academic Listening'))}</h1>` +
       `<p class="ie-lead" style="margin: 0; font-size: var(--font-body-compact); color: var(--ink-secondary); line-height: 1.5;">${esc(t('ielts.listening_lead', undefined, 'Ten questions per section, voiced by browser text-to-speech with a different voice per speaker. Practice mode lets you replay; the mock plays each section once.'))}</p>` +

@@ -29,7 +29,7 @@ Mỗi ngày tập trung sâu vào một trọng tâm kết hợp với việc ô
 
 ### TUẦN 1: THIẾT LẬP NỀN TẢNG & HIỆU CHỈNH PHẢN XẠ (DAYS 1–7)
 
-- [ ] **Day 1: Đọc Chuyên Sâu & Khởi Tạo Kho Thẻ Từ Vựng**
+- [ ] **Day 1: Đọc hiểu sâu & Tạo bộ thẻ từ vựng**
   - [ ] **15m:** Thực hiện *Intensive Reading Protocol* ([`reading.md` §2](file:///E:/Eng/reading.md#2-intensive-vs-extensive-reading-methodology)) trên 1 bài xã luận 400 từ (*BBC/The Guardian*). Đánh dấu cấu trúc ngữ pháp và từ lạ.
   - [ ] **25m:** Đọc Extensive 8–10 trang sách phi hư cấu yêu thích. Tuân thủ *Quy tắc 98%* (không dừng lại tra từ).
   - [ ] **10m:** Nhặt 5 mẫu câu $i+1$ tạo thẻ Anki theo chuẩn ([`reading.md` §3](file:///E:/Eng/reading.md#3-contextual-vocabulary-acquisition)).
@@ -81,7 +81,7 @@ Mỗi ngày tập trung sâu vào một trọng tâm kết hợp với việc ô
   - [ ] **30m:** Nâng cấp lên Bước 4 của Pipeline: *Blind Shadowing* ([`speaking.md` §2](file:///E:/Eng/speaking.md#2-the-comprehensive-shadowing-protocol)). Nhại giọng ngay khi nghe âm phát ra không cần nhìn text.
   - [ ] **15m:** Tập độc thoại nội tâm: *The Silent Narration Walk* trong 15 phút miêu tả cảm xúc và hành động bằng tiếng Anh.
 
-- [ ] **Day 11: Phương Pháp Chép Phạt Benjamin Franklin (Copywork Protocol)**
+- [ ] **Day 11: Luyện viết theo phương pháp chép mẫu (Copywork)**
   - [ ] **30m:** Áp dụng *Benjamin Franklin Copywork Method* ([`writing.md` §4](file:///E:/Eng/writing.md#the-benjamin-franklin-copywork-method)): Chọn 1 đoạn văn 250 từ của tác giả bậc thầy (George Orwell/Joan Didion), ghi chú ý chính, cất bản gốc và tự viết lại.
   - [ ] **15m:** Đối chiếu từng câu với bản gốc để phát hiện sự khác biệt về động từ mạnh và nhịp điệu câu.
   - [ ] **10m:** Nhập các cụm từ đắt giá vừa phát hiện vào Anki.

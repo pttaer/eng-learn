@@ -16,7 +16,7 @@ export class WorldStateEngine {
     const skillsOrder: SkillId[] = ['listening', 'reading', 'writing', 'speaking', 'grammar', 'vocab'];
     const weakestSkill = skillsOrder.reduce((min, s) =>
       cefrIndex((skillLevels[s] || 'B1') as Cefr) < cefrIndex((skillLevels[min] || 'B1') as Cefr) ? s : min
-    , skillsOrder[0]);
+      , skillsOrder[0]);
 
     // Determine cognitive energy
     let cognitiveEnergy: CognitiveEnergyLevel = 'focused';

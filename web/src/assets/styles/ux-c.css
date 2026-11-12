@@ -360,7 +360,7 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
     padding: 10px !important;
     background: var(--bg-surface, #11151f) !important;
     border: 1px solid var(--border-hairline) !important;
-    border-radius: var(--radius-squircle-sm, 10px) !important;
+    border-radius: var(--radius-btn, 10px) !important;
     width: 100% !important;
     box-sizing: border-box !important;
   }
@@ -457,8 +457,8 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
     display: flex !important;
     justify-content: space-between !important;
     align-items: center !important;
-    flex-wrap: wrap !important;
-    gap: 12px !important;
+    flex-wrap: nowrap !important;
+    gap: 8px !important;
     margin-bottom: 12px !important;
     width: 100% !important;
   }
@@ -468,10 +468,12 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
     font-weight: 700 !important;
     font-family: var(--font-mono) !important;
     font-size: var(--font-kicker) !important;
-    letter-spacing: 0.05em !important;
+    letter-spacing: 0.04em !important;
     flex: 1 1 auto !important;
     min-width: 0 !important;
-    line-height: 1.4 !important;
+    line-height: 1.3 !important;
+    text-align: left !important;
+    white-space: normal !important;
   }
 
   .copywork-header-row .hud-btn {
@@ -479,10 +481,13 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
     flex-shrink: 0 !important;
     display: inline-flex !important;
     align-items: center !important;
+    justify-content: center !important;
     gap: 6px !important;
-    min-height: var(--touch-target-min) !important;
-    padding: 8px 12px !important;
+    min-height: var(--touch-target-min, 44px) !important;
+    padding: 6px 10px !important;
     font-size: var(--font-kicker) !important;
+    border-radius: var(--radius-btn, 10px) !important;
+    align-self: center !important;
   }
 
   .copywork-header-row .telemetry-value {
@@ -516,6 +521,9 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
   .copywork-studio .step-indicator {
     display: flex !important;
     justify-content: space-between !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+    gap: 4px 8px !important;
     width: 100% !important;
     font-size: var(--font-kicker) !important;
     padding-top: 6px !important;
@@ -917,15 +925,11 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
   }
 
   .speaking-mode-cluster {
-    display: flex !important;
-    flex-wrap: nowrap !important;
-    overflow-x: auto !important;
-    overflow-y: hidden !important;
-    -webkit-overflow-scrolling: touch !important;
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
     gap: 8px !important;
     width: 100% !important;
     padding-bottom: 4px !important;
-    scrollbar-width: none !important;
   }
 
   .speaking-mode-cluster::-webkit-scrollbar {
@@ -960,12 +964,23 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
     min-height: 44px !important;
   }
 
-  .speaking-mode-cluster>* {
-    flex: 0 0 auto !important;
-    white-space: nowrap !important;
-    min-height: 44px !important;
-    padding: 8px 16px !important;
+  .speaking-mode-cluster>*,
+  .speaking-mode-cluster .mode-tab {
+    flex: none !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    white-space: normal !important;
+    text-align: center !important;
+    min-height: var(--touch-target-min, 44px) !important;
+    padding: 8px 10px !important;
+    font-size: var(--font-kicker, 11px) !important;
+    line-height: 1.25 !important;
     border-radius: var(--radius-btn, 10px) !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 6px !important;
+    box-sizing: border-box !important;
   }
 
   .day-picker-track>* {
@@ -1069,19 +1084,22 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
 
   /* Star Map / Skill Deck switch spans the card width with clean 12px rhythm without double margin */
   .constellation-view-switcher {
-    display: flex !important;
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
     align-items: center !important;
     justify-content: center !important;
-    gap: 12px !important;
+    gap: 8px !important;
     margin: 0 0 12px 0 !important;
     width: 100% !important;
     padding: 0 !important;
   }
 
   .constellation-view-switcher>.view-switch-btn {
-    flex: 1 1 0 !important;
+    width: 100% !important;
     min-width: 0 !important;
+    min-height: var(--touch-target-min, 44px) !important;
     padding: 10px 12px !important;
+    border-radius: var(--radius-btn, 10px) !important;
     gap: 8px !important;
   }
 
@@ -1295,10 +1313,10 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
     line-height: 1.2 !important;
     width: 100% !important;
     min-width: 0 !important;
-    min-height: 32px !important;
-    height: 32px !important;
-    padding: 2px 4px !important;
-    border-radius: 6px !important;
+    min-height: var(--touch-target-min, 44px) !important;
+    height: auto !important;
+    padding: 6px 8px !important;
+    border-radius: var(--radius-btn, 10px) !important;
     box-sizing: border-box !important;
     cursor: pointer !important;
     transition: background 0.15s ease, color 0.15s ease !important;
@@ -1344,8 +1362,8 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
 
   .tree-command-panel .btn-continue-workout,
   .btn-continue-workout {
-    min-height: 40px !important;
-    height: 40px !important;
+    min-height: var(--touch-target-min, 44px) !important;
+    height: 44px !important;
     padding: 8px 16px !important;
     font-size: 13px !important;
     font-weight: 600 !important;
@@ -1371,7 +1389,8 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
   }
 
   .constellation-view-switcher {
-    display: flex !important;
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
     align-items: center !important;
     justify-content: center !important;
     gap: 8px !important;
@@ -1382,7 +1401,7 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
   }
 
   .constellation-view-switcher>.view-switch-btn {
-    flex: 1 1 0 !important;
+    width: 100% !important;
     min-width: 0 !important;
     min-height: var(--touch-target-min, 44px) !important;
     padding: 8px 12px !important;
@@ -1416,7 +1435,7 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
     min-width: 0 !important;
     min-height: 0 !important;
     height: auto !important;
-    padding: 12px 14px !important;
+    padding: 10px 10px !important;
     gap: 6px !important;
     border-radius: 12px !important;
     box-sizing: border-box !important;
@@ -1461,10 +1480,10 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
     flex-direction: row !important;
     align-items: center !important;
     justify-content: flex-start !important;
-    gap: 8px !important;
+    gap: 6px !important;
     width: 100% !important;
     min-width: 0 !important;
-    padding-right: 44px !important;
+    padding-right: 36px !important;
     box-sizing: border-box !important;
     text-align: left !important;
     position: relative !important;
@@ -1495,11 +1514,11 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
   }
 
   .deck-branch-icon-badge {
-    width: 28px !important;
-    height: 28px !important;
-    min-width: 28px !important;
-    min-height: 28px !important;
-    border-radius: 7px !important;
+    width: 24px !important;
+    height: 24px !important;
+    min-width: 24px !important;
+    min-height: 24px !important;
+    border-radius: 6px !important;
     padding: 2px !important;
     display: inline-flex !important;
     align-items: center !important;
@@ -1573,21 +1592,33 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
   }
 
   .deck-branch-name {
-    font-size: var(--font-body-compact) !important;
+    font-size: 13px !important;
     font-weight: 700 !important;
-    line-height: 1.2 !important;
+    line-height: 1.25 !important;
     margin: 0 !important;
-    white-space: nowrap !important;
+    white-space: normal !important;
+    word-break: break-word !important;
     overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
     text-align: left !important;
+    letter-spacing: normal !important;
+    text-transform: none !important;
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
   }
 
   .deck-branch-tagline {
-    font-size: 11px !important;
+    font-size: 10.5px !important;
     color: var(--ink-muted) !important;
-    white-space: nowrap !important;
+    white-space: normal !important;
+    word-break: break-word !important;
     overflow: hidden !important;
-    text-overflow: ellipsis !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
     margin: 0 !important;
     font-weight: 500 !important;
     letter-spacing: -0.01em !important;
@@ -1642,18 +1673,18 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
   .deck-branch-card .btn-enter-dossier,
   .skill-arrow {
     position: absolute !important;
-    top: 0 !important;
-    right: 0 !important;
-    width: 44px !important;
-    height: 44px !important;
-    min-width: 44px !important;
-    min-height: 44px !important;
+    top: 4px !important;
+    right: 4px !important;
+    width: 32px !important;
+    height: 32px !important;
+    min-width: 32px !important;
+    min-height: 32px !important;
     padding: 0 !important;
     font-size: 14px !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    border-radius: var(--radius-squircle-sm, 10px) !important;
+    border-radius: var(--radius-btn, 10px) !important;
     box-sizing: border-box !important;
     flex: 0 0 auto !important;
     background: transparent !important;
@@ -1683,24 +1714,29 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
   /* Reading Dossier & Exam Cockpit Segmented Mobile Tab Bars */
   .reading-mobile-tab-bar,
   .cd-mobile-tab-bar {
-    padding: 6px !important;
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    align-items: stretch !important;
+    padding: 4px !important;
     gap: 8px !important;
-    margin: 0 !important;
-    border-radius: 8px !important;
+    margin: 0 0 8px 0 !important;
+    border-radius: var(--radius-btn, 10px) !important;
   }
 
   .reading-mobile-tab-btn,
   .cd-mobile-tab-btn {
     padding: 8px 12px !important;
     gap: 6px !important;
-  }
-
-  /* Equal-width segments: a long label wraps inside its half instead of widening the tab */
-  .reading-mobile-tab-btn {
-    flex: 1 1 0 !important;
+    border-radius: var(--radius-btn, 10px) !important;
+    min-height: var(--touch-target-min, 44px) !important;
+    width: 100% !important;
     min-width: 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
     text-align: center !important;
     line-height: 1.25 !important;
+    box-sizing: border-box !important;
   }
 
   .calm-reader {
@@ -2026,13 +2062,18 @@ button:not(.btn-round):not(.btn-circle):not(.sheet-btn-close):not(.vault-btn-clo
 
   /* Prevent header, badge, and prompt truncation/wrapping */
   .card-prompt-label,
-  .copywork-header-row .telemetry-label,
   .listening-header-row .telemetry-label,
   .mission-phase-badge,
   .register-badge {
     white-space: normal !important;
     line-height: 1.25 !important;
     text-align: center !important;
+  }
+
+  .copywork-header-row .telemetry-label {
+    white-space: normal !important;
+    line-height: 1.25 !important;
+    text-align: left !important;
   }
 
   .tenses-badge-row {
@@ -2589,61 +2630,86 @@ html[data-cognitive-mode="cockpit"] .gentle-only {
    ========================================================================== */
 @media (max-width: 768px) {
 
-  /* Reading 2-mode switcher in a single sleek row */
+  /* Reading 2-mode switcher in a single sleek row with 50/50 uniform distribution */
   .reading-mode-bar {
-    display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: nowrap !important;
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
     width: 100% !important;
     gap: 8px !important;
     margin-bottom: 8px !important;
-    padding-bottom: 8px !important;
+    padding: 0 !important;
+    border: none !important;
+    background: transparent !important;
   }
 
-  .reading-mode-bar .hud-btn {
-    flex: 1 1 0 !important;
+  .reading-mode-bar .hud-btn,
+  .reading-mode-bar .hud-btn.active {
+    width: 100% !important;
     min-width: 0 !important;
     min-height: var(--touch-target-min, 44px) !important;
-    max-height: 44px !important;
     padding: 8px 10px !important;
+    border-radius: var(--radius-btn, 10px) !important;
+    display: inline-flex !important;
+    align-items: center !important;
     justify-content: center !important;
     text-align: center !important;
     white-space: nowrap !important;
+    box-sizing: border-box !important;
   }
 
   /* Compact Reading Skim Timer Card */
   .skim-timer-panel {
     padding: 10px 12px !important;
     gap: 8px !important;
+    flex-wrap: wrap !important;
   }
 
   .skim-timer-actions {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    width: 100% !important;
     gap: 8px !important;
   }
 
   .skim-timer-actions .hud-btn {
     min-height: var(--touch-target-min, 44px) !important;
     padding: 6px 10px !important;
+    border-radius: var(--radius-btn, 10px) !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    white-space: normal !important;
+    line-height: 1.2 !important;
+    text-align: center !important;
   }
 
-  /* Collocations SRS / Lexicon mode switcher side-by-side */
+  /* Collocations SRS / Lexicon mode switcher side-by-side with 50/50 uniform distribution */
   .collocations-mode-header .view-mode-toggle {
-    display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: nowrap !important;
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
     width: 100% !important;
     gap: 8px !important;
   }
 
-  .collocations-mode-header .view-toggle-btn {
-    flex: 1 1 0 !important;
+  /* Tenses 3-tab mode switcher (Drill, Gauntlet, Reference) */
+  .tenses-mode-header .view-mode-toggle {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    width: 100% !important;
+    gap: 6px !important;
+  }
+
+  .collocations-mode-header .view-toggle-btn,
+  .tenses-mode-header .view-toggle-btn {
+    width: 100% !important;
     min-width: 0 !important;
     min-height: var(--touch-target-min, 44px) !important;
     padding: 8px 8px !important;
+    border-radius: var(--radius-btn, 10px) !important;
     justify-content: center !important;
     text-align: center !important;
     white-space: nowrap !important;
     font-size: var(--text-xs) !important;
+    box-sizing: border-box !important;
   }
 
   /* Habit tracker day picker smooth scrolling peek */
@@ -2716,7 +2782,7 @@ html[data-cognitive-mode="cockpit"] .gentle-only {
   /* Direction 3: Purge dashed border on vocabulary radar chips */
   .radar-chip {
     border: 1px solid var(--border-hairline) !important;
-    border-radius: var(--radius-squircle-sm, 10px) !important;
+    border-radius: var(--radius-btn, 10px) !important;
     background: var(--bg-surface-raised, rgba(255, 255, 255, 0.04)) !important;
   }
 }

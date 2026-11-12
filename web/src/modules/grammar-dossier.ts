@@ -94,7 +94,7 @@ export class GrammarDossier {
       <div class="app-hero-banner grammar-hero-banner" style="margin-bottom: var(--space-12, 12px);">
         <div class="app-hero-banner-content">
           <span class="telemetry-label" style="color: var(--accent-gold); font-size: var(--font-kicker); font-family: var(--font-mono); font-weight: 700;">
-            [${t('grammar.title', undefined, 'GRAMMAR CODEX & GAUNTLET')}]
+            ${t('grammar.title', undefined, 'GRAMMAR CODEX & GAUNTLET')}
           </span>
           <h2 style="margin: 0; font-size: var(--font-h3, 16px); font-weight: 700; color: var(--ink-primary); line-height: 1.3;">
             ${modeTitles[this.activeMode] || prettyMode(this.activeMode)}
@@ -143,7 +143,7 @@ export class GrammarDossier {
 
       <div class="dossier-nav-bar">
         <button class="hud-btn nav-btn-prev">${icon('arrowLeft')} ${t('action.prev')}</button>
-        <span class="telemetry-value card-counter">SYNTAX NODE ${this.currentIndex + 1} / ${Math.max(1, this.currentList.length)}</span>
+        <span class="telemetry-value card-counter">${t('grammar.syntax_node_counter', { current: this.currentIndex + 1, total: Math.max(1, this.currentList.length) }, `SYNTAX NODE ${this.currentIndex + 1} / ${Math.max(1, this.currentList.length)}`)}</span>
         <button class="hud-btn nav-btn-next">${t('action.next')} ${icon('arrowRight')}</button>
       </div>
     `;
@@ -202,7 +202,7 @@ export class GrammarDossier {
     this.renderCurrentCard();
     const counter = this.container.querySelector('.card-counter');
     if (counter) {
-      counter.textContent = `SYNTAX NODE [ ${this.currentIndex + 1} / ${Math.max(1, this.currentList.length)} ]`;
+      counter.textContent = t('grammar.syntax_node_counter', { current: this.currentIndex + 1, total: Math.max(1, this.currentList.length) }, `SYNTAX NODE ${this.currentIndex + 1} / ${Math.max(1, this.currentList.length)}`);
     }
   }
 
@@ -287,7 +287,7 @@ export class GrammarDossier {
 
       <!-- Syntactic Repair Diff -->
       <div class="grammar-repair-diff-box">
-        <div class="telemetry-label" style="margin-bottom: 4px;">[${t('grammar.repair_diff_title', undefined, 'SYNTACTIC REPAIR DIFF: BASELINE → TRANSFORMED')}]</div>
+        <div class="telemetry-label" style="margin-bottom: 4px;">${t('grammar.repair_diff_title', undefined, 'SYNTACTIC REPAIR DIFF: BASELINE → TRANSFORMED')}</div>
         <div class="repair-diff-content" style="line-height: 1.8;">
           ${repairDiffHtml}
         </div>
@@ -295,24 +295,24 @@ export class GrammarDossier {
 
       <!-- Formula Bar -->
       <div class="grammar-formula-bar">
-        [ ${t('grammar.syntactic_matrix_step', undefined, 'STEP-BY-STEP SYNTACTIC MATRIX')} ]: ${item.formula}
+        ${t('grammar.syntactic_matrix_step', undefined, 'STEP-BY-STEP SYNTACTIC MATRIX')}: ${item.formula}
       </div>
 
       <!-- Vietnamese Comparative Syntax Drawer -->
       <div class="grammar-vietnamese-callout">
-        <strong style="white-space: normal; overflow-wrap: anywhere;">[${t('grammar.l1_interference', undefined, 'VIETNAMESE L1 COMPARATIVE INTERFERENCE')}]:</strong>
+        <strong style="white-space: normal; overflow-wrap: anywhere;">${t('grammar.l1_interference', undefined, 'VIETNAMESE L1 COMPARATIVE INTERFERENCE')}:</strong>
         ${item.vietnamese}
       </div>
 
       <!-- Rhetorical Analysis -->
       <div class="grammar-analysis-box" style="margin-top: 8px;">
-        <span class="telemetry-label">[${t('grammar.rhetorical_analysis', undefined, 'RHETORICAL & SYNTACTIC ANALYSIS')}]:</span>
+        <span class="telemetry-label">${t('grammar.rhetorical_analysis', undefined, 'RHETORICAL & SYNTACTIC ANALYSIS')}:</span>
         <p style="font-size: var(--font-body-compact); line-height: 1.5; margin-top: 4px;">${item.analysis}</p>
       </div>
 
       <!-- Contrastive Advanced Register Exemplar -->
       <div class="grammar-exemplar-box" style="margin-top: 8px;">
-        <span class="telemetry-label">[${t('grammar.contrastive_exemplar', undefined, 'CONTRASTIVE EXEMPLAR IN ADVANCED REGISTER')}]:</span>
+        <span class="telemetry-label">${t('grammar.contrastive_exemplar', undefined, 'CONTRASTIVE EXEMPLAR IN ADVANCED REGISTER')}:</span>
         <blockquote style="font-style: italic; border-left: 2px solid var(--accent-gold); padding-left: 10px; margin: 6px 0; font-size: var(--font-body-compact); line-height: 1.5;">
           "${item.exemplarContext}"
         </blockquote>
@@ -506,7 +506,7 @@ export class GrammarDossier {
     this.renderCurrentCard();
     const counter = this.container.querySelector('.card-counter');
     if (counter) {
-      counter.textContent = `SYNTAX NODE [ ${this.currentIndex + 1} / ${Math.max(1, this.currentList.length)} ]`;
+      counter.textContent = t('grammar.syntax_node_counter', { current: this.currentIndex + 1, total: Math.max(1, this.currentList.length) }, `SYNTAX NODE ${this.currentIndex + 1} / ${Math.max(1, this.currentList.length)}`);
     }
   }
 

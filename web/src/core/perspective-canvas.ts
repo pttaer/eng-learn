@@ -3,6 +3,7 @@ import { SeaUrchin, PillarId } from './sea-urchin';
 import { CursorTracker } from './cursor-tracker';
 import { StorageManager } from '../utils/storage';
 import { SRSEngine } from './srs-engine';
+import { t } from './i18n';
 
 export interface FloatingEntity {
   id: string;
@@ -718,7 +719,7 @@ export class PerspectiveCanvas {
 
       ctx.font = '700 10px "JetBrains Mono", monospace';
       ctx.textBaseline = 'middle';
-      ctx.fillText('[ABSORB]', lens.x, btnY);
+      ctx.fillText(t('canvas.absorb', undefined, 'ABSORB'), lens.x, btnY);
     }
 
     ctx.restore();

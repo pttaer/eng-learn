@@ -928,7 +928,7 @@ export class HeaderHUD {
           <button type="button" class="hud-btn mobile-sheet-row sheet-btn-budget">
             <span class="row-ico">${icon('clock', 16)}</span>
             <span class="row-label">${t('drawer.time_budget_label', undefined, 'Daily Study Budget')}</span>
-            <span class="row-val font-mono">${t('drawer.time_budget_val', { budget: timeBudget }, `${timeBudget}m / ngày`)}</span>
+            <span class="row-val font-mono">${t('drawer.time_budget_val', { budget: timeBudget }, `${timeBudget}m / day`)}</span>
             <span class="row-chev">${icon('chevronRight', 16)}</span>
           </button>
 
@@ -936,7 +936,7 @@ export class HeaderHUD {
             <button type="button" class="hud-btn mobile-sheet-row sheet-btn-exam">
               <span class="row-ico">${icon('alarm', 16)}</span>
               <span class="row-label">${t('settings.target_exam_date_label', undefined, 'Target IELTS Exam Date:')}</span>
-              <span class="row-val font-mono">${(examDaysRemaining ?? 0) >= 0 ? t('drawer.exam_days_left', { days: examDaysRemaining ?? 0 }, `Thi IELTS: còn ${examDaysRemaining} ngày`) : t('drawer.exam_passed', undefined, 'Thi IELTS: Đã qua')}</span>
+              <span class="row-val font-mono">${(examDaysRemaining ?? 0) >= 0 ? t('drawer.exam_days_left', { days: examDaysRemaining ?? 0 }, `IELTS Exam: ${examDaysRemaining} days remaining`) : t('drawer.exam_passed', undefined, 'IELTS Exam: Concluded')}</span>
               <span class="row-chev">${icon('chevronRight', 16)}</span>
             </button>
           ` : ''}

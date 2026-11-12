@@ -73,7 +73,7 @@ export function mockView(root: HTMLElement): () => void {
       'app-hero-banner ielts-mock-hero',
       `<div class="app-hero-banner-content">` +
         `<span class="telemetry-label" style="color: var(--accent-gold); font-size: var(--font-kicker); font-family: var(--font-mono); font-weight: 700;">` +
-          `[IELTS ACADEMIC // FULL CD-IELTS COCKPIT SIMULATOR]` +
+          `${t('ielts.kicker_mock', undefined, 'IELTS ACADEMIC · CD-IELTS SIMULATOR')}` +
         `</span>` +
         `<h1 class="ie-title" style="margin: 0; font-size: var(--font-h1); line-height: 1.25;">${t('mock.title', undefined, 'Mock tests')}</h1>` +
         `<p class="ie-lead" style="margin: 0; font-size: var(--font-body-compact); color: var(--ink-secondary); line-height: 1.5;">${t('mock.lead_desc', undefined, 'Exam conditions. Reading: 3 passages, 40 questions, 60 minutes with 10m & 5m warning alerts. Full 1–40 navigator strip, dual-pane split-screen resizer, and post-test 9.0 Band Conversion Modal.')}</p>` +

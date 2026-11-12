@@ -129,7 +129,7 @@ export class SpotlightTour {
             <div class="tour-step-badge" id="tourStepBadge">
             <span class="tour-step-pill" id="tourStepPill">${t('tour.step_badge', { step: 1, total: 6 }, 'Step 1 of 6')}</span>
             <span class="tour-step-divider" id="tourStepDivider" aria-hidden="true">·</span>
-            <span class="tour-step-kicker" id="tourStepKicker">DIRECTIVE HUD</span>
+            <span class="tour-step-kicker" id="tourStepKicker" style="display: none;"></span>
           </div>
             <button class="tour-card-close" id="tourCloseBtn" aria-label="${t('tour.close_title', undefined, 'Close Spotlight Tour (Esc)')}" title="${t('tour.close_title', undefined, 'Close (Esc)')}">✕</button>
           </div>

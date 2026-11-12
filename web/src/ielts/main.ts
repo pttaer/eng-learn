@@ -124,7 +124,7 @@ function workoutHeroBanner(): HTMLElement {
     <div style="flex: 1; min-width: 240px;">
       <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 4px;">
         <span class="ie-card-badge" style="background: var(--accent-cyan); color: #0b0f19; font-weight: 800;">
-          DAILY FLOW
+          ${t('ielts.daily_flow', undefined, 'DAILY FLOW')}
         </span>
         <span style="font-size: var(--font-kicker, 11px); color: var(--accent-gold); font-weight: 700;">
           ${streakText}

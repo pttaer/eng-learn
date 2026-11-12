@@ -302,7 +302,7 @@ export class ProgressionEngine {
         this.state.streak += 1;
         try {
           AcousticHaptics.chime();
-        } catch {}
+        } catch { }
       } else {
         this.state.streak = 1;
       }

@@ -971,7 +971,7 @@ export function writingView(root: HTMLElement): () => void {
       'app-hero-banner ielts-writing-hero',
       `<div class="app-hero-banner-content">` +
         `<span class="telemetry-label" style="color: var(--accent-gold); font-size: var(--font-kicker); font-family: var(--font-mono); font-weight: 700;">` +
-          `[IELTS ACADEMIC // WRITING HUB]` +
+          `${esc(t('ielts.kicker_writing', undefined, 'IELTS ACADEMIC · WRITING'))}` +
         `</span>` +
         `<h1 class="ie-title" style="margin: 0; font-size: var(--font-h1); line-height: 1.25;">${esc(t('ielts.nav_writing', undefined, 'Academic Writing'))}</h1>` +
         `<p class="ie-lead" style="margin: 0; font-size: var(--font-body-compact); color: var(--ink-secondary); line-height: 1.5;">${esc(t('writing.view_lead', undefined, 'Task 1: describe the visual in 150+ words (20 min). Task 2: write a 250+ word essay (40 min). Explore the interactive Visual Formula Inspector and 4-Sentence Paragraph Workbench below or inside any prompt.'))}</p>` +

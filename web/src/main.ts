@@ -569,7 +569,7 @@ class App {
         <div class="app-illustration-wrap" style="margin-bottom: var(--space-12, 12px);">
           ${illustration('completed', { size: 'card', ariaLabel: t('completion.directive_complete', undefined, 'MISSION DIRECTIVE COMPLETE') })}
         </div>
-        <div class="telemetry-label" style="margin-bottom: 8px;">[${t('completion.directive_complete', undefined, 'MISSION DIRECTIVE COMPLETE')}]</div>
+        <div class="telemetry-label" style="margin-bottom: 8px;">${t('completion.directive_complete', undefined, 'MISSION COMPLETED')}</div>
         <h2 style="font-family: var(--font-mono); font-size: var(--font-h2); font-weight: 700; margin-bottom: 16px;">
           ${moduleName}
         </h2>

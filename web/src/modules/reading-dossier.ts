@@ -454,7 +454,7 @@ export class ReadingDossier {
         <div class="article-meta-telemetry reading-meta-telemetry" aria-label="Article telemetry">
           <span class="telemetry-value reading-meta-words">${t('reading.words_count', { count: article.wordCount })}</span>
           <span class="reading-meta-dot" aria-hidden="true">•</span>
-          <span class="telemetry-value reading-meta-time">${article.readingTime.toUpperCase()}</span>
+          <span class="telemetry-value reading-meta-time">${this.formatReadingTime(article.readingTime)}</span>
         </div>
       </div>
 
@@ -746,12 +746,12 @@ export class ReadingDossier {
             <p class="vocab-field-value">${this.escapeHtml(info.definition)}</p>
           </div>
           <div class="vocab-drawer-field vocab-vietnamese-field">
-            <span class="vocab-field-label">VIETNAMESE EQUIVALENT & NUANCE</span>
+            <span class="vocab-field-label">${t('reading.vietnamese_meaning', undefined, 'VIETNAMESE MEANING')}</span>
             <p class="vocab-field-value vietnamese-meaning">${this.escapeHtml(info.vietnamese)}</p>
           </div>
           ${info.collocations && info.collocations.length > 0 ? `
             <div class="vocab-drawer-field">
-              <span class="vocab-field-label">COLLOCATION PARTNERS</span>
+              <span class="vocab-field-label">${t('reading.collocation_partners', undefined, 'COLLOCATION PARTNERS')}</span>
               <div class="vocab-colloc-tags">
                 ${info.collocations.map(c => `<span class="colloc-pill">${this.escapeHtml(c)}</span>`).join('')}
               </div>
@@ -759,7 +759,7 @@ export class ReadingDossier {
           ` : ''}
           ${info.etymology ? `
             <div class="vocab-drawer-field">
-              <span class="vocab-field-label">ETYMOLOGY & ROOTS</span>
+              <span class="vocab-field-label">${t('reading.etymology_roots', undefined, 'ETYMOLOGY & ROOTS')}</span>
               <p class="vocab-field-value" style="font-size: var(--font-kicker); font-style: italic; color: var(--ink-muted);">${this.escapeHtml(info.etymology)}</p>
             </div>
           ` : ''}
@@ -781,6 +781,15 @@ export class ReadingDossier {
         this.closeVocabDrawer();
       });
     });
+  }
+
+  private formatReadingTime(timeStr: string): string {
+    if (!timeStr) return '';
+    return timeStr
+      .replace(/\bmin\b/i, t('common.minute_short', undefined, 'min'))
+      .replace(/\(Intensive\)/i, `(${t('reading.mode_intensive_label', undefined, 'Intensive')})`)
+      .replace(/\(Extensive\)/i, `(${t('reading.mode_extensive_label', undefined, 'Extensive')})`)
+      .toUpperCase();
   }
 
   private escapeHtml(str: string): string {
@@ -835,10 +844,10 @@ export class ReadingDossier {
         </div>
         <div class="skim-timer-actions">
           <button type="button" class="hud-btn btn-toggle-timer ${this.isSkimTimerRunning ? 'is-running' : ''}">
-            ${this.isSkimTimerRunning ? '⏸ Pause Timer' : '⏱ Start 60s Skim'}
+            ${this.isSkimTimerRunning ? t('reading.pause_timer', undefined, '⏸ Pause Timer') : t('reading.start_skim', undefined, '⏱ Start 60s Skim')}
           </button>
           <button type="button" class="hud-btn btn-toggle-focus ${this.isFocusModeActive ? 'is-active' : ''}">
-            ${this.isFocusModeActive ? icon('eye') + ' Unblur Detail' : icon('target') + ' Focus Headings'}
+            ${this.isFocusModeActive ? icon('eye') + ' ' + t('reading.unblur_detail', undefined, 'Unblur Detail') : icon('target') + ' ' + t('reading.focus_headings', undefined, 'Focus Headings')}
           </button>
         </div>
       </div>
@@ -852,7 +861,7 @@ export class ReadingDossier {
           role="tab"
           aria-selected="${this.mobileActiveTab === 'text'}"
         >
-          ${icon('book', 14)} ${t('reading.reading_text', undefined, 'Reading Text')}
+          ${icon('book', 14)} ${t('reading.tab_text', undefined, 'Reading Text')}
         </button>
         <button
           type="button"
@@ -905,7 +914,7 @@ export class ReadingDossier {
           </div>
 
           <div class="reading-sidebar-card">
-            <div class="telemetry-label" style="margin-bottom: 8px;">COMPREHENSION CHECKS</div>
+            <div class="telemetry-label" style="margin-bottom: 8px;">${t('reading.comprehension_checks', undefined, 'COMPREHENSION CHECKS')}</div>
             ${data.comprehensionChecks.map((check: any, idx: number) => `
               <div class="comp-check-item">
                 <div class="comp-question">${idx + 1}. ${check.question}</div>
@@ -983,11 +992,11 @@ export class ReadingDossier {
         if (this.skimTimerInterval) clearInterval(this.skimTimerInterval);
         this.isSkimTimerRunning = false;
         toggleTimerBtn.classList.remove('is-running');
-        toggleTimerBtn.textContent = '▶ Resume Skim';
+        toggleTimerBtn.textContent = t('reading.resume_skim', undefined, '▶ Resume Skim');
       } else {
         this.isSkimTimerRunning = true;
         toggleTimerBtn.classList.add('is-running');
-        toggleTimerBtn.textContent = '⏸ Pause Timer';
+        toggleTimerBtn.textContent = t('reading.pause_timer', undefined, '⏸ Pause Timer');
         this.skimTimerInterval = setInterval(() => {
           if (this.skimSecondsRemaining > 0) {
             this.skimSecondsRemaining -= 1;
@@ -998,7 +1007,7 @@ export class ReadingDossier {
             AudioSynthesizer.play('chime');
             toggleTimerBtn.classList.remove('is-running');
             toggleTimerBtn.classList.add('is-completed');
-            toggleTimerBtn.textContent = '✓ Skim Completed';
+            toggleTimerBtn.textContent = t('reading.skim_completed', undefined, '✓ Skim Completed');
           }
         }, 1000);
       }
@@ -1010,11 +1019,11 @@ export class ReadingDossier {
       if (this.isFocusModeActive) {
         readingBody?.classList.add('skim-focused');
         toggleFocusBtn.classList.add('is-active');
-        toggleFocusBtn.innerHTML = icon('eye') + ' Unblur Detail';
+        toggleFocusBtn.innerHTML = icon('eye') + ' ' + t('reading.unblur_detail', undefined, 'Unblur Detail');
       } else {
         readingBody?.classList.remove('skim-focused');
         toggleFocusBtn.classList.remove('is-active');
-        toggleFocusBtn.innerHTML = icon('target') + ' Focus Headings';
+        toggleFocusBtn.innerHTML = icon('target') + ' ' + t('reading.focus_headings', undefined, 'Focus Headings');
       }
     });
 
@@ -1204,13 +1213,13 @@ export class ReadingDossier {
         </div>
 
         <div class="synthesis-card">
-          <div class="telemetry-label">Reverse-Engineering Reconstruction Prompt</div>
+          <div class="telemetry-label">${t('reading.reconstruction_prompt_label', undefined, 'Reverse-Engineering Reconstruction Prompt')}</div>
           <p class="synthesis-reconstruction-prompt" style="max-width: 68ch; line-height: 1.62;">
             ${synthesis.reconstructionPrompt || 'Close this dossier. In your notebook or writing buffer, reconstruct the central thesis of the article in exactly 3 complex sentences utilizing at least 3 of the mined vocabulary items.'}
           </p>
           <div style="margin-top: 16px;">
             <button class="hud-btn btn-finish-reading" style="width: 100%; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; padding: 10px 20px; font-weight: 700; background: var(--accent-gold); color: var(--bg-canvas); border: none; border-radius: var(--radius-btn, 10px); box-shadow: var(--shadow-glow);">
-              Complete Intensive Pass & Log to Record
+              ${t('reading.btn_complete_pass', undefined, 'Complete Intensive Pass & Log to Record')}
             </button>
           </div>
         </div>

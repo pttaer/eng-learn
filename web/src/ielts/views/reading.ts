@@ -622,7 +622,7 @@ export function readingView(root: HTMLElement): () => void {
     'app-hero-banner ielts-reading-hero',
     `<div class="app-hero-banner-content">` +
       `<span class="telemetry-label" style="color: var(--accent-gold); font-size: var(--font-kicker); font-family: var(--font-mono); font-weight: 700;">` +
-        `[IELTS ACADEMIC // READING SUITE]` +
+        `${esc(t('ielts.kicker_reading', undefined, 'IELTS ACADEMIC · READING'))}` +
       `</span>` +
       `<h1 class="ie-title" style="margin: 0; font-size: var(--font-h1); line-height: 1.25;">${esc(t('ielts.nav_reading', undefined, 'Academic Reading'))}</h1>` +
       `<p class="ie-lead" style="margin: 0; font-size: var(--font-body-compact); color: var(--ink-secondary); line-height: 1.5;">${esc(t('ielts.reading_lead', undefined, 'One passage, 20 minutes, 13-14 questions. Same question types as the exam. Submit to see the evidence for every answer.'))}</p>` +

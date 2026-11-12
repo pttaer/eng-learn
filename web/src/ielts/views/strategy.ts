@@ -656,7 +656,7 @@ export function strategyView(root: HTMLElement): () => void {
     'app-hero-banner ielts-strategy-hero',
     `<div class="app-hero-banner-content">` +
       `<span class="telemetry-label" style="color: var(--accent-gold); font-size: var(--font-kicker); font-family: var(--font-mono); font-weight: 700;">` +
-        `[${esc(t('ielts.strategy_codex_kicker', undefined, 'IELTS ACADEMIC // STRATEGY & KNOWLEDGE CODEX'))}]` +
+        `${esc(t('ielts.strategy_codex_kicker', undefined, 'IELTS ACADEMIC · STRATEGY CODEX'))}` +
       `</span>` +
       `<h1 class="ie-title" style="margin: 0; font-size: var(--font-h1); line-height: 1.25;">${esc(t('ielts.strategy_title', undefined, 'IELTS Master Strategy & Knowledge Codex'))}</h1>` +
       `<p class="ie-lead" style="margin: 0; font-size: var(--font-body-compact); color: var(--ink-secondary); line-height: 1.5;">${esc(t('ielts.strategy_lead', { total: allCards.length }, `The IELTS tactical compendium: ${allCards.length} exam blueprints covering 14 Reading question types, Listening traps, Writing frameworks, Speaking tactics, and Computer-Based Test (CBT) ergonomics.`))}</p>` +

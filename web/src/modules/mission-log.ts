@@ -58,13 +58,13 @@ export class MissionLog {
       <div class="app-hero-banner habits-hero-banner" style="margin-bottom: var(--space-12, 12px);">
         <div class="app-hero-banner-content">
           <span class="telemetry-label" style="color: var(--accent-gold); font-size: var(--font-kicker); font-family: var(--font-mono); font-weight: 700;">
-            [${t('habits.kicker', undefined, 'HABITS // KINETIC ROADMAP')}]
+            ${t('habits.kicker', undefined, 'HABITS · LEARNING ROADMAP')}
           </span>
           <h2 style="margin: 0; font-size: var(--font-h3, 16px); font-weight: 700; color: var(--ink-primary); line-height: 1.3;">
-            ${t('habits.daily_workout', undefined, 'Daily Workout & Kinetic Missions')}
+            ${t('habits.hero_title', undefined, 'Daily Practice & Habit Missions')}
           </h2>
           <div style="font-size: var(--font-kicker); color: var(--ink-secondary); display: flex; gap: 8px; flex-wrap: wrap;">
-            <span>CEFR ${this.activeLevel}</span>
+            <span>${t('habits.level_label', undefined, 'LEVEL:')} ${this.activeLevel}</span>
             <span>•</span>
             <span>${t('habits.day_indicator', { current: this.activeDayIndex + 1, total: 30 }, `DAY ${this.activeDayIndex + 1} / 30`)}</span>
           </div>
@@ -76,7 +76,7 @@ export class MissionLog {
 
       <div class="dossier-control-bar mission-control-bar" style="display: flex; flex-direction: column; align-items: stretch; gap: 8px; width: 100%;">
         <div class="mission-header-row" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
-          <span class="telemetry-label" style="color: var(--accent-gold); font-weight: 700; font-family: var(--font-mono); font-size: var(--font-kicker);">[${t('habits.kicker', undefined, 'HABITS // KINETIC ROADMAP')}]</span>
+          <span class="telemetry-label" style="color: var(--accent-gold); font-weight: 700; font-family: var(--font-mono); font-size: var(--font-kicker);">${t('habits.kicker', undefined, 'HABITS · LEARNING ROADMAP')}</span>
           <div class="habit-level-chips" style="display: inline-flex; gap: 6px;">
             ${(['A1', 'A2', 'B1', 'B2', 'C1', 'C2'] as Cefr[]).map(lvl => `
               <button class="hud-chip habit-level-chip ${lvl === this.activeLevel ? 'active' : ''}" data-level="${lvl}" style="padding: 3px 8px; font-size: var(--font-kicker); cursor: pointer; border-radius: var(--radius-btn, 10px); border: 1px solid ${lvl === this.activeLevel ? 'var(--accent-gold)' : 'var(--border-subtle)'}; background: ${lvl === this.activeLevel ? 'var(--accent-gold)' : 'var(--bg-surface)'}; color: ${lvl === this.activeLevel ? 'var(--bg-canvas)' : 'var(--ink-secondary)'}; font-weight: 700; white-space: nowrap;">
@@ -86,7 +86,7 @@ export class MissionLog {
           </div>
         </div>
         <div class="dossier-status-pill" style="display: flex; justify-content: space-between; align-items: center; padding: 0;">
-          <span class="telemetry-value" style="font-size: var(--font-body-compact); font-weight: 700;">LEVEL ${this.activeLevel} // ${t('habits.daily_workout', undefined, 'DAILY WORKOUT')}</span>
+          <span class="telemetry-value" style="font-size: var(--font-body-compact); font-weight: 700;">${t('habits.level_label', undefined, 'LEVEL:')} ${this.activeLevel} · ${t('habits.daily_workout', undefined, 'DAILY PRACTICE')}</span>
         </div>
       </div>
       <div class="mission-log-main">
@@ -148,12 +148,17 @@ export class MissionLog {
       ? day.tasksByLevel[currentLevel]!
       : day.tasks;
 
+    const phaseKey = `habits.phase_week_${day.week}`;
+    const localizedPhase = t(phaseKey, undefined, day.phase);
+    const weekText = t('habits.week_phase', { week: String(day.week).padStart(2, '0'), phase: localizedPhase }, `WEEK 0${day.week} · ${localizedPhase}`);
+    const dayNumberText = t('habits.day_number', { day: String(day.day).padStart(2, '0') }, `DAY ${String(day.day).padStart(2, '0')}`);
+
     slot.innerHTML = `
       <div class="mission-card">
         <div class="card-header-bar">
           <div class="card-meta-left" style="display: flex; align-items: center; gap: 8px; min-width: 0; flex: 1 1 auto;">
-            <span class="mission-phase-badge" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">[WEEK 0${day.week} // ${day.phase.toUpperCase()}]</span>
-            <span class="hud-status-badge" style="font-size: var(--font-kicker); padding: 1px 6px; border-radius: 3px; border: 1px solid var(--accent-gold); color: var(--accent-gold); font-weight: 700;">
+            <span class="mission-phase-badge" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${weekText}</span>
+            <span class="hud-status-badge" style="font-size: var(--font-kicker); padding: 2px 8px; border-radius: var(--radius-squircle-sm, 10px); border: none !important; background: rgba(165, 180, 252, 0.16); color: var(--accent-gold); font-weight: 700;">
               ${t('habits.level_label', undefined, 'LEVEL:')} ${currentLevel}
             </span>
             <span class="card-badge-status ${progress.completed ? 'badge-completed' : ''}">
@@ -161,7 +166,7 @@ export class MissionLog {
             </span>
           </div>
           <div class="card-meta-right">
-            <span>DAY ${String(day.day).padStart(2, '0')}</span>
+            <span>${dayNumberText}</span>
           </div>
         </div>
 
@@ -190,7 +195,7 @@ export class MissionLog {
             <span class="telemetry-value">${progress.completedTasks.length} / ${tasks.length} ${t('habits.tasks_label', undefined, 'TASKS')}</span>
           </div>
           <div class="mission-actions">
-            ${progress.completed ? '<span style="font-family: var(--font-mono); font-size: var(--font-kicker); font-weight: 700;">[STREAK REGISTERED]</span>' : ''}
+            ${progress.completed ? `<span style="font-family: var(--font-mono); font-size: var(--font-kicker); font-weight: 700;">${t('habits.streak_registered', undefined, 'STREAK RECORDED ✓')}</span>` : ''}
           </div>
         </div>
       </div>
@@ -231,7 +236,7 @@ export class MissionLog {
 
     const indicator = this.container.querySelector('.active-day-indicator');
     if (indicator) {
-      indicator.textContent = `DAY [ ${this.activeDayIndex + 1} / 30 ]`;
+      indicator.textContent = t('habits.day_indicator', { current: this.activeDayIndex + 1, total: 30 }, `DAY ${this.activeDayIndex + 1} / 30`);
     }
   }
 
